@@ -1,0 +1,583 @@
+[
+  {
+    "id": "bert_review_q001",
+    "question": "What limitation of unidirectional language models does BERT address?",
+    "ground_truth": "BERT addresses the inability of unidirectional models to use both left and right context when learning token representations.",
+    "evidence": "The GPT model uses left-to-right text scans so that the representation of each token can only take into account previous but not subsequent tokens.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "bert_review_q002",
+    "question": "What are the two stages of BERT training?",
+    "ground_truth": "BERT training consists of pre-training on unlabeled data followed by task-specific fine-tuning on labeled data.",
+    "evidence": "The BERT model training process includes two stages: pre-training on unlabeled data and additional training on labeled data for a specific application problem.",
+    "difficulty": "easy",
+    "category": "training"
+  },
+  {
+    "id": "bert_review_q003",
+    "question": "How many parameters are used in BERT Base and BERT Large?",
+    "ground_truth": "BERT Base contains about 110 million parameters while BERT Large contains about 340 million parameters.",
+    "evidence": "The authors trained two versions: a standard one with 110 million trained parameters and a large one with 340 million parameters.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "bert_review_q004",
+    "question": "Why is intra-domain pretraining generally more effective than cross-domain pretraining?",
+    "ground_truth": "Because the target domain data distribution is more similar to the downstream task, allowing the model to learn domain-specific patterns.",
+    "evidence": "Studies show intra-subject learning is generally more effective than intra-task learning, while cross-subject learning does not significantly improve performance.",
+    "difficulty": "medium",
+    "category": "fine_tuning"
+  },
+  {
+    "id": "bert_review_q005",
+    "question": "What is catastrophic forgetting and how can it be mitigated when fine-tuning BERT?",
+    "ground_truth": "Catastrophic forgetting occurs when knowledge learned during pretraining is overwritten during fine-tuning; using lower learning rates helps mitigate it.",
+    "evidence": "The problem of catastrophic forgetting arises during additional training and can be overcome using low learning rates.",
+    "difficulty": "medium",
+    "category": "fine_tuning"
+  },
+  {
+    "id": "bert_review_q006",
+    "question": "Why do contextual embeddings handle ambiguous words better than traditional embeddings?",
+    "ground_truth": "Because contextual embeddings generate different representations depending on surrounding context rather than using one fixed vector per word.",
+    "evidence": "Traditional embeddings use fixed representations, whereas contextual models produce different representations depending on context.",
+    "difficulty": "medium",
+    "category": "embeddings"
+  },
+  {
+    "id": "bert_review_q007",
+    "question": "What problem was BERTScore designed to solve?",
+    "ground_truth": "BERTScore was designed to better evaluate generated text by measuring semantic similarity rather than relying only on surface-level lexical overlap.",
+    "evidence": "BLEU focuses on superficial similarity. BERTScore correlates better with human judgments by using contextual embeddings.",
+    "difficulty": "medium",
+    "category": "evaluation"
+  },
+  {
+    "id": "bert_review_q008",
+    "question": "How does BERTScore compute similarity between candidate and reference texts?",
+    "ground_truth": "It computes cosine similarity between contextual embeddings of words and aggregates the best matching pairs.",
+    "evidence": "At the heart of BERTScore is a simple algorithm for calculating cosine distance between vectorized representations of words.",
+    "difficulty": "medium",
+    "category": "evaluation"
+  },
+  {
+    "id": "bert_review_q009",
+    "question": "What conditions must a valid adversarial text example satisfy?",
+    "ground_truth": "It must preserve human interpretation, maintain semantic similarity, and remain linguistically correct.",
+    "evidence": "Adversarial examples must satisfy consistency of human interpretation, semantic similarity, and linguistic correctness.",
+    "difficulty": "medium",
+    "category": "adversarial_nlp"
+  },
+  {
+    "id": "bert_review_q010",
+    "question": "What is the purpose of Translation Language Modeling (TLM) in multilingual learning?",
+    "ground_truth": "TLM aligns representations across languages by predicting masked words using information from parallel translated sentences.",
+    "evidence": "Two parallel sentences are submitted as input and the model can use either sentence to predict masked words.",
+    "difficulty": "medium",
+    "category": "multilingual"
+  },
+  {
+    "id": "bert_review_q011",
+    "question": "Why was BioBERT developed instead of using the original BERT model?",
+    "ground_truth": "Because general-purpose BERT may perform suboptimally on biomedical text due to lack of domain-specific training.",
+    "evidence": "General models may show sub-optimal efficiency due to a lack of specific training.",
+    "difficulty": "hard",
+    "category": "domain_specific_models"
+  },
+  {
+    "id": "bert_review_q012",
+    "question": "Why does SciBERT use a specialized vocabulary?",
+    "ground_truth": "Because scientific texts have a significantly different token distribution from general-purpose corpora.",
+    "evidence": "The intersection between general-purpose and scientific vocabularies was only 42 percent.",
+    "difficulty": "hard",
+    "category": "domain_specific_models"
+  },
+  {
+    "id": "bert_review_q013",
+    "question": "What evidence led researchers to conclude that the original BERT model was undertrained?",
+    "ground_truth": "Training on larger corpora consistently improved performance on GLUE, SQuAD, and RACE benchmarks.",
+    "evidence": "The resulting model improved performance on all benchmarks, allowing researchers to conclude BERT was undertrained.",
+    "difficulty": "hard",
+    "category": "robustness"
+  },
+  {
+    "id": "bert_review_q014",
+    "question": "How do BioBERT and SciBERT demonstrate the value of domain-specific pretraining?",
+    "ground_truth": "Both models outperform general BERT on specialized tasks because they are pretrained on domain-specific corpora and capture domain-specific terminology.",
+    "evidence": [
+      "BioBERT outperformed conventional BERT on biomedical tasks.",
+      "SciBERT outperformed general BERT on scientific NLP datasets."
+    ],
+    "difficulty": "multi_hop",
+    "category": "reasoning"
+  },
+  {
+    "id": "bert_review_q015",
+    "question": "How do masked language modeling and contextual embeddings together contribute to BERT's success across NLP tasks?",
+    "ground_truth": "Masked language modeling enables bidirectional contextual learning, while contextual embeddings provide context-sensitive representations that improve performance across diverse NLP tasks.",
+    "evidence": [
+      "BERT predicts masked words using surrounding context.",
+      "Contextual models generate representations that depend on context."
+    ],
+    "difficulty": "multi_hop",
+    "category": "reasoning"
+  },
+  {
+    "id": "distilbert_q016",
+    "question": "What problem motivated the development of DistilBERT?",
+    "ground_truth": "Large pretrained language models are computationally expensive, memory intensive, and difficult to deploy on edge devices or under constrained inference budgets.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "distilbert_q017",
+    "question": "What is the main goal of DistilBERT?",
+    "ground_truth": "To create a smaller and faster language model that preserves most of BERT's performance while reducing computational and memory requirements.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "distilbert_q018",
+    "question": "How much smaller is DistilBERT compared to BERT according to the paper?",
+    "ground_truth": "DistilBERT reduces model size by approximately 40 percent.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "distilbert_q019",
+    "question": "How much faster is DistilBERT than BERT during inference?",
+    "ground_truth": "DistilBERT is approximately 60 percent faster during inference.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "distilbert_q020",
+    "question": "What percentage of BERT's language understanding capability does DistilBERT retain?",
+    "ground_truth": "DistilBERT retains approximately 97 percent of BERT's language understanding performance.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "distilbert_q021",
+    "question": "What is knowledge distillation in the context of DistilBERT?",
+    "ground_truth": "Knowledge distillation is a compression technique where a smaller student model learns to reproduce the behavior of a larger teacher model.",
+    "difficulty": "medium",
+    "category": "distillation"
+  },
+  {
+    "id": "distilbert_q022",
+    "question": "What are the three components of the DistilBERT training objective?",
+    "ground_truth": "The training objective combines masked language modeling loss, distillation loss, and cosine embedding loss.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "distilbert_q023",
+    "question": "Why is a cosine embedding loss included in DistilBERT training?",
+    "ground_truth": "The cosine loss helps align the hidden-state representations of the student model with those of the teacher model.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "distilbert_q024",
+    "question": "Which architectural components of BERT were removed when constructing DistilBERT?",
+    "ground_truth": "DistilBERT removes token-type embeddings and the pooler while reducing the number of layers by half.",
+    "difficulty": "medium",
+    "category": "architecture"
+  },
+  {
+    "id": "distilbert_q025",
+    "question": "Why did the authors choose to reduce the number of layers rather than the hidden size?",
+    "ground_truth": "Reducing layers provides a greater computational efficiency gain because hidden-size reductions have less impact on speed in optimized transformer implementations.",
+    "difficulty": "medium",
+    "category": "architecture"
+  },
+  {
+    "id": "distilbert_q026",
+    "question": "How was the DistilBERT student model initialized from the teacher model?",
+    "ground_truth": "The student was initialized using every other layer from the teacher model.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "distilbert_q027",
+    "question": "Which BERT training practices were adopted when training DistilBERT?",
+    "ground_truth": "DistilBERT used dynamic masking, large batch training, and removed the next sentence prediction objective.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "distilbert_q028",
+    "question": "How did DistilBERT perform relative to BERT on the GLUE benchmark?",
+    "ground_truth": "DistilBERT retained about 97 percent of BERT's performance while using significantly fewer parameters.",
+    "difficulty": "hard",
+    "category": "evaluation"
+  },
+  {
+    "id": "distilbert_q029",
+    "question": "What did the ablation study reveal about the importance of the triple-loss objective?",
+    "ground_truth": "Removing any component reduced performance, and the distillation-related losses contributed more strongly than masked language modeling alone.",
+    "difficulty": "hard",
+    "category": "ablation"
+  },
+  {
+    "id": "distilbert_q030",
+    "question": "Why is DistilBERT particularly suitable for edge-device deployment compared to BERT?",
+    "ground_truth": "Because it significantly reduces model size and inference latency while preserving most of BERT's performance, making deployment on mobile and resource-constrained devices practical.",
+    "difficulty": "multi_hop",
+    "category": "reasoning"
+  },
+  {
+    "id": "review_bert_models_q031",
+    "question": "What was the primary objective of this systematic literature review?",
+    "ground_truth": "The study aimed to analyze BERT-based models and their variations for text classification, question answering, and text summarization tasks.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "review_bert_models_q032",
+    "question": "How many papers were initially collected during the literature search process?",
+    "ground_truth": "A total of 4,120 papers were initially collected.",
+    "difficulty": "easy",
+    "category": "methodology"
+  },
+  {
+    "id": "review_bert_models_q033",
+    "question": "How many papers were ultimately selected for detailed analysis in the review?",
+    "ground_truth": "Forty-one papers met all review criteria and were selected for analysis.",
+    "difficulty": "easy",
+    "category": "methodology"
+  },
+  {
+    "id": "review_bert_models_q034",
+    "question": "Which three NLP tasks were the primary focus of the review?",
+    "ground_truth": "Text classification, question answering, and text summarization.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "review_bert_models_q035",
+    "question": "Which systematic review framework was used in this study?",
+    "ground_truth": "The study followed the Kitchenham systematic literature review framework.",
+    "difficulty": "easy",
+    "category": "methodology"
+  },
+  {
+    "id": "review_bert_models_q036",
+    "question": "What three major concerns should be considered when selecting a BERT-based model for an NLP task?",
+    "ground_truth": "The NLP task type, the application domain, and the intended language.",
+    "difficulty": "medium",
+    "category": "model_selection"
+  },
+  {
+    "id": "review_bert_models_q037",
+    "question": "Why might a domain-specific BERT model outperform a general-purpose BERT model?",
+    "ground_truth": "Because it is trained or fine-tuned on domain-specific corpora and better captures domain-specific terminology and context.",
+    "difficulty": "medium",
+    "category": "domain_adaptation"
+  },
+  {
+    "id": "review_bert_models_q038",
+    "question": "Why are language-specific BERT variants often preferred over multilingual BERT for a single language?",
+    "ground_truth": "Because they are trained on language-specific corpora and better capture linguistic nuances and contextual patterns of that language.",
+    "difficulty": "medium",
+    "category": "multilingual_nlp"
+  },
+  {
+    "id": "review_bert_models_q039",
+    "question": "What role does learning rate play during BERT model training?",
+    "ground_truth": "The learning rate controls how much model weights are updated during training and affects convergence speed and model performance.",
+    "difficulty": "medium",
+    "category": "hyperparameters"
+  },
+  {
+    "id": "review_bert_models_q040",
+    "question": "According to the review, what learning rate range was most commonly used when training BERT-based models?",
+    "ground_truth": "Learning rates around 2e-5 to 3e-5 were most commonly used.",
+    "difficulty": "medium",
+    "category": "hyperparameters"
+  },
+  {
+    "id": "review_bert_models_q041",
+    "question": "Why is batch size considered an important hyperparameter in BERT training?",
+    "ground_truth": "Because it affects training speed, memory usage, generalization performance, and the likelihood of out-of-memory issues.",
+    "difficulty": "medium",
+    "category": "hyperparameters"
+  },
+  {
+    "id": "review_bert_models_q042",
+    "question": "Which optimizer was most frequently used across the reviewed studies?",
+    "ground_truth": "Adam was the most frequently used optimizer.",
+    "difficulty": "medium",
+    "category": "hyperparameters"
+  },
+  {
+    "id": "review_bert_models_q043",
+    "question": "Why is Adam generally preferred over SGD for BERT-based model training according to the reviewed literature?",
+    "ground_truth": "Because Adam provides adaptive optimization, faster convergence, and generally better performance across many NLP tasks.",
+    "difficulty": "hard",
+    "category": "optimization"
+  },
+  {
+    "id": "review_bert_models_q044",
+    "question": "Why should evaluation metrics be selected based on the NLP task and dataset characteristics?",
+    "ground_truth": "Because different tasks and dataset distributions require metrics that appropriately reflect model performance and avoid misleading conclusions.",
+    "difficulty": "hard",
+    "category": "evaluation"
+  },
+  {
+    "id": "review_bert_models_q045",
+    "question": "How do task requirements, domain specialization, language considerations, and hyperparameter choices collectively influence the selection of a BERT-based model?",
+    "ground_truth": "Effective model selection requires aligning the model with the target task, domain, language, and training configuration, since all of these factors jointly affect performance and suitability.",
+    "difficulty": "multi_hop",
+    "category": "reasoning"
+  },
+  {
+    "id": "roberta_q046",
+    "question": "What was the primary motivation behind the development of RoBERTa?",
+    "ground_truth": "The authors found that BERT was significantly undertrained and sought to improve its performance through better training procedures rather than architectural changes.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "roberta_q047",
+    "question": "What does the acronym RoBERTa stand for?",
+    "ground_truth": "RoBERTa stands for Robustly Optimized BERT Pretraining Approach.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "roberta_q048",
+    "question": "What key conclusion did the authors reach about the original BERT model?",
+    "ground_truth": "The authors concluded that BERT was significantly undertrained and could achieve much better performance with improved training strategies.",
+    "difficulty": "easy",
+    "category": "findings"
+  },
+  {
+    "id": "roberta_q049",
+    "question": "What four major modifications were introduced in RoBERTa compared to BERT?",
+    "ground_truth": "RoBERTa trains longer with larger batches and more data, removes next sentence prediction, uses longer sequences, and applies dynamic masking.",
+    "difficulty": "medium",
+    "category": "architecture"
+  },
+  {
+    "id": "roberta_q050",
+    "question": "Why did the authors remove the Next Sentence Prediction objective?",
+    "ground_truth": "Experiments showed that removing NSP did not hurt performance and often slightly improved downstream task results.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "roberta_q051",
+    "question": "What is dynamic masking and how does it differ from BERT's original masking strategy?",
+    "ground_truth": "Dynamic masking generates new masking patterns every time a sequence is processed, whereas BERT used largely fixed masking patterns generated during preprocessing.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "roberta_q052",
+    "question": "Why is dynamic masking particularly beneficial during large-scale pretraining?",
+    "ground_truth": "It exposes the model to more diverse masked token configurations, improving learning efficiency and reducing repetition.",
+    "difficulty": "medium",
+    "category": "reasoning"
+  },
+  {
+    "id": "roberta_q053",
+    "question": "What was the effect of increasing batch size during RoBERTa pretraining?",
+    "ground_truth": "Larger batch sizes improved masked language modeling perplexity and downstream task performance while enabling more efficient parallel training.",
+    "difficulty": "medium",
+    "category": "optimization"
+  },
+  {
+    "id": "roberta_q054",
+    "question": "What new dataset was introduced by the authors and why?",
+    "ground_truth": "The CC-NEWS dataset was introduced to increase pretraining data size and better study the effect of large-scale training data.",
+    "difficulty": "medium",
+    "category": "dataset"
+  },
+  {
+    "id": "roberta_q055",
+    "question": "Approximately how much text data was used in RoBERTa's largest pretraining setup?",
+    "ground_truth": "Approximately 160 GB of text collected from multiple corpora.",
+    "difficulty": "easy",
+    "category": "dataset"
+  },
+  {
+    "id": "roberta_q056",
+    "question": "Why did the authors argue that more pretraining data improves downstream performance?",
+    "ground_truth": "Larger and more diverse corpora expose the model to broader linguistic patterns, improving generalization and downstream task performance.",
+    "difficulty": "medium",
+    "category": "pretraining"
+  },
+  {
+    "id": "roberta_q057",
+    "question": "How did RoBERTa's training duration differ from the original BERT approach?",
+    "ground_truth": "RoBERTa was trained for substantially more updates and saw significantly more training examples than the original BERT.",
+    "difficulty": "medium",
+    "category": "pretraining"
+  },
+  {
+    "id": "roberta_q058",
+    "question": "What effect did longer pretraining have on RoBERTa's performance?",
+    "ground_truth": "Longer pretraining consistently improved downstream benchmark performance without showing clear signs of overfitting.",
+    "difficulty": "medium",
+    "category": "results"
+  },
+  {
+    "id": "roberta_q059",
+    "question": "How did RoBERTa perform relative to BERT and XLNet on major benchmarks?",
+    "ground_truth": "RoBERTa matched or exceeded BERT and achieved state-of-the-art performance competitive with or better than XLNet on GLUE, SQuAD, and RACE.",
+    "difficulty": "medium",
+    "category": "evaluation"
+  },
+  {
+    "id": "roberta_q060",
+    "question": "What evidence from the paper suggests that training strategy can be as important as architectural innovation?",
+    "ground_truth": "RoBERTa achieved major performance gains using essentially the same transformer architecture as BERT, demonstrating that better training procedures alone can produce state-of-the-art results.",
+    "difficulty": "hard",
+    "category": "insight"
+  },
+  {
+    "id": "roberta_q061",
+    "question": "Why does removing NSP, using dynamic masking, increasing training data, and extending training duration collectively improve RoBERTa's performance?",
+    "ground_truth": "These changes improve representation learning by exposing the model to more diverse contexts, reducing unnecessary objectives, increasing data coverage, and allowing more complete optimization during pretraining.",
+    "difficulty": "multi_hop",
+    "category": "reasoning"
+  },
+  {
+    "id": "roberta_q062",
+    "question": "What broader lesson about language model development can be drawn from the RoBERTa study?",
+    "ground_truth": "Reported improvements should not automatically be attributed to new architectures because optimization choices, training duration, data scale, and preprocessing decisions can substantially influence model performance.",
+    "difficulty": "multi_hop",
+    "category": "research_insight"
+  },
+  {
+    "id": "language_specific_bert_q063",
+    "question": "What is the primary goal of this survey paper?",
+    "ground_truth": "The paper aims to analyze language-specific BERT models, compare them with multilingual BERT, and provide an overview of their architectures, domains, tasks, and performance.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "language_specific_bert_q064",
+    "question": "What is multilingual BERT (mBERT)?",
+    "ground_truth": "mBERT is a multilingual version of BERT pretrained on data from 104 languages that supports cross-lingual transfer and zero-shot learning.",
+    "difficulty": "easy",
+    "category": "mbert"
+  },
+  {
+    "id": "language_specific_bert_q065",
+    "question": "Why were language-specific BERT models developed despite the existence of mBERT?",
+    "ground_truth": "Because multilingual models may overlook language-specific linguistic characteristics, and specialized models often achieve better performance for individual languages.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "language_specific_bert_q066",
+    "question": "How many language-specific BERT models were identified in the survey?",
+    "ground_truth": "The survey identified 30 language-specific BERT models.",
+    "difficulty": "easy",
+    "category": "statistics"
+  },
+  {
+    "id": "language_specific_bert_q067",
+    "question": "How many languages were covered by the collected language-specific BERT models?",
+    "ground_truth": "The survey covered 18 languages.",
+    "difficulty": "easy",
+    "category": "statistics"
+  },
+  {
+    "id": "language_specific_bert_q068",
+    "question": "What is BertLang?",
+    "ground_truth": "BertLang is an interactive website that catalogs language-specific BERT models, their tasks, domains, evaluation metrics, and performance results.",
+    "difficulty": "easy",
+    "category": "resource"
+  },
+  {
+    "id": "language_specific_bert_q069",
+    "question": "What advantage does mBERT provide for cross-lingual NLP tasks?",
+    "ground_truth": "mBERT enables zero-shot transfer, allowing models trained in one language to be applied to another language without task-specific retraining.",
+    "difficulty": "medium",
+    "category": "cross_lingual_learning"
+  },
+  {
+    "id": "language_specific_bert_q070",
+    "question": "According to the survey, how do language-specific BERT models generally perform compared to mBERT?",
+    "ground_truth": "Language-specific BERT models generally achieve higher performance than mBERT on tasks in their target language.",
+    "difficulty": "medium",
+    "category": "comparison"
+  },
+  {
+    "id": "language_specific_bert_q071",
+    "question": "Which NLP task appeared most frequently among the surveyed language-specific BERT evaluations?",
+    "ground_truth": "Named Entity Recognition (NER) was the most frequently evaluated task.",
+    "difficulty": "medium",
+    "category": "tasks"
+  },
+  {
+    "id": "language_specific_bert_q072",
+    "question": "Which task showed the largest average improvement of language-specific BERT models over mBERT?",
+    "ground_truth": "Sentiment analysis showed the largest average improvement over mBERT.",
+    "difficulty": "medium",
+    "category": "performance"
+  },
+  {
+    "id": "language_specific_bert_q073",
+    "question": "Why do low-resource languages often benefit more from language-specific BERT models than high-resource languages?",
+    "ground_truth": "Because developers can incorporate additional language-specific resources and data sources not fully represented in mBERT's multilingual pretraining corpus.",
+    "difficulty": "medium",
+    "category": "low_resource_languages"
+  },
+  {
+    "id": "language_specific_bert_q074",
+    "question": "How can low-resource languages overcome the challenge of insufficient pretraining data?",
+    "ground_truth": "By fine-tuning multilingual BERT rather than training a new model entirely from scratch.",
+    "difficulty": "medium",
+    "category": "transfer_learning"
+  },
+  {
+    "id": "language_specific_bert_q075",
+    "question": "Which architectures besides standard BERT were commonly adopted in language-specific models?",
+    "ground_truth": "ALBERT and RoBERTa were frequently adopted as base architectures for language-specific models.",
+    "difficulty": "medium",
+    "category": "architectures"
+  },
+  {
+    "id": "language_specific_bert_q076",
+    "question": "What are the three primary data sources commonly used for pretraining language-specific BERT models?",
+    "ground_truth": "Wikipedia, OPUS corpora, and OSCAR corpora.",
+    "difficulty": "medium",
+    "category": "datasets"
+  },
+  {
+    "id": "language_specific_bert_q077",
+    "question": "Why is Wikipedia frequently used for multilingual and language-specific BERT pretraining?",
+    "ground_truth": "Because it provides large-scale multilingual text resources across hundreds of languages.",
+    "difficulty": "medium",
+    "category": "datasets"
+  },
+  {
+    "id": "language_specific_bert_q078",
+    "question": "What challenge does the growing number of language-specific BERT models create for NLP practitioners?",
+    "ground_truth": "It becomes difficult to identify which model is most appropriate for a specific language, task, and domain due to differences in architectures, datasets, and evaluation settings.",
+    "difficulty": "hard",
+    "category": "model_selection"
+  },
+  {
+    "id": "language_specific_bert_q079",
+    "question": "Why might language-specific BERT models outperform mBERT despite mBERT being trained on over 100 languages?",
+    "ground_truth": "Language-specific models focus their capacity on a single language, allowing them to capture language-specific linguistic patterns, vocabulary, and domain characteristics more effectively.",
+    "difficulty": "hard",
+    "category": "reasoning"
+  },
+  {
+    "id": "language_specific_bert_q080",
+    "question": "How do task requirements, language resources, domain data, and computational cost collectively influence the decision between using mBERT and a language-specific BERT model?",
+    "ground_truth": "mBERT is advantageous for multilingual and low-resource scenarios, while language-specific models often provide better performance when sufficient data and computational resources are available for a particular language and task.",
+    "difficulty": "multi_hop",
+    "category": "reasoning"
+  }
+]

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "rag_q001",
+    "question": "What is the primary goal of the paper 'Searching for Best Practices in Retrieval-Augmented Generation'?",
+    "ground_truth": "The paper aims to identify optimal practices and module combinations for implementing retrieval-augmented generation systems through extensive experimentation.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "rag_q002",
+    "question": "Why are Retrieval-Augmented Generation (RAG) systems useful for large language models?",
+    "ground_truth": "RAG systems provide up-to-date external knowledge, reduce hallucinations, and improve response quality without modifying model parameters.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "rag_q003",
+    "question": "What are the major modules included in a typical RAG workflow according to the paper?",
+    "ground_truth": "Query classification, retrieval, reranking, repacking, summarization, chunking, embedding, vector database management, and generator fine-tuning.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q004",
+    "question": "Why is query classification introduced in the RAG workflow?",
+    "ground_truth": "Query classification determines whether retrieval is necessary, reducing unnecessary retrieval operations and improving efficiency.",
+    "difficulty": "easy",
+    "category": "query_classification"
+  },
+  {
+    "id": "rag_q005",
+    "question": "How many samples were used to train the query classification dataset?",
+    "ground_truth": "111,000 samples.",
+    "difficulty": "easy",
+    "category": "dataset"
+  },
+  {
+    "id": "rag_q006",
+    "question": "How many task types were used when constructing the query classification dataset?",
+    "ground_truth": "15 task types.",
+    "difficulty": "easy",
+    "category": "dataset"
+  },
+  {
+    "id": "rag_q007",
+    "question": "Which chunking strategy was selected as the default approach in the paper?",
+    "ground_truth": "Sentence-level chunking.",
+    "difficulty": "easy",
+    "category": "chunking"
+  },
+  {
+    "id": "rag_q008",
+    "question": "What chunk size achieved the highest faithfulness score in the chunking experiments?",
+    "ground_truth": "A chunk size of 512 tokens.",
+    "difficulty": "medium",
+    "category": "chunking"
+  },
+  {
+    "id": "rag_q009",
+    "question": "Which embedding model was ultimately selected for building the vector database?",
+    "ground_truth": "LLM-Embedder.",
+    "difficulty": "easy",
+    "category": "embedding"
+  },
+  {
+    "id": "rag_q010",
+    "question": "Which vector database was recommended by the authors?",
+    "ground_truth": "Milvus.",
+    "difficulty": "easy",
+    "category": "vector_database"
+  },
+  {
+    "id": "rag_q011",
+    "question": "What retrieval approach achieved the highest retrieval performance in the experiments?",
+    "ground_truth": "Hybrid Search combined with HyDE.",
+    "difficulty": "easy",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q012",
+    "question": "What does HyDE stand for in retrieval augmentation?",
+    "ground_truth": "Hypothetical Document Embeddings, where hypothetical answers are generated and used for retrieval.",
+    "difficulty": "medium",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q013",
+    "question": "Which reranking model was recommended as the best balance between performance and efficiency?",
+    "ground_truth": "monoT5.",
+    "difficulty": "easy",
+    "category": "reranking"
+  },
+  {
+    "id": "rag_q014",
+    "question": "Which reranking method was identified as the fastest option?",
+    "ground_truth": "TILDEv2.",
+    "difficulty": "easy",
+    "category": "reranking"
+  },
+  {
+    "id": "rag_q015",
+    "question": "Which document repacking strategy achieved the highest RAG score?",
+    "ground_truth": "Reverse repacking.",
+    "difficulty": "easy",
+    "category": "repacking"
+  },
+  {
+    "id": "rag_q016",
+    "question": "Which summarization method was recommended by the authors?",
+    "ground_truth": "Recomp.",
+    "difficulty": "easy",
+    "category": "summarization"
+  },
+  {
+    "id": "rag_q017",
+    "question": "What generator fine-tuning strategy produced the most robust performance?",
+    "ground_truth": "Training with a mixture of relevant documents and randomly selected documents.",
+    "difficulty": "medium",
+    "category": "fine_tuning"
+  },
+  {
+    "id": "rag_q018",
+    "question": "What were the two RAG deployment recipes proposed by the authors?",
+    "ground_truth": "A best-performance practice and a balanced-efficiency practice.",
+    "difficulty": "easy",
+    "category": "best_practices"
+  },
+  {
+    "id": "rag_q019",
+    "question": "What retrieval method is recommended in the balanced-efficiency practice?",
+    "ground_truth": "Hybrid Search without HyDE.",
+    "difficulty": "medium",
+    "category": "best_practices"
+  },
+  {
+    "id": "rag_q020",
+    "question": "What multimodal capability did the paper demonstrate beyond text-based RAG?",
+    "ground_truth": "Text-to-image and image-to-text retrieval using a retrieval-as-generation strategy.",
+    "difficulty": "medium",
+    "category": "multimodal_rag"
+  },
+  {
+    "id": "rag_q021",
+    "question": "What is the main objective of the CoRAG framework?",
+    "ground_truth": "To train language models to iteratively retrieve and reason over information through multiple retrieval steps before generating a final answer.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "rag_q022",
+    "question": "What limitation of conventional RAG systems motivates the development of CoRAG?",
+    "ground_truth": "Conventional RAG systems typically perform only a single retrieval step before generation, which limits effectiveness on complex and multi-hop queries.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "rag_q023",
+    "question": "What does CoRAG stand for?",
+    "ground_truth": "Chain-of-Retrieval Augmented Generation.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "rag_q024",
+    "question": "How does CoRAG improve retrieval quality during reasoning?",
+    "ground_truth": "It dynamically reformulates queries and retrieves information step-by-step based on the evolving reasoning state.",
+    "difficulty": "easy",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q025",
+    "question": "What technique is used to generate intermediate retrieval chains for training?",
+    "ground_truth": "Rejection sampling.",
+    "difficulty": "easy",
+    "category": "training"
+  },
+  {
+    "id": "rag_q026",
+    "question": "What components make up a retrieval chain in CoRAG?",
+    "ground_truth": "A sequence of sub-queries and their corresponding sub-answers.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q027",
+    "question": "How is the best retrieval chain selected during rejection sampling?",
+    "ground_truth": "The chain with the highest log-likelihood of producing the correct final answer is selected.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "rag_q028",
+    "question": "What three tasks are jointly optimized during CoRAG training?",
+    "ground_truth": "Sub-query prediction, sub-answer prediction, and final answer prediction.",
+    "difficulty": "easy",
+    "category": "training"
+  },
+  {
+    "id": "rag_q029",
+    "question": "Which decoding strategy generates retrieval chains sequentially without sampling alternatives?",
+    "ground_truth": "Greedy decoding.",
+    "difficulty": "easy",
+    "category": "inference"
+  },
+  {
+    "id": "rag_q030",
+    "question": "What is the main idea behind Best-of-N sampling in CoRAG?",
+    "ground_truth": "Multiple retrieval chains are sampled and the most promising chain is selected before generating the final answer.",
+    "difficulty": "easy",
+    "category": "inference"
+  },
+  {
+    "id": "rag_q031",
+    "question": "Which search strategy is used in CoRAG's tree search decoding method?",
+    "ground_truth": "Breadth-first search with retrieval chain rollouts.",
+    "difficulty": "medium",
+    "category": "inference"
+  },
+  {
+    "id": "rag_q032",
+    "question": "What metric is used to measure test-time compute in CoRAG?",
+    "ground_truth": "The total number of consumed tokens, including both prompt and generated tokens.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q033",
+    "question": "Which retriever was used for intermediate retrieval during training data generation?",
+    "ground_truth": "E5-large.",
+    "difficulty": "easy",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q034",
+    "question": "Which benchmark did CoRAG achieve state-of-the-art performance on across most tasks?",
+    "ground_truth": "The KILT benchmark.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "rag_q035",
+    "question": "On which type of question answering tasks does CoRAG show the largest gains?",
+    "ground_truth": "Multi-hop question answering tasks.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "rag_q036",
+    "question": "How much improvement did CoRAG achieve over strong baselines on multi-hop QA tasks according to the abstract?",
+    "ground_truth": "More than 10 points improvement in Exact Match (EM) score.",
+    "difficulty": "medium",
+    "category": "results"
+  },
+  {
+    "id": "rag_q037",
+    "question": "What relationship was observed between token consumption and performance when scaling test-time compute?",
+    "ground_truth": "The Pareto frontier approximately follows a log-linear relationship between token consumption and performance.",
+    "difficulty": "medium",
+    "category": "scaling_laws"
+  },
+  {
+    "id": "rag_q038",
+    "question": "Why does Chain-of-Retrieval provide limited gains on datasets such as Natural Questions and TriviaQA?",
+    "ground_truth": "Because these datasets are mostly single-hop tasks where one retrieval step is usually sufficient.",
+    "difficulty": "medium",
+    "category": "analysis"
+  },
+  {
+    "id": "rag_q039",
+    "question": "How does CoRAG affect retrieval recall compared to standard dense retrieval?",
+    "ground_truth": "It consistently improves Recall@10, Recall@20, and Recall@100 across all evaluated multi-hop QA datasets.",
+    "difficulty": "medium",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q040",
+    "question": "What is one key limitation acknowledged by the authors?",
+    "ground_truth": "The study mainly focuses on tasks with short, easy-to-verify answers and does not extensively evaluate long-form generation tasks.",
+    "difficulty": "easy",
+    "category": "limitations"
+  },
+  {
+    "id": "rag_q041",
+    "question": "What problem does GraphRAG aim to solve that conventional vector RAG struggles with?",
+    "ground_truth": "GraphRAG addresses global sensemaking and corpus-level question answering that require understanding the entire dataset rather than retrieving a few relevant documents.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "rag_q042",
+    "question": "What does QFS stand for in the context of GraphRAG?",
+    "ground_truth": "Query-Focused Summarization.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "rag_q043",
+    "question": "What is the core idea behind GraphRAG?",
+    "ground_truth": "To construct a knowledge graph from documents, detect communities of related entities, generate community summaries, and use those summaries to answer global questions.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "rag_q044",
+    "question": "What are the two major indexing stages in GraphRAG?",
+    "ground_truth": "Building an entity knowledge graph and generating summaries for graph communities.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q045",
+    "question": "What type of graph is constructed during GraphRAG indexing?",
+    "ground_truth": "An entity knowledge graph where nodes represent entities and edges represent relationships between entities.",
+    "difficulty": "easy",
+    "category": "knowledge_graph"
+  },
+  {
+    "id": "rag_q046",
+    "question": "How does GraphRAG generate a final answer to a user query?",
+    "ground_truth": "It generates partial answers from community summaries and then combines them through a reduce step into a final global answer.",
+    "difficulty": "easy",
+    "category": "inference"
+  },
+  {
+    "id": "rag_q047",
+    "question": "What community detection algorithm is used in GraphRAG?",
+    "ground_truth": "The Leiden community detection algorithm.",
+    "difficulty": "easy",
+    "category": "graph_processing"
+  },
+  {
+    "id": "rag_q048",
+    "question": "What is the purpose of community summaries in GraphRAG?",
+    "ground_truth": "They provide compressed representations of graph communities that enable scalable global reasoning and summarization.",
+    "difficulty": "easy",
+    "category": "summarization"
+  },
+  {
+    "id": "rag_q049",
+    "question": "How are higher-level community summaries generated?",
+    "ground_truth": "By recursively combining and summarizing lower-level community summaries within the hierarchical community structure.",
+    "difficulty": "medium",
+    "category": "summarization"
+  },
+  {
+    "id": "rag_q050",
+    "question": "What are the three main graph elements extracted from text during indexing?",
+    "ground_truth": "Entities, relationships, and claims.",
+    "difficulty": "easy",
+    "category": "knowledge_graph"
+  },
+  {
+    "id": "rag_q051",
+    "question": "What is a claim in the GraphRAG framework?",
+    "ground_truth": "A factual statement about an entity such as an event, date, action, or interaction that can be verified.",
+    "difficulty": "easy",
+    "category": "knowledge_graph"
+  },
+  {
+    "id": "rag_q052",
+    "question": "Why does GraphRAG use hierarchical community detection?",
+    "ground_truth": "To enable divide-and-conquer summarization and reasoning at multiple levels of granularity.",
+    "difficulty": "medium",
+    "category": "graph_processing"
+  },
+  {
+    "id": "rag_q053",
+    "question": "What evaluation method was used when no gold-standard answers were available?",
+    "ground_truth": "An LLM-as-a-judge evaluation framework using pairwise answer comparisons.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q054",
+    "question": "Which four evaluation criteria were used in the paper?",
+    "ground_truth": "Comprehensiveness, Diversity, Empowerment, and Directness.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q055",
+    "question": "What does the comprehensiveness metric measure?",
+    "ground_truth": "How thoroughly an answer covers all aspects and details relevant to a question.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q056",
+    "question": "What does the diversity metric measure?",
+    "ground_truth": "How varied and rich the answer is in presenting multiple perspectives, insights, or themes.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q057",
+    "question": "What does the directness metric evaluate?",
+    "ground_truth": "How specifically and concisely an answer addresses the user's question.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q058",
+    "question": "How did GraphRAG perform compared to vector RAG on comprehensiveness and diversity?",
+    "ground_truth": "GraphRAG substantially outperformed vector RAG on both comprehensiveness and diversity across evaluated datasets.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "rag_q059",
+    "question": "What trade-off was observed between GraphRAG and vector RAG regarding directness?",
+    "ground_truth": "Vector RAG generally produced more direct and concise answers, while GraphRAG produced more comprehensive and diverse answers.",
+    "difficulty": "medium",
+    "category": "analysis"
+  },
+  {
+    "id": "rag_q060",
+    "question": "What is one major advantage of root-level community summaries (C0)?",
+    "ground_truth": "They provide strong global reasoning performance while requiring dramatically fewer tokens than source-text summarization approaches.",
+    "difficulty": "medium",
+    "category": "efficiency"
+  },
+  {
+    "id": "rag_q061",
+    "question": "What is the primary goal of LightRAG?",
+    "ground_truth": "To improve retrieval-augmented generation through graph-enhanced indexing, dual-level retrieval, and efficient incremental updates.",
+    "difficulty": "easy",
+    "category": "overview"
+  },
+  {
+    "id": "rag_q062",
+    "question": "What major limitation of traditional RAG systems motivated the development of LightRAG?",
+    "ground_truth": "Traditional RAG systems rely on flat data representations and often fail to capture complex relationships between entities.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "rag_q063",
+    "question": "What are the three key challenges that LightRAG aims to address?",
+    "ground_truth": "Comprehensive information retrieval, enhanced retrieval efficiency, and rapid adaptation to new data.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "rag_q064",
+    "question": "What is the central data structure used by LightRAG?",
+    "ground_truth": "A knowledge graph consisting of entities as nodes and relationships as edges.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q065",
+    "question": "What are the three main stages of LightRAG's graph-based text indexing process?",
+    "ground_truth": "Entity and relationship extraction, LLM profiling for key-value generation, and deduplication.",
+    "difficulty": "easy",
+    "category": "indexing"
+  },
+  {
+    "id": "rag_q066",
+    "question": "Why does LightRAG split documents into smaller chunks during indexing?",
+    "ground_truth": "To enable efficient extraction of entities and relationships and facilitate accurate retrieval.",
+    "difficulty": "easy",
+    "category": "indexing"
+  },
+  {
+    "id": "rag_q067",
+    "question": "What is the purpose of the LLM profiling function in LightRAG?",
+    "ground_truth": "To generate key-value pairs that summarize entities and relationships for efficient retrieval.",
+    "difficulty": "medium",
+    "category": "indexing"
+  },
+  {
+    "id": "rag_q068",
+    "question": "What role does deduplication play in LightRAG?",
+    "ground_truth": "It merges duplicate entities and relationships to reduce graph size and improve efficiency.",
+    "difficulty": "easy",
+    "category": "indexing"
+  },
+  {
+    "id": "rag_q069",
+    "question": "What are the two retrieval levels in LightRAG?",
+    "ground_truth": "Low-level retrieval and high-level retrieval.",
+    "difficulty": "easy",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q070",
+    "question": "What is the focus of low-level retrieval in LightRAG?",
+    "ground_truth": "Retrieving specific entities, attributes, and relationships relevant to detail-oriented queries.",
+    "difficulty": "easy",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q071",
+    "question": "What is the focus of high-level retrieval in LightRAG?",
+    "ground_truth": "Retrieving broader topics, themes, and aggregated information across multiple entities.",
+    "difficulty": "easy",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q072",
+    "question": "How does LightRAG classify query keywords during retrieval?",
+    "ground_truth": "Into low-level keywords representing specific entities and high-level keywords representing broader concepts.",
+    "difficulty": "medium",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q073",
+    "question": "How are graph structures and vector representations combined in LightRAG?",
+    "ground_truth": "Vector search retrieves candidate entities and relations, while graph structures provide contextual relationships and neighboring information.",
+    "difficulty": "medium",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q074",
+    "question": "What is meant by incorporating high-order relatedness in LightRAG?",
+    "ground_truth": "Retrieving neighboring nodes and graph context around matched entities and relations to enrich retrieved information.",
+    "difficulty": "medium",
+    "category": "graph_reasoning"
+  },
+  {
+    "id": "rag_q075",
+    "question": "How does LightRAG handle incremental knowledge base updates?",
+    "ground_truth": "New documents are indexed and merged into the existing graph without rebuilding the entire knowledge graph.",
+    "difficulty": "easy",
+    "category": "incremental_updates"
+  },
+  {
+    "id": "rag_q076",
+    "question": "Why is LightRAG more efficient than GraphRAG for incremental updates?",
+    "ground_truth": "Because it integrates new entities and relationships directly into the existing graph rather than regenerating community structures.",
+    "difficulty": "medium",
+    "category": "incremental_updates"
+  },
+  {
+    "id": "rag_q077",
+    "question": "What four evaluation dimensions were used to compare LightRAG with baselines?",
+    "ground_truth": "Comprehensiveness, Diversity, Empowerment, and Overall performance.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q078",
+    "question": "Which baseline methods were compared against LightRAG?",
+    "ground_truth": "NaiveRAG, RQ-RAG, HyDE, and GraphRAG.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q079",
+    "question": "How did LightRAG perform compared to GraphRAG on large datasets?",
+    "ground_truth": "LightRAG generally outperformed GraphRAG, especially in comprehensiveness, diversity, and handling complex large-scale corpora.",
+    "difficulty": "medium",
+    "category": "results"
+  },
+  {
+    "id": "rag_q080",
+    "question": "What key advantage does the hybrid dual-level retrieval strategy provide?",
+    "ground_truth": "It combines the breadth of high-level retrieval with the depth of low-level retrieval, producing balanced and comprehensive answers.",
+    "difficulty": "medium",
+    "category": "analysis"
+  },
+  {
+    "id": "rag_q081",
+    "question": "What problem does Retrieval-Augmented Generation (RAG) aim to solve?",
+    "ground_truth": "RAG aims to improve knowledge-intensive NLP tasks by combining parametric memory in language models with non-parametric external knowledge retrieval.",
+    "difficulty": "easy",
+    "category": "motivation"
+  },
+  {
+    "id": "rag_q082",
+    "question": "What are the two memory components used in RAG?",
+    "ground_truth": "A parametric memory implemented by a seq2seq model and a non-parametric memory implemented by a dense document index.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q083",
+    "question": "Which model is used as the retriever in the original RAG architecture?",
+    "ground_truth": "Dense Passage Retriever (DPR).",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q084",
+    "question": "Which model serves as the generator in the original RAG framework?",
+    "ground_truth": "BART-large.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q085",
+    "question": "What knowledge source is used as the non-parametric memory in RAG?",
+    "ground_truth": "A dense vector index built from Wikipedia passages.",
+    "difficulty": "easy",
+    "category": "knowledge_base"
+  },
+  {
+    "id": "rag_q086",
+    "question": "How does RAG retrieve relevant documents?",
+    "ground_truth": "It uses DPR embeddings and Maximum Inner Product Search (MIPS) to retrieve the top-K relevant documents.",
+    "difficulty": "medium",
+    "category": "retrieval"
+  },
+  {
+    "id": "rag_q087",
+    "question": "What is treated as a latent variable during RAG training?",
+    "ground_truth": "The retrieved document.",
+    "difficulty": "easy",
+    "category": "training"
+  },
+  {
+    "id": "rag_q088",
+    "question": "What is the key difference between RAG-Sequence and RAG-Token?",
+    "ground_truth": "RAG-Sequence uses the same retrieved document for the entire generated sequence, while RAG-Token can use different retrieved documents for different generated tokens.",
+    "difficulty": "easy",
+    "category": "architecture"
+  },
+  {
+    "id": "rag_q089",
+    "question": "How does RAG-Sequence compute output probabilities?",
+    "ground_truth": "By marginalizing sequence probabilities over the top-K retrieved documents.",
+    "difficulty": "medium",
+    "category": "rag_sequence"
+  },
+  {
+    "id": "rag_q090",
+    "question": "How does RAG-Token differ in probability computation?",
+    "ground_truth": "It marginalizes retrieval probabilities at every token generation step.",
+    "difficulty": "medium",
+    "category": "rag_token"
+  },
+  {
+    "id": "rag_q091",
+    "question": "Why is RAG considered end-to-end trainable?",
+    "ground_truth": "Because the retriever query encoder and generator are jointly optimized using task loss.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "rag_q092",
+    "question": "Which retriever component remains fixed during fine-tuning?",
+    "ground_truth": "The document encoder and document index remain fixed.",
+    "difficulty": "medium",
+    "category": "training"
+  },
+  {
+    "id": "rag_q093",
+    "question": "What dataset dump of Wikipedia was used in the experiments?",
+    "ground_truth": "The December 2018 Wikipedia dump.",
+    "difficulty": "easy",
+    "category": "experimental_setup"
+  },
+  {
+    "id": "rag_q094",
+    "question": "Into what size chunks were Wikipedia articles split?",
+    "ground_truth": "Disjoint 100-word chunks.",
+    "difficulty": "easy",
+    "category": "indexing"
+  },
+  {
+    "id": "rag_q095",
+    "question": "Approximately how many documents were stored in the retrieval index?",
+    "ground_truth": "About 21 million documents.",
+    "difficulty": "easy",
+    "category": "indexing"
+  },
+  {
+    "id": "rag_q096",
+    "question": "Which open-domain QA benchmarks were used to evaluate RAG?",
+    "ground_truth": "Natural Questions, TriviaQA, WebQuestions, and CuratedTrec.",
+    "difficulty": "easy",
+    "category": "evaluation"
+  },
+  {
+    "id": "rag_q097",
+    "question": "What major result did RAG achieve on open-domain QA tasks?",
+    "ground_truth": "It achieved state-of-the-art performance on Natural Questions, WebQuestions, and CuratedTrec.",
+    "difficulty": "easy",
+    "category": "results"
+  },
+  {
+    "id": "rag_q098",
+    "question": "How did RAG compare with extractive retrieval-based QA systems such as DPR?",
+    "ground_truth": "RAG outperformed DPR despite not requiring a separate reranker or extractive reader.",
+    "difficulty": "medium",
+    "category": "results"
+  },
+  {
+    "id": "rag_q099",
+    "question": "What advantage does generation provide over extractive QA in RAG?",
+    "ground_truth": "RAG can generate correct answers even when the exact answer is not explicitly present in retrieved documents.",
+    "difficulty": "medium",
+    "category": "analysis"
+  },
+  {
+    "id": "rag_q100",
+    "question": "What important capability does index hot-swapping demonstrate?",
+    "ground_truth": "RAG's world knowledge can be updated by replacing the retrieval index without retraining the model.",
+    "difficulty": "medium",
+    "category": "knowledge_updates"
+  }
+]
