@@ -1,0 +1,4671 @@
+[
+  {
+    "type": "UncategorizedText",
+    "element_id": "b483a6ff53001a850796fda8466bf8d6",
+    "text": "JURNAL INFOTEL",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "61b36609082b03d542acdbe81a983465",
+    "text": "VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "a053025a387e117ebddef3fef8730874",
+    "text": "< YU H & 36 &7",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "70724e646b561b9e496e33e1202be63b",
+    "text": "DOI:10.20895/INFOTEL.V1613.1206",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "be687514562cc4d825521d1c08b3f24b",
+    "text": "RESEARCH ARTICLE",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "dfca41d4360c9bcee2fd4801f86c1bdb",
+    "text": "A Systematic Literature Review of BERT-based Models for Natural Language Processing Tasks",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fa3bdd3f7e713fe98e062659c49bc868",
+    "text": "Agung Fatwanto1,*, Fardan Zamakhsyari2, Rebbecah Ndungi3, and Norma Latif Fitriyani4",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dfca41d4360c9bcee2fd4801f86c1bdb"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8420159d0c84c16be10aa96d05a208d4",
+    "text": "1,2Informatics Department, UIN Sunan Kalijaga Yogyakarta, Sleman 55281, Indonesia 3Faculty of Mathematics and Computer Science, St.Petersburg State University, St.Petersburg, Russia 4Department of Artificial Intelligence and Data Science, Sejong University, Seoul, Republic of Korea",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dfca41d4360c9bcee2fd4801f86c1bdb"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7ac209a89c746423fcedb17724ca08da",
+    "text": "*Corresponding email: agung.fatwanto@uin-suka.ac.id",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dfca41d4360c9bcee2fd4801f86c1bdb"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0b76c6e4511b118b2b62d39ca0944a86",
+    "text": "Received: July 11, 2024; Revised: November 19, 2024; Accepted: December 02, 2024.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dfca41d4360c9bcee2fd4801f86c1bdb"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e1bfb1cb2cea6b0a8608569ebc2996e5",
+    "text": "Abstract: Research area in natural language processing (NLP) domain has made major advances in recent years. The Bidirectional Encoder Representations from Transformers (BERT) and its derivative models have been at the vanguard, gaining notice for their ex- ceptional performance across a variety of NLP applications. As a response to this context, hence, this study aims to conduct a systematic literature review on current research in BERT-based models in order to describe their characteristic variations on three frequently demanded natural language processing (NLP) tasks, i.e. text classification, question an- swering, and text summarization. This study employed a systematic literature review method as prescribed by Kitchenham. We collected 4,120 papers from publications in- dexed by Scopus and Google Scholar from which 41 complied with our defined review criteria and finally chosen for further analysis. Our review came up with three conclu- sions. First, in order to select appropriate models for particular NLP tasks, three primary concerns should be considered: i) the type of NLP problem to be resolved (i.e. NLP task to be served), ii) the specific domain to be handled (such as financial, medical, law/legal or others), and iii) the intended language to be applied (such as English or others). Second, learning rate, batch size, and the type of optimizer were the three most considered hyper- parameters to be properly arranged in model training. Third, the most widely used metrics for text classification tasks were F1-score, accuracy, precision, and sensitivity (recall), while question answering, and text summarization tasks were mostly used the Exact Match and ROUGE respectively.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dfca41d4360c9bcee2fd4801f86c1bdb"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "40a21df7f853df3f6d4c1931d968edfa",
+    "text": "Keywords: bert, nlp, nlp task, systematic literature review, transformer",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dfca41d4360c9bcee2fd4801f86c1bdb"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "3a62eb06058f5ac03ac94396b6b9eea4",
+    "text": "\u00a9 Jurnal Infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "FormKeysValues",
+    "element_id": "30b7936f208e8f8a4f00331f7dd4bd71",
+    "text": "ISSN: 2085-3688; e-ISSN: 2460-0997",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "c6c07718dad0b23dc0b58148720b1de4",
+    "text": "714",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "5a503207ba69191f87768d9a99e285fd",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "f8446baff77138a3411b48d46f17d36c",
+    "text": "1 Introduction",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "5a503207ba69191f87768d9a99e285fd"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fb6916bc26260dcc362ae6933fba3bd6",
+    "text": "The area of natural language processing (NLP) has grown in importance within the artificial intelligence (AI) and machine learning areas. Many natural language process- ing (NLP) tasks, namely text classification (such as sentiment analysis), machine transla- tion, question-answering, text summarization, information extraction, instruction follow- ing, machine reading comprehension, and image captioning can currently be handled by deep learning algorithms [1]. Among these various tasks, the demand for text classification, question answering, and text summarization is steadily increasing since their application for particular context requires customized implementation for specific type of usage. It is due to the fact that these three types of NLP tasks, compared to machine translation for example, are apparently context-specific whereas machine translation is more generic in nature (meaning that one can utilize a readily available machine translation tool without having to perform more customization for their specific tasks at hand).",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "cite.1bharadiya2023comprehensive",
+          "start_index": 459
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f8446baff77138a3411b48d46f17d36c"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8b1bb6adf46e2bae0bc8a41c53455a1e",
+    "text": "One of the most notable advances on NLP research in recent years was the introduc- tion of the Bidirectional Encoder Representations from Transformers (BERT) model pro- posed by Google AI Language researchers [2]. Using a transformer architecture, BERT is a pre-trained language model [3] that extracts word contextual representations from vast volumes of unlabeled text data. Through the use of novel training techniques includ- ing Masked Language Modeling (MLM) and Next Sentence Prediction (NSP), BERT has demonstrated outstanding outcome on a variety of NLP tasks, assigning a new benchmark in excellence [2]. The success of BERT sparked research interest in the research community, resulting in the development of many versions and model-specific adaptations of BERT [4]. Along with the Generative Pre-trained Transformer (GPT), BERT has become the primary foundational model option among other Transformer-based models to be fine-tuned for various NLP tasks [5]. Its bidirectional framework makes it become context-aware at the word-level (compared to the GPT which only has awareness at token-level). This word- level awareness makes BERT ideal for natural language understanding (NLU) tasks, even though it is not as powerful as GPT for natural language generation (NLG) tasks. Another important thing that makes BERT gain popularity is that, compared to GPT for example, it is categorized as open source hence it is free to be utilized and developed further. Con- sidering these aspects, we therefore decided to focus our literature review on BERT-based models instead of a more general Transformer-based model. Although BERT has been widely studied and applied in various NLP tasks, there is still a need to synthesize and critically analyze existing literature to gain a comprehensive understanding of its perfor- mance, limitations, and potential areas for improvement.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "cite.2kenton2019bert",
+          "start_index": 210
+        },
+        {
+          "text": "3",
+          "url": "cite.3mohiuddin2023retention",
+          "start_index": 286
+        },
+        {
+          "text": "2",
+          "url": "cite.2kenton2019bert",
+          "start_index": 611
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 773
+        },
+        {
+          "text": "5",
+          "url": "cite.5kotei2023systematic",
+          "start_index": 964
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f8446baff77138a3411b48d46f17d36c"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d7a27e3baa332fbbca33814069c1f9ce",
+    "text": "BERT\u2019s ability to capture contextual information and its impressive performance on a wide range of NLP tasks have made it a game-changer in the natural language processing sector. However, despite its success, BERT is not without limitations. One of the main chal- lenges associated with BERT is its computational complexity and resource requirements, which can make it difficult to deploy in resource-constrained environments or on edge de- vices. Additionally, like many other language models, BERT can exhibit biases and incon- sistencies, which can be problematic in real-world applications [6]. A systematic literature review can provide new insights into the current state of research, identify research gaps, and inform future research directions [7].",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "6",
+          "url": "cite.6qiu2020pre",
+          "start_index": 595
+        },
+        {
+          "text": "7",
+          "url": "cite.7samant2022framework",
+          "start_index": 754
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f8446baff77138a3411b48d46f17d36c"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "be7f9f49ee743ad41ac52b67cbca2f2b",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "a530e1618b57f354b1e70ed5b2f8964a",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "eef46bcb0894b2a44b7c9ce52082d4b0",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "5c61461eb7e6ee0feaec077b2f1e2622",
+    "text": "715",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "12741358998b47d82f9107a40238ccba",
+    "text": "This systematic literature review (SLR) intends to structurally analyze current research on BERT-based models in order to describe their characteristic variations on three fre- quently demanded natural language processing (NLP) tasks, i.e. text classification, ques- tion answering, and text summarization. These three NLP tasks represent both \u201cdiscrimi- native\u201d (for text classification) and \u201cgenerative\u201d (for question answering and text summa- rization) AI. By scrutinizing and combining findings from relevant research studies, this review aspires to present a clear comprehension of the proper implementations of BERT- based models in the field of the three most demanded NLP tasks.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "5c61461eb7e6ee0feaec077b2f1e2622"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "e5ee7944469d3f348a879fe9a380cf9d",
+    "text": "2 Research Method",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "5c61461eb7e6ee0feaec077b2f1e2622"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "abff718184996a8ff2f22b05977ee41a",
+    "text": "In recent years, systematic literature review (SLR) has been acclaimed and widely ac- cepted as a type of qualified research by scientific community globally and can easily be found in many respected journal publications [8]. As a type of meta-research, SLR is re- garded as a qualified research genre and has become one of the trustworthy sources of knowledge. In regard to this context, hence, this work was conducted as an SLR study employing the framework as suggested by Kitchenham [9]. The purpose of systematic literature reviews (also known as secondary studies) is to search, collect, select (evaluate), analyze, synthesize, extract, and summarize relevant research results on specific and fo- cused topics, hence it is classified as a tertiary review. The stages in conducting a sys- tematic review following the Kitchenham method consist of: Planning, Conducting, and Reporting [9], [10]. For this particular study\u2019s stages, the method is depicted in Figure 1.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "8",
+          "url": "cite.8rana2016topic",
+          "start_index": 220
+        },
+        {
+          "text": "9",
+          "url": "cite.9kitchenham2009systematic",
+          "start_index": 485
+        },
+        {
+          "text": "9",
+          "url": "cite.9kitchenham2009systematic",
+          "start_index": 885
+        },
+        {
+          "text": "10",
+          "url": "cite.10zamakhsyari2023systematic",
+          "start_index": 890
+        },
+        {
+          "text": "Figure 1",
+          "url": "figure.1",
+          "start_index": 957
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "e5ee7944469d3f348a879fe9a380cf9d"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "3886b15402f875424303d499216c3d2c",
+    "text": "Conducting Search Collect Reporting Planning Select (Evaluate) Answer Research Design SLR Protocol Analyze Questions Synthesis Extract Summarize",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "a06e154129fd6e2e2d5c341bc329f96d",
+    "text": "Figure 1: Systematic literature review process.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "30849d1303d429266e623d9f6cc22d81",
+    "text": "Following the Kitchenham framework, there are three stages to conduct a SLR study, as shown in Figure 1. The first stage is to plan the systematic review process, in which we designed a review protocol. One of the main elements specified in the protocol is the proposed research questions. These research questions are going to be the platform in con- ducting the study. The second stage is to conduct the systematic review process, which involves searching, collecting, selecting (evaluating), analyzing, synthesizing, extracting and summarizing the papers according to the defined criteria in order to answer the speci- fied research questions. Finally, the third stage is to report the systematic review, in which the whole processes of the study are reported including the answers and explanations to the proposed research questions.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Figure 1",
+          "url": "figure.1",
+          "start_index": 95
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "b9ca09320bc4674ce3731c3d031f6b6a",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "f2548e0ea48149e805ddb110aff264d3",
+    "text": "716",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "903e40d4c5ec82f03fe290dd9762bce4",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "a04f2b4df33034ab0383999564e29a1e",
+    "text": "2.1 Planning",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "903e40d4c5ec82f03fe290dd9762bce4"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d71038b69e3491d45eda6f4ed262b5d9",
+    "text": "At this stage, a review protocol to conduct the study is designed with the purpose of having a systematic and structured literature review. The protocol consists of research questions, searching tools, searching terms, inclusion, exclusion, and quality assessment criteria. The protocol also establishes a data analysis and synthesis strategy as a guidance in extracting and summarizing the collected papers. The protocol is described in Table 1.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Table 1",
+          "url": "table.1",
+          "start_index": 438
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a04f2b4df33034ab0383999564e29a1e"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "ab7a786002f925234173fc8a2cdf1420",
+    "text": "Table 1: Systematic literature review protocol",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a04f2b4df33034ab0383999564e29a1e"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "2c3492802fbd9383e22b8cf099d8a74f",
+    "text": "SLR Protocol Description Research Question 1. RQ1. What type of concerns were normally considered when se- lecting BERT-based model variants for particular NLP tasks? 2. RQ2. What type of hyperparameters were mostly considered to be properly arranged in training the BERT-based models? 3. RQ3. What type of evaluation metrics were normally employed for particular NLP tasks? Search Tool Publish or Perish Application. Search Terms \u201cText Classification\u201d; \u201cQuestion Answer\u201d; \u201cText Summarization\u201d. Inclusion Criteria 1. The papers are from scientific journals published between 2019- 2024. 2. The publications are indexed by Scopus and/or Google Scholar. 3. The publications are not in the form of journals and proceedings. 4. The paper\u2019s theme is regarding NLP tasks which employ BERT- based models. 5. The paper is written in English. Exclusion Criteria 1. Unpublished scientific papers between 2019-2024. 2. The publications are not indexed by Scopus and/or Google Scholar. 3. The publications are not in the form of journals and proceedings. 4. The paper\u2019s theme is not regarding NLP tasks which employ BERT-based models. 5. The paper is not written in English. Quality Assessment Criteria 1. Clarity of research objectives 2. Contains literature review, background, and research results. 3. Provides relevant conclusions. 4. Describes the method of developing or optimizing and evaluat- ing the BERT-based model. Based on the chosen papers, each variable that deemed suitable and Data Analysis Strategy relevant to answer the research questions, will be identified, gath- ered, analyzed, and scrutinized based on the quality of the study. A data-driven methodology, founded on the data analysis outcomes Data Synthesis Strategy of the papers, is used in data synthesis. To address the research ques- tions, a table containing comparison list of each variable was com- posed for every chosen paper using a data-driven approach.",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>SLR Protocol</th><th>Description</th></tr></thead><tbody><tr><td>Research Question</td><td>RQ1. What type of concerns were normally considered when se- lecting BERT-based model variants for particular NLP tasks? RQ2. What type of hyperparameters were mostly considered to be properly arranged in training the BERT-based models? RQ3. What type of evaluation metrics were normally employed for particular NLP tasks?</td></tr><tr><td>Search Tool</td><td>Publish or Perish Application.</td></tr><tr><td>Search Terms Inclusion Criteria</td><td>\u201cText Classification\u201d; \u201cQuestion Answer\u201d; \u201cText Summarization\u201d. The papers are from scientific journals published between 2019- 2024.</td></tr><tr><td>Exclusion Criteria</td><td>paper English. Unpublished scientific papers between 2019-2024. The publications are not indexed by Scopus and/or Google Scholar. The publications are not in the form of journals and proceedings. The paper\u2019s theme is not regarding NLP tasks which employ BERT-based models.</td></tr><tr><td></td><td>The paper is not written in English.</td></tr><tr><td>Quality Assessment Criteria</td><td>Clarity of research objectives Contains literature review, background, and research results. Provides relevant conclusions. Describes the method of developing or optimizing and evaluat- ing the BERT-based model.</td></tr><tr><td>Data Analysis Strategy</td><td>Based on the chosen papers, each variable that deemed suitable and relevant to answer the research questions, will be identified, gath- ered, analyzed, and scrutinized based on the quality of the study. A data-driven methodology, founded on the data analysis outcomes</td></tr><tr><td>Data Synthesis Strategy</td><td>of the papers, is used in data synthesis. To address the research ques- tions, a table containing comparison list of each variable was com- posed for every chosen paper using a data-driven approach.</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a04f2b4df33034ab0383999564e29a1e"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "8ec9718f5ccb96943bbe8823460d71ac",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "f5eeb85e14d3d5d346324765d008c2dc",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "057454125b437c163069162483cce82f",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "50eb6df2bee2681b7744bb812338b6d6",
+    "text": "717",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "409fb02e980be20354acc62657ac54fc",
+    "text": "2.2 Conducting",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "50eb6df2bee2681b7744bb812338b6d6"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "952ae0e6fe1a6ee4fa681667e0368dfa",
+    "text": "A series of activities to search, collect, select (evaluate), analyze, synthesize, extract, and summarize papers from the publicly available publications following the defined re- view protocol was performed during this phase. Firstly, papers were searched based on the defined keywords (i.e. text classification, question answer, and text summarization) and the first three inclusion criteria (i.e. the publication range were between 2019-2024, the papers were indexed by Scopus and/or Google Scholar, and the papers were pub- lished either in journals or proceedings) from the publicly available publications. Secondly, the collected papers were selected (evaluated) based on the fourth inclusion criteria (i.e. to inspect whether the papers\u2019 theme is regarding NLP tasks which employ BERT-based models). Thirdly, the selected papers were further examined to identify the content that was deemed suitable and relevant to answer the proposed research questions based on the quality assesment criteria. Then, variables which deemed suitable and relevant to answer the proposed research questions were analyzed from the chosen papers by considering the quality of the study. Finally, these analyzed variables were then synthesized in which a data-driven approach was employed by composing a table containing comparison list of each variable for every chosen papers.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "409fb02e980be20354acc62657ac54fc"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "f1a75195edb5f9a2f2d7cf94401ff539",
+    "text": "3 Results",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "50eb6df2bee2681b7744bb812338b6d6"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "521950bc95cc0a592f4fc36626e2528e",
+    "text": "This research was conducted following the defined SLR protocol as described in Ta- ble 1. We proposed three research questions to be studied through this review. In order to align with these three specified research questions, we employed three keywords to query the publicly available papers. We also defined inclusion and exclusion criteria to limit the collected papers. A quality assessment criterion was also determined to evaluate and filter out the collected papers so that the final selected papers are clear, credible and relevant to answer the specified research questions. In addition, data analysis and data synthe- sis strategies were also defined to guide the extraction and summarization of data and information from the final selected papers as the basis to answer the proposed research questions. Following the defined SLR protocol, we performed the process of searching, collecting, selecting (evaluating), analyzing, synthesizing, extracting, and summarizing the papers from publicly available publications. The number of processed papers is described in Table 2.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Ta -",
+          "url": "table.1",
+          "start_index": 78
+        },
+        {
+          "text": "ble 1",
+          "url": "table.1",
+          "start_index": 82
+        },
+        {
+          "text": "Table 2",
+          "url": "table.2",
+          "start_index": 1065
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f1a75195edb5f9a2f2d7cf94401ff539"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f5ef79731aece1062553ec49c1835cc1",
+    "text": "Table 2: Number of processed papers",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f1a75195edb5f9a2f2d7cf94401ff539"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "0b30083d59cb02cfdb8961f87098ad75",
+    "text": "Keywords Source #of Gathered Pa- pers from Initial Search Action #of Papers with Related Theme within Title & Abstract #of Qualified & Relevant Papers Text Classification Scopus 536 127 10 Google Scholar 882 113 6 Question Answer Scopus 278 117 9 Google Scholar 858 105 5 Text Summarization Scopus 756 118 8 Google Scholar 810 92 3 Total 4,120 672 41",
+    "metadata": {
+      "is_extracted": "partial",
+      "text_as_html": "<table><thead><tr><th>Keywords</th><th>Source</th><th>#of Gathered Pa- pers from Initial Search Action</th><th>#of Papers with Related Theme within Title &amp; Abstract</th><th>#of Qualified &amp; Relevant Papers</th></tr></thead><tbody><tr><td rowspan=\"2\">Text Classification</td><td>Scopus</td><td>536</td><td>127</td><td>10</td></tr><tr><td>Google Scholar</td><td>882</td><td>113</td><td>&amp;</td></tr><tr><td rowspan=\"2\">Question Answer</td><td>Scopus</td><td>278</td><td>117</td><td>o</td></tr><tr><td>Google Scholar</td><td>858</td><td>105</td><td>Ul</td></tr><tr><td rowspan=\"2\">Text Summarization</td><td>Scopus</td><td>756</td><td>118</td><td>\u00ae</td></tr><tr><td>Google Scholar</td><td>810</td><td>92</td><td>W</td></tr><tr><td>Total</td><td></td><td>4,120</td><td>672</td><td>41</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f1a75195edb5f9a2f2d7cf94401ff539"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "03e16458945db8af2f0fdba650b5481c",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "677c738dfabd39fc140ceb51f0291fcc",
+    "text": "718",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "cf6637db2cd2a5b32eaa25ac484c4c1c",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "332c921c5861a1734a146b96406e5c09",
+    "text": "Using the Publish or Perish application (https://harzing.com/resources/publish-or- perish), we searched the papers from the publicly available publications by applying each specified keywords (i.e. text classification, question answer, and text summarization) and the first three inclusion criteria (i.e. the publication range were between 2019-2024, the papers were indexed by Scopus and/or Google Scholar, and the papers were published either in journals or proceedings). This action resulted in 4,120 collected papers, in which 1,418 papers found for the keywords of \u201cText Classification\u201d, 1,136 papers found for the keyword of \u201cQuestion Answer\u201d, and followed by 1,566 papers found for the keyword of \u201cText Summarization\u201d.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "( https :// harzing . com / resources / publish - or -",
+          "url": "https://harzing.com/resources/publish-or-perish",
+          "start_index": 40
+        },
+        {
+          "text": "perish ),",
+          "url": "https://harzing.com/resources/publish-or-perish",
+          "start_index": 83
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "cf6637db2cd2a5b32eaa25ac484c4c1c"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8442fce557bbe4f4125f3b5851a7b4ed",
+    "text": "Based on those collected papers, we then applied the fourth and fifth inclusion cri- teria which is to select (evaluate) whether the papers\u2019 themes are related to NLP tasks which employ BERT-based models and wether they are written in English. We performed this selection (evaluation) process manually by scrutinizing each collected papers. We se- lect (evaluate) each collected papers by identifying their themes which is either described within the title or abstract. This selection (evaluation) process was done through all 4,120 collected papers resulting in 672 papers that deemed meet the inclusion criteria, in which 240 papers were from the \u201cText Classification\u201d category (previously we found 241 papers but there was one paper written in Bahasa Indonesia hence we excluded it), 222 papers were from the \u201cQuestion Answer\u201d category, and followed by 210 papers that were from the \u201cText Summarization\u201d category.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "cf6637db2cd2a5b32eaa25ac484c4c1c"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7f6ea31189db3b28764cd151359941f2",
+    "text": "At the final phase of papers selection (evaluation), a thorough review was carried out of all 672 selected papers from previous action. In this phase, each papers were deeply scru- tinized to identify the content that deemed suitable and relevant to answer the proposed research questions. During this phase, we scrutinized each selected papers according to the quality assesment criteria. We especially put more efforts to identify and locate any papers which contain data, description, and explanation regarding the method of develop- ing or optimizing BERT-based models for three frequently demanded NLP tasks (i.e. text classification, question answering, and text summarization). It included the identification of any type of BERT-based model variants and implementation of certain hyperparameters arrangement. In addition, we also identified and located any description and explanation about evaluation metrics for particular NLP tasks. A total of 41 papers that met these quality assesment criteria were finally chosen.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "cf6637db2cd2a5b32eaa25ac484c4c1c"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2f31e6d515a83cab7b8485878acccf9a",
+    "text": "The next step was analyzing data and information which deemed suitable and relevant to answer the proposed research questions from these 41 chosen papers. We refered to the specified data analysis strategy as defined in the review protocol in which each variable that deemed suitable and relevant to answer the research questions was identified, gath- ered, analyzed, and scrutinized based on the quality of the study. The variables that were analyzed were the deployed variants of BERT-based models for three frequently demanded NLP tasks (i.e. text classification, question answering, and text summarization), the imple- mentation of certain hyperparameters arrangement in BERT-based models development or optimization, the deployed variants of BERT-based models for three frequently demanded NLP tasks (i.e. text classification, question answering, and text summarization), and also the employed evaluation metrics for particular NLP tasks.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "cf6637db2cd2a5b32eaa25ac484c4c1c"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0e6c0e654fad4f446cc95dcd8bc1dd7d",
+    "text": "These analyzed data and information were then synthesized following the specified data synthesis strategy as defined in the review protocol in which a data-driven approach was employed by composing a table containing comparison list of each variable for every chosen papers. Based on this comparison list, we then categorized the data and information",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "cf6637db2cd2a5b32eaa25ac484c4c1c"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "18f10f941adddc69bf408409053cc2c7",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "4f6713248769a7550c19b7ba1ddf611b",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "fa2dd6658f616e2f854a79cb421eeec4",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "b10eff925135f27598e37d233ae64fb6",
+    "text": "719",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fd582a7e8da032e5c9d28d3345eade57",
+    "text": "according to the specified research questions. These categorized data and information were then extracted and summarized as the basis of answering the proposed research questions.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "b10eff925135f27598e37d233ae64fb6"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c70a5a0de45fb0f1810aa43a22541ab8",
+    "text": "4 Discussion",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "b10eff925135f27598e37d233ae64fb6"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5b74b984c0674150238677dad5cfe5d9",
+    "text": "The aim of this study is to conduct a systematic literature review on current research in BERT-based models in order to describe their characteristic variations on three frequently demanded natural language processing (NLP) tasks, i.e. text classification, question answering, and text summarization. As has been designed in our SLR protocol, we try to answer three research questions regarding this context. This discussion of this section is hence framed based on these three questions.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c70a5a0de45fb0f1810aa43a22541ab8"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "7db2a9bfe72bf71cbec65829aa3453af",
+    "text": "RQ 1. What type of concerns were normally considered when selecting BERT-based model variants for particular NLP tasks?",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "b10eff925135f27598e37d233ae64fb6"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7c929e903dc4b35429b026b7e20e7a6f",
+    "text": "The BERT-based models are commonly used for various types of NLP tasks. Some of the examples are text classification (such as sentiment analysis and information extraction like named entity recognition), machine translation, question-answering, text summarization, information extraction, instruction following, machine reading comprehension, and image captioning. The BERT-based models have also been employed on domain specific applica- tions such as finance, law/legal, medical, etc. Some language-specific models other than English have also been developed and applied. These models are starting to outperform humans on tasks previously thought to be unsolvable by AI, such as question answering and verbal lie detection [11].",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 722
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "7db2a9bfe72bf71cbec65829aa3453af"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "00ed190b1120c63b5ecc4caf1f21729f",
+    "text": "This research, however, focuses on the exploration of the BERT-based models for the three frequently demanded NLP tasks, i.e. text classification, question-answering, and text summarization. The first task represents the \u201cdiscriminative\u201d AI while the last two tasks exemplify the \u201cgenerative\u201d AI. The exploration was based on the chosen papers that have been examined carefully according to the review protocol. The result of the exploration is described in Table 3.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Table 3",
+          "url": "table.3",
+          "start_index": 456
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "7db2a9bfe72bf71cbec65829aa3453af"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "1ef58a9c301102fef9513a048231c313",
+    "text": "Table 3: The variants of BERT-based models for particular NLP tasks",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "7db2a9bfe72bf71cbec65829aa3453af"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "107c0c4c2fac9aaa676d9c07e20fe5df",
+    "text": "Task Variant Paper Text Classification BERT [12], [13], [14], [15], [16], [17], [11], [18] M-BERT [19], [20], [21], [22], [23], [24] IndoBERT [25], [19], [26], [27], [14], [23], [28] RoBERTa [12], [19] Question Answer BERT [29], [30], [31] M-BERT [32], [21], [33], [34], [35], [36] IndoBERT [4], [32], [37], [34], [38], [39] RoBERTa [4], [39] Text Summarization BERT [40], [41], [42], [43] M-BERT [44], [45], [46], [47], [48], [49] IndoBERT [44], [50]",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 1
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 7
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 13
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 19
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 25
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 31
+        },
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 37
+        },
+        {
+          "text": "18",
+          "url": "cite.50mutasodirin2021investigating",
+          "start_index": 43
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 48
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 54
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 60
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 66
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 72
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 78
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 83
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 89
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 95
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 101
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 107
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 113
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 119
+        },
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 124
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 130
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 135
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 141
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 147
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 152
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 158
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 164
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 170
+        },
+        {
+          "text": "35",
+          "url": "cite.40abdel2022performance",
+          "start_index": 176
+        },
+        {
+          "text": "36",
+          "url": "cite.17yang2023finchain",
+          "start_index": 182
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 187
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 192
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 198
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 204
+        },
+        {
+          "text": "38",
+          "url": "cite.45calizzano2022generating",
+          "start_index": 210
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 216
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 221
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 226
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 231
+        },
+        {
+          "text": "41",
+          "url": "cite.14li2022improved",
+          "start_index": 237
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 243
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 249
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 254
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 260
+        },
+        {
+          "text": "46",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 266
+        },
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 272
+        },
+        {
+          "text": "48",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 278
+        },
+        {
+          "text": "49",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 284
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 289
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 295
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Task</th><th>Variant</th><th>Paper</th></tr></thead><tbody><tr><td rowspan=\"4\">Text Classification</td><td>BERT</td><td>[12], [13], [14], [15], [16], [17], [11], [18]</td></tr><tr><td>M-BERT</td><td>[19], [20], [21], [22], [23], [24]</td></tr><tr><td>IndoBERT</td><td>[25], [19], [26], [27], [14], [23], [28]</td></tr><tr><td>RoBERTa</td><td>[12], [19]</td></tr><tr><td rowspan=\"4\">Question Answer</td><td>BERT</td><td>[29], [30], [31]</td></tr><tr><td>M-BERT</td><td>[32], [21], [33], [34], [35], [36]</td></tr><tr><td>IndoBERT</td><td>[4], [32], [37], [34], [38], [39]</td></tr><tr><td>RoBERTa</td><td>[4], [39]</td></tr><tr><td rowspan=\"3\">Text Summarization</td><td>BERT</td><td>[40], [41], [42], [43]</td></tr><tr><td>M-BERT IndoBERT</td><td>[44], [45], [46], [47], [48], [49] [44], [50]</td></tr><tr><td></td><td></td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "7db2a9bfe72bf71cbec65829aa3453af"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "a019c3784d2e0360065025b360147fc7",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "130887fbc0de7ded1f4f40ae9c268261",
+    "text": "720",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "dbbb459f148f4ba17799ff3f1e44d702",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7b22dbd89dc623e2ac9cbe126f194b5b",
+    "text": "Most BERT-based models were developed or fine-tuned with a specific context. Few of the models were even designed for a specific type of NLP task since their inception. For most of the models, their pre-training or especially their subsequent fine-tuning processes employed specific types of datasets (corpus) which obviously will affect the suitability of the produced models. Choosing the appropriate models prior to applying them for specific NLP tasks is therefore critical for achieving optimum performance as expected.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dbbb459f148f4ba17799ff3f1e44d702"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0932db3946cf3ae13e04857377378b6f",
+    "text": "In order to select appropriate models for particular NLP tasks, three primary concerns should be considered: i) the type of NLP problem to be resolved (i.e. NLP task to be served), ii) the specific domain to be handled (such as financial, medical, law/legal or others), and iii) the intended language to be applied (such as English or others). For selecting what type of models should be chosen for a particular NLP task, Table 3 has presented the list of can- didates deemed suitable to be applied for text classification, question answering, and text summarization tasks. Text classification apparently has been attracting a lot of attention from researchers as reflected in the number of related publications. It might be due to the fact that research and implementation of text classification have been around longer than question answering and text summarization. Another explanation is that the demand for text classification tasks is relatively high. For highly specific NLP tasks like sentiment anal- ysis or named entity recognition (as part of text classification), task-specific models have shown to outperform generic models hence the demand is increasing. It is therefore more models were developed and supplied for this kind of task. Nevertheless, the demand for question answering tasks has gaining more attention recently. More research and models\u2019 constructions specifically for question answering are currently on the way. More domain and language specific models are now even easier to obtain. In a quite different condition, the studies on text summarization do not gain as high attention as text question answering and especially text classification. It is reflected in the number of publications as presented in Table 3.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Table 3",
+          "url": "table.3",
+          "start_index": 1720
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dbbb459f148f4ba17799ff3f1e44d702"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "58d6e4eba313d0270a45b9bddb8b4c41",
+    "text": "Some works and studies on domain specific BERT-based models have been conducted. A number of domain specific models, such as for the legal/law domain [48], education [25], finance [18], health especially for biomedical [12], religion [34], customer service for general business [31] and university students\u2019 activity [39], and also beauty [37] and general products review [38] are some of the examples. These models were developed on specific corpus in order to cater to a particular implementation domain.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "48",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 149
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 165
+        },
+        {
+          "text": "18",
+          "url": "cite.50mutasodirin2021investigating",
+          "start_index": 178
+        },
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 217
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 232
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 276
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 315
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 337
+        },
+        {
+          "text": "38",
+          "url": "cite.45calizzano2022generating",
+          "start_index": 370
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dbbb459f148f4ba17799ff3f1e44d702"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b4b448d1304752615f3119ca4d11ef54",
+    "text": "In the context of language consideration, BERT or RoBERTa become a better alternative for English-specific tasks because both are trained on vast volumes of English corpus and perform well on several English-based NLP tasks. M-BERT, on the other hand, is a better option for \u201clow resources\u201d languages-specific tasks in which the local language-specific models are obviously rare. Based on the studies as have been reported in [27], [46], [40], [50], [13], [47], [32], [45], and [23], M-BERT model is the currently available answer to the cross-language problem caused by the original-based BERT models\u2019 lack of multilanguage capabilities. Many works and studies on non-English language-specific models have been conducted and still gaining more attention to the researchers recently. Models such as Hu- BERT for agglutinative language (in this case is Hungarian and Turkish) [43], BERTTurk for Turkish [49], SwedishBERT for Swedish [33], EstBERT for Estonian [46], ItaBERT for Ital- ian [48], and IndoBERT for Bahasa Indonesia [4], [44] are some of the examples. These mod- els are a preferable option compared to BERT or M-BERT for NLP tasks for non-English spe- cific languages. This is because they were specifically trained in those languages-specific corpuses, so it can better capture more nuances and context of that particular type of lan-",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 424
+        },
+        {
+          "text": "46",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 430
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 436
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 442
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 448
+        },
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 454
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 460
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 466
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 476
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 872
+        },
+        {
+          "text": "49",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 899
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 929
+        },
+        {
+          "text": "46",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 956
+        },
+        {
+          "text": "48",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 984
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 1024
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 1029
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "dbbb459f148f4ba17799ff3f1e44d702"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "0843c96c5f3a7770a14920b9a205ff27",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "76c7be2950f6054e124bd42f9b61845c",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "2a25f71b96f979d0b6bcc47cae6e99c5",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "01e9ab6305e882b3458700b8e897d3f5",
+    "text": "721",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "34d6190aaef3ac8ee8dfefdd61f8d789",
+    "text": "guages. These languages-specific models have shown to provide more powerful perfor- mance when applied on language-specific NLP tasks. For the case of IndoBERT, as an example, it is evidenced by some comparative studies as reported in [24], [44], [49], [39] and [19]. In these studies, IndoBERT was compared with other models for a number of NLP tasks utilizing Indonesian language datasets, and the results show that IndoBERT had outperformed other models.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 234
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 240
+        },
+        {
+          "text": "49",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 246
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 252
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 261
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "01e9ab6305e882b3458700b8e897d3f5"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "dde5077a2918c82c3bf4a23aa95f7676",
+    "text": "Aside from type of NLP tasks, working domain, and linguistic considerations, other important attention also needs to be taken into account when choosing the appropriate models for the project at hand, such as model size, available computer resources, and train- ing data availability. Larger models, such as RoBERTa-large, tend to perform better but demand more computational resources. If computational resources are restricted, smaller models like BERT-base may be a better option. The availability of training data (corpus) in a specific language may also be a factor to consider when planning to develop or optimize language-specific models for particular NLP tasks in that language.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "01e9ab6305e882b3458700b8e897d3f5"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f8aa891f3916a2447f2e1aa0d31e3804",
+    "text": "Finding the proper model frequently entails conducting empirical experiments and evaluation of a number of candidate models to decide which one performs best. To make an informed decision, it is important to comprehend the available collection of models, particular NLP tasks to handle, and the availability of training materials (corpus) in advance.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "01e9ab6305e882b3458700b8e897d3f5"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "d30fbad95f73a9d7867924eab56c1442",
+    "text": "RQ 2. What type of hyperparameters were mostly considered to be properly arranged in training the BERT-based models?",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "01e9ab6305e882b3458700b8e897d3f5"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "96416eb84349d28abfd5026e258c2e4c",
+    "text": "BERT is a recent modification of a series of neural models that makes extensive use of pre-training and has shown useful in a wide range of NLP tasks, including text classifica- tion and question-answering from datasets. To learn word representations, BERT uses the Transformer architecture, that comprise of several encoder layers. It analyzes sequential input, like words in text, using an attention mechanism. The attention mechanism helps the model better understand the text\u2019s context by allowing it to capture the relationship between far-off words [26]. During the training process, numerous parameter variables are applied to setting the process, resulting in many variances in the outcomes.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 554
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "d30fbad95f73a9d7867924eab56c1442"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "65490efbce13ca123cb72a0e901ba542",
+    "text": "Certain hyperparameters arrangement plays a crucial role in optimizing the training process and the resulting performance of deep learning models like BERT. The proper ar- rangement in setting the hyperparameters can have a notable effect on the training process and the resulting models\u2019 performance on certain tasks. Learning rate, batch size, and the type of optimizer were the three most considered hyperparameters to be properly arranged in BERT-based model training. Understanding the utility and influence of each hyperpa- rameter is critical for achieving optimal results. Table 4 lists various types of various hy- perparameters arrangement applied in past research.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Table 4",
+          "url": "table.4",
+          "start_index": 580
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "d30fbad95f73a9d7867924eab56c1442"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9826c5fcc7488f9650ea5e90926038ac",
+    "text": "The learning rate was one of the most considered hyperparameters to be properly ar- ranged for the training of deep learning models like BERT. The learning rate defines how much the network\u2019s weights change throughout each training iteration. A high value learn- ing rate may speed up the training process but will potentially lead the training process to skip in obtaining models with optimal performance. Meanwhile, too low value of learning rate will potentially lead to obtaining models with optimal performance but at the cost of slow down the training process. Based on the literature, we found that the average applied learning rate was between 2.00E-05 and 3.00E-05. The list of papers that reported the imple-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "d30fbad95f73a9d7867924eab56c1442"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "b7d96e6e147a8159df742a3a1a6d6006",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "6fc9366efab68c87973cc3fe2e29dda5",
+    "text": "722",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "a0c61c58780f7a8f3bdcc06c5394eac9",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "a55981bdd29b07bdacaf9960168fffe7",
+    "text": "Table 4: The applied hyperparameters excerpted from the reviewed papers",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a0c61c58780f7a8f3bdcc06c5394eac9"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "e5fbc0a9eeebae8f3b66e6accc7b6e56",
+    "text": "Hyperparameter Variation Paper Learning Rate 1.00E-05 [12], [4], [26], [11] 1.00E-04 [41], [42], [43], [36] 2.00E-03 [44], [40], [47] 2.00E-05 [25], [19], [32], [20], [26], [15], [29], [30], [16], [17], [34], [28], [31], [50], [49] 3.00E-05 [25], [20], [26], [13], [27], [33], [22], [39], [35] 4.00E-05 [21] 5.00E-05 [25], [20], [37], [14], [24], [38], [45], [46] Batch Size 8 [32], [33], [23], [38], [45], [35] 16 [12], [20], [4], [37], [29], [17], [34], [24], [50], [41], [48], [49] 24 [46] 32 [25], [19], [20], [26], [27], [15], [30], [39], [42], [47], [43], [28], [11] 64 [14], [16], [36] 128 [21] 256 [31] 3000 [40] Optimizer Adam [4], [12], [11], [41], [42], [43], [36], [44], [40], [47], [25], [19], [32], [20], [15], [29], [30], [16], [17], [34], [28], [31], [50], [49], [13], [27], [33], [22], [39], [35], [21], [37], [14], [24], [38], [45], [46], [23], [48] Stochastic Gradient Descent (SGD) [26]",
+    "metadata": {
+      "is_extracted": "partial",
+      "links": [
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 1
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 7
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 12
+        },
+        {
+          "text": "11 ]",
+          "url": "cite.11tsani2023personality",
+          "start_index": 18
+        },
+        {
+          "text": "41",
+          "url": "cite.14li2022improved",
+          "start_index": 23
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 29
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 35
+        },
+        {
+          "text": "36 ]",
+          "url": "cite.17yang2023finchain",
+          "start_index": 41
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 46
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 52
+        },
+        {
+          "text": "47 ]",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 58
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 63
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 69
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 75
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 81
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 87
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 93
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 99
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 105
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 111
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 117
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 123
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 129
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 135
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 141
+        },
+        {
+          "text": "49 ]",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 147
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 152
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 158
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 164
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 170
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 176
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 182
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 188
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 194
+        },
+        {
+          "text": "35 ]",
+          "url": "cite.40abdel2022performance",
+          "start_index": 200
+        },
+        {
+          "text": "21 ]",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 205
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 210
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 216
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 222
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 228
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 234
+        },
+        {
+          "text": "38",
+          "url": "cite.45calizzano2022generating",
+          "start_index": 240
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 246
+        },
+        {
+          "text": "46 ]",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 252
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 257
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 263
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 269
+        },
+        {
+          "text": "38",
+          "url": "cite.45calizzano2022generating",
+          "start_index": 275
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 281
+        },
+        {
+          "text": "35 ]",
+          "url": "cite.40abdel2022performance",
+          "start_index": 287
+        },
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 292
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 298
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 304
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 309
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 315
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 321
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 327
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 333
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 339
+        },
+        {
+          "text": "41",
+          "url": "cite.14li2022improved",
+          "start_index": 345
+        },
+        {
+          "text": "48",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 351
+        },
+        {
+          "text": "49 ]",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 357
+        },
+        {
+          "text": "46 ]",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 362
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 367
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 373
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 379
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 385
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 391
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 397
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 403
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 409
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 415
+        },
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 421
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 427
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 433
+        },
+        {
+          "text": "11 ]",
+          "url": "cite.11tsani2023personality",
+          "start_index": 439
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 444
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 450
+        },
+        {
+          "text": "36 ]",
+          "url": "cite.17yang2023finchain",
+          "start_index": 456
+        },
+        {
+          "text": "21 ]",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 461
+        },
+        {
+          "text": "31 ]",
+          "url": "cite.32putri2022idk",
+          "start_index": 466
+        },
+        {
+          "text": "40 ]",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 471
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 476
+        },
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 481
+        },
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 487
+        },
+        {
+          "text": "41",
+          "url": "cite.14li2022improved",
+          "start_index": 493
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 499
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 505
+        },
+        {
+          "text": "36",
+          "url": "cite.17yang2023finchain",
+          "start_index": 511
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 517
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 523
+        },
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 529
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 535
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 541
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 547
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 553
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 559
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 565
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 571
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 577
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 583
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 589
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 595
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 601
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 607
+        },
+        {
+          "text": "49",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 613
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 619
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 625
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 631
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 637
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 643
+        },
+        {
+          "text": "35",
+          "url": "cite.40abdel2022performance",
+          "start_index": 649
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 655
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 661
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 667
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 673
+        },
+        {
+          "text": "38",
+          "url": "cite.45calizzano2022generating",
+          "start_index": 679
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 685
+        },
+        {
+          "text": "46",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 691
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 697
+        },
+        {
+          "text": "48 ]",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 703
+        },
+        {
+          "text": "26 ]",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 708
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Hyperparameter</th><th>Variation</th><th>Paper</th></tr></thead><tbody><tr><td rowspan=\"7\">Learning Rate</td><td>1.00E-05</td><td>[12], [4], [26], [11]</td></tr><tr><td>1.00E-04</td><td>[41], [42], [43], [36]</td></tr><tr><td>2.00E-03</td><td>[44], [40], [47]</td></tr><tr><td>2.00E-05</td><td>[25], [19], [32], [20], [26], [15], [29], [30], [16], [17], [34], [28], [31], [50], [49]</td></tr><tr><td>3.00E-05</td><td>[25], [20], [26], [13], [27], [33], [22], [39], [35]</td></tr><tr><td>4.00E-05</td><td>[21]</td></tr><tr><td>5.00E-05</td><td>[25], [20], [37], [14], [24], [38], [45], [46]</td></tr><tr><td rowspan=\"8\">Batch Size</td><td>8</td><td>[32], [33], (23], [38], [45], [35]</td></tr><tr><td>16</td><td>[12], [20], [4], [37], [29], [17], [34], [24], [50], [41], [48], [49]</td></tr><tr><td>24</td><td>[46]</td></tr><tr><td>32</td><td>[25], [19], [20], [26], [27], [15], [30], [39], [42], [47], [43], [28], [11]</td></tr><tr><td>64</td><td>[14], [16], [36]</td></tr><tr><td>128</td><td>[21]</td></tr><tr><td>256</td><td>[31]</td></tr><tr><td>3000</td><td>[40]</td></tr><tr><td rowspan=\"2\">Optimizer</td><td>Adam</td><td>[4], [12], [11], [41], [42], [43], [36], [44], [40], [47], [25], [19], [32], [20], [15], [29], [30], [16], [17], [34], (28], [31], [50], [49], [13], [27], [33], [22], [39], [35], [21], [37], [14], [24], [38], [45], [46], [23], [48]</td></tr><tr><td>Stochastic Gradient Descent (SGD)</td><td>[26]</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a0c61c58780f7a8f3bdcc06c5394eac9"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0d169782c1b02a7d0ed7f737373b5563",
+    "text": "mentation of these level of learning rate are [26], [25], [19], [32], [20], [15], [29], [30], [16], [17], [34], [28], [31], [50], [49], [13], [27], [33], [22], [39], and [35]. Most of these studies that apply learning rate levels of 2.00E-05 and 3.00E-05 were perhaps due to the original research on BERT as reported in the paper titled \u201cBERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\u201d, in which the authors mentioned that the optimal hyperparameter values are actually specific to a particular training context, nevertheless several ranges of values are generally work well in all type of tasks. For their study, however, the authors specifically set their learning rate value to 2.00E-05, 3.00E-05, and 5.00E-05.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 47
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 53
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 59
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 65
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 71
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 77
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 83
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 89
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 95
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 101
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 107
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 113
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 119
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 125
+        },
+        {
+          "text": "49",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 131
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 137
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 143
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 149
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 155
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 161
+        },
+        {
+          "text": "35",
+          "url": "cite.40abdel2022performance",
+          "start_index": 171
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a0c61c58780f7a8f3bdcc06c5394eac9"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "dd744d5885844bd8305ac49281d3ab31",
+    "text": "The second most considered hyperparameter to be arranged was batch size, which refers to the amount of data samples handled concurrently in a single iteration of model training. The Greater batch size can expedite the training process. They however may degrade the quality of the trained models toward recognizing patterns in new (unseen) data. Smaller batch sizes, on the other hand, will lead to trained models with higher per- formance due to their better pattern recognition capability towards new (unseen) data but will need longer time to train. Based on the reviewed papers, the most widely applied batch size is 32. The list of papers that reported the implementation of this level of batch size comprises [32], [20], [29], [26], [22], [30], [17], [21], [36], [19], [44], [50], and [42]. The main consideration for selecting a particular level of batch size for model training is nor- mally to account for the available graphical processing unit (GPU) or central processing unit (CPU) memory to avoid out-of-memory (OOM) issues. Furthermore, we need to ex- amine the trade-off between training speed and the expected performance of the trained model when choosing the batch size. Small batch sizes can be slower per epoch but may lead to produce better models\u2019 performance.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 715
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 721
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 727
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 733
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 739
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 745
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 751
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 757
+        },
+        {
+          "text": "36",
+          "url": "cite.17yang2023finchain",
+          "start_index": 763
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 769
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 775
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 781
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 791
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a0c61c58780f7a8f3bdcc06c5394eac9"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f3fa9006de8f98b995ecbdebcf820b70",
+    "text": "The next most considered hyperparameter to be arranged was the type of optimizer, which is an algorithm that updates the network\u2019s weights during the model training pro- cess. An efficient optimizer can contribute to faster convergence and better models\u2019 perfor- mance outcomes. Adam is a frequently applied optimizer for BERT-based models training. Adam is an adaptive and efficient optimizer that uses momentum estimates and RMSProp.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "a0c61c58780f7a8f3bdcc06c5394eac9"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "63d9c42c247241abc4de53d35688226b",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "5f23c5e332762ac41a6afee598793341",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "1972348711b4e4c7c17fecbd5eaf1ba9",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "f74c39be03377097a4a6f9afbf356a52",
+    "text": "723",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5ae8d6f7e7fa6bb1de275d4b6e9095bb",
+    "text": "Interestingly, all the studies reported within the reviewed papers applied Adam optimizer, except for one study as reported in [26] which applied SGD for the optimizer. As men- tioned in their paper, the authors\u2019 reason for employing SGD is \u201cthat SGD\u2019s performance was tuned to identify the ideal parameters for improving pertinence through Grid Search and Random Search\u201d. Nonetheless, the application of Adam\u2019s optimizer outperforms SGD in several studies as reported in the reviewed papers.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 128
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f74c39be03377097a4a6f9afbf356a52"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b4cb745ce898b808139ed42a1256bf29",
+    "text": "According to several studies, the proper arrangement of hyperparameters has a significant impact on the BERT-based model. Based on our reviewed papers, the three most considered hyperparameters for training models were learning rate, batch size, and the type of optimizer. Most of the studies also applied certain types of arrangement for these three hyperparameters. These kinds of arrangements practiced in several studies have provided valuable insight for future works in BERT-based models development and optimization. It is strongly advised to identify the purpose of the models\u2019 development or optimization at hand prior deciding certain type of hyperparameters arrangement in our work. Several factors should be considered when deciding on certain hyperparameter arrangements, including the employed hardware capacity, the size of datasets (corpus), the type of the NLP tasks, and the type of the intended model to be developed or optimized (i.e. generic-foundational or specific-customized models).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f74c39be03377097a4a6f9afbf356a52"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "476eed0800e4559d406e4add3ade5623",
+    "text": "RQ 3. What type of evaluation metrics were normally employed for particular NLP tasks?",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "f74c39be03377097a4a6f9afbf356a52"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7db4b0a11c348a5dc72ef50423f64c92",
+    "text": "A number of evaluation metrics to evaluate the BERT-based models for NLP tasks have been mentioned in our reviewed papers. The metrics, as described in Table 5, comprise of F1-Score, Accuracy, Precision, Recall, Receiver Operating Characteristic (ROC)/Area Un- der the ROC Curve (AUC), Exact Match, and ROUGE. The F1 Score was used in the major- ity of the studies, in which it is commonly combined with Accuracy, Precision, and Recall. It is due to the fact that most of our reviewed papers were reporting on studies regard- ing text classification. For the type of binary, multi-class or multi-label text classifications, these types of metrics that were calculated based on the result of confusion matrix have be- come a de facto standard to evaluate the models\u2019 performance. If the previous metrics are normally used for evaluating \u201cdiscriminative\u201d AI-type of tasks, Exact Match and ROUGE are commonly employed for evaluating models\u2019 performance on \u201cgenerative\u201d AI-type of tasks. Since until recently the number of publications on the topic of \u201cgenerative\u201d AI is still lesser than its \u201cdiscriminative\u201d AI counterpart, hence the studies which employed the Exact Match and ROUGE are also lower as reflected in Table 5. Nevertheless, the selection of evaluation metric should be based on the type of NLP tasks at hand (such as it is ad- vised to use ROUGE for text synthesis task) and class distribution of the datasets (e.g. it is suggested to avoid using accuracy for evaluating classification performance on imbalanced datasets).",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Table 5",
+          "url": "table.5",
+          "start_index": 152
+        },
+        {
+          "text": "Table 5",
+          "url": "table.5",
+          "start_index": 1209
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "476eed0800e4559d406e4add3ade5623"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "179cbea3bd5e752fbad84c6848add200",
+    "text": "The F1-Score, Accuracy, Precision, Recall, and ROC (AUC) metrics provide an informa- tive picture of the models\u2019 performance in predicting (classifying) the correct label. These scores are widely utilized in various \u201cdiscriminative\u201d AI NLP tasks, such as sentiment analysis and information extraction. It is reflected in the vast number of studies which em- ploying this type of metrics found in this study as reported in [32], [41], [20], [29], [33], [22], [30], [14], [34], [28], [35], [18], [45], [50], [42], [47], [49], [13], [36], [37], [40], and [11] which address text classification tasks. Interestingly, there was no study employed specificity as the evaluation metric even though one paper mentioned it in their content [27]. As for the",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 422
+        },
+        {
+          "text": "41",
+          "url": "cite.14li2022improved",
+          "start_index": 428
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 434
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 440
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 446
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 452
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 458
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 464
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 470
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 476
+        },
+        {
+          "text": "35",
+          "url": "cite.40abdel2022performance",
+          "start_index": 482
+        },
+        {
+          "text": "18",
+          "url": "cite.50mutasodirin2021investigating",
+          "start_index": 488
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 494
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 500
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 506
+        },
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 512
+        },
+        {
+          "text": "49",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 518
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 524
+        },
+        {
+          "text": "36",
+          "url": "cite.17yang2023finchain",
+          "start_index": 530
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 536
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 542
+        },
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 552
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 728
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "476eed0800e4559d406e4add3ade5623"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "3a16b9c96e393f610d5e9abce8c29684",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "f3931dfd3068262d611b8567c2d1b1cf",
+    "text": "724",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "9d76ac302c69413b8c90182f2df6a132",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "a1d18af3b1f0f6eee816b8c79821da88",
+    "text": "Table 5: The applied evaluation metrics excerpted from the reviewed papers",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9d76ac302c69413b8c90182f2df6a132"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "c5685914222fdd4cb3ba82b21d677590",
+    "text": "NLP Task Evaluation Metric Paper Text Classification F1 Score [25], [12], [19], [32], [20], [4], [37], [13], [27], [15], [29], [30], [21] [16], [17], [33], [34], [22], [23], [24], [38], [28], [11], [39], [44], [31], [50], [42], [35], [36] Accuracy [25], [20], [37], [26], [13], [27], [14], [21], [16], [17], [22], [28] [50] Precision [25], [19], [37], [13], [27], [22], [24], [28], [11], [31], [42] Sensitivity (Recall) [25], [37], [13], [27], [15], [22], [24], [28], [11], [31], [42] ROC (AUC) [11] Question Answering Exact Match [32], [4], [37], [15], [30], [21], [33], [34], [39], [35], [36] Text Summarization ROUGE [44], [45], [46], [40], [41], [47], [48], [43], [49]",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 1
+        },
+        {
+          "text": "12",
+          "url": "cite.12chandradev2023analisis",
+          "start_index": 7
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 13
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 19
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 25
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 31
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 36
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 42
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 48
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 54
+        },
+        {
+          "text": "29",
+          "url": "cite.26akhmad2023analisis",
+          "start_index": 60
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 66
+        },
+        {
+          "text": "21 ]",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 72
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 77
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 83
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 89
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 95
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 101
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 107
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 113
+        },
+        {
+          "text": "38",
+          "url": "cite.45calizzano2022generating",
+          "start_index": 119
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 125
+        },
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 131
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 137
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 143
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 149
+        },
+        {
+          "text": "50",
+          "url": "cite.33von2020building",
+          "start_index": 155
+        },
+        {
+          "text": "42",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 161
+        },
+        {
+          "text": "35",
+          "url": "cite.40abdel2022performance",
+          "start_index": 167
+        },
+        {
+          "text": "36 ]",
+          "url": "cite.17yang2023finchain",
+          "start_index": 173
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 178
+        },
+        {
+          "text": "20",
+          "url": "cite.24baharuddin2023fine",
+          "start_index": 184
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 190
+        },
+        {
+          "text": "26",
+          "url": "cite.13mozafari2020hate",
+          "start_index": 196
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 202
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 208
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 214
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 220
+        },
+        {
+          "text": "16",
+          "url": "cite.28alzubi2023cobert",
+          "start_index": 226
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 232
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 238
+        },
+        {
+          "text": "28 ]",
+          "url": "cite.31wang2021cs",
+          "start_index": 244
+        },
+        {
+          "text": "50 ]",
+          "url": "cite.33von2020building",
+          "start_index": 249
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 254
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 260
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 266
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 272
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 278
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 284
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 290
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 296
+        },
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 302
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 308
+        },
+        {
+          "text": "42 ]",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 314
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 319
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 325
+        },
+        {
+          "text": "13",
+          "url": "cite.35kazemi2022persianquad",
+          "start_index": 331
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 337
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 343
+        },
+        {
+          "text": "22",
+          "url": "cite.38sutoyo2023emotionally",
+          "start_index": 349
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 355
+        },
+        {
+          "text": "28",
+          "url": "cite.31wang2021cs",
+          "start_index": 361
+        },
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 367
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 373
+        },
+        {
+          "text": "42 ]",
+          "url": "cite.15liu2022sentiment",
+          "start_index": 379
+        },
+        {
+          "text": "11 ]",
+          "url": "cite.11tsani2023personality",
+          "start_index": 384
+        },
+        {
+          "text": "32",
+          "url": "cite.23martin2021sentiment",
+          "start_index": 389
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 395
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 400
+        },
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 406
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 412
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 418
+        },
+        {
+          "text": "33",
+          "url": "cite.37indah2021Indonesia",
+          "start_index": 424
+        },
+        {
+          "text": "34",
+          "url": "cite.30puri2020training",
+          "start_index": 430
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 436
+        },
+        {
+          "text": "35",
+          "url": "cite.40abdel2022performance",
+          "start_index": 442
+        },
+        {
+          "text": "36 ]",
+          "url": "cite.17yang2023finchain",
+          "start_index": 448
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 453
+        },
+        {
+          "text": "45",
+          "url": "cite.46harm2022abstractive",
+          "start_index": 459
+        },
+        {
+          "text": "46",
+          "url": "cite.47luu2021hybrid",
+          "start_index": 465
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 471
+        },
+        {
+          "text": "41",
+          "url": "cite.14li2022improved",
+          "start_index": 477
+        },
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 483
+        },
+        {
+          "text": "48",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 489
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 495
+        },
+        {
+          "text": "49 ]",
+          "url": "cite.34rizqullah2023qasina",
+          "start_index": 501
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>NLP Task</th><th>Evaluation Metric</th><th>Paper</th></tr></thead><tbody><tr><td rowspan=\"4\">Text Classification</td><td>F1 Score</td><td>[25], [12], [19], [32], [20], [4], [37], [13], [27], [15], [29], [30], [21] [16], [17], [33], [34], [22], [23], [24], [38], [28], [11], [39], [44], [31], [50], [42], [35], [36]</td></tr><tr><td>Accuracy</td><td>[25], [20], [37], [26], [13], [27], [14], [21], [16], [17], [22], [28] [50]</td></tr><tr><td>Sensitivity (Recall)</td><td>[25], [19], [37], [13], [27], [22], [24], [28], [11], [31], [42] [25], [37], [13], [27], [15], [22], [24], [28], [11], [31], [42]</td></tr><tr><td>ROC (AUC)</td><td>[11]</td></tr><tr><td>Question Answering</td><td>Exact Match</td><td>[32], [4], [37], [15], [30], [21], [33], [34], [39], [35], [36]</td></tr><tr><td>Text Summarization</td><td>ROUGE</td><td>[44], [45], [46], [40], [41], [47], [48], [43], [49]</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9d76ac302c69413b8c90182f2df6a132"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "df324c3a7ef15bd93b6e4976bd140e88",
+    "text": "least employed metrics for classification performance evaluation was ROC (AUC) which was employed in [11].",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "11",
+          "url": "cite.11tsani2023personality",
+          "start_index": 101
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9d76ac302c69413b8c90182f2df6a132"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c90dc8d80a63158f707254e5d3a0ec77",
+    "text": "Meanwhile, Exact Match is employed for \u201cgenerative\u201d AI NLP tasks like question an- swering and machine reading comprehension. Exact Match is a measure of the percentage of responses predicted by the model that match the actual answers, as used for the evalu- ation metrics in several studies on question-answering model as reported in [15], [4], [24], [30], [17], [14], [39], [31], [21], [37], and [40].",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "15",
+          "url": "cite.25yunanto2023bert",
+          "start_index": 336
+        },
+        {
+          "text": "4",
+          "url": "cite.4richardson2022comparison",
+          "start_index": 342
+        },
+        {
+          "text": "24",
+          "url": "cite.44koto2020liputan6",
+          "start_index": 347
+        },
+        {
+          "text": "30",
+          "url": "cite.27jazuli2023aspect",
+          "start_index": 353
+        },
+        {
+          "text": "17",
+          "url": "cite.29risch2021semantic",
+          "start_index": 359
+        },
+        {
+          "text": "14",
+          "url": "cite.43baykara2022abstractive",
+          "start_index": 365
+        },
+        {
+          "text": "39",
+          "url": "cite.39dartiko2024comparative",
+          "start_index": 371
+        },
+        {
+          "text": "31",
+          "url": "cite.32putri2022idk",
+          "start_index": 377
+        },
+        {
+          "text": "21",
+          "url": "cite.41ranggianto2023abstractive",
+          "start_index": 383
+        },
+        {
+          "text": "37",
+          "url": "cite.42ismail2023arabic",
+          "start_index": 389
+        },
+        {
+          "text": "40",
+          "url": "cite.19maceda2023sentiment",
+          "start_index": 399
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9d76ac302c69413b8c90182f2df6a132"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "888bc4de77217d385bf8f06d13f24cda",
+    "text": "Finally, the ROUGE metric is commonly applied to a number of other \u201cgenerative\u201d AI NLP tasks including text summarization, text synthesis, and machine translation. ROUGE measures the difference of the text produced by the model to a reference text that is re- garded as valid, taking into account n-grams, word order, and lexical similarity. A number of studies on text summarization as reported in [47], [23], [48], [25], [43], [19], [18], [44], and [27], used this evaluation instrument due to its fitness for the particular task.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "47",
+          "url": "cite.20antoun2020arabert",
+          "start_index": 400
+        },
+        {
+          "text": "23",
+          "url": "cite.48licari2023legal",
+          "start_index": 406
+        },
+        {
+          "text": "48",
+          "url": "cite.49fikri2024abstractive",
+          "start_index": 412
+        },
+        {
+          "text": "25",
+          "url": "cite.21hutama2022indonesian",
+          "start_index": 418
+        },
+        {
+          "text": "43",
+          "url": "cite.16ullah2023bert",
+          "start_index": 424
+        },
+        {
+          "text": "19",
+          "url": "cite.22nabiilah2023bert",
+          "start_index": 430
+        },
+        {
+          "text": "18",
+          "url": "cite.50mutasodirin2021investigating",
+          "start_index": 436
+        },
+        {
+          "text": "44",
+          "url": "cite.18nissa2023multi",
+          "start_index": 442
+        },
+        {
+          "text": "27",
+          "url": "cite.36vemula2022tequad",
+          "start_index": 452
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9d76ac302c69413b8c90182f2df6a132"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "9b0dbb39109e81099205fa76e4a00009",
+    "text": "5 Conclusion",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9d76ac302c69413b8c90182f2df6a132"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1fabb4b856c1bade5ce6509af3888411",
+    "text": "Based on an extensive as well as intensive study of a sufficient number of papers which complied with our review protocol, we eventually came up with three conclusions. First, each type of BERT-based model variant conveys task-specific suitability due to their in- herent training history. In order to select appropriate models for particular NLP tasks, three primary concerns should be considered: i) the type of NLP problem to be resolved (i.e. NLP task to be served), ii) the specific domain to be handled (such as financial, med- ical, law/legal or others), and iii) the intended language to be applied (such as English or others). Second, certain types of hyperparameters arrangements is suggested for training the BERT-based models for improving their performance. Learning rate, batch size, and the type of optimizer were the three most considered hyperparameters to be properly arranged in BERT-based model training. A number of factors should be considered when deciding on certain hyperparameter arrangements, including the employed hardware capacity, the size of datasets (corpus), the type of the NLP tasks, and the type of the intended model to be developed or optimized (i.e. generic-foundational or specific-customized models). Third, different types of metrics are normally employed for particular NLP tasks. The most widely used metrics for text classification were F1-score, accuracy, precision, and sensitiv-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "9b0dbb39109e81099205fa76e4a00009"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "49a6e4ac219139979b42b0a68ea092b2",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "928e439d9fc27b5f04df7cf0846c249e",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "a02e9fa8f66dd6a470f6414a12fb78f3",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "915c36492c53323ae4ad451976cd722e",
+    "text": "725",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ba69e3c8adc3096195d5adffef4202cc",
+    "text": "ity (recall). Meanwhile, most of the reviewed papers were reporting using Exact Match for question answering and ROUGE for text summarization tasks.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "915c36492c53323ae4ad451976cd722e"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "1f8b7bd3b272fd241148c56b0a4c79d1",
+    "text": "References",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "915c36492c53323ae4ad451976cd722e"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5d38112e8f97339fcbd0caf33fb539a8",
+    "text": "[1] J. Bharadiya, \u201cA comprehensive survey of deep learning techniques natural language processing,\u201d European Journal of Technology, vol. 7, no. 1, pp. 58\u201366, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ae4faf76385f7ba988baba5cc5f8c18f",
+    "text": "[2] M.-W. C. Kenton, Jacob Devlin and L. K. Toutanova, \u201cBert: Pre-training of deep bidirectional transformers for language understanding,\u201d in Proceedings of naacL-HLT, vol. 1, p. 2, Minneapolis, Minnesota, 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a8569d15924bb1f22fc6c64b86a95531",
+    "text": "[3] K. Mohiuddin, M. A. Alam, M. M. Alam, P. Welke, M. Martin, J. Lehmann, and S. Vah- dati, \u201cRetention is all you need,\u201d in Proceedings of the 32nd ACM International Conference on Information and Knowledge Management, pp. 4752\u20134758, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d1ad34dc925bceb3779b66e2d79dd711",
+    "text": "[4] B. Richardson and A. Wicaksana, \u201cComparison of indobert-lite and roberta in text mining for indonesian language question answering application,\u201d Int. J. Innov. Com- put. Inf. Control, vol. 18, no. 6, pp. 1719\u20131734, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "2173820b211eb7ea3db41147d359a390",
+    "text": "[5] E. Kotei and R. Thirunavukarasu, \u201cA systematic review of transformer-based pre- trained language models through self-supervised learning,\u201d Information, vol. 14, no. 3, p. 187, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "211bbe0dd12c5ac1fdbbcec0633ee0df",
+    "text": "[6] X. Qiu, T. Sun, Y. Xu, Y. Shao, N. Dai, and X. Huang, \u201cPre-trained models for natural language processing: A survey,\u201d Science China technological sciences, vol. 63, no. 10, pp. 1872\u20131897, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "02767eb6fa90dfcb559ca2b334804de0",
+    "text": "[7] R. M. Samant, M. R. Bachute, S. Gite, and K. Kotecha, \u201cFramework for deep learning- based language models using multi-task learning in natural language understanding: A systematic literature review and future directions,\u201d IEEE Access, vol. 10, pp. 17078\u2013 17097, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "cad84ac221889a9667ea420d2e7ceb8b",
+    "text": "[8] T. A. Rana, Y.-N. Cheah, and S. Letchmunan, \u201cTopic modeling in sentiment analysis: A systematic review.,\u201d Journal of ICT Research & Applications, vol. 10, no. 1, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "715195a04d6a7c5fa5b03b940e09fce4",
+    "text": "[9] B. Kitchenham, O. P. Brereton, D. Budgen, M. Turner, J. Bailey, and S. Linkman, \u201cSys- tematic literature reviews in software engineering\u2013a systematic literature review,\u201d In- formation and software technology, vol. 51, no. 1, pp. 7\u201315, 2009.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "384f82a01587c4a39b87d3cf35ef7d74",
+    "text": "[10] F. Zamakhsyari and A. Fatwanto, \u201cA systematic literature review of design thinking approach for user interface design,\u201d JOIV: International Journal on Informatics Visualiza- tion, vol. 7, no. 4, pp. 2313\u20132320, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "fa46222bfa7544106a6e62ed6de96879",
+    "text": "[11] E. F. Tsani and D. Suhartono, \u201cPersonality identification from social media using en- semble bert and roberta,\u201d Informatica, vol. 47, no. 4, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "620e97446d8d160a80902aacf5bfb784",
+    "text": "[12] V. Chandradev, I. M. A. D. Suarjaya, and I. P. A. Bayupati, \u201cAnalisis sentimen re- view hotel menggunakan metode deep learning bert,\u201d Jurnal Buana Informatika, vol. 14, no. 02, pp. 107\u2013116, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "1f8b7bd3b272fd241148c56b0a4c79d1"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "c955e6fbd5a123ffb47dd1d1bc61011c",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "bb60e5180fb3024c53e6bcdca972c4dc",
+    "text": "726",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "c775476baf7e9502ca719430159ad27a",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "20c21c34913f19aeb7b4e54e0736f12d",
+    "text": "[13] A. Kazemi, J. Mozafari, and M. A. Nematbakhsh, \u201cPersianquad: the native question answering dataset for the persian language,\u201d IEEE Access, vol. 10, pp. 26045\u201326057, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "e7139debc5cec86869693f040d7ed0d4",
+    "text": "[14] B. Baykara and T. G\u00fcng\u00f6r, \u201cAbstractive text summarization and new large-scale datasets for agglutinative languages turkish and hungarian,\u201d Language Resources and Evaluation, vol. 56, no. 3, pp. 973\u20131007, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "2e02057ebd0f327041a4b7a77935b240",
+    "text": "[15] R. Yunanto, E. Wibowo, and R. Rianto, \u201cA bert model to detect provocative hoax,\u201d Journal of Engineering Science and Technology, vol. 18, no. 5, pp. 2281\u20132297, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "31074266fb4f612342f39fd10670bb0a",
+    "text": "[16] J. A. Alzubi, R. Jain, A. Singh, P. Parwekar, and M. Gupta, \u201cCobert: Covid-19 question answering system using bert,\u201d Arabian journal for science and engineering, vol. 48, no. 8, pp. 11003\u201311013, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "65a347d43b396ec0b6ac9495b995ae28",
+    "text": "[17] J. Risch, T. M\u00f6ller, J. Gutsch, and M. Pietsch, \u201cSemantic answer similarity for evaluat- ing question answering models,\u201d arXiv preprint arXiv:2108.06130, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "4d0ee5e5ebb3c6f40fd4ee72202b3aca",
+    "text": "[18] M. A. Mutasodirin and R. E. Prasojo, \u201cInvestigating text shortening strategy in bert: Truncation vs summarization,\u201d in 2021 international conference on advanced computer science and information systems (icacsis), pp. 1\u20135, IEEE, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "85817198bb2bf32c65f759c31d986cac",
+    "text": "[19] G. Z. Nabiilah, S. Y. Prasetyo, Z. N. Izdihar, and A. S. Girsang, \u201cBert base model for toxic comment analysis on indonesian social media,\u201d Procedia Computer Science, vol. 216, pp. 714\u2013721, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "4b4f9c217bc72becf11c6fabca748a7a",
+    "text": "[20] F. Baharuddin and M. F. Naufal, \u201cFine-tuning indobert for indonesian exam question classification based on bloom\u2019s taxonomy,\u201d Journal of Information Systems Engineering and Business Intelligence, vol. 9, no. 2, pp. 253\u2013263, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ec6e4b066ad668a34486eb1c749e35c5",
+    "text": "[21] N. A. Ranggianto, D. Purwitasari, C. Fatichah, R. W. Sholikah, et al., \u201cAbstractive and extractive approaches for summarizing multi-document travel reviews,\u201d Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi), vol. 7, no. 6, pp. 1464\u20131475, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b7125728c21e7a902ee3d7ca5f22fd0b",
+    "text": "[22] R. Sutoyo, H. Warnars, S. M. Isa, and W. Budiharto, \u201cEmotionally aware chatbot for responding to indonesian product reviews,\u201d International Journal of Innovative Comput- ing, Information and Control, vol. 19, no. 03, p. 861, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7755b8a2a23c3694723f10ea0ce17cea",
+    "text": "[23] D. Licari, P. Bushipaka, G. Marino, G. Comand\u00e9, and T. Cucinotta, \u201cLegal holding extraction from italian case documents using italian-legal-bert text summarization,\u201d in Proceedings of the Nineteenth International Conference on Artificial Intelligence and Law, pp. 148\u2013156, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "964e8292189b81eb7bf93c6a1a5e1ad8",
+    "text": "[24] F. Koto, J. H. Lau, and T. Baldwin, \u201cLiputan6: A large-scale indonesian dataset for text summarization,\u201d arXiv preprint arXiv:2011.00679, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9daed58dac9c531e9b3a73279181b722",
+    "text": "[25] L. B. Hutama and D. Suhartono, \u201cIndonesian hoax news classification with multilin- gual transformer model and bertopic,\u201d Informatica, vol. 46, no. 8, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f1d0b270b05721dbfcd6ff4c2b54f820",
+    "text": "[26] M. Mozafari, R. Farahbakhsh, and N. Crespi, \u201cHate speech detection and racial bias mitigation in social media based on bert model,\u201d PloS one, vol. 15, no. 8, p. e0237861, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "c775476baf7e9502ca719430159ad27a"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "c49020edc617fa0897e1d4de1b3ed736",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "58d28a2fadaddc825c0008c3d4a172fc",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "a4790d41980a22d1a73b11ad9094e7c6",
+    "text": "A SYSTEMATIC LITERATURE REVIEW OF \u00b7\u00b7\u00b7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "2991c6059bfd8508c0cff2b2d99b2dff",
+    "text": "727",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7a17cdbc34420a4b9767516f8a880e6f",
+    "text": "[27] R. Vemula, M. Nuthi, and M. Shrivastava, \u201cTequad: Telugu question answering dataset,\u201d in Proceedings of the 19th International Conference on Natural Language Process- ing (ICON), pp. 300\u2013307, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "6fad4fc170291b9ade71dfa8a2365d67",
+    "text": "[28] P. Wang, J. Fang, and J. Reinspach, \u201cCs-bert: a pretrained model for customer ser- vice dialogues,\u201d in Proceedings of the 3rd Workshop on Natural Language Processing for Conversational AI, pp. 130\u2013142, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "462facccc5d3adb4e823935fea5b7adc",
+    "text": "[29] E. P. A. Akhmad, \u201cAnalisis sentimen ulasan aplikasi dlu ferry pada google play store menggunakan bidirectional encoder representations from transformers,\u201d Jurnal Ap- likasi Pelayaran dan Kepelabuhanan, vol. 13, no. 2, pp. 104\u2013112, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "dec9e621ce3d4bafb07de398dd6c1d04",
+    "text": "[30] A. Jazuli, W. Widowati, and R. Kusumaningrum, \u201cAspect-based sentiment analysis on student reviews using the indo-bert base model,\u201d in E3S Web of Conferences, vol. 448, p. 02004, EDP Sciences, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "debd439eb84d1b1b1d4d802d6e7db938",
+    "text": "[31] R. A. Putri and A. Oh, \u201cIdk-mrc: Unanswerable questions for indonesian machine reading comprehension,\u201d arXiv preprint arXiv:2210.13778, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "825655184cb61ea0bad6aa334b2bc811",
+    "text": "[32] G. L. Martin, M. E. Mswahili, and Y.-S. Jeong, \u201cSentiment classification in swahili lan- guage using multilingual bert,\u201d arXiv preprint arXiv:2104.09006, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "35abddc12f3cd249b29a9ea2c1612031",
+    "text": "[33] M. I. Rahajeng and P. Ayu, \u201cIndonesian question answering system for factoid ques- tions using face beauty products knowledge graph,\u201d Jurnal Linguistik Komputasional (JLK), vol. 4, p. 59, 09 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "28a74997f20c27107431b9c483d89d84",
+    "text": "[34] R. Puri, R. Spring, M. Patwary, M. Shoeybi, and B. Catanzaro, \u201cTraining question an- swering models from synthetic data,\u201d arXiv preprint arXiv:2002.09599, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3052a5e5f28470da76aea9dba2e02cbd",
+    "text": "[35] S. Abdel-Salam and A. Rafea, \u201cPerformance study on extractive text summarization using bert models,\u201d Information, vol. 13, no. 2, p. 67, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c2e15cc726baeb9e949300e3ee828ec3",
+    "text": "[36] X. Yang, C. Zhang, Y. Sun, K. Pang, L. Jing, S. Wa, and C. Lv, \u201cFinchain-bert: A high- accuracy automatic fraud detection model based on nlp methods for financial scenar- ios,\u201d Information, vol. 14, no. 9, p. 499, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d60b1dc6705b40e4fb8c361c841132f0",
+    "text": "[37] Q. Ismail, K. Alissa, and R. M. Duwairi, \u201cArabic news summarization based on t5 transformer approach,\u201d in 2023 14th International Conference on Information and Com- munication Systems (ICICS), pp. 1\u20137, IEEE, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d7c2b74261cc62b0b408c0ba800d6d7d",
+    "text": "[38] R. Calizzano, M. Ostendorff, Q. Ruan, and G. Rehm, \u201cGenerating extended and multi- lingual summaries with pre-trained transformers,\u201d in Proceedings of the Thirteenth Lan- guage Resources and Evaluation Conference, pp. 1640\u20131650, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "e568b57f90c5d5e20e84a23e8650df4b",
+    "text": "[39] F. Dartiko, M. Yusa, A. Erlansari, and S. A. Basha, \u201cComparative analysis of transformer-based method in a question answering system for campus orientation guides,\u201d INTENSIF: Jurnal Ilmiah Penelitian dan Penerapan Teknologi Sistem Informasi, vol. 8, no. 1, pp. 122\u2013139, 2024.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c7b929606a41a24ec2dd77c8cd8f42f3",
+    "text": "[40] L. L. Maceda, A. A. Satuito, and M. B. Abisado, \u201cSentiment analysis of code-mixed social media data on philippine uaqte using fine-tuned mbert model,\u201d International Journal of Advanced Computer Science and Applications, vol. 14, no. 7, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "2991c6059bfd8508c0cff2b2d99b2dff"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "5573267fe71600799317dcba73040201",
+    "text": "JURNAL INFOTEL, VOL. 16, NO. 4, NOVEMBER 2024, PP. 713\u2013728.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "eab2134f3d54e3e14866237c44379935",
+    "text": "728",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "216cb6bcf68cbd3c3050df686a33a044",
+    "text": "FATWANTO et al.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "edefd121bbe9ee64a92fdae1b0383478",
+    "text": "[41] Q. Li and Y. Zhang, \u201cImproved text matching model based on bert,\u201d Frontiers in Com- puting and Intelligent Systems, vol. 2, no. 3, pp. 40\u201343, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "fca6c064af2084732e12b9c7e7091ea0",
+    "text": "[42] X. Liu, Y. Li, Y. Shao, A. Li, and J. Liang, \u201cA sentiment analysis model for car review texts based on adversarial training and whole word mask bert,\u201d in China Intelligent Networked Things Conference, pp. 107\u2013121, Springer, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "088837f71783a637519953df0a5c19d6",
+    "text": "[43] M. F. Ullah, A. Saeed, J. Li, T. Mahmood, M. Adeel, et al., \u201cBert model for roman urdu fake review identification,\u201d 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "6b509e33f6ec5931fd99dd87f624830f",
+    "text": "[44] N. K. Nissa and E. Yuliant, \u201cMulti-label text classification of indonesian customer reviews using bidirectional encoder representations from transformers language model,\u201d Int. J. Power Electron. Drive Syst, vol. 13, pp. 5641\u20135652, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5b006a0665bbdfc55d749cb02704050b",
+    "text": "[45] H. H\u00e4rm and T. Alum\u00e4e, \u201cAbstractive summarization of broadcast news stories for estonian.,\u201d Baltic Journal of Modern Computing, vol. 10, no. 3, 2022.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c6bc637f87dd7d8e4f00da0d1b6e22f4",
+    "text": "[46] T. M. Luu, H. T. Le, and T. M. Hoang, \u201cA hybrid model using the pretrained bert and deep neural networks with rich feature for extractive text summarization,\u201d Journal of Computer Science and Cybernetics, vol. 37, no. 2, pp. 123\u2013143, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b6dc90ceb8888c6f3545e1cb3340b226",
+    "text": "[47] W. Antoun, F. Baly, and H. Hajj, \u201cArabert: Transformer-based model for arabic lan- guage understanding,\u201d arXiv preprint arXiv:2003.00104, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3a6d4732b5e96f5bed22a5d1ceb193f1",
+    "text": "[48] F. B. Fikri, K. Oflazer, and B. Yan\u0131ko\u02d8glu, \u201cAbstractive summarization with deep rein- forcement learning using semantic similarity rewards,\u201d Natural Language Engineering, vol. 30, no. 3, pp. 554\u2013576, 2024.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a81ad973fc8e96f5c36e7e1685f16734",
+    "text": "[49] M. R. Rizqullah, A. Purwarianti, and A. F. Aji, \u201cQasina: Religious domain question answering using sirah nabawiyah,\u201d in 2023 10th International Conference on Advanced Informatics: Concept, Theory and Application (ICAICTA), pp. 1\u20136, IEEE, 2023.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "95e8c6fb0838618ec10aba85c3f754e0",
+    "text": "[50] H. von Essen and D. Hesslow, \u201cBuilding a swedish question-answering model,\u201d in Proceedings of the Probability and Meaning Conference (PaM 2020), pp. 117\u2013127, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf",
+      "parent_id": "216cb6bcf68cbd3c3050df686a33a044"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "9e98b8028a08cfaec10e30ef4fd8e785",
+    "text": "\u00ae",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "26d579de8a891a4388e9b9ed750872ca",
+    "text": "https://ejournal.ittelkom-pwt.ac.id/index.php/infotel",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "review_of_bert_based_models.pdf"
+    }
+  }
+]

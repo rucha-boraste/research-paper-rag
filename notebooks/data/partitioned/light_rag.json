@@ -1,0 +1,3957 @@
+[
+  {
+    "type": "Title",
+    "element_id": "10e873d4146a258850b13c1c387d2542",
+    "text": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "0faffc09b001e68ff4d35d5e1d375ab2",
+    "text": "Zirui Guo, Lianghao Xia', Yanhua Yu?, Tu Ao?, Chao Huang'*",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf",
+      "parent_id": "10e873d4146a258850b13c1c387d2542"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "256ce4616eaed64f5bde46a3aeb86038",
+    "text": "University of Hong Kong1",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf",
+      "parent_id": "10e873d4146a258850b13c1c387d2542"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bea0bf8bd2b6480bc0565c575f98bd0f",
+    "text": "Beijing University of Posts and Telecommunications2",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf",
+      "parent_id": "10e873d4146a258850b13c1c387d2542"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a5dfebe5c8baf30ace696f103fa00cac",
+    "text": "zrguo101@hku.hk aka_xia@foxmail.com chaohuang75@gmail.com",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf",
+      "parent_id": "10e873d4146a258850b13c1c387d2542"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "f9d91b8a95d64fb25c9aba8e6c854123",
+    "text": "Abstract",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "34b1d5fc61aa7f6ff3935214b0b4c960",
+    "text": "Retrieval-Augmented Generation (RAG) sys- tems enhance large language models (LLMs) by integrating external knowledge sources, en- abling more accurate and contextually relevant responses tailored to user needs. However, existing RAG systems have significant limi- tations, including reliance on flat data repre- sentations and inadequate contextual aware- ness, which can lead to fragmented answers that fail to capture complex interdependencies. To address these challenges, we propose Ligh- tRAG, a novel framework that incorporates graph structures into text indexing and retrieval processes. This innovative approach employs a dual-level retrieval system that enhances com- prehensive information retrieval from both low- and high-level knowledge discovery. Addition- ally, the integration of graph structures with vector representations facilitates efficient re- trieval of related entities and their relationships, significantly improving response times while maintaining contextual relevance. This capa- bility is further enhanced by an incremental update algorithm that ensures the timely inte- gration of new data, allowing the system to re- main effective and responsive in rapidly chang- ing data environments. Extensive experimental validation demonstrates considerable improve- ments in retrieval accuracy and efficiency com- pared to existing approaches. LightRAG is pub- licly available as an open-source framework at: https://github.com/HKUDS/LightRAG.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf",
+      "parent_id": "f9d91b8a95d64fb25c9aba8e6c854123"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "3c6a6218a07a7ae449485aec433cc12a",
+    "text": "1 Introduction",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "001c4d23861cd0e91cd543abbf3f70ff",
+    "text": "Retrieval-Augmented Generation (RAG) systems have been developed to enhance large language models (LLMs) by integrating external knowledge sources (Sudhi et al., 2024; Es et al., 2024; Salemi et al., 2024). This innovative integration allows LLMs to generate more accurate and contextually relevant responses, significantly improving their",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf",
+      "parent_id": "3c6a6218a07a7ae449485aec433cc12a"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "e2e86ecbfcd9d2193493892e24148a1a",
+    "text": "*Corresponding Author: Chao Huang",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "19927238b8b1840391eced1ffa505f44",
+    "text": "utility in real-world applications. By adapting to specific domain knowledge (Tu et al., 2024), RAG systems ensure that the information provided is not only pertinent but also tailored to the user\u2019s needs. Furthermore, they offer access to up-to-date information (Zhao et al., 2024), which is crucial in rapidly evolving fields. Chunking plays a vital role in facilitating the retrieval-augmented generation process (Lyu et al., 2024). By breaking down a large external text corpus into smaller, more man- ageable segments, chunking significantly enhances the accuracy of information retrieval. This enables more targeted similarity searches, ensuring that the retrieved content is directly relevant to user queries.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "732423bdbb6d11cb0ba0f403b59d7cda",
+    "text": "However, existing RAG systems have key limi- tations that hinder their performance. First, many methods rely on flat data representations, restrict- ing their ability to understand and retrieve infor- mation based on intricate relationships between entities. Second, these systems often lack the con- textual awareness needed to maintain coherence across various entities and their interrelations, re- sulting in responses that may not fully address user queries. For example, consider a user asking, \u201cHow does the rise of electric vehicles influence urban air quality and transportation infrastructure?\u201d Existing RAG methods might retrieve separate documents on electric vehicles, air pollution, and transporta- tion challenges but struggle to synthesize them into a cohesive response. They may fail to explain how the adoption of electric vehicles can improve air quality, which in turn could affect public trans- portation planning. As a result, the answer may be fragmented and does not adequately capture the complex inter-dependencies among these topics.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1abe003aabc51964600e37abc02e9b8e",
+    "text": "To address these limitations, we propose incor- porating graph structures into text indexing and relevant information retrieval. Graphs are particu- larly effective at representing the interdependencies among different entities (Ramp\u00e1\u0161ek et al., 2022), which enables a more nuanced understanding of re-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "fb7c3d8e3dc61030b90f1459c778944c",
+    "text": "10746",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "8d76b0adbf4837f7f995abfe6da0e302",
+    "text": "Findings of the Association for Computational Linguistics: EMNLP 2025, pages 10746\u201310761 November 4-9, 2025 \u00a92025 Association for Computational Linguistics",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bbb5a8cc9a3e13f2fd36a5bd5140cad0",
+    "text": "lationships. The integration of graph-based knowl- edge structures facilitates the synthesis of informa- tion from multiple sources into coherent and con- textually rich responses. Despite these advantages, developing a fast and scalable graph-empowered RAG system that efficiently handles varying query volumes is crucial. In this work, we achieve an effective and efficient RAG system by addressing three key challenges: i) Comprehensive Infor- mation Retrieval. Ensuring comprehensive infor- mation retrieval that captures the full context of inter-dependent entities from all documents; ii) En- hanced Retrieval Efficiency. Improving retrieval efficiency over the graph-based knowledge struc- tures to significantly reduce response times; iii) Rapid Adaptation to New Data. Enabling quick adaptation to new data updates, ensuring the system remains relevant in dynamic environments.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "df2abfc2eda7bdf1db5b3a985a02cbea",
+    "text": "In response to the outlined challenges, we pro- pose LightRAG, a model that seamlessly inte- grates a graph-based text indexing paradigm with a dual-level retrieval framework. This innovative approach enhances the system\u2019s capacity to cap- ture complex inter-dependencies among entities, resulting in more coherent and contextually rich re- sponses. LightRAG employs efficient dual-level re- trieval strategies: low-level retrieval, which focuses on precise information about specific entities and their relationships, and high-level retrieval, which encompasses broader topics and themes. By com- bining both detailed and conceptual retrieval, Ligh- tRAG effectively accommodates a diverse range of quries, ensuring that users receive relevant and comprehensive responses tailored to their specific needs. Additionally, by integrating graph struc- tures with vector representations, our framework facilitates efficient retrieval of related entities and relations while enhancing the comprehensiveness of results through relevant structural information from the constructed knowledge graph.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "dbfa7d25f75adf4f314105064228d979",
+    "text": "In summary, this work\u2019s key contributions are:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "4bd6dfd9b54e3f753d379a44c45628d9",
+    "text": "\u2022 General Aspect. We emphasize the importance of developing a graph-empowered RAG system to overcome the limitations of existing methods. By integrating graph structures into text index- ing, we can effectively represent complex interde- pendencies among entities, fostering a nuanced understanding of relationships and enabling co- herent, contextually rich responses.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "414c654b1bb91882fef20a216377e642",
+    "text": "\u2022 Methodologies. To enable an efficient and adap- tive RAG system, we propose LightRAG, which",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "263c789ecfbe18313570476bca53e83b",
+    "text": "integrates a dual-level retrieval paradigm with graph-enhanced text indexing. This approach captures both low-level and high-level informa- tion for comprehensive, cost-effective retrieval. Without the need to rebuild the entire index, Ligh- tRAG reduces computational costs and acceler- ates adaptation, while its incremental update al- gorithm ensures timely integration of new data, maintaining efficacy in dynamic environments.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "0a11a46f96c05dc3125f800ddc7e8328",
+    "text": "\u2022 Experimental Findings. Extensive experiments were conducted to evaluate the effectiveness of LightRAG in comparison to existing RAG mod- els. These assessments focused on several key dimensions, including retrieval accuracy, model ablation, response efficiency, and adaptability to new information. The results demonstrated sig- nificant improvements over baseline methods.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "8f2a40930423f3bf91b33684880551ae",
+    "text": "2 Retrieval-Augmented Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "51dccc1d9c5f307cf85dc12efdd03787",
+    "text": "Retrieval-Augmented Generation (RAG) integrates user queries with a collection of pertinent doc- uments sourced from an external knowledge database, incorporating two essential elements: the Retrieval Component and the Generation Com- ponent. 1) The retrieval component is responsi- ble for fetching relevant documents or information from the external knowledge database. It identi- fies and retrieves the most pertinent data based on the input query. 2) After the retrieval process, the generation component takes the retrieved informa- tion and generates coherent, contextually relevant responses. It leverages powerful LLMs to produce meaningful outputs. Formally, this RAG frame- work, denoted as , can be defined as follows:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf",
+      "parent_id": "8f2a40930423f3bf91b33684880551ae"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "1ba437eabb97434f14bd7fc4cdf195de",
+    "text": "M",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf",
+      "parent_id": "8f2a40930423f3bf91b33684880551ae"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "24204fae5384f3ecd1514fcea8dfb063",
+    "text": "M= (g, R=(p.1)), A D = (D) e M(D) = G((: D)),",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e9e1f2467dcc04e8361c04d851c74ab8",
+    "text": "In this framework, and represent the genera- G R tion module and the retrieval module, respectively, while q denotes the input query and D refers to the external database. The retrieval module R cludes two key functionalities: i) Data Indexer in- \u03c6( ): which involves building a specific data struc- \u00b7 ture \u02c6 based on the external database D. ii) Data D Retriever \u03c8( ): The relevant documents are ob- \u00b7 tained by comparing the query against the indexed data, also denoted as \u201crelevant documents\u201d. By leveraging the information retrieved through \u03c8( along with the initial query q, the generative model \u00b7 )",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "316fe91c6ac5b943099187de437b88fd",
+    "text": "10747",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "50e2c498e825143e9a578c27dcdf124f",
+    "text": "G () efficiently produces high-quality responses. (nodes) and their relationships (edges) within the This work targets several key points essential for text data. For instance, it can extract entities like an efficient and effective RAG system as follows: \"Cardiologists\" and \"Heart Disease,\" and rela- tionships such as \"Cardiologists diagnose Heart Disease\" from the text: \"Cardiologists assess symptoms to identify potential heart issues.\" To improve efficiency, the raw text D is segmented into multiple chunks D;.",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b8565808950cf0e93adff6088d8e1961",
+    "text": "\u2022 Comprehensive Information Retrieval: The in- dexing function \u03c6( ) must be adept at extracting \u00b7 global information, as this is crucial for effective query answering using LLMs.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "531d90a8e045c5a639f8d2557a167ec7",
+    "text": "\u2022 Efficient and Low-Cost Retrieval: The indexed data structure \u02c6 must enable rapid and cost- D efficient information retrieval to effectively han- dle a high volume of user queries.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "93419627688791a2c8541547e3835d9b",
+    "text": "\u2022 Fast Adaptation to Data Changes: The ability to swiftly and efficiently adjust the data structure to incorporate new information from the external knowledge base, is crucial for ensuring that the system remains current and relevant in an ever- changing information landscape.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "e96b1d1e2251e4553ce18c56bbef02d4",
+    "text": "3 The LightRAG Architecture",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "429077b3c37e85baa3d66c0072602ac1",
+    "text": "3.1 Graph-based Text Indexing",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ab8dd4c5b1597a37aa324aa78d1f305c",
+    "text": "Graph-Enhanced Entity and Relationship Ex- traction. Our LightRAG enhances the retrieval sys- tem by segmenting documents into smaller, more manageable pieces. This strategy allows for quick identification and access to relevant information without analyzing entire documents. Next, we leverage LLMs to identify and extract various enti- ties (e.g., names, dates, locations, and events) along with the relationships between them. The informa- tion collected through this process will be used to create a comprehensive knowledge graph that high- lights the connections and insights across the entire collection of documents. We formally represent this graph generation module as follows:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf",
+      "parent_id": "429077b3c37e85baa3d66c0072602ac1"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "6a63e02adfd79c5487277bd767a22048",
+    "text": "\u02c6 D = (\u02c6 , \u02c6 Prof( ) = Dedupe E \u25e6 V = Di) Recog( , \u222aDi\u2208D E V V , E ), (2)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ec5bd7b8722b3bae6996b54b97290e0f",
+    "text": "where \u02c6 represents the resulting knowledge D graphs. To generate this data, we apply three main processing steps to the raw text documents These steps utilize a LLM for text analysis and processing. Details about the prompt templates Di. and specific settings for this part can be found in Appendix 9.4.2. The functions used in our graph- based text indexing paradigm are described as:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "8981b225fb7fb830178b24298ceb202a",
+    "text": "\u2022 Extracting Entities and Relationships. R( This function prompts a LLM to identify entities \u00b7 ):",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "20c3b120019ee7940e21647035e9fb5a",
+    "text": "\u2022 LLM Profiling for Key-Value Pair Generation. P( ): We employ a LLM-empowered profiling \u00b7 function, P( ), to generate a text key-value pair \u00b7 (K,V ) for each entity node in and relation V . Each index key is a word or short edge in E phrase that enables efficient retrieval, while the corresponding value is a text paragraph summa- rizing relevant snippets from external data to aid in text generation. Entities use their names as the sole index key, whereas relations may have mul- tiple keys derived from LLM enhancements that include global themes from connected entities.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ebc25109893526b1b07b21a89741db99",
+    "text": "\u2022 Deduplication to Optimize Graph Operations. D( ): Finally, we implement a deduplication \u00b7 function, D( ), that identifies and merges identi- \u00b7 cal entities and relations from different segments of the raw text Di. This process effectively re- duces the overhead associated with graph opera- tions on \u02c6 by minimizing the graph\u2019s size, lead- D ing to more efficient data processing.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "463981ee4dd52cc8ea0f8cb7253042b7",
+    "text": "Our LightRAG offers two advantages through its graph-based text indexing paradigm. First, Com- prehensive Information Understanding. The constructed graph enables the extraction of global information from multi-hop subgraphs, greatly en- hancing LightRAG\u2019s ability to handle complex queries that span multiple document chunks. Sec- ond, Enhanced Retrieval Performance. the key- value data structures derived from the graph are optimized for rapid and precise retrieval. This pro- vides a superior alternative to less accurate em- bedding matching methods (Gao et al., 2023) and inefficient chunk traversal techniques (Edge et al., 2024) commonly used in existing approaches.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "45296f6fbecd915bb289511b057a268a",
+    "text": "Fast Adaptation to Incremental Knowledge Base. To efficiently adapt to evolving data changes while ensuring accurate and relevant responses, our LightRAG incrementally updates the knowledge base without the need for complete reprocessing of the entire external database. For a new document D\u2032, the incremental update algorithm processes it using the same graph-based indexing steps \u03c6 as",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "eb68d1fbc6d1237f35e65fbeed21b531",
+    "text": "10748",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "6b7eb27738e6b8e8cf31f363e568112b",
+    "text": "... BEEKEEPER\u2018s practices involve  the methods and strategies employed  by  beekeepers  to manage  bee  colonies and ensure their health and  productivity. A Beekeeper  is an  individual who produces honey and  other  related products, playing a  crucial role in \u2026\u2026  Beekeepers engage in various tasks,  including observing bee behavior,  monitoring  hive  conditions,  preventing pest  infestations, and  utilizing techniques to handle bees,  such as using smoke to calm them ...  Beekeeper  \u2026  beekeeper  Deduplication  Match  A beekeeper   Beekeeper  is an person   who\u2026  LLM Profiling  Beekeeper  Observe  Bees  Entity & Rel Extraction  Graph-based Text Indexing  Index Graph   used for Retrieval  Entity Name:  Beekeeper  Entity Type: PERSON  Description: A Beekeeper is   an individual who produces ...  Original Chunks ID: xxx  Source: Honey Bee  Target: Industrial agriculture  Keywords: Agriculture ...  Description:Honey Bees are   negatively impacted ...  Original Chunks ID: xxx  Beekeeper Honey Bee  -----Entities-----  Formers  Hive  \u2026  \"Beekeeper\",\u201dA Beekeeper  is an  individual who produces honey and  Low-level Keys  Entities  other related products, playing a  crucial role in ......\u201d  -Relationships-  Query + LLM  \"Beekeeper\",\u201cbee\",\"Beekeepers  manage bees but do not develop  individual relationships with them  due to the limited interaction time  Agriculture  Production  Relations  with each hive.\u201d  ----Contexts----  Environmental Impact \u2026  Original Text  BEEKEEPER's practices involve the  methods and strategies employed  High-level Keys  by beekeepers to manage \u2026\u2026  Retrieved Content  Dual-level Retrieval Paradigm ",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f7412a653453a08e4238e6db2b1086bc",
+    "text": "Figure 1: Overall architecture of the proposed LightRAG framework.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4ab1bbbe00ef842f3e1a29df7da2e8d6",
+    "text": "before, resulting in \u02c6 D\u2032 = (\u02c6 V\u2032, \u02c6 E\u2032). Subsequently, LightRAGcombines the new graph data with the original by taking the union of the node sets \u02c6 V \u02c6 V\u2032, as well as the edge sets \u02c6 and \u02c6 E\u2032. E and",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "af7830bd11aee9c50ee99d7e7b729524",
+    "text": "Two key objectives guide our approach to fast adaptation for the incremental knowledge base: Seamless Integration of New Data. By apply- ing a consistent methodology to new information, the incremental update module allows the Ligh- tRAG to integrate new external databases without disrupting the existing graph structure. This ap- proach preserves the integrity of established con- nections, ensuring that historical data remains ac- cessible while enriching the graph without conflicts or redundancies. Reducing Computational Over- head . By eliminating the need to rebuild the entire index graph, this method reduces computational overhead and facilitates the rapid assimilation of new data. Consequently, LightRAG maintains sys- tem accuracy, provides current information, and conserves resources, ensuring users receive timely updates and enhancing the RAG effectiveness.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "f6f99647cbc4fc25c5c86f89d1407270",
+    "text": "3.2 Dual-level Retrieval Paradigm",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "283a1e96a174fdbfbe09fb4e2807b5fb",
+    "text": "To retrieve relevant information from both spe- cific document chunks and their complex inter- dependencies, our LightRAG proposes generating query keys at both detailed and abstract levels.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ff277f9aa02b4d6ae8d5e46d49340117",
+    "text": "\u2022 Specific Queries. These queries are detail- oriented and typically reference specific entities within the graph, requiring precise retrieval of information associated with particular nodes or edges. For example, a specific query might be, \u201cWho wrote \u2019Pride and Prejudice\u2019?\u201d",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "90ad47e20429ae5253afe5e846b2f583",
+    "text": "\u2022 Abstract Queries. In contrast, abstract queries are more conceptual, encompassing broader top- ics, summaries, or overarching themes that are not directly tied to specific entities. An exam- ple of an abstract query is, \u201cHow does artificial intelligence influence modern education?\u201d",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "841c350a0a05c1e062b9c82940bf843c",
+    "text": "To accommodate diverse query types, the Ligh- tRAG employs two distinct retrieval strategies",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2905f03d3cd522b8c50c810b036e6261",
+    "text": "within the dual-level retrieval paradigm. This en- sures that both specific and abstract inquiries are addressed effectively, allowing the system to de- liver relevant responses tailored to user needs.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5e48140980bb8235d847c35f145f2475",
+    "text": "\u2022 Low-Level Retrieval. This level is primar- ily focused on retrieving specific entities along with their associated attributes or relationships. Queries at this level are detail-oriented and aim to extract precise information about particular nodes or edges within the graph.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f0e69bafd86f8d1daa78d2edef269e7f",
+    "text": "\u2022 High-Level Retrieval. This level addresses broader topics and overarching themes. Queries at this level aggregate information across mul- tiple related entities and relationships, provid- ing insights into higher-level concepts and sum- maries rather than specific details.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c24ff264dc52aeab1a97e847ce96200c",
+    "text": "Integrating Graph and Vectors for Efficient Retrieval. By combining graph structures with vector representations, the model gains a deeper insight into the interrelationships among entities. This synergy enables the retrieval algorithm to ef- fectively utilize both local and global keywords, streamlining the search process and improving the relevance of results.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a0b995aa1349b218cdb2e22b5d8511fb",
+    "text": "\u2022 (i) Query Keyword Extraction. For a given query q, the retrieval algorithm of LightRAG begins by extracting both local query keywords k(l) and global query keywords k(g).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "8bb11bf5b609915fe70e74462e0189fb",
+    "text": "\u2022 (ii) Keyword Matching. The algorithm uses an efficient vector database to match local query key- words with candidate entities and global query keywords with relations linked to global keys.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ca0c46aa0e001ab0d7d2490c28cae07c",
+    "text": "\u2022 (iii) Incorporating High-Order Relatedness. To enhance the query with higher-order relat- edness, LightRAGfurther gathers neighboring nodes within the local subgraphs of the retrieved graph elements. This process involves the set vi| vi \u2208 Ne) (vi \u2208 Nv \u2228 vi \u2208 V \u2227 , where { } and Ne represent the one-hop neighboring nodes of the retrieved nodes v and edges e, respectively. Nv",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf",
+      "parent_id": "f6f99647cbc4fc25c5c86f89d1407270"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "42bfe8e45e25d13b94a614e29fa82c1d",
+    "text": "10749",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "610d6be36b9756a4b8bd7a043dd7dc77",
+    "text": "This dual-level retrieval paradigm of LightRAG not only facilitates efficient retrieval of related enti- ties and relations through keyword matching, but also enhances the comprehensiveness of retrieval results by integrating relevant structural informa- tion from the constructed knowledge graph.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "6e478dcdb9be5671252608b0cad5a111",
+    "text": "3.3 Retrieval-Augmented Answer Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "73b73e26040291c12e6f9a6dd7dbb793",
+    "text": "Utilization of Retrieved Information. Utilizing the retrieved information \u03c8(q; \u02c6 ), our LightRAG D employs a general-purpose LLM to generate an- swers based on the collected data. This data com- prises concatenated values V from relevant entities and relations, produced by the profiling function P( ). It includes names, descriptions of entities and \u00b7 relations, and excerpts from the original text.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f7c1962b21939262aa3835a26417c32f",
+    "text": "Context Integration and Answer Generation. By unifying the query with this multi-source text, the LLM generates informative answers tailored to the user\u2019s needs, ensuring alignment with the query\u2019s intent. This approach streamlines the an- swer generation process by integrating both context and query into the LLM model, as illustrated in de- tailed examples (Appendix 9.3).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "adb70186f5051dab64b29daad3de5db8",
+    "text": "3.4 Complexity Analysis of LightRAG",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "75c1f14747a84b452bb5e3926dcd0c75",
+    "text": "In this section, we analyze the complexity of our proposed LightRAG framework, which can be di- vided into two main parts. The first part is the graph-based Index phase. During this phase, we use the large language model (LLM) to extract en- tities and relationships from each chunk of text. As a result, the LLM needs to be called total tokens chunk size times. Importantly, there is no additional over- head involved in this process, making our approach highly efficient in managing updates to new text.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "adb70186f5051dab64b29daad3de5db8"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "39a7c18fb865229dbb860789e11d8376",
+    "text": "The second part of the process involves the graph-based retrieval phase. For each query, we first utilize the large language model (LLM) to generate relevant keywords. Similar to current Retrieval-Augmented Generation (RAG) systems (Gao et al., 2023, 2022; Chan et al., 2024), our retrieval mechanism relies on vector-based search. However, instead of retrieving chunks as in conven- tional RAG, we concentrate on retrieving entities and relationships. This approach markedly reduces retrieval overhead compared to the community- based traversal method used in GraphRAG.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "adb70186f5051dab64b29daad3de5db8"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c9f79024bf1ac0e32286c19aa8e4e912",
+    "text": "4 Evaluation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b7fd2780425b41276d317a67b62254a3",
+    "text": "We conduct empirical evaluations on benchmark data to assess the effectiveness of the proposed",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "c9f79024bf1ac0e32286c19aa8e4e912"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f3f4d533aef0edd4b42dbd08be2d190d",
+    "text": "LightRAG framework by addressing the follow- ing research questions: (RQ1): How does Ligh- \u2022 tRAG compare to existing RAG baseline methods in terms of generation performance? (RQ2): \u2022 How do dual-level retrieval and graph-based index- ing enhance the generation quality of LightRAG? (RQ3): What are the costs associated with Ligh- \u2022 tRAG, as well as its adaptability to data changes?",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "c9f79024bf1ac0e32286c19aa8e4e912"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "fe3bf2f5eb30966c9e9f8e00816ee88e",
+    "text": "4.1 Experimental Settings",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1b2d99150cc410e2b1405a7306024ffa",
+    "text": "To evaluate the effectiveness of LightRAG, we con- ducted experiments on four datasets from the Ultra- Domain benchmark (Qian et al., 2024), covering diverse domains such as Agriculture, CS, Legal, and Mixed. Each dataset ranges from 600,000 to 5,000,000 tokens. We compare LightRAG with state-of-the-art RAG methods, including Naive RAG, RQ-RAG, HyDE, and GraphRAG. Using a robust LLM-based evaluation, we assess perfor- mance across four dimensions: Comprehensive- ness, Diversity, Empowerment, and Overall.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "fe3bf2f5eb30966c9e9f8e00816ee88e"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c6544fd914d46270cf8fcb605bd92a25",
+    "text": "Detailed descriptions of datasets, question gener- ation, and baselines are provided in Appendix 9.1.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "fe3bf2f5eb30966c9e9f8e00816ee88e"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "81efda9d62f84f21e9049689fb6aa01a",
+    "text": "4.2 RAG Performance Comparison (RQ1)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3fa70b2c15e2c0c7197305985669435a",
+    "text": "We compare LightRAG against each baseline across various evaluation dimensions and datasets. The results are presented in Table 1. Based on these findings, we draw the following conclusions:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "81efda9d62f84f21e9049689fb6aa01a"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9e79a3c1a9c939f85f594a3fcb10363f",
+    "text": "Graph-Enhanced RAG Superiority in Large- Scale Corpora. When handling large token counts and complex queries requiring comprehensive dataset understanding, graph-based RAG systems like LightRAG and GraphRAG consistently out- perform chunk-based methods such as NaiveRAG, HyDE, and RQRAG. This performance gap widens with dataset size\u2014in the largest dataset (Legal), baseline methods achieve only 20% win rates com- pared to LightRAG\u2019s dominance. This trend high- lights the advantages of graph-enhanced RAG sys- tems in capturing complex semantic dependencies within large-scale corpora, enabling better knowl- edge understanding and improved generalization.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "81efda9d62f84f21e9049689fb6aa01a"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e85c0500bdfd333da6ca2dc76665f2e0",
+    "text": "Enhancing Response Diversity with Ligh- tRAG. Compared to various baselines, LightRAG demonstrates a significant advantage in the Di- versity metric, particularly within the larger Le- gal dataset. Its consistent lead in this area under- scores LightRAG\u2019s effectiveness in generating a wider range of responses, especially in scenarios where diverse content is essential. We attribute",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf",
+      "parent_id": "81efda9d62f84f21e9049689fb6aa01a"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "6597cea83a4b76694222b9e91dc875fa",
+    "text": "10750",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "23974c47b9469b656ac6c7cc76effbdf",
+    "text": "Table 1: Win rates (%) of baselines v.s. LightRAG across four datasets and four evaluation dimensions.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "58ecf2078a89dfa78f8e82a87d9668a5",
+    "text": "Agriculture CS Legal Mix NaiveRAG LightRAG NaiveRAG LightRAG NaiveRAG LightRAG NaiveRAG LightRAG Comprehensiveness 32.4% 67.6% 38.4% 61.6% 16.4% 83.6% 38.8% 61.2% Diversity 23.6% 76.4% 38.0% 62.0% 13.6% 86.4% 32.4% 67.6% Empowerment 32.4% 67.6% 38.8% 61.2% 16.4% 83.6% 42.8% 57.2% Overall 32.4% 67.6% 38.8% 61.2% 15.2% 84.8% 40.0% 60.0% RQ-RAG LightRAG RQ-RAG LightRAG RQ-RAG LightRAG RQ-RAG LightRAG Comprehensiveness 31.6% 68.4% 38.8% 61.2% 15.2% 84.8% 39.2% 60.8% Diversity 29.2% 70.8% 39.2% 60.8% 11.6% 88.4% 30.8% 69.2% Empowerment 31.6% 68.4% 36.4% 63.6% 15.2% 84.8% 42.4% 57.6% Overall 32.4% 67.6% 38.0% 62.0% 14.4% 85.6% 40.0% 60.0% HyDE LightRAG HyDE LightRAG HyDE LightRAG HyDE LightRAG Comprehensiveness 26.0% 74.0% 41.6% 58.4% 26.8% 73.2% 40.4% 59.6% Diversity 24.0% 76.0% 38.8% 61.2% 20.0% 80.0% 32.4% 67.6% Empowerment 25.2% 74.8% 40.8% 59.2% 26.0% 74.0% 46.0% 54.0% Overall 24.8% 75.2% 41.6% 58.4% 26.4% 73.6% 42.4% 57.6% GraphRAG LightRAG GraphRAG LightRAG GraphRAG LightRAG GraphRAG LightRAG Comprehensiveness 45.6% 54.4% 48.4% 51.6% 48.4% 51.6% 50.4% 49.6% Diversity 22.8% 77.2% 40.8% 59.2% 26.4% 73.6% 36.0% 64.0% Empowerment 41.2% 58.8% 45.2% 54.8% 43.6% 56.4% 50.8% 49.2% Overall 45.2% 54.8% 48.0% 52.0% 47.2% 52.8% 50.4% 49.6%",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th></th><th colspan=\"2\">Agriculture</th><th colspan=\"2\">cs</th><th colspan=\"2\">Legal</th><th colspan=\"2\">Mix</th></tr><tr><th></th><th>NaiveRAG</th><th>LightRAG</th><th>NaiveRAG</th><th>LightRAG</th><th>NaiveRAG</th><th>LightRAG</th><th>NaiveRAG</th><th>LightRAG</th></tr></thead><tbody><tr><td>Comprehensiveness</td><td>32.4%</td><td>67.6%</td><td>38.4%</td><td>61.6%</td><td>16.4%</td><td>83.6%</td><td>38.8%</td><td>61.2%</td></tr><tr><td>Diversity</td><td>23.6%</td><td>76.4%</td><td>38.0%</td><td>62.0%</td><td>13.6%</td><td>86.4%</td><td>32.4%</td><td>67.6%</td></tr><tr><td>Empowerment</td><td>32.4%</td><td>67.6%</td><td>38.8%</td><td>61.2%</td><td>16.4%</td><td>83.6%</td><td>42.8%</td><td>57.2%</td></tr><tr><td rowspan=\"2\">Overall</td><td>32.4%</td><td>67.6%</td><td>38.8%</td><td>61.2%</td><td>15.2%</td><td>84.8%</td><td>40.0%</td><td>60.0%</td></tr><tr><td>RQ-RAG</td><td>LightRAG</td><td>RQ-RAG</td><td>LightRAG</td><td>RQ-RAG</td><td>LightRAG</td><td>RQ-RAG</td><td>LightRAG</td></tr><tr><td>Comprehensiveness</td><td>31.6%</td><td>68.4%</td><td>38.8%</td><td>61.2%</td><td>152%</td><td>84.8%</td><td>39.2%</td><td>60.8%</td></tr><tr><td>Diversity</td><td>29.2%</td><td>70.8%</td><td>39.2%</td><td>60.8%</td><td>11.6%</td><td>88.4%</td><td>30.8%</td><td>69.2%</td></tr><tr><td>Empowerment</td><td>31.6%</td><td>68.4%</td><td>36.4%</td><td>63.6%</td><td>15.2%</td><td>84.8%</td><td>42.4%</td><td>57.6%</td></tr><tr><td rowspan=\"2\">Overall</td><td>32.4%</td><td>67.6%</td><td>38.0%</td><td>62.0%</td><td>14.4%</td><td>85.6%</td><td>40.0%</td><td>60.0%</td></tr><tr><td>HyDE</td><td>LightRAG</td><td>HyDE</td><td>LightRAG</td><td>HyDE</td><td>LightRAG</td><td>HyDE</td><td>LightRAG</td></tr><tr><td>Comprehensiveness</td><td>26.0%</td><td>74.0%</td><td>41.6%</td><td>58.4%</td><td>26.8%</td><td>73.2%</td><td>40.4%</td><td>59.6%</td></tr><tr><td>Diversity</td><td>24.0%</td><td>76.0%</td><td>38.8%</td><td>61.2%</td><td>20.0%</td><td>80.0%</td><td>32.4%</td><td>67.6%</td></tr><tr><td>Empowerment</td><td>25.2%</td><td>74.8%</td><td>40.8%</td><td>59.2%</td><td>26.0%</td><td>74.0%</td><td>46.0%</td><td>54.0%</td></tr><tr><td rowspan=\"2\">Overall</td><td>24.8%</td><td>75.2%</td><td>41.6%</td><td>58.4%</td><td>26.4%</td><td>73.6%</td><td>42.4%</td><td>57.6%</td></tr><tr><td>GraphRAG</td><td>LightRAG</td><td>GraphRAG</td><td>LightRAG</td><td>GraphRAG</td><td>LightRAG</td><td>GraphRAG</td><td>LightRAG</td></tr><tr><td>Comprehensiveness</td><td>45.6%</td><td>54.4%</td><td>48.4%</td><td>51.6%</td><td>48.4%</td><td>51.6%</td><td>50.4%</td><td>49.6%</td></tr><tr><td>Diversity</td><td>22.8%</td><td>77.2%</td><td>40.8%</td><td>59.2%</td><td>26.4%</td><td>73.6%</td><td>36.0%</td><td>64.0%</td></tr><tr><td>Empowerment</td><td>41.2%</td><td>58.8%</td><td>45.2%</td><td>54.8%</td><td>43.6%</td><td>56.4%</td><td>50.8%</td><td>49.2%</td></tr><tr><td>Overall</td><td>45.2%</td><td>54.8%</td><td>48.0%</td><td>52.0%</td><td>47.2%</td><td>52.8%</td><td>50.4%</td><td>49.6%</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "34773a92eff9297be63a3db26dbd3025",
+    "text": "this advantage to LightRAG\u2019s dual-level retrieval paradigm, which facilitates comprehensive infor- mation retrieval from both low-level and high-level dimensions. This approach effectively leverages graph-based text indexing to consistently capture the full context in response to queries.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e0110c4485c08eb188f17eb6abc038c5",
+    "text": "LightRAG\u2019s Superiority over GraphRAG: While both LightRAG and GraphRAG use graph-based retrieval mechanisms, LightRAG consistently outperforms GraphRAG, particu- larly in larger datasets with complex language contexts. In the Agriculture, CS, and Le- gal datasets\u2014each containing millions of to- kens\u2014LightRAG shows a clear advantage, sig- nificantly surpassing GraphRAG and highlighting its strength in comprehensive information under- standing within diverse environments. Enhanced Response Variety: By integrating low-level re- trieval of specific entities with high-level retrieval of broader topics, LightRAG boosts response di- versity. This dual-level mechanism effectively ad- dresses both detailed and abstract queries, ensuring a thorough grasp of information. Complex Query Handling: This approach is especially valuable in scenarios requiring diverse perspectives. By access- ing both specific details and overarching themes, LightRAG adeptly responds to complex queries involving interconnected topics, providing contex- tually relevant answers of high quality.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "a7d134d1a46e7bcae5586612605331bd",
+    "text": "4.3 Ablation Studies (RQ2)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c20f6f24823ed5f3a0e6a3ff593223fe",
+    "text": "We also conduct ablation studies to evaluate the impact of our dual-level retrieval paradigm and the effectiveness of our graph-based text indexing in LightRAG. The results are presented in Table 2.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf",
+      "parent_id": "a7d134d1a46e7bcae5586612605331bd"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "94b3fc0f3770a3d5210ca995d7f0a3a2",
+    "text": "Effectiveness of Dual-level Retrieval Paradigm. We begin by analyzing the effects of low-level and high-level retrieval paradigms. We compare two ablated models against LightRAG across four datasets. Here are our key observations:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf",
+      "parent_id": "a7d134d1a46e7bcae5586612605331bd"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "871c2e47a494551f05ddc1032f683e6c",
+    "text": "\u2022 Low-level-only Retrieval: The -High variant removes high-order retrieval, leading to a sig- nificant performance decline across nearly all datasets and metrics. This drop is mainly due to its emphasis on the specific information, which focuses excessively on entities and their imme- diate neighbors. While this approach enables deeper exploration of directly related entities, it struggles to gather information for complex queries that demand comprehensive insights.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf",
+      "parent_id": "a7d134d1a46e7bcae5586612605331bd"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a1f8c814e8791bed991a078624c95e06",
+    "text": "\u2022 High-level-only Retrieval: The -Low variant pri- oritizes capturing a broader range of content by leveraging entity-wise relationships rather than focusing on specific entities. This approach of- fers a significant advantage in comprehensive- ness, allowing it to gather more extensive and varied information. However, the trade-off is a reduced depth in examining specific entities, which can limit its ability to provide highly de-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf",
+      "parent_id": "a7d134d1a46e7bcae5586612605331bd"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "683977a927ebeff86935a1c8fcee3e1f",
+    "text": "10751",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "4f08ecdd265825e46dbe18a31caddbbc",
+    "text": "Table 2: Performance of ablated versions of LightRAG, using NaiveRAG as reference.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "17cc40224a59244da6ab3aa5965764c5",
+    "text": "Agriculture CS Legal Mix NaiveRAG LightRAG NaiveRAG LightRAG NaiveRAG LightRAG NaiveRAG LightRAG Comprehensiveness 32.4% 67.6% 38.4% 61.6% 16.4% 83.6% 38.8% 61.2% Diversity 23.6% 76.4% 38.0% 62.0% 13.6% 86.4% 32.4% 67.6% Empowerment 32.4% 67.6% 38.8% 61.2% 16.4% 83.6% 42.8% 57.2% Overall 32.4% 67.6% 38.8% 61.2% 15.2% 84.8% 40.0% 60.0% NaiveRAG -High NaiveRAG -High NaiveRAG -High NaiveRAG -High Comprehensiveness 34.8% 65.2% 42.8% 57.2% 23.6% 76.4% 40.4% 59.6% Diversity 27.2% 72.8% 36.8% 63.2% 16.8% 83.2% 36.0% 64.0% Empowerment 36.0% 64.0% 42.4% 57.6% 22.8% 77.2% 47.6% 52.4% Overall 35.2% 64.8% 44.0% 56.0% 22.0% 78.0% 42.4% 57.6% NaiveRAG -Low NaiveRAG -Low NaiveRAG -Low NaiveRAG -Low Comprehensiveness 36.0% 64.0% 43.2% 56.8% 19.2% 80.8% 36.0% 64.0% Diversity 28.0% 72.0% 39.6% 60.4% 13.6% 86.4% 33.2% 66.8% Empowerment 34.8% 65.2% 42.8% 57.2% 16.4% 83.6% 35.2% 64.8% Overall 34.8% 65.2% 43.6% 56.4% 18.8% 81.2% 35.2% 64.8% NaiveRAG -Origin NaiveRAG -Origin NaiveRAG -Origin NaiveRAG -Origin Comprehensiveness 24.8% 75.2% 39.2% 60.8% 16.4% 83.6% 44.4% 55.6% Diversity 26.4% 73.6% 44.8% 55.2% 14.4% 85.6% 25.6% 74.4% Empowerment 32.0% 68.0% 43.2% 56.8% 17.2% 82.8% 45.2% 54.8% Overall 25.6% 74.4% 39.2% 60.8% 15.6% 84.4% 44.4% 55.6%",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th></th><th colspan=\"2\" rowspan=\"2\">Agriculture</th><th colspan=\"2\" rowspan=\"2\">cs</th><th colspan=\"2\" rowspan=\"2\">Legal</th><th colspan=\"2\" rowspan=\"2\">Mix</th></tr><tr><th></th></tr><tr><th></th><th>NaiveRAG</th><th>LightRAG</th><th>NaiveRAG</th><th>LightRAG</th><th>NaiveRAG</th><th>LightRAG</th><th>NaiveRAG</th><th>LightRAG</th></tr></thead><tbody><tr><td>Comprehensiveness</td><td>32.4%</td><td>67.6%</td><td>38.4%</td><td>61.6%</td><td>16.4%</td><td>83.6%</td><td>38.8%</td><td>61.2%</td></tr><tr><td>Diversity</td><td>23.6%</td><td>76.4%</td><td>38.0%</td><td>62.0%</td><td>13.6%</td><td>86.4%</td><td>32.4%</td><td>67.6%</td></tr><tr><td>Empowerment</td><td>32.4%</td><td>67.6%</td><td>38.8%</td><td>61.2%</td><td>16.4%</td><td>83.6%</td><td>42.8%</td><td>57.2%</td></tr><tr><td rowspan=\"2\">Overall</td><td>32.4%</td><td>67.6%</td><td>38.8%</td><td>61.2%</td><td>15.2%</td><td>84.8%</td><td>40.0%</td><td>60.0%</td></tr><tr><td>NaiveRAG</td><td>-High</td><td>NaiveRAG</td><td>-High</td><td>NaiveRAG</td><td>-High</td><td>NaiveRAG</td><td>-High</td></tr><tr><td>Comprehensiveness</td><td>34.8%</td><td>65.2%</td><td>42.8%</td><td>57.2%</td><td>23.6%</td><td>76.4%</td><td>40.4%</td><td>59.6%</td></tr><tr><td>Diversity</td><td>272%</td><td>72.8%</td><td>36.8%</td><td>63.2%</td><td>16.8%</td><td>83.2%</td><td>36.0%</td><td>64.0%</td></tr><tr><td>Empowerment</td><td>36.0%</td><td>64.0%</td><td>42.4%</td><td>57.6%</td><td>22.8%</td><td>77.2%</td><td>47.6%</td><td>52.4%</td></tr><tr><td rowspan=\"2\">Overall</td><td>352%</td><td>64.8%</td><td>44.0%</td><td>56.0%</td><td>22.0%</td><td>78.0%</td><td>42.4%</td><td>57.6%</td></tr><tr><td>NaiveRAG</td><td>-Low</td><td>NaiveRAG</td><td>-Low</td><td>NaiveRAG</td><td>-Low</td><td>NaiveRAG</td><td>-Low</td></tr><tr><td>Comprehensiveness</td><td>36.0%</td><td>64.0%</td><td>43.2%</td><td>56.8%</td><td>19.2%</td><td>80.8%</td><td>36.0%</td><td>64.0%</td></tr><tr><td>Diversity</td><td>28.0%</td><td>72.0%</td><td>39.6%</td><td>60.4%</td><td>13.6%</td><td>86.4%</td><td>33.2%</td><td>66.8%</td></tr><tr><td>Empowerment</td><td>34.8%</td><td>65.2%</td><td>42.8%</td><td>57.2%</td><td>16.4%</td><td>83.6%</td><td>35.2%</td><td>64.8%</td></tr><tr><td rowspan=\"2\">Overall</td><td>34.8%</td><td>65.2%</td><td>43.6%</td><td>56.4%</td><td>18.8%</td><td>81.2%</td><td>35.2%</td><td>64.8%</td></tr><tr><td>NaiveRAG</td><td>-Origin</td><td>NaiveRAG</td><td>-Origin</td><td>NaiveRAG</td><td>-Origin</td><td>NaiveRAG</td><td>-Origin</td></tr><tr><td>Comprehensiveness</td><td>24.8%</td><td>15.2%</td><td>39.2%</td><td>60.8%</td><td>16.4%</td><td>83.6%</td><td>44.4%</td><td>55.6%</td></tr><tr><td>Diversity</td><td>26.4%</td><td>73.6%</td><td>44.8%</td><td>55.2%</td><td>14.4%</td><td>85.6%</td><td>25.6%</td><td>74.4%</td></tr><tr><td>Empowerment</td><td>32.0%</td><td>68.0%</td><td>43.2%</td><td>56.8%</td><td>17.2%</td><td>82.8%</td><td>45.2%</td><td>54.8%</td></tr><tr><td>Overall</td><td>25.6%</td><td>74.4%</td><td>39.2%</td><td>60.8%</td><td>15.6%</td><td>84.4%</td><td>44.4%</td><td>55.6%</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b8d29aeedacfb6d76ebc706e28423f93",
+    "text": "tailed insights. Consequently, this high-level- only retrieval method may struggle with tasks that require precise, detailed answers.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "281cdc686863b1b7c7426a3259944b37",
+    "text": "\u2022 Hybrid Mode: The hybrid mode, or the full- version LightRAG, combines the strengths of both low- and high-level methods. It retrieves a broader set of relationships while simultaneously conducting an in-depth exploration of specific entities. This dual-level approach ensures both breadth in the retrieval process and depth in the analysis, providing a comprehensive view of the data. As a result, LightRAG achieves balanced performance across multiple dimensions.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f2b71ec94f9d0a01588d631b25ff4c1b",
+    "text": "Semantic Graph Excels in RAG. We elimi- nated the use of original text in our retrieval process. Surprisingly, the resulting variant, -Origin, does not exhibit significant performance declines. In some cases, this variant even shows improvements (e.g. Agriculture, Mix). We attribute this result to the effective extraction of key information during the graph-based indexing process, which provides suf- ficient context to answer queries. Additionally, the original text often contains irrelevant information that can introduce noise in the response.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2afaab28dd6ebd4bdda1f56c8696681e",
+    "text": "4.4 Cost and Adaptability Analysis (RQ3)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d2eeb3484ded3194680d3cb9ace505cd",
+    "text": "We compare the cost of LightRAG with that of the top-performing baseline, GraphRAG, from two key perspectives. First, we examine the number of tokens and API calls during the indexing and",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf",
+      "parent_id": "2afaab28dd6ebd4bdda1f56c8696681e"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "76ef0e64f18e9284b166bb9e031c7294",
+    "text": "Table 3: RAG cost comparison on Legal data.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf",
+      "parent_id": "2afaab28dd6ebd4bdda1f56c8696681e"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "4ed254044aaeffff608d853c26d136bf",
+    "text": "Phase Retrieval Phase Model GraphRAG Ours Tokens 610 \u00d7 1,000 < 100 API Calls 610 1,000 \u00d7 Cmax 1 Incremental Text Update GraphRAG Ours 1,399 2 \u00d7 \u00d7 +Textract 5,000 Textract 1,399 \u00d7 2 + Cextract Cextract",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th rowspan=\"2\">Phase Model</th><th colspan=\"2\">Retrieval Phase</th><th colspan=\"2\">Incremental Text Update</th></tr><tr><th>GraphRAG |</th><th>Ours</th><th>GraphRAG</th><th>Ours</th></tr></thead><tbody><tr><td>Tokens</td><td>[ 610 x 1,000</td><td>| &lt; 100</td><td>1,399 x 2 x 5,000 exract</td><td>Textract</td></tr><tr><td>API Calls</td><td>610x1,000 Cmax</td><td>1</td><td>1,399 X 2 + Cext</td><td>| Cextract</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf",
+      "parent_id": "2afaab28dd6ebd4bdda1f56c8696681e"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "521fb75fcc76768a497617dc18664e25",
+    "text": "retrieval processes. Second, we analyze these met- rics in relation to handling data changes in dynamic environments. The results on the legal dataset are presented in Table 3. In this context, Textract repre- sents the token overhead for entity and relationship extraction, Cmax denotes the maximum number of tokens allowed per API call, and Cextract indicates the number of API calls required for extraction.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf",
+      "parent_id": "2afaab28dd6ebd4bdda1f56c8696681e"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0a5d1ad4a58d663077bb6fe2581cab39",
+    "text": "In the retrieval phase, GraphRAG generates 1,399 communities, with 610 level-2 communities actively utilized for retrieval in this experiment. Each community report averages 1,000 tokens, re- sulting in a total token consumption of 610,000 tokens (610 communities 1,000 tokens per com- \u00d7 munity). Additionally, GraphRAG\u2019s requirement to traverse each community individually leads to hundreds of API calls, significantly increasing re- trieval overhead. In contrast, LightRAG optimizes this process by using fewer than 100 tokens for keyword generation and retrieval, requiring only a single API call for the entire process. This effi- ciency is achieved through our retrieval mechanism, which seamlessly integrates graph structures and vectorized representations for information retrieval,",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf",
+      "parent_id": "2afaab28dd6ebd4bdda1f56c8696681e"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "3154a8fc0cc2494c7e1048f423f807d2",
+    "text": "10752",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "835d3a5d4af752dc716b80b2248e3416",
+    "text": "thereby eliminating the need to process large vol- umes of information upfront.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "77b701f8795ad4fead24e4b1c7b47e16",
+    "text": "In the incremental data update phase, address- ing dynamic real-world scenarios, both models ex- hibit similar overhead for entity and relationship extraction. However, GraphRAG shows significant inefficiency managing newly added data. When in- troducing a new dataset matching the legal dataset size, GraphRAG must dismantle its existing com- munity structure to incorporate new entities and relationships, then completely regenerate. This in- curs substantial token costs of approximately 5,000 tokens per community report. With 1,399 com- munities, GraphRAG requires around 1,399 \u00d7 2 \u00d7 5,000 tokens to reconstruct both original and new community reports\u2014an exorbitant expense high- lighting its inefficiency. In contrast, LightRAG seamlessly integrates newly extracted entities and relationships into the existing graph without recon- struction, resulting in significantly lower overhead during incremental updates and demonstrating su- perior efficiency and cost-effectiveness.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "51f80396aada014d101bde7c42b3bf72",
+    "text": "4.5 Case Study",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c18f1e60183b2934306adbda218b5e7b",
+    "text": "In addition to the overall evaluation results, we provided detailed case analyses in Appendix 9.2 to further illustrate the key findings of this study.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf",
+      "parent_id": "51f80396aada014d101bde7c42b3bf72"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "87d7d0316e628b64024da3bfcae9f379",
+    "text": "5 Related Work",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "9b34c5bdbe7ffa841942d4dc811ee5c3",
+    "text": "5.1 Retrieval-Augmented Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "561101b8f0a0e87cd531645866df6464",
+    "text": "Retrieval-Augmented Generation (RAG) systems enhance LLM inputs by retrieving relevant infor- mation from external sources, grounding responses in factual, domain-specific knowledge (Ram et al., 2023; Fan et al., 2024). Current RAG approaches (Gao et al., 2022, 2023; Chan et al., 2024; Yu et al., 2024) typically embed queries in a vector space to find the nearest context vectors. However, many of these methods rely on fragmented text chunks and only retrieve the top-k contexts, limiting their abil- ity to capture comprehensive global information needed for high-quality responses.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf",
+      "parent_id": "9b34c5bdbe7ffa841942d4dc811ee5c3"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9f4a066350ec863ccaf1d1303e87a1c7",
+    "text": "Although recent studies (Edge et al., 2024) have explored using graph structures for knowledge rep- resentation, two key limitations persist. First, these approaches often lack the capability for dynamic updates and expansions of the knowledge graph, making it difficult to incorporate new informa- tion effectively. In contrast, our proposed model, LightRAG, addresses these challenges by enabling the RAG system to quickly adapt to new infor-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf",
+      "parent_id": "9b34c5bdbe7ffa841942d4dc811ee5c3"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f914c8d36c63108b0b400187d6386cce",
+    "text": "mation, ensuring the model\u2019s timeliness and accu- racy. Additionally, existing methods often rely on brute-force searches for each generated community, which are inefficient for large-scale queries. Our LightRAG framework overcomes this limitation by facilitating rapid retrieval of relevant information from the graph through our proposed dual-level retrieval paradigm, significantly enhancing both retrieval efficiency and response speed.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf",
+      "parent_id": "9b34c5bdbe7ffa841942d4dc811ee5c3"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "50bd909b9f8c338890743f36a1b14339",
+    "text": "5.2 Large Language Model for Graphs",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "433f99a704297447c8863dca0728512c",
+    "text": "Graphs have become a powerful framework for rep- resenting complex relationships, with applications across fields. As large language models (LLMs) evolve, researchers aim to enhance their ability to interpret graph-structured data. This work falls into three broad categories: i) GNNs as Prefix - using GNNs to generate structure-aware tokens for LLMs, e.g., GraphGPT (Tang et al., 2024) and LLaGA (Chen et al., 2024). ii) LLMs as Prefix - leveraging LLMs to process graph data with text, producing embeddings/labels to refine GNN train- ing, like GALM (Xie et al., 2023) and OFA (Liu et al., 2024). iii) LLMs-Graphs Integration - achieving seamless interaction, using techniques, , fusion training, GNN alignment, and LLM-based agents for direct graph handling, e.g., Grenade (Li et al., 2023) and Congrat (Brannon et al., 2023).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf",
+      "parent_id": "50bd909b9f8c338890743f36a1b14339"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "f9e1172f4cddb974160442ba684d8279",
+    "text": "6 Conclusion",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f84a885d64cce92aafd6a883efad50fe",
+    "text": "This work introduces an advancement in LLM- empowered Retrieval-Augmented Generation through the integration of a graph-based indexing approach that enhances both efficiency and comprehension in information retrieval. LightRAG utilizes a comprehensive knowledge graph to facilitate rapid and relevant document retrieval, enabling a deeper understanding of complex queries. Its dual-level retrieval paradigm allows for the extraction of both specific and abstract information, catering to diverse user needs. Furthermore, LightRAG\u2019s seamless incremental update capability ensures that the system remains current and responsive to new information, thereby maintaining its effectiveness over time. Overall, LightRAG excels in both efficiency and effectiveness, significantly improving the speed and quality of information retrieval and generation while reducing costs for LLM inference.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf",
+      "parent_id": "f9e1172f4cddb974160442ba684d8279"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "eb3cbb8b507298b96e5e569fd8fa2a77",
+    "text": "10753",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "a763fd0a42b06d7a28acdb78b8b5479b",
+    "text": "7 Limitations",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "adc93faaf6c72f526ea9f2363a9d5cb6",
+    "text": "Integrating multi-modal capabilities into Ligh- tRAG significantly enhances functionality by in- corporating diverse data types such as text, im- ages, and audio. This enables richer contextual understanding and more nuanced responses to user queries. Additionally, incorporating time- awareness ensures the system reflects dynamic events and evolving contexts, adapting responses based on temporal relevance. By combining multi- modal inputs with time-sensitive frameworks, Ligh- tRAG delivers timely, contextually accurate in- sights that address complex queries requiring un- derstanding of current events and interconnections.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "a763fd0a42b06d7a28acdb78b8b5479b"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "234bc75cdaca280be9908a22ce21d04f",
+    "text": "8 Acknowledgments",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5690d5bdd425d8823a7cd70487b7dc96",
+    "text": "This research was partially supported by the Na- tional Natural Science Foundation of China under Grant No. U22B2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "234bc75cdaca280be9908a22ce21d04f"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "09a3b6699560bcd7d85a2dcd5f9f5be9",
+    "text": "References",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "1b012c65e6a5d2810de3c60921224827",
+    "text": "William Brannon, Suyash Fulay, Hang Jiang, Won- june Kang, Brandon Roy, Jad Kabbara, and Deb Roy. 2023. Congrat: Self-supervised contrastive pre- training for joint graph and text embeddings. arXiv preprint arXiv:2305.14321.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c2e18c91d5d899b3ce0930985ef505bd",
+    "text": "Chi-Min Chan, Chunpu Xu, Ruibin Yuan, Hongyin Luo, Wei Xue, Yike Guo, and Jie Fu. 2024. Rq-rag: Learn- ing to refine queries for retrieval augmented genera- tion. arXiv preprint arXiv:2404.00610.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c9ccdc189ba126f2069a7ec6662e2ef1",
+    "text": "Runjin Chen, Tong Zhao, AJAY KUMAR JAISWAL, Neil Shah, and Zhangyang Wang. 2024. Llaga: Large language and graph assistant. In ICML.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "353c19682d8ac4c235573a950690e43a",
+    "text": "Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, and Jonathan Larson. 2024. From local to global: A graph rag approach to query-focused summarization. arXiv preprint arXiv:2404.16130.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "889fb1aea7921ee1e78272764fd63272",
+    "text": "Shahul Es, Jithin James, Luis Espinosa Anke, and Steven Schockaert. 2024. Ragas: Automated evalua- tion of retrieval augmented generation. In EACL.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f5c7e6215173c9e522c008e16e29a992",
+    "text": "Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li. 2024. A survey on rag meeting llms: Towards retrieval-augmented large language models. In KDD.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "e69c9809c87676f60492ef4b527e4e60",
+    "text": "Luyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. 2022. Precise zero-shot dense retrieval without rele- vance labels. arXiv preprint arXiv:2212.10496.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "146ebf77d3ef828285c81a2e18e7fae9",
+    "text": "Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yi Dai, Jiawei Sun, and Haofen Wang. 2023. Retrieval-augmented generation for large language models: A survey. arXiv preprint arXiv:2312.10997.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9558cacf11b82728a88206c75ebfb2a7",
+    "text": "Yichuan Li, Kaize Ding, and Kyumin Lee. 2023. Grenade: Graph-centric language model for self- supervised representation learning on text-attributed graphs. In EMNLP.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "65def59443574c0e294b2d8577d4ea5c",
+    "text": "Hao Liu, Jiarui Feng, Lecheng Kong, Ningyue Liang, Dacheng Tao, Yixin Chen, and Muhan Zhang. 2024. One for all: Towards training one graph model for all classification tasks. In ICLR.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "4417e57bc38c6aae225cbca97c768f52",
+    "text": "Yuanjie Lyu, Zhiyu Li, Simin Niu, Feiyu Xiong, Bo Tang, Wenjin Wang, Hao Wu, Huanyong Liu, Tong Xu, and Enhong Chen. 2024. Crud-rag: A comprehensive chinese benchmark for retrieval- augmented generation of large language models. arXiv preprint arXiv:2401.17043.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "0803d53ac1d55a6f2d5fe12bbde0a147",
+    "text": "Hongjin Qian, Peitian Zhang, Zheng Liu, Kelong Mao, and Zhicheng Dou. 2024. Memorag: Moving to- wards next-gen rag via memory-inspired knowledge discovery. arXiv preprint arXiv:2409.05591.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c3b978206e611024d98c671ebe43f543",
+    "text": "Ori Ram, Yoav Levine, Itay Dalmedigos, Dor Muhlgay, Amnon Shashua, Kevin Leyton-Brown, and Yoav Shoham. 2023. In-context retrieval-augmented lan- guage models. TACL, 11:1316\u20131331.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "35c6c7c5b5060ac6212802a823cb1dd0",
+    "text": "Ladislav Ramp\u00e1\u0161ek, Michael Galkin, Vijay Prakash Dwivedi, Anh Tuan Luu, Guy Wolf, and Dominique Beaini. 2022. Recipe for a general, powerful, scal- able graph transformer. NeurIPS, 35:14501\u201314515.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a54d9b80f2201e1e55ae4f3df27c7fd6",
+    "text": "Alireza Salemi et al. 2024. Evaluating retrieval quality in retrieval-augmented generation. In SIGIR.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "98f9730037eabb0951308b80f7ee8934",
+    "text": "Viju Sudhi, Sinchana Ramakanth Bhat, Max Rudat, et al. 2024. Rag-ex: A generic framework for explaining retrieval augmented generation. In SIGIR.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "e96f24be0a621dc356ec842bbc93d207",
+    "text": "Jiabin Tang, Yuhao Yang, Wei Wei, Lei Shi, Lixin Su, Suqi Cheng, Dawei Yin, and Chao Huang. 2024. Graphgpt: Graph instruction tuning for large lan- guage models. In SIGIR.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "523df37e669b4c72749932616cbfb01f",
+    "text": "Shangqing Tu, Yuanchun Wang, Jifan Yu, Yuyang Xie, Yaran Shi, Xiaozhi Wang, Jing Zhang, Lei Hou, and Juanzi Li. 2024. R-eval: A unified toolkit for evaluat- ing domain knowledge of retrieval augmented large language models. In KDD.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "052b5ffdeb33fb7feed47e09e1bd2a89",
+    "text": "Han Xie, Da Zheng, Jun Ma, Houyu Zhang, Vassilis N Ioannidis, Xiang Song, Qing Ping, et al. 2023. Graph- aware language model pre-training on a large graph corpus can help multiple graph applications. In KDD.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "029f638b02dbaa3d47d1270efb632c93",
+    "text": "Yue Yu, Wei Ping, Zihan Liu, Boxin Wang, Jiaxuan You, Chao Zhang, Mohammad Shoeybi, and Bryan Catanzaro. 2024. Rankrag: Unifying context ranking with retrieval-augmented generation in llms. arXiv preprint arXiv:2407.02485.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a87465b86fa27d4935816569506b4ac1",
+    "text": "Penghao Zhao, Hailin Zhang, Qinhan Yu, Zhengren Wang, Yunteng Geng, Fangcheng Fu, Ling Yang, Wentao Zhang, and Bin Cui. 2024. Retrieval- augmented generation for ai-generated content: A survey. arXiv preprint arXiv:2402.19473.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf",
+      "parent_id": "09a3b6699560bcd7d85a2dcd5f9f5be9"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "fc94ca13e3ab1089d4f7913003985092",
+    "text": "10754",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "736338cb130637cd1b5d79b2255f9cf8",
+    "text": "9 Appendix",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "76a7635bf784c403176b5a34b3d651c1",
+    "text": "In this section, we elaborate the methodologies and experimental settings of the LightRAG framework. It describes the specific steps for extracting enti- ties and relationships from documents, detailing how large language models (LLMs) are utilized for this purpose. The section also specifies the prompt templates and configurations used in LLM oper- ations, ensuring clarity in the experimental setup. Additionally, it outlines the evaluation criteria and dimensions used to assess the performance of Ligh- tRAG against baselines from various dimensions.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "736338cb130637cd1b5d79b2255f9cf8"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "a3d4033c09715ca5a04416d5f44dabdc",
+    "text": "9.1 Experimental Settings",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "5ccd8937e93d83f7b3ba0bc23ae22dd3",
+    "text": "Table 4: Statistical information of the datasets.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "5b20ec97ae1da31abfafb0f7b7b10ad0",
+    "text": "Statistics Agriculture CS Legal Mix # Docs 12 10 94 61 # Tokens 2,017,886 2,306,535 5,081,069 619,009",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Statistics</th><th>Agriculture</th><th>CS</th><th>Legal</th><th>Mix</th></tr></thead><tbody><tr><td># Docs</td><td>12</td><td>10</td><td>94</td><td>61</td></tr><tr><td># Tokens</td><td>2,017,886</td><td>2,306,535</td><td>5,081,069</td><td>619,009</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3ec912083295c80d4998d20a17d08642",
+    "text": "Evaluation Datasets. To conduct a compre- hensive analysis of LightRAG, we selected four datasets from the UltraDomain benchmark (Qian et al., 2024). The UltraDomain data is sourced from 428 college textbooks and encompasses 18 distinct domains, including agriculture, social sciences, and humanities. Among these domains, we chose the Agriculture, CS, Legal, and Mix datasets. Each dataset contains between 600,000 and 5,000,000 tokens, with detailed information provided in Ta- ble 4. Below is a specific introduction to the four domains utilized in our experiments:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d3d79e92c3d8f4ac18bd77bafbc87dc0",
+    "text": "\u2022 Agriculture: This domain focuses on agricul- tural practices, covering a range of topics includ- ing beekeeping, hive management, crop produc- tion, and disease prevention.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "56f3adf25486f88de8991e2f2ef46062",
+    "text": "\u2022 CS: This domain focuses on computer science and includes key areas of data science and soft- ware engineering. It particularly highlights ma- chine learning and big data processing, featuring content on recommender systems, classification algorithms, and real-time analytics using Spark.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "047de0043ef179fad9ef8558418a0898",
+    "text": "\u2022 Legal: It centers on corporate legal practices, addressing corporate restructuring, legal agree- ments, regulatory compliance, and governance, with a focus on the legal and financial sectors.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "db8f3f47686e0dca2e09e627cdf8e896",
+    "text": "\u2022 Mixed: This domain presents a rich variety of lit- erary, biographical, and philosophical texts, span- ning a broad spectrum of disciplines, including cultural, historical, and philosophical studies.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1ab6b279209f8c2bd41ef4a05babe7d6",
+    "text": "Question Generation. To evaluate the effective- ness of RAG systems for high-level sensemaking tasks, we consolidate all text content from each dataset as context and adopt the generation method outlined in (Edge et al., 2024). Specifically, we instruct an LLM to generate five RAG users, along with five tasks for each user. Each generated user is accompanied by a textual description detailing their expertise and traits that motivate their question- raising activities. Each user task is also described, emphasizing one of the user\u2019s potential intentions when interacting with RAG systems. For each user- task pair, the LLM generates five questions that require an understanding of the entire corpus. In total, we generate 125 questions for each dataset.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e17267b0ce64c414df7b81850b84bd24",
+    "text": "Baselines. Our LightRAG is compared against the following state-of-the-art methods:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f1fb737b673cde3891f99b593680547d",
+    "text": "\u2022 Naive RAG (Gao et al., 2023): This model serves as a standard baseline in existing RAG systems. It segments raw texts into chunks and stores them in a vector database using text embeddings. For queries, Naive RAG generates vectorized repre- sentations to directly retrieve text chunks based on the highest similarity in their representations, ensuring efficient and straightforward matching.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ea7e81bc1af739c12b49807790f72da4",
+    "text": "\u2022 RQ-RAG (Chan et al., 2024): This approach leverages the LLM to decompose the input query into multiple sub-queries. These sub-queries are designed to enhance search accuracy by utilizing explicit techniques such as rewriting, decomposi- tion, and disambiguation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "2c52e03a90c2b46ec285ce2c36617d68",
+    "text": "\u2022 HyDE (Gao et al., 2022): This method utilizes the LLM to generate a hypothetical document based on the input query. This generated docu- ment is then employed to retrieve relevant text chunks, which are subsequently used to formu- late the final answer.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c2daa085d2534bdecaed40198e575d88",
+    "text": "\u2022 GraphRAG (Edge et al., 2024): This is a graph- enhanced RAG system that utilizes an LLM to extract entities and relationships from the text, representing them as nodes and edges. It gen- erates corresponding descriptions for these ele- ments, aggregates nodes into communities, and produces a community report to capture global information. When handling high-level queries, GraphRAG retrieves more comprehensive infor- mation by traversing these communities.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1301117e30f62e5f99bc68df94840e40",
+    "text": "Implementation and Evaluation Details. In our experiments, we utilize the nano vector database for vector data management and access.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf",
+      "parent_id": "a3d4033c09715ca5a04416d5f44dabdc"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "5be0872a5a5fe324ee39c0a8446a4e82",
+    "text": "10755",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "9685713ec0d778bfac9f2c56f485c30e",
+    "text": "Table 5: Comparison of Document Insertion Times",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "cad588393971cf255b6edf670dd76bb1",
+    "text": "No. Token Count LightRAG (s) GraphRAG (s) 1 59,870 486 642 2 41,224 418 700 3 73,989 561 953 4 47,502 513 741 5 48,353 453 926",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>No.</th><th>Token Count</th><th>LightRAG (s)</th><th>GraphRAG (s)</th></tr></thead><tbody><tr><td></td><td>59,870</td><td>486</td><td>642</td></tr><tr><td></td><td>41,224</td><td>418</td><td>700</td></tr><tr><td></td><td>73,989</td><td>561</td><td>953</td></tr><tr><td></td><td>47,502</td><td>513</td><td>741</td></tr><tr><td>(</td><td>48,353</td><td>453</td><td>926</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "27d7e141d39b0c4dda41ff89f696db88",
+    "text": "Table 6: Average Query Times",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "947d3aa8351ab3f7dc744a4fdaae5e9a",
+    "text": "Metric LightRAG GraphRAG Average Query Time (s) 11.2 23.6",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Metric</th><th>LightRAG</th><th>GraphRAG</th></tr></thead><tbody><tr><td>Average Query Time (s)</td><td>11.2</td><td>23.6</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "39a43cb54f0685ab59c709dab4caf964",
+    "text": "For all LLM-based operations in LightRAG, we de- fault to using GPT-4o-mini. To ensure consistency, the chunk size is set to 1200 across all datasets. Additionally, the gleaning parameter is fixed at 1 for both GraphRAG and LightRAG.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b7aa204c320359c9715a9b788d00c6fd",
+    "text": "Defining ground truth for many RAG queries, particularly those involving complex high-level se- mantics, poses significant challenges. To address this, we build on existing work (Edge et al., 2024) and adopt an LLM-based multi-dimensional com- parison method. We employ a robust LLM, specif- ically GPT-4o-mini, to rank each baseline against our LightRAG. The evaluation prompt we used is detailed in Appendix 9.4.4. In total, we utilize four evaluation dimensions, including:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "86c5b21a6ef8dfb456fc643c28c4001f",
+    "text": "i) Comprehensiveness: How thoroughly does the answer address all aspects and details of the question? ii) Diversity: How varied and rich is the answer in offering different perspectives and in- sights related to the question? iii) Empowerment: How effectively does the answer enable the reader to understand the topic and make informed judg- ments? iv) Overall: This dimension assesses the cumulative performance across the three preceding criteria to identify the best overall answer.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "cab4015c8bd4156ccb7f923f18eb668e",
+    "text": "The LLM directly compares two answers for each dimension and selects the superior response for each criterion. After identifying the winning an- swer for the three dimensions, the LLM combines the results to determine the overall better answer. To ensure a fair evaluation and mitigate the poten- tial bias that could arise from the order in which the answers are presented in the prompt, we alternate the placement of each answer. We calculate win rates accordingly, leading to the final results.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "8c790a5f1e58e39a12accdcd50436a90",
+    "text": "9.2 Time and Space Comparison",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "eb9a751f064193bdd50e6bd7092b13b9",
+    "text": "To further investigate the scalability and efficiency of our proposed approach, LightRAG, we con-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "8c790a5f1e58e39a12accdcd50436a90"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "67f7c441bd90309d7cf48bbd8397f6cd",
+    "text": "Table 7: Final Storage Space Usage",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "8c790a5f1e58e39a12accdcd50436a90"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "ad9fd8914211d232bf0b3874d65ff24c",
+    "text": "Method Final Storage Space (MB) LightRAG 39.5 GraphRAG 286.7",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Method</th><th>Final Storage Space (MB)</th></tr></thead><tbody><tr><td>LightRAG</td><td>39.5</td></tr><tr><td>GraphRAG</td><td>286.7</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "8c790a5f1e58e39a12accdcd50436a90"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1d50d005efe344c1a454a6037551c280",
+    "text": "ducted a series of incremental insertion experi- ments. We introduced five additional documents, with token counts ranging from 41,224 to 73,989, into the knowledge base. The results, presented in Table 5, demonstrate that LightRAG consistently outperforms the baseline GraphRAG method in both time and space efficiency. For the document indexing task, LightRAG exhibits near-linear scala- bility, with insertion times ranging from 418 to 561 seconds. In contrast, GraphRAG\u2019s insertion times are significantly higher, ranging from 642 to 953 seconds, indicating a heavier computational over- head due to its community detection mechanisms.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "8c790a5f1e58e39a12accdcd50436a90"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3114c1b279eae4afb0c8df31dcedf9e5",
+    "text": "During the retrieval phase, LightRAG achieves an average query time of 11.2 seconds, less than half of GraphRAG\u2019s 23.6 seconds, as summarized in Table 6. This performance improvement is primarily attributed to LightRAG\u2019s lightweight, keyword-based retrieval approach. Furthermore, the final storage usage for LightRAG is only 39.5MB, as shown in Table 7, a stark contrast to GraphRAG\u2019s 286.7MB. This highlights Ligh- tRAG\u2019s superior efficiency in managing large-scale data. These results reinforce LightRAG\u2019s advan- tages in terms of scalability and resource efficiency, making it a more suitable choice for dynamic sce- narios involving the ingestion and retrieval of large- scale knowledge bases.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "8c790a5f1e58e39a12accdcd50436a90"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "0793e175d8f0e5458746db3328c8320f",
+    "text": "9.3 Case Example of Retrieval-Augmented Generation in LightRAG",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a04541efc09e68627823a385481f4052",
+    "text": "In Figure 2, we illustrate the retrieve-and-generate process. When presented with the query, \u201cWhat metrics are most informative for evaluating movie recommendation systems?\u201d, the LLM first extracts both low-level and high-level keywords. These keywords guide the dual-level retrieval process on the generated knowledge graph, targeting relevant entities and relationships. The retrieved informa- tion is organized into three components: entities, relationships, and corresponding text chunks. This structured data is then fed into the LLM, enabling it to generate a comprehensive answer to the query.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "0793e175d8f0e5458746db3328c8320f"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "e236939fae4beadf46560f27685cbbd7",
+    "text": "9.4 Overview of Prompts in LightRAG",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "594184d1504653e7c161bdcd56d42831",
+    "text": "9.4.1 Prompts for Graph Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "50a763d61b7fbde7d7a258f9745400a5",
+    "text": "The graph construction prompt outlined in Fig- ure 3 is designed to extract and structure entity-",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf",
+      "parent_id": "594184d1504653e7c161bdcd56d42831"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "4bb8ceb7899d761ea0eb447cbecd2517",
+    "text": "10756",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8c285df5c1055fd0b284e1c9efcc9697",
+    "text": "Query: What metrics are most informative for evaluating movie recommendation systems?",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "9cac698ee8459972c935dcd6b0ea8b98",
+    "text": "Query",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "a2db2820ca6ef5ec096091b0c3a826cf",
+    "text": "High level keywords: [Metrics\", \"Movie recommendation systems\", \"Evaluation methods\"], Low level keywords: [Accuracy\u201d, \u201cPrecision\u201d, \"Recall \"F1 score\u201d, \"User satisfaction\", \"Diversity\", \"Coverage\"]",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b68ce31d923ce5e773b88c86ada51260",
+    "text": "Keywords",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c2a4877eadbc0726625aba52134de00b",
+    "text": "PERFORMANCE METRICS. Performance Metrics are measures used to evaluate how well the Decision Tree model performs, including RMSLE among others. PRECISION-RECALL (PR) CURVE. The precision-recall curve is an event used to visualize the trade-off between precision and recall for different thresholds in binary classification.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9eb474a8126fa99a198d040a5df3fd7e",
+    "text": "MOVIE CLUSTERING,.Movie clustering refers to the grouping of movies based on similarities using the K-means algorithm and evaluating their performance metrics. ACCURACY. Accuracy is a basic metric used to assess the performance of predictive models, expressed as a percentage of correct predictions.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "e1d8dd9d29c1eaa1198d7def33134564",
+    "text": "---Relationships--- ITEMMATRIX, MOVIES, temMatrix holds the factors for movies, used to derive recommendations for each user based on their preferences. AVGPRECISIONK, SPARK, avgPrecisionK function is utilized within the Spark framework to analyze the precision of recommendations for users. MEAN SQUARE ERROR, VARIANCE, Mean Square Error is calculated based on the total Variance in the dataset, showing the relationship between explained and unexplained variance. + error measurement, variance",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "adb07ada5591a365a9f3bf8f4dc48346",
+    "text": "ACTUALMOVIES, PREDICTEDMOVIES, ActualMovies are compared against predictedMovies to assess the accuracy of the movie recommendation model",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "55b478df038d141127d017e53dbccb49",
+    "text": "---Sources---",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7db58c79fae40e8bebc1111c21b86c4d",
+    "text": "... these metrics are popular for model evaluation and selection purposes ...... These movie IDs are sorted in order of the estimated rating.\\nAs we did for MSE and RMSE, we can compute ranking-based evaluation metrics using MLIib's \u2018RankingMetrics\u2019 class. .... Then, for each user, we have the list of actual and predicted movie IDs that we can pass to our APK function. In a manner similar to how we computed MSE, we will sum each of these APK scores using a \u2018reduce\u2019 action and divide by the number of users (that is, the count of the \"allRecs RDD):\\nFinally, we compute the accuracy for the decision tree...... First, we will compute the MSE and RMSE metrics using RegressionMetrics. ...",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "19c5803b9acb780e5d24d2d8dc78f634",
+    "text": "Retrieval Context",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "22a1713e0bbdd038c88ba7701f846627",
+    "text": "Key Metrics for Evaluating Movie Recommendation Systems",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c90407bdb91e5f79813028ccab66964c",
+    "text": "Evaluating movie recommendation systems involves multiple metrics that assess the effectiveness and accuracy of the recommendations provided to users. Below are some of the most informative metrics commonly used in this context, derived from the data and concepts surrounding recommendation systems.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "4e63061b9a69971b7ad23c71a1a5660e",
+    "text": "1. Mean Average Precision at K (MAPK) [...]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9b82aeed505bb65a009bbebc4a2bf9dc",
+    "text": "2. Precision and Recall [...]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "90fa40300f9e3619abe68315b4c5d9d6",
+    "text": "3. Root Mean Squared Error (RMSE) and Mean Squared Error (MSE) [...]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "89f507d38f5bc01a452bf29d1ab13094",
+    "text": "4. Area Under the Curve (AUC) [..]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5d5758dae5cd6b7e2264f29397c9dc91",
+    "text": "5. F-Measure [...]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a2e83fd3082cac70f65e442e73255574",
+    "text": "6. User Engagement Metrics [...]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "53b8f6d8f5e54dd9ed945270f58896e3",
+    "text": "Conclusion: A comprehensive evaluation of movie recommendation systems employs a range of metrics that capture both the accuracy of the recommendations and to users. user satisfaction. By effectively leveraging these metrics, system designers can optimize recommendation engines to deliver more personalized and relevant experiences",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "89e0fa85c54e052ce8b636da125baac2",
+    "text": "LLM Response",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "fa5153caffd4f69ce13c35de910126a3",
+    "text": "Figure 2: A retrieval and generation example.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bd2ac5899f37eb1dcf4552646207124f",
+    "text": "relationship information from a text document based on specified entity types. The process begins by identifying entities and categorizing them into types such as organization, person, location, and event. It then provides detailed descriptions of their attributes and activities. Next, the prompt identi- fies relationships between these entities, offering explanations, assigning strength scores, and sum- marizing the relations using high-level keywords.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "22a1713e0bbdd038c88ba7701f846627"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "eea2c9ad94e4505daef1cc171fe9787e",
+    "text": "9.4.2 Prompts for Query Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "350ccaa4195c912ae7de32f7f94b9e57",
+    "text": "In Figure 4, the query generation prompt outlines a framework for identifying potential user roles (e.g., data scientist, finance analyst, and prod- uct manager) and their objectives for generating queries based on a specified dataset description. The prompt explains how to define five distinct users who would benefit from interacting with the dataset. For each user, it specifies five key tasks they would perform while working with the dataset. Additionally, for each (user, task) combination, five high-level questions are posed to ensure a thorough understanding of the dataset.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "eea2c9ad94e4505daef1cc171fe9787e"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c88c8bca98b41187862c06efb8bca8e7",
+    "text": "9.4.3 Prompts for Keyword Extraction",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "44f9144cf7222a6abfb5d2da43e5bcc8",
+    "text": "In Figure 5, the prompt describes a method for ex- tracting keywords from a user\u2019s query, distinguish- ing between high-level and low-level keywords. High-level keywords represent broad concepts or themes, while low-level keywords focus on specific entities and details. The extracted keywords are re- turned in JSON format, organized into two fields: \u201chigh_level_keywords\u201d for overarching ideas and \u201clow_level_keywords\u201d for specific details.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "c88c8bca98b41187862c06efb8bca8e7"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c9375a93996c4e2905886eaff89ed6a3",
+    "text": "9.4.4 Prompts for RAG Evaluation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "9cac698ee8459972c935dcd6b0ea8b98"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "320a5fb8415ca882dd5349cde32b4d15",
+    "text": "The evaluation prompt is illustrated in Figure 6. It introduces a comprehensive evaluation framework for comparing two answers to the same question based on three key criteria: Comprehensiveness, Diversity, and Empowerment. Its purpose is to guide the LLM through the process of selecting the better answer for each criterion, followed by an overall assessment. For each of the three crite- ria, the LLM must identify which answer performs better and provide a rationale for its choice. Ulti- mately, an overall winner is determined based on",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf",
+      "parent_id": "c9375a93996c4e2905886eaff89ed6a3"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "e83031c4064783b36344ff2c2a4b2b9c",
+    "text": "10757",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "08ead9e54326b84320557a317d605c8b",
+    "text": "-Goal-",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "062dfcad1605b0020d177a27eb0af114",
+    "text": "Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "08ead9e54326b84320557a317d605c8b"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "8e0c5d0cf883f585a73daf906be62164",
+    "text": "-Steps-",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "cb92c01ec7da800a9488ba668e19720d",
+    "text": "1. Identify all entities. For each identified entity, extract the following information:",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "8524caaa7baa25277533cedb2ca254e6",
+    "text": "- entity_name: Name of the entity, capitalized",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f5c934e1d39165dc6fb98b43b86d5443",
+    "text": "- entity_type: One of the following types: [organization, person, geo, event]",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d59a5c92aa61eb5b82ec055b87ea9ba2",
+    "text": "- entity_description: Comprehensive description of the entity's attributes and activities",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a3ef351ca453bbbeb4a629c967ff7db1",
+    "text": "Format each entity as (\"entity\"<|><entity_name><|><entity_type><|><entity_description>)",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "51d2cb24fb604ec6b39be9123f582960",
+    "text": "2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other. For each pair of related entities, extract the following information:",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3e21e4b93876c91c2740192c93423ee5",
+    "text": "- source_entity: name of the source entity, as identified in step 1",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3b64fa632fb6f9faf57bdf56aa530f98",
+    "text": "- target_entity: name of the target entity, as identified in step 1",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "6c55d891e603e8f0f380ab80fe4bdf9d",
+    "text": "- relationship_description: explanation as to why you think the source entity and the target entity are related to each other",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "046016b953c818c38d303a069d84e127",
+    "text": "- relationsl strength: a numeric score indicating strength of the relationship between the source entity and target entity",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d0c8f2f22715035ce8d4a5602392a53a",
+    "text": "- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2ecd9cedf73b6a7d1f830885b5afc354",
+    "text": "Format each relationship as (\"relationship\"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_keywords><|><relationship_strength>)",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3014bb0a785276cbdd5207736a6d53f2",
+    "text": "3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document. Format the content-level words",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "61533d49da203bc1382cf4fd68f80645",
+    "text": "Format the content-level key words as (\"content_keywords\"<|><high_level_keywords>)",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "129c8355d5218a99d772440b821c0c3a",
+    "text": "4. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "782a1f275dfc763c70419e6830ceaa69",
+    "text": "5. When finished, output <COMPLETE|>",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "170419968804713f36311e286ca480f0",
+    "text": "-Real Data- Entity_types: {entity_types}",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8840fddf08b70322d3254bec327b0e99",
+    "text": "Text:",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9a436f824934e77bbb2578a46844e765",
+    "text": "{input_text}",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bd0bc6a18fb06f850b251c341ae290cc",
+    "text": "Output:",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4052280e6c228521154b7206e1eb496e",
+    "text": "Graph Construct Prompt",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "b227f75d09e79ee912a91f84f6defcd1",
+    "text": "Figure 3: Prompts for Graph Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "8e0c5d0cf883f585a73daf906be62164"
+    }
+  },
+  {
+    "type": "CodeSnippet",
+    "element_id": "b83c016378ade4a6d09b4b39039c2281",
+    "text": "Given the following description of a dataset: {total_description} Please identify 5 potential users who would engage with this dataset. For each user, list 5 tasks they would perform with this dataset. Then, for each (user, task) combination, generate 5 questions that require a high-level understanding of the entire dataset. Output the results in the following structure: - User 1: [user description] - Task 1: [task description] [ Question 1: {Question 1}, Question 2: {Question 2}, Question 3: {Question 3}, Question 4: {Question 4}, Question 5: {Question 5} ] - Task 2: [task description] [ Question 1: {Question 1}, Question 2: {Question 2}, Question 3: {Question 3}, Question 4: {Question 4}, Question 5: {Question 5} ] - I 5: [task description] [ Question 1: {Question 1}, Question 2: {Question 2}, Question 3: {Question 3}, Question 4: {Question 4}, Question 5: {Question 5} ] - User 2: [user description] - r 5: [user description] Query Generate Prompt",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "85086e76d99204bf5c98cc7200712d99",
+    "text": "Figure 4: Prompts for Query Generation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a13ccd9c48d66ca23d95d4cd73f06182",
+    "text": "performance across all three dimensions, accompa- nied by a detailed summary that justifies the deci- sion. The evaluation is structured in JSON format, ensuring clarity and consistency, and facilitating a systematic comparison between the two answers.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "349799db61319f86ae135980d37f2390",
+    "text": "9.5 Case Study: Comparison between LightRAG and the Baseline NaiveRAG",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "337632fc0cc35bd15ab2559959732ea7",
+    "text": "To further illustrate LightRAG\u2019s superiority over baseline models in terms of comprehensiveness, empowerment, and diversity, we present a case study comparing LightRAG and NaiveRAG in Ta- ble 8. This study addresses a question regarding indigenous perspectives in the context of corpo- rate mergers. Notably, LightRAG offers a more in-depth exploration of key themes related to in- digenous perspectives, such as cultural significance, collaboration, and legal frameworks, supported by specific and illustrative examples. In contrast,",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "349799db61319f86ae135980d37f2390"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "aa41136850b0298edad2f31955a0f252",
+    "text": "while NaiveRAG provides informative responses, it lacks the depth needed to thoroughly examine the various dimensions of indigenous ownership and collaboration. The dual-level retrieval process employed by LightRAG enables a more compre- hensive investigation of specific entities and their interrelationships, facilitating extensive searches that effectively capture overarching themes and complexities within the topic.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "349799db61319f86ae135980d37f2390"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "fd88f48a3cd8745d927b54261695a1c3",
+    "text": "9.6 Case Study: Comparison between LightRAG and GraphRAG",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4cf0451f01de3cb580c06e165c4e623f",
+    "text": "To provide a clear comparison between baseline methods and our LightRAG, we present specific case examples in Table 9. The table includes re- sponses to a machine learning question from both the competitive baseline, GraphRAG, and our Ligh- tRAG framework. In this instance, LightRAG out- performs GraphRAG in all evaluation dimensions",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf",
+      "parent_id": "fd88f48a3cd8745d927b54261695a1c3"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "ce61499181d693bcf65600bc7886d42d",
+    "text": "10758",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 13,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "b829b1b2bf212536d707492e8e90047a",
+    "text": "---Role-",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "05c47b10090d7f0eb52484aadf92c5b9",
+    "text": "You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "b829b1b2bf212536d707492e8e90047a"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "31e7a210e2939100ce6ab578e1f59882",
+    "text": "---Goal---",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "b829b1b2bf212536d707492e8e90047a"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d5e8275cc4320907f6c73594c2541837",
+    "text": "specific entities, details, or concrete terms. Given the query, list both high-level and low-level keywords. High-level keywords focus on overarching concepts or themes, while low-level keywords focus on",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "b829b1b2bf212536d707492e8e90047a"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "dfd832e6113368f446f3485524dd9543",
+    "text": "Keywords Generate Instruction Prompt",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "fad7e28170f09e9be3ce75de065431d9",
+    "text": "Figure 5: Prompts for Keyword Extraction",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "22814506672750e357c7cb01d16bb45c",
+    "text": "-Role---",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ffa94cf753ee992f02425230a94e6f49",
+    "text": "You are an expert tasked with evaluating two answers to the same question based on four criteria: Comprehensiveness, Diversity, and Empowerment.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "b39973e378f35410d251b4f995d82dd3",
+    "text": "---Goal-\u2014",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "efd139227ab9030780076a180adaf4ab",
+    "text": "ou will evaluate two answers to the same question based on four criteria: Comprehensiveness, Diversity, and Empowerment.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "80b05cc1881a3e64f937dc86f836758a",
+    "text": "- Comprehensiveness: How much detail does the answer provide to cover all aspects and details of the question?",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "c477d491215c78d3c0ce12ae9e22ad7a",
+    "text": "- Diversity: How varied and rich is the answer in providing different perspectives and insights on the question?",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a67c96845c21e26ac75392a9f9757a77",
+    "text": "- Empowerment: How well does the answer help the reader understand and make informed judgments about the topic?",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "aa782aaf1084803c05fbe9237836f0a3",
+    "text": "F each choose the answer (either Answer 1 or Answer n A select an | winner based on these three ries.",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf",
+      "parent_id": "dfd832e6113368f446f3485524dd9543"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "8492f444ed67d091a9a0e9128b593ffa",
+    "text": "Evaluation Instruction Prompt",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "CodeSnippet",
+    "element_id": "36f2aafdb977fc63b587cac819052996",
+    "text": "Here is the question: {query} Here are the two answers: Answer 1: {answer1}; Answer 2: {answer2} Evaluate both answers using the three criteria listed above and provide detailed explanations for each criterion. Output your evaluation in the following JSON format: { \"Comprehensiveness\": {{ \"Winner\": \"[Answer 1 or Answer 2]\", \"Explanation\u201d: \"[Provide explanation here]\" }, \"Diversity\": {{ \"Winner\": \"[Answer 1 or Answer 2]\", \"Explanation\": \"[Provide explanation here]\" }}, \"Empowerment: {{ \"Winner\": \"[Answer 1 or Answer 2]\", \u201cExplanation\": \"[Provide explanation here]\" }}, \"Overall Winner\": {{ \"Winner\": \u201c[Answer 1 or Answer 2]\", \"Explanation\u201d: [Summarize why this answer is the overall winner based on the three criteria]\" } ] Evaluation Input Prompt",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "8845d8c6aa994a21ac3dc0c7eaddf28a",
+    "text": "Figure 6: Prompts for RAG Evaluation",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "76c60b7a93e2eec25432d7403b9ee962",
+    "text": "assessed by the LLM judge, including comprehen- siveness, diversity, empowerment, and overall qual- ity. Our key observations are as follows:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9b72987cae05dccfda2c7981dbe9eb7f",
+    "text": "i) Comprehensiveness. Notably, LightRAG covers a broader range of machine learning met- rics, showcasing its comprehensiveness and ability to effectively discover relevant information. This highlights the strength of our graph-based index- ing paradigm, which excels in precise entity and relation extraction as well as LLM profiling.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f33fb96f2e1b858365a493917c478256",
+    "text": "ii) Both Diversity and Empowerment. Further- more, LightRAG not only offers a more diverse array of information but also delivers more empow- ering content. This success is due to LightRAG\u2019s",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bab5695a05395be7dd90d122431443cf",
+    "text": "innovative hierarchical retrieval paradigm. This ap- proach combines in-depth explorations of related entities through low-level retrieval to enhance the empowerment and depth of the responses, along with broader explorations via high-level retrieval to improve the diversity of the answers. Together, they capture a comprehensive global perspective of the knowledge domain, enabling LightRAG to provide users with a richer, more empowering, and more diverse set of information.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "479d2f99f536d110e0e437890c853e84",
+    "text": "10759",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 14,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "61d0a2b4f70f337541bd394fdf3b4360",
+    "text": "Table 8: Case Study: Comparison Between LightRAG and the Baseline NaiveRAG.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "196249c3f11360569b08417518cfa123",
+    "text": "Query How do indigenous perspectives on ownership and collaboration influence corporate mergers in countries like Canada and Australia? NaiveRAG Indigenous perspectives on ownership and collaboration play a significant role in shaping corporate mergers in countries like Canada and Australia, particularly where resources and land rights intersect with Indigenous sovereignty and cultural values. These perspectives emphasize community engagement, respect for traditional land use, and a collaborative approach to resource management, influencing corporate strategies and outcomes. ... Both nations illustrate that prioritizing Indigenous perspectives leads to more sustainable and equitable outcomes. Acknowledging Indigenous rights and fostering collaborative relationships can reduce conflicts and enhance corporate reputations. Ultimately, integrating Indigenous perspectives is a pathway to better business practices and community relations. LightRAG Indigenous Perspectives on Ownership and Collaboration in Corporate Mergers Indigenous perspectives significantly influence corporate mergers in countries like Canada and Australia. These views emphasize communal rights to land and resources, spiritual connections to the environment, and the importance of collaboration over competition. Cultural Significance of Land Ownership [...] The Role of Collaboration [...] Legal and Regulatory Frameworks [...] Conclusion Indigenous perspectives shape corporate mergers by emphasizing communal ownership and collab- orative partnerships. Corporations must adopt respectful, inclusive practices that honor Indigenous cultural values and rights, paving the way for sustainable, mutually beneficial outcomes. LLM Decision Comprehensiveness: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 provides a thorough exploration of the indigenous perspectives by discussing cultural significance, collaboration, and legal frameworks, including specific examples and detailed insights. In contrast, Answer 1, while informative, lacks the same depth in analyzing the various dimensions of the indigenous perspectives on ownership and collaboration.\" Diversity: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 presents a wider array of perspectives, focusing on the communal aspect of land ownership, spiritual connections, and practical examples of collaboration. It covers more ground by contrasting Indigenous views with Western notions, whereas Answer 1 primarily focuses on corporate strategies and outcomes with limited perspective.\" Empowerment: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 equips the reader with nuanced understanding and actionable insights by highlighting the importance of collaboration and the legal frameworks involved. It empowers corporations by illustrating how adopting an inclusive approach can facilitate better out- comes. Answer 1, while practical, does not emphasize the moral or ethical implications as strongly.\" Overall Winner: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 excels overall due to its comprehensive exploration, diversity of perspec- tives, and empowerment of the reader with actionable insights about indigenous perspectives and collaboration in corporate mergers. Although Answer 1 is more direct, the depth and breadth of Answer 2 make it the stronger response.\"",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Query</th><th>How do indigenous perspectives on ownership and collaboration influence corporate mergers in countries like Canada and Australia?</th></tr></thead><tbody><tr><td>NaiveRAG</td><td>Indigenous perspectives on ownership and collaboration play a significant role in shaping corporate mergers in countries like Canada and Australia, particularly where resources and land rights intersect with Indigenous sovereignty and cultural values. These perspectives emphasize community engagement, respect for traditional land use, and a collaborative approach to resource management, influencing corporate strategies and outcomes. h nations illustrate that prioritizing Indigenous perspectives leads to more sustainable and equitable outcomes. Acknowledging Indigenous rights and fostering collaborative relationships can reduce conflicts and enhance corporate reputations. Ultimately, integrating Indigenous perspectives is a pathway to better business practices and community relations.</td></tr><tr><td>LightRAG</td><td>Indigenous Perspectives on Ownership and Collaboration in Corporate Mergers Indigenous perspectives significantly influence corporate mergers in countries like Canada and Australia. These views emphasize communal rights to land and resources, spiritual connections to the environment, and the importance of collaboration over competition. Cultural Significance of Land Ownership [...] The Role of Collaboration [...] Legal and Regulatory Frameworks |[...] Conclusion Indigenous perspectives shape corporate mergers by emphasizing communal ownership and collab- orative partnerships. Corporations must adopt respectful, inclusive practices that honor Indigenous cultural values and rights, paving the way for sustainable, mutually beneficial outcomes.</td></tr><tr><td></td><td>examples and detailed insights. In contrast, Answer 1, while informative, lacks the same depth in analyzing the various dimensions of the indigenous perspectives on ownership and collaboration.\" Diversity: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 presents a wider array of perspectives, focusing on the communal aspect of land ownership, spiritual connections, and practical examples of collaboration. It covers more ground by contrasting Indigenous views with Western notions, whereas Answer 1 primarily focuses on corporate strategies and outcomes with limited perspective.\" Empowerment: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 equips the reader with nuanced understanding and actionable insights by highlighting the importance of collaboration and the legal frameworks involved. It empowers corporations by illustrating how adopting an inclusive approach can facilitate better out- comes. Answer 1, while practical, does not emphasize the moral or ethical implications as strongly.\" Overall Winner: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 excels overall due to its comprehensive exploration, diversity of perspec- tives, and empowerment of the reader with actionable insights about indigenous perspectives and collaboration in corporate mergers. Although Answer 1 is more direct, the depth and breadth of Answer 2 make it the stronger response.\"</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "85ae5655b6ca66459a8fe824c76271c6",
+    "text": "10760",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 15,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "1e95b91b07de9325779fbd5b04155080",
+    "text": "Table 9: Case Study: Comparison Between LightRAG and the Baseline Method GraphRAG.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "3dfcb266519a7cc4daeac2afac9b548b",
+    "text": "Query Which methods can normalize the feature values for effective machine learning? GraphRAG Key Metrics for Evaluating Movie Recommendation Systems: Evaluating the effectiveness of movie recommendation systems is crucial for ensuring user satisfaction and improving the overall performance of these systems. Several metrics are widely recognized for their ability to provide insights into how well a recommendation system performs. Below are the most informative metrics: 1. Precision [...] 2. Recall [...] 3. F1 Score [...] 4. Mean Average Precision (MAP) [...] 5. Root Mean Squared Error (RMSE) [...] 6. User Satisfaction Metrics [...] Conclusion: In summary, metrics such as precision, recall, F1 score, MAP, RMSE, and user satisfaction are critical for evaluating the performance of movie recommendation systems. Each metric provides unique insights that can help developers and researchers refine their algorithms and enhance user experiences. By focusing on these metrics, stakeholders can ensure that their recommendation systems effectively meet user preferences and expectations. LightRAG Key Metrics for Evaluating Movie Recommendation Systems: Evaluating movie recommen- dation systems involves multiple metrics that assess the effectiveness and accuracy of the recom- mendations provided to users. Below are some of the most informative metrics commonly used in this context, derived from the data and concepts surrounding recommendation systems. 1. Mean Average Precision at K (MAPK) [...] 2. Precision and Recall [...] 3. Root Mean Squared Error (RMSE) and Mean Squared Error (MSE) [...] 4. Area Under the Curve (AUC) [...] 5. F-Measure [...] 6. User Engagement Metrics [...] Conclusion: A comprehensive evaluation of movie recommendation systems employs a range of metrics that capture both the accuracy of the recommendations and user satisfaction. By effectively leveraging these metrics, system designers can optimize recommendation engines to deliver more personalized and relevant experiences. LLM Decision Comprehensiveness: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 provides a broader array of metrics including MAPK, AUC, and user engagement metrics alongside precision, recall, RMSE, and F-Measure. This gives a fuller view of how recommendation systems can be evaluated. Answer 1, while detailed, is more focused on traditional metrics and lacks the inclusion of engagement metrics which are crucial for understanding user interaction.\" Diversity: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 not only covers a wide variety of metrics but also includes nuanced explanations of how some metrics interrelate and differ from one another, like the inclusion of both RMSE and MSE, as well as the details behind AUC. In contrast, Answer 1 sticks primarily to standard metrics without much exploration of potential nuances.\" Empowerment: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 empowers the reader more effectively by detailing how each metric functions and its importance in evaluating recommendation systems. By providing context such as the trade-offs between precision and recall and emphasizing user engagement metrics, it enables readers to make more informed judgments and understand the implications of different metrics. Answer 1 is more straightforward but lacks the depth of insight regarding why these metrics matter.\" Overall Winner: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"While Answer 1 is more direct and systematic, Answer 2 excels in comprehen- siveness, diversity, and empowerment. It provides a richer exploration of the topic, including insights into user engagement and nuanced differences between metrics. This depth and breadth make it more informative for readers seeking to thoroughly understand the evaluation of movie recommendation systems.\"",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Query</th><th>Which methods can normalize the feature values for effective machine learning?</th></tr></thead><tbody><tr><td>GraphRAG</td><td>Key Metrics for Evaluating Movie Recommendation Systems: Evaluating the effectiveness of movie recommendation systems is crucial for ensuring user satisfaction and improving the overall performance of these systems. Several metrics are widely recognized for their ability to provide insights into how well a recommendation system performs. Below are the most informative metrics: 1. Precision [...] 2. Recall [...] 3. F1 Score [...] 4. Mean Average Precision (MAP) [...] 5. Root Mean Squared Error (RMSE) [...] 6. User Satisfaction Metrics [...] Conclusion: In summary, metrics such as precision, recall, F1 score, MAP, RMSE, and user satisfaction are critical for evaluating the performance of movie recommendation systems. Each metric provides unique insights that can help developers and researchers refine their algorithms and enhance user experiences. By focusing on these metrics, stakeholders can ensure that their recommendation systems effectively meet user preferences and expectations.</td></tr><tr><td>LightRAG</td><td>Key Metrics for Evaluating Movie Recommendation Systems: Evaluating movie recommen- dation systems involves multiple metrics that assess the effectiveness and accuracy of the recom- mendations provided to users. Below are some of the most informative metrics commonly used in this context, derived from the data and concepts surrounding recommendation systems. 1. Mean Average Precision at K (MAPK) [...] 2. Precision and Recall [...] 3. Root Mean Squared Error (RMSE) and Mean Squared Error (MSE) [...] 4. Area Under the Curve (AUC) [...] 5. F-Measure [...] 6. User Engagement Metrics [...] Conclusion: A comprehensive evaluation of movie recommendation systems employs a range of metrics that capture both the accuracy of the recommendations and user satisfaction. By effectively leveraging these metrics, system designers can optimize recommendation engines to deliver more personalized and relevant experiences.</td></tr><tr><td>LLM Decision</td><td>Comprehensiveness: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 provides a broader array of metrics including MAPK, AUC, and user engagement metrics alongside precision, recall, RMSE, and F-Measure. This gives a fuller view of how recommendation systems can be evaluated. Answer 1, while detailed, is more focused on traditional metrics and lacks the inclusion of engagement metrics which are crucial for understanding user interaction.\" Diversity: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 not only covers a wide variety of metrics but also includes nuanced explanations of how some metrics interrelate and differ from one another, like the inclusion of both RMSE and MSE, as well as the details behind AUC. In contrast, Answer 1 sticks primarily to standard metrics without much exploration of potential nuances.\" Empowerment: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"Answer 2 empowers the reader more effectively by detailing how each metric functions and its importance in evaluating recommendation systems. By providing context such as the trade-offs between precision and recall and emphasizing user engagement metrics, it enables readers to make more informed judgments and understand the implications of different metrics. Answer 1 is more straightforward but lacks the depth of insight regarding why these metrics matter.\" Overall Winner: \"Winner\": \"Answer 2 (LightRAG)\", \"Explanation\": \"While Answer 1 is more direct and systematic, Answer 2 excels in comprehen- siveness, diversity, and empowerment. It provides a richer exploration of the topic, including insights into user engagement and nuanced differences between metrics. This depth and breadth make it more informative for readers seeking to thoroughly understand the evaluation of movie recommendation systems.\"</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "light_rag.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "2f2ded3005b7ececaf1464b46c65a63e",
+    "text": "10761",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 16,
+      "filename": "light_rag.pdf"
+    }
+  }
+]

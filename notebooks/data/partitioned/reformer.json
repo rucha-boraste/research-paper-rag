@@ -1,0 +1,3268 @@
+[
+  {
+    "type": "Header",
+    "element_id": "80161ea0af79d459b13e031f660be49d",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "d8670b809b45549abcb309151dd2120d",
+    "text": "REFORMER: THE EFFICIENT TRANSFORMER",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "80161ea0af79d459b13e031f660be49d"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "57108e3ca616e4278063200fca67b615",
+    "text": "Nikita Kitaev\u2217 U.C. Berkeley & Google Research kitaev@cs.berkeley.edu",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "d8670b809b45549abcb309151dd2120d"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "76aded19e44c25e4787db259eb25c191",
+    "text": "\u0141ukasz Kaiser\u2217 Anselm Levskaya Google Research Google Research {lukaszkaiser,levskaya}@google.com",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "d8670b809b45549abcb309151dd2120d"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "0622438ee9a32e2fb807b32ead7f1571",
+    "text": "0 2 0 2 b e F 8 1 ] G L . s c [ 2 v 1 5 4 4 0 . 1 0 0 2 : v i X r a",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "3be9fe715fc2af20ab24f68e2c369790",
+    "text": "ABSTRACT",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0622438ee9a32e2fb807b32ead7f1571"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "6593778946e8dcd4924094d9e63c1f78",
+    "text": "Large Transformer models routinely achieve state-of-the-art results on a number of tasks but training these models can be prohibitively costly, especially on long sequences. We introduce two techniques to improve the ef\ufb01ciency of Transform- ers. For one, we replace dot-product attention by one that uses locality-sensitive hashing, changing its complexity from O(L2) to O(LlogL), where L is the length of the sequence. Furthermore, we use reversible residual layers instead of the standard residuals, which allows storing activations only once in the training pro- cess instead of N times, where N is the number of layers. The resulting model, the Reformer, performs on par with Transformer models while being much more memory-ef\ufb01cient and much faster on long sequences.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "3be9fe715fc2af20ab24f68e2c369790"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "0bc6ba868005528775bd767543999451",
+    "text": "1 INTRODUCTION",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0622438ee9a32e2fb807b32ead7f1571"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a3f3dd8660382cecda7dec8600a601fe",
+    "text": "The Transformer architecture (Vaswani et al., 2017) is widely used in natural language processing and yields state-of-the-art results on a number of tasks. To obtain these results, researchers have resorted to training ever larger Transformer models. The number of parameters exceeds 0.5B per layer in the largest con\ufb01guration reported in (Shazeer et al., 2018) while the number of layers goes up to 64 in (Al-Rfou et al., 2018). Transformer models are also used on increasingly long sequences. Up to 11 thousand tokens of text in a single example were processed in (Liu et al., 2018) and when processing other modalities, like music (Huang et al., 2018) and images (Parmar et al., 2018), even longer sequences are commonplace. These large-scale long-sequence models yield great results but strain resources to the point where some argue that this trend is breaking NLP research1. Many large Transformer models can only realistically be trained in large industrial research laboratories and such models trained with model parallelism cannot even be \ufb01ne-tuned on a single GPU as their memory requirements demand a multi-accelerator hardware setup even for a single training step.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Vaswani et al .,",
+          "url": "cite.transformer",
+          "start_index": 30
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 46
+        },
+        {
+          "text": "Shazeer et al .,",
+          "url": "cite.meshtf",
+          "start_index": 340
+        },
+        {
+          "text": "2018",
+          "url": "cite.meshtf",
+          "start_index": 356
+        },
+        {
+          "text": "Al - Rfou et al .,",
+          "url": "cite.chartransformer",
+          "start_index": 407
+        },
+        {
+          "text": "2018",
+          "url": "cite.chartransformer",
+          "start_index": 423
+        },
+        {
+          "text": "Liu et al .,",
+          "url": "cite.wikipedia",
+          "start_index": 567
+        },
+        {
+          "text": "2018",
+          "url": "cite.wikipedia",
+          "start_index": 579
+        },
+        {
+          "text": "Huang et al .,",
+          "url": "cite.huang2018music",
+          "start_index": 635
+        },
+        {
+          "text": "2018",
+          "url": "cite.huang2018music",
+          "start_index": 649
+        },
+        {
+          "text": "Parmar et al .,",
+          "url": "cite.parmar2018imagetransformer",
+          "start_index": 667
+        },
+        {
+          "text": "2018",
+          "url": "cite.parmar2018imagetransformer",
+          "start_index": 682
+        },
+        {
+          "text": ".",
+          "url": "Hfootnote.1",
+          "start_index": 879
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0bc6ba868005528775bd767543999451"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9be2c7ff73c1d838fd69b1524da39529",
+    "text": "Do large Transformer models fundamentally require such huge resources or are they simply inef\ufb01- cient? Consider the following calculation: the 0.5B parameters used in the largest reported Trans- former layer account for 2GB of memory. Activations for 64K tokens with embedding size 1024 and batch size 8 account for 64K \u00d7 1K \u00d7 8 = 0.5B \ufb02oats, requiring another 2GB of memory. If our memory use was only per-layer, then we should fairly easily \ufb01t a large Transformer even on sequences of length 64K on a single accelerator. Further, the whole corpus used to train BERT only requires 17GB to store. Why is it then that we cannot even \ufb01ne-tune these models on single machines?",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0bc6ba868005528775bd767543999451"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "90b0671077905d8986cd6075668056a1",
+    "text": "The above estimate includes only per-layer memory and input activations cost and does not take into account the following major sources of memory use in the Transformer.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0bc6ba868005528775bd767543999451"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "078615e6af72d1be236b02f3e7cf8d4d",
+    "text": "\u2022 Memory in a model with N layers is N-times larger than in a single-layer model due to the fact that activations need to be stored for back-propagation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0bc6ba868005528775bd767543999451"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "fdeed08fe77a42f06b01dc3782049c39",
+    "text": "\u2022 Since the depth dff of intermediate feed-forward layers is often much larger than the depth dmodel of attention activations, it accounts for a large fraction of memory use.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0bc6ba868005528775bd767543999451"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "aee75445a73ec20b9a942bc1bf76f21a",
+    "text": "\u2022 Attention on sequences of length L is O(L2) in both computational and memory complex- ity, so even for a single sequence of 64K tokens can exhaust accelerator memory.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf",
+      "parent_id": "0bc6ba868005528775bd767543999451"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "2562b36389007978813dd9e10b556f62",
+    "text": "\u2217Equal Contribution",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "92d32ad2b300eca282ad306359d86395",
+    "text": "1https://hackingsemantics.xyz/2019/leaderboards/",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "2b624ac52b866599d7f81896768e0036",
+    "text": "1",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "1af52e5a12f76a25d8c392b0121bdab1",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5024f72c8510ded45469b7b1bd8a76ed",
+    "text": "We introduce the Reformer model which solves these problems using the following techniques:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5d8e9dff6d58a26a17f9a0d8edd97ef1",
+    "text": "\u2022 Reversible layers, \ufb01rst introduced in Gomez et al. (2017), enable storing only a single copy of activations in the whole model, so the N factor disappears.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Gomez et al .",
+          "url": "cite.gomez2017reversible",
+          "start_index": 40
+        },
+        {
+          "text": "2017",
+          "url": "cite.gomez2017reversible",
+          "start_index": 54
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "89963595cc05ae3cc5d308d217865f72",
+    "text": "\u2022 Splitting activations inside feed-forward layers and processing them in chunks removes the dff factor and saves memory inside feed-forward layers.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "eafdd5c97fa1821238b2b3becfc0be01",
+    "text": "\u2022 Approximate attention computation based on locality-sensitive hashing replaces the O(L2) factor in attention layers with O(LlogL) and so allows operating on long sequences.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "57a6430952bd8dbbe4dde99d89dd9e32",
+    "text": "We study these techniques and show that they have negligible impact on the training process com- pared to the standard Transformer. Splitting activations in fact only affects the implementation; it is numerically identical to the layers used in the Transformer. Applying reversible residuals instead of the standard ones does change the model but has a negligible effect on training in all con\ufb01gurations we experimented with. Finally, locality-sensitive hashing in attention is a more major change that can in\ufb02uence the training dynamics, depending on the number of concurrent hashes used. We study this parameter and \ufb01nd a value which is both ef\ufb01cient to use and yields results very close to full attention.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ccf5eeff7f17eb91cdd79311d25f6406",
+    "text": "We experiment on a synthetic task, a text task (enwik8) with sequences of length 64K and an image generation task (imagenet-64 generation) with sequences of length 12K. In both cases we show that Reformer matches the results obtained with full Transformer but runs much faster, especially on the text task, and with orders of magnitude better memory ef\ufb01ciency.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "27c9175578c3437964574f539f02a448",
+    "text": "2 LOCALITY-SENSITIVE HASHING ATTENTION",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "1af52e5a12f76a25d8c392b0121bdab1"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "229c521a4a49b7484a2de97ee1bf7505",
+    "text": "Dot-product attention. The standard attention used in the Transformer is the scaled dot-product attention (Vaswani et al., 2017). The input consists of queries and keys of dimension dk, and values \u221a of dimension dv. The dot products of the query with all keys are computed, scaled by dk, and a softmax function is applied to obtain the weights on the values. In practice, the attention function on a set of queries is computed simultaneously, packed together into a matrix Q. Assuming the keys and values are also packed together into matrices K and V , the matrix of outputs is de\ufb01ned as:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Vaswani et al .,",
+          "url": "cite.transformer",
+          "start_index": 107
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 123
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf",
+      "parent_id": "27c9175578c3437964574f539f02a448"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "cde85443d74180ee6c86a5ea2c241a3a",
+    "text": "Attention(Q,K,V ) = softmax( QKT \u221a dk )V (1)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "faccbec3abd06f62cd0ef3b72a79db13",
+    "text": "Multi-head attention. In the Transformer, instead of performing a single attention function with dmodel-dimensional keys, values and queries, one linearly projects the queries, keys and values h times with different, learned linear projections to dk, dk and dv dimensions, respectively. Attention is applied to each of these projected versions of queries, keys and values in parallel, yielding dv- dimensional output values. These are concatenated and once again projected, resulting in the \ufb01nal values. This mechanism is known as multi-head attention.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2914cf8dc43183b76cafed3d3adf1c4d",
+    "text": "Memory-ef\ufb01cient attention. To calculate the memory use of the attention mechanism, let us focus on the attention computation from Equation 1. Let us assume that Q, K and V all have the shape [batch size,length,dmodel]. The main issue is the term QKT, which has the shape [batch size,length,length]. In the experimental section we train a model on sequences of length 64K \u2013 in this case, even at batch-size of 1, this is a 64K \u00d764K matrix, which in 32-bit \ufb02oats would take 16GB of memory. This is impractical and has hindered the use of the Transformer for long sequences. But it is important to note that the QKT matrix does not need to be fully materialized in memory. The attention can indeed be computed for each query qi separately, only calculating softmax(qiKT )V once in memory, and then re-computing it on the backward pass when needed for \u221a dk gradients. This way of computing attention may be less ef\ufb01cient but it only uses memory propor- tional to length. We use this memory-ef\ufb01cient implementation of attention to run the full-attention baselines presented in the experimental section.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "equation.2.1",
+          "start_index": 139
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "861579bd17615d3ced9340494af907f6",
+    "text": "Where do Q, K, V come from? The multi-head attention described above operates on keys, queries and values, but usually we are only given a single tensor of activations A of the shape [batch size,length,dmodel] \u2013 e.g., coming from embedding the tokens in a sentence into vectors.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "1d7e858bf6089dce3b4b9c20f3718bb4",
+    "text": "2",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "8979b33548f180feb908a02558fb1aae",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "54af66335440f851ea01a0c5d631987c",
+    "text": "Sphere Projected Points Random Rotation 0 Random Rotation 1 Random Rotation 2 021 320 021 021 o8 23 2",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "88572d4153285eebb268981ce03fe298",
+    "text": "Figure 1: An angular locality sensitive hash uses random rotations of spherically projected points to establish buckets by an argmax over signed axes projections. In this highly simpli\ufb01ed 2D depiction, two points x and y are unlikely to share the same hash buckets (above) for the three different angular hashes unless their spherical projections are close to one another (below).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "17e4ad5f24d9aacea67f85a1f9335276",
+    "text": "To build Q, K and V from A, the Transformer uses 3 different linear layers projecting A into Q, K and V with different parameters. For models with LSH attention, we want queries and keys (Q and K) to be identical. This is easily achieved by using the same linear layer to go from A to Q and K, and a separate one for V. We call a model that behaves like this a shared-QK Transformer. It turns out that sharing QK does not affect the performance of Transformer, even if we additionally normalize the length of the keys K, as we show in the experimental Section 5.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "5",
+          "url": "section.5",
+          "start_index": 560
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9f94c688fc79b9e7b388037a9fb9b7ab",
+    "text": "Hashing attention. For the LSH attention, we start with two tensors, Q=K and V of the shape [batch size,length,dmodel]. We keep the multi-head mechanism intact and focus on the atten- tion computation from Equation 1. As already mentioned, the main issue is the term QKT, which has the shape [batch size,length,length]. But note that we are actually only interested in softmax(QKT). Since softmax is dominated by the largest elements, for each query qi we only need to focus on the keys in K that are closest to qi. For example, if K is of length 64K, for each qi we could only consider a small subset of, say, the 32 or 64 closest keys. That is much more ef\ufb01cient, but how can we \ufb01nd the nearest neighbors among the keys?",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "equation.2.1",
+          "start_index": 215
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "812332c218267c3f8e36b4557bc6e8f6",
+    "text": "Locality sensitive hashing. The problem of \ufb01nding nearest neighbors quickly in high-dimensional spaces can be solved by locality-sensitive hashing (LSH). A hashing scheme that assigns each vector x to a hash h(x) is called locality-sensitive if nearby vectors get the same hash with high probability and distant ones do not. In our case, we actually only require that nearby vectors get the same hash with high probability and that hash-buckets are of similar size with high probability.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9705e348ce6b7fda8ff822c6e4dcc70d",
+    "text": "We achieve this by employing random projections as follows (see Figure 1). To get b hashes, we \ufb01rst \ufb01x a random matrix R of size [dk,b/2]. We then de\ufb01ne h(x) = argmax([xR;\u2212xR]) where [u;v] denotes the concatenation of two vectors. This method is a known LSH scheme (Andoni et al., 2015) and is easy to implement and apply to batches of vectors.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "figure.1",
+          "start_index": 71
+        },
+        {
+          "text": "Andoni et al .,",
+          "url": "cite.andoni2015angularLSH",
+          "start_index": 266
+        },
+        {
+          "text": "2015",
+          "url": "cite.andoni2015angularLSH",
+          "start_index": 281
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7bc9736ca17b38dc6cb9e1668897faf5",
+    "text": "LSH attention. Knowing our LSH scheme and the general idea of hashing attention, we will now formalize the LSH attention we use in this paper. We \ufb01rst rewrite the equation for normal attention, (1), for a single query position i at a time:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "equation.2.1",
+          "start_index": 195
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "0f544334226353798b39ab8099afcc8f",
+    "text": "(i,P)) where P; = {j : i > j} ) > exp (g JEP.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "280ffc223948b77a45d14e19f9009b77",
+    "text": "We introduce the notation Pi to represent the set that the query at position i attends to, and z to denote the partition function (i.e. the normalizing term in the softmax). For clarity, we also omit \u221a dk. scaling by",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2db47aaef5c16196505d24b05abdd44d",
+    "text": "For batching purposes we typically perform attention over a larger set P; {0,1,...,1} 2 P; while masking out elements not in P;",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "309665e5b0dff1697daf9f4cd1e9b9de",
+    "text": "o ifj &P 0; = exp (4, Ps) (i,P)) otherwise 3 where m(j,P;) = 0 JEP.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "069f2f2db87e63c2ce4b6188571b8a80",
+    "text": "3",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "0bbff3163819952804ca03e24de59d18",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "114c2aa4bdfcfd7ed953cf51649a4fa4",
+    "text": "9, 9, 95 9, 95 96 9, 9, 9, 93 96 s Sequence . . of queries=keys LSH bucketing ~ x B =~ Sort by LSH bucket =~ El all (T ~ x X PO ol o St Chunk sorted (a) Normal (b) Bucketed sequence to parallelize 9, 9, 9, 95 9 G 9 9, 9 95 G 95 EC a4 a4 Attend within a, a, same bucket in 9, 9, own chunk and ; previous chunk 9 00 O 0 s s (Q=K (d) Chunked",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "76461ab97c10ee68c6bfc406fd206d4d",
+    "text": "Figure 2: Simpli\ufb01ed depiction of LSH Attention showing the hash-bucketing, sorting, and chunking steps and the resulting causal attentions. (a-d) Attention matrices for these varieties of attention.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "34e0fe45e328926b0cdf8859464dff0d",
+    "text": "Now we turn to LSH attention, which we can think of in terms of restricting the set Pi of target items a query position i can attend to, by only allowing attention within a single hash bucket.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "8778b715a321aac25fb5274847184fba",
+    "text": "Pi = {j : h(qi) = h(kj)} (4)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "eb88766f3303104cbf0c096453ed69ce",
+    "text": "Figure 2(a-b) shows a schematic comparison of full-attention with a hashed variant. Part (a) depicts that the attention matrix for full attention is typically sparse, but the computation does not take advantage of this sparsity. In (b), the queries and keys have been sorted according to their hash bucket. Since similar items fall in the same bucket with high probability, the full attention pattern can be approximated by only allowing attention within each bucket.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "figure.2",
+          "start_index": 7
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "cf23f2ef9b00ba084c948796d4f7a213",
+    "text": "Hash buckets in this formulation tend to be uneven in size, which makes it difficult to batch across buckets. Moreover, the number of queries and the number of keys within a bucket may be unequal \u2014 in fact, it is possible for a bucket to contain many queries but no keys. To alleviate these issues, we first ensure that h(k;) = h(g;) by setting k; = Next, we sort the queries by bucket number and, within each bucket, by sequence position; this defines a permutation where 7 \u2014 s; after sorting. In the sorted attention matrix, pairs from the same bucket will cluster near the diagonal (as depicted in Figure 2c). We can follow a batching approach where chunks of m consecutive queries (after sorting) attend to each other, and one chunk back (Figure 2d). Following our earlier notation, this corresponds to setting:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2c",
+          "url": "figure.2",
+          "start_index": 615
+        },
+        {
+          "text": "2d",
+          "url": "figure.2",
+          "start_index": 757
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "877dfef408dcd89a00ab66eb5c733488",
+    "text": "= \u2014 \u2014\u2014 Si 5 < 5 & m J-1] m | = m ) &)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c8367855c0c841c478055c9f114dc631",
+    "text": "21 If max; [P;| < m, then P; C In practice we set m = Nbuckets (where [ is the sequence length). L The average bucket size is buckets , and we assume that the probability of a bucket growing to twice that size is sufficiently low. The overall process of LSH attention is summarized in Figure 2.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "figure.2",
+          "start_index": 180
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3d37c8150464a9943f2f1e30a4445796",
+    "text": "Multi-round LSH attention. With hashing, there is always a small probability that similar items nevertheless fall in different buckets. This probability can be reduced by doing multiple rounds of hashing with nrounds distinct hash functions {h(1),h(2),...}, such that:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "cf3173d008c858be4cde0a702fafb572",
+    "text": "Nrounds \u2014 Pi = \u00a9) r=1 where = ( =",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8cbd505be45c4d1affd5da8e2fae0897",
+    "text": "The multi-round case essentially involves performing LSH attention nrounds times in parallel; the details of the procedure are described in in Appendix A.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "A",
+          "url": "appendix.A",
+          "start_index": 152
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8b84cf860fa7433a71dabdf377815615",
+    "text": "Causal masking for shared-QK attention. In a Transformer decoder, masking (denoted by m(j,Pi) in Equation 3) is used to prevent positions from attending into the future. To implement masking in LSH attention, we associate every query/key vector with a position index, re-order the position indices using the same permutations used to sort the query/key vectors, and then use a comparison operation to compute the mask.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "equation.2.3",
+          "start_index": 106
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "65f619e3eea2fc0cd3178755edd7f8a3",
+    "text": "4",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "a7369bc5394614996b3c8de971acc3e5",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "aac8dbd4ce5b0edb8d43e33889c34f33",
+    "text": "Table 1: Memory and time complexity of attention variants. We write l for length, b for batch size, nh for the number of heads, nc for the number of LSH chunks, nr for the number of hash repetitions.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "a7369bc5394614996b3c8de971acc3e5"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "61dafe74ffffb2dbaf32d49109dc2c85",
+    "text": "Attention Type Memory Complexity Time Complexity Scaled Dot-Product max(bnhldk,bnhl2) max(bnhldk,bnhl2) Memory-Ef\ufb01cient max(bnhldk,bnhl2) max(bnhldk,bnhl2) LSH Attention max(bnhldk,bnhlnr(4l/nc)2) max(bnhldk,bnhnrl(4l/nc)2)",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Attention Type</th><th>Memory Complexity</th><th>Time Complexity</th></tr></thead><tbody><tr><td>Scaled Dot-Product</td><td>max(bnpld, bnyl?)</td><td>max(bnpd, bnyl?)</td></tr><tr><td>Memory-Efficient</td><td>max(bny,ldy, bnyl?)</td><td>max(bn,ldy, bnl?)</td></tr><tr><td>LSH Attention</td><td>max(bnpldy, bnyln, (4l /n.)?)</td><td>max(bnldy, bnpn, 4l /n.)?)</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "a7369bc5394614996b3c8de971acc3e5"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "05ad96ceb3d9f0c0e3fc945ecd5cf642",
+    "text": "Table 2: Accuracies on the duplication task of a 1-layer Transformer model with full attention and with locality-sensitive hashing attention using different number of parallel hashes.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "a7369bc5394614996b3c8de971acc3e5"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "75e306a3a42c0dc495e391b5d055e572",
+    "text": "Train Eval Full Attention LSH-8 LSH-4 LSH-2 LSH-1 Full Attention 100% 94.8% 92.5% 76.9% 52.5% LSH-4 0.8% 100% 99.9% 99.4% 91.9% LSH-2 0.8% 100% 99.9% 98.1% 86.8% LSH-1 0.8% 99.9% 99.6% 94.8% 77.9%",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Eval Train</th><th>Full Attention</th><th>| LSH-8</th><th>LSH-4</th><th>LSH-2</th><th>LSH-1</th></tr></thead><tbody><tr><td>Full Attention</td><td>100%</td><td>94.8%</td><td>92.5%</td><td>76.9%</td><td>52.5%</td></tr><tr><td>LSH-4</td><td>0.8%</td><td>100%</td><td>99.9%</td><td>99.4%</td><td>91.9%</td></tr><tr><td>LSH-2</td><td>0.8%</td><td>100%</td><td>99.9%</td><td>98.1%</td><td>86.8%</td></tr><tr><td>LSH-1</td><td>0.8%</td><td>99.9%</td><td>99.6%</td><td>94.8%</td><td>77.9%</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "a7369bc5394614996b3c8de971acc3e5"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "843fea9832dfd503aefbfcc2cbf983d0",
+    "text": "While attention to the future is not allowed, typical implementations of the Transformer do allow a position to attend to itself. Such behavior is undesirable in a shared-QK formulation because the dot-product of a query vector with itself will almost always be greater than the dot product of a query vector with a vector at another position. We therefore modify the masking to forbid a token from attending to itself, except in situations where a token has no other valid attention targets (e.g. the \ufb01rst token in a sequence).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "a7369bc5394614996b3c8de971acc3e5"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2ea387e884a0faae6846bb408b32915a",
+    "text": "2.1 ANALYSIS ON A SYNTHETIC TASK",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "a7369bc5394614996b3c8de971acc3e5"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "01e8556cf36a6ec51589bde826aab3eb",
+    "text": "To verify the performance of LSH attention and study its behavior, we start with the following synthetic task: duplicate a sequence of symbols. In this task, each training and testing example has the form 0w0w where w \u2208 {1,...,N}\u2217 is a sequence of symbols ranging from 1 to N (we use N = 127 in our experiments). An example with the word w of length 3 is given below.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "2ea387e884a0faae6846bb408b32915a"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "6c037412d8a6e64c0a1314717d5dc11e",
+    "text": "Example: 0 19 113 72 0 19 113 72",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Example:</th><th>0</th><th>19</th><th>19</th><th>113</th><th>| 72</th></tr></thead><tbody></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "2ea387e884a0faae6846bb408b32915a"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5b114e47eb414fd71ba3668948eee1b1",
+    "text": "To study LSH attention, we train a language model on examples of the above form where each w is of length 511 (so the whole input 0w0w is of length 1024). As this is a language modeling task, we always predict the next symbol given all the previous ones, but we mask the loss and accuracy to only consider positions in the second half of the input, i.e., those that can actually be predicted.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "2ea387e884a0faae6846bb408b32915a"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4385b2ddc96aa16b73487727271efc13",
+    "text": "The above task can be solved perfectly (to accuracy 100% and loss 0) by a 1-layer Transformer model. Note though, that it requires non-local attention lookups, so it cannot be solved by any model relying on sparse attention with a limited span. To make it easy and fast to train but similar to models used in NLP, we use a 1-layer Transformer with dmodel = dff = 256 and 4 heads. We train it for 150K steps in 4 different settings: with full attention, LSH attention with nrounds = 1, nrounds = 2 and nrounds = 4.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "2ea387e884a0faae6846bb408b32915a"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "819aadd4320025734c7125ad7a87fdeb",
+    "text": "From the results summarized in Table 2 we see that a model trained with full attention can be imme- diately used with LSH attention, but at some loss of accuracy. When trained from scratch with LSH attention, the model trained with 4 hashes achieves almost perfect accuracy as well. Interestingly, the accuracy becomes perfect when evaluated with 8 hashes. It goes down when evaluated with 2 or 1 hashes. Models trained with less hashes show worse results but even the model trained with just 1 hash performs almost perfectly when evaluated with 8 hashes.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "table.2",
+          "start_index": 37
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf",
+      "parent_id": "2ea387e884a0faae6846bb408b32915a"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "5a67c751638f9b4636944b7e4b6a0d87",
+    "text": "5",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "46b61bb256a427cc99730ca16af9c2b8",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "580156fa8bc93b6c1f838f7f557c7b9b",
+    "text": "3 REVERSIBLE TRANSFORMER",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf",
+      "parent_id": "46b61bb256a427cc99730ca16af9c2b8"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1a2cda062168684f4f93f4808caa86c4",
+    "text": "As the above section shows, the complexity of attention can be reduced from square in length to linear, provided an approximation is acceptable. But it is clear from Table 1 that each \ufb01eld starts with a b \u00b7 nh \u00b7 l term: the b \u00b7 nh \u00b7 l \u00b7 dk, or alternatively b \u00b7 l \u00b7 dmodel cost cannot be avoided. Indeed, the activations before each layer are already of the size b\u00b7l\u00b7dmodel, so the memory use of the whole model with nl layers is at least b \u00b7 l \u00b7 dmodel \u00b7 nl. Even worse: inside the feed-forward layers of Transformer this goes up to b \u00b7 l \u00b7 dff \u00b7 nl. In a big Transformer it is usual to set dff = 4K and nl = 16 so with l = 64K this again would use an impractical 16GB of memory",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "table.1",
+          "start_index": 172
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf",
+      "parent_id": "580156fa8bc93b6c1f838f7f557c7b9b"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c95cf9cd26fcbae6cceb4a2e6e3dad19",
+    "text": "In this section, we show how to reduce this cost by \ufb01rst dealing with the nl part of the term using reversible layers and then showing how chunking can allow us to handle the dff problem. The effects of each of these approaches on memory and time complexity are summarized in Table 3.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "table.3",
+          "start_index": 282
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf",
+      "parent_id": "580156fa8bc93b6c1f838f7f557c7b9b"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "73b824335e9218aba516f36c03310f3b",
+    "text": "RevNets. Reversible residual networks were introduced by Gomez et al. (2017) where it was shown that they can replace ResNets for image classification. The main idea is to allow the activations at any given layer to be recovered from the activations at the following layer, using only the model parameters. Rather than having to checkpoint intermediate values for use in the backward pass, layers can be reversed one-by-one as back-propagation proceeds from the output of the network to its input. Whereas a normal residual layer performs a function x +\u2014 y that operates on a single input and produces a single output and has the form y = 4+ F(x), a reversible layer works on pairs of inputs/outputs: (z1,z2) \u2014 (y1,y2), and follows the equations:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Gomez et al .",
+          "url": "cite.gomez2017reversible",
+          "start_index": 57
+        },
+        {
+          "text": "2017",
+          "url": "cite.gomez2017reversible",
+          "start_index": 71
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf",
+      "parent_id": "580156fa8bc93b6c1f838f7f557c7b9b"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "dc3dd05ca2550357b2dc9d4262bda2e0",
+    "text": "y1 = x1 + F(x2) y2 = x2 + G(y1) (7)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a992fd8c84242ef60b1c6f20fed4ace4",
+    "text": "A layer can be reversed by subtracting (rather than adding) the residuals:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "3ebccbe9bdeff3aac32fff72a51d0e03",
+    "text": "x2 = y2 \u2212 G(y1) x1 = y1 \u2212 F(x2) (8)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2d6a366f8db29302be633f5bca7e7bad",
+    "text": "Reversible Transformer. We apply the RevNet idea to the Transformer by combining the attention and feed-forward layers inside the revnet block. In the notation above, F becomes an attention layer while G becomes the feed-forward layer. Note that Layer Normalization (Ba et al., 2016) is moved inside the residual blocks.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Ba et al .,",
+          "url": "cite.layernorm2016",
+          "start_index": 267
+        },
+        {
+          "text": "2016",
+          "url": "cite.layernorm2016",
+          "start_index": 278
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "8858b4bac706f49c49b996e5536ab919",
+    "text": "Y1 = X1 + Attention(X2) Y2 = X2 + FeedForward(Y1) (9)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bbaa0f9ebafb684a8bd979cc9ff07538",
+    "text": "The reversible Transformer does not need to store activations in each layer and so gets rid of the nl term. In Section 5 we show that it performs the same as the normal Transformer when using the same number of parameters; we achieve this by having both x1 and x2 have size dmodel.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "5",
+          "url": "table.4",
+          "start_index": 119
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ebe09e32c0289001775e54f26bb57825",
+    "text": "Chunking. While reversibility covers the nl term, the thicker layers can still use a lot of memory. The feed-forward layer in particular can use intermediate vectors of dimensionality dff = 4K or higher. However, computations in feed-forward layers are completely independent across positions in a sequence, so the computation can be split into c chunks:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "329a7f830f4380964beafd14ee5fa64e",
+    "text": "Y = ... - + FeedForward(Y,\"); ... ; X{) FdF0() (10)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "64b0e23982ee70f584a51fa4aafc0faf",
+    "text": "This layer is typically batched by performing operations for all positions in parallel, but operating on one chunk at a time can reduce memory. The reverse computation in (8) and the backward pass are also chunked. In addition to the feed-forward layers, for models with large vocabulary (more than dmodel word types) we also chunk the log-probabilities at the output and calculate the loss for sections of the sequence at a time.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "8",
+          "url": "equation.3.8",
+          "start_index": 172
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "11469b49a70a55cb1cc1f1bd65a3f654",
+    "text": "Chunking, large batches and parameter reuse. With chunking and reversible layers the memory we use for activations in the whole network is independent of the number of layers. The same is not true for parameters though as their number grows with the number of layers. This problem is remedied though because we can swap layer parameters to and from CPU memory when this layer is not computing. In a standard Transformer this would be inef\ufb01cient because memory transfer to CPU is slow. The batch size multiplied by length in Reformer is much larger though and therefore the amount of compute done with the parameters amortizes the cost of their transfer.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "8b9320b796023a882bef2813ad32f791",
+    "text": "6",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "34be18e293e1ae7ccc33dc4223672322",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "1d66bf594909b2a058ec76e15cf39c62",
+    "text": "Table 3: Memory and time complexity of Transformer variants. We write dmodel and dff for model depth and assume dff \u2265 dmodel; b stands for batch size, l for length, nl for the number of layers. We assume nc = l/32 so 4l/nc = 128 and we write c = 1282.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "34be18e293e1ae7ccc33dc4223672322"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "ec880b85f292eda3018fffa870b891ca",
+    "text": "Model Type Memory Complexity Time Complexity Transformer max(bldff,bnhl2)nl (bldff + bnhl2)nl Reversible Transformer max(bldff,bnhl2) (bnhldff + bnhl2)nl Chunked Reversible Transformer max(bldmodel,bnhl2) (bnhldff + bnhl2)nl LSH Transformer max(bldff,bnhlnrc)nl (bldff + bnhnrlc)nl Reformer max(bldmodel,bnhlnrc) (bldff + bnhnrlc)nl",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Model Type</th><th>Memory Complexity</th><th>Time Complexity</th></tr></thead><tbody><tr><td>Transformer</td><td>max(bld s, bnyl?)n</td><td>(bldy s + bnpl)my</td></tr><tr><td>Reversible Transformer</td><td>b</td><td>+ l</td></tr><tr><td>Chunked Reversible Transformer</td><td>ld 5</td><td>+ l</td></tr><tr><td>LSH Transformer</td><td>max(bld , bnpln.c)n</td><td>(bld s + brpnle)n</td></tr><tr><td>Reformer</td><td>max(bldde, bplng,c)</td><td>(bld 4 bnpnle)ny</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "34be18e293e1ae7ccc33dc4223672322"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "1a7aebb42ca96d666d8598a25703eca7",
+    "text": "4 RELATED WORK",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "34be18e293e1ae7ccc33dc4223672322"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "669e1000d0ed90f7703f47acc0c9f443",
+    "text": "The Transformer model introduced in (Vaswani et al., 2017) has been used widely in natural lan- guage tasks and further extended to model diverse data such as music scores (Huang et al., 2018), and images (Parmar et al., 2018; Ramachandran et al., 2019). Most notably, this model class has been applied successfully in the self-supervised training of extremely large language models (Devlin et al., 2018; Radford et al., 2019).",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Vaswani et al .,",
+          "url": "cite.transformer",
+          "start_index": 37
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 53
+        },
+        {
+          "text": "Huang et al .,",
+          "url": "cite.huang2018music",
+          "start_index": 173
+        },
+        {
+          "text": "2018",
+          "url": "cite.huang2018music",
+          "start_index": 187
+        },
+        {
+          "text": "Parmar et al .,",
+          "url": "cite.parmar2018imagetransformer",
+          "start_index": 206
+        },
+        {
+          "text": "2018",
+          "url": "cite.parmar2018imagetransformer",
+          "start_index": 221
+        },
+        {
+          "text": "Ramachandran et al .,",
+          "url": "cite.ramachandran2019attentionimage",
+          "start_index": 227
+        },
+        {
+          "text": "2019",
+          "url": "cite.ramachandran2019attentionimage",
+          "start_index": 248
+        },
+        {
+          "text": "Devlin",
+          "url": "cite.devlin2018BERT",
+          "start_index": 384
+        },
+        {
+          "text": "et al .,",
+          "url": "cite.devlin2018BERT",
+          "start_index": 391
+        },
+        {
+          "text": "2018",
+          "url": "cite.devlin2018BERT",
+          "start_index": 399
+        },
+        {
+          "text": "Radford et al .,",
+          "url": "cite.radford2019GPT2",
+          "start_index": 405
+        },
+        {
+          "text": "2019",
+          "url": "cite.radford2019GPT2",
+          "start_index": 421
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "1a7aebb42ca96d666d8598a25703eca7"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "479e0d7c46a517ab4c7802be68efcdbc",
+    "text": "Given the enormous computational requirements of state of the art sequence models, there has been increasing interest in \ufb01nding methods to reduce the memory footprint and computational require- ments of Transformer models. In addition to standard methods such as precision reduction and gradient checkpointing (Sohoni et al., 2019), more ef\ufb01cient versions of the Transformer model\u2019s self-attention mechanism (Sukhbaatar et al., 2019a;b) have also recently been explored.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Sohoni et al .,",
+          "url": "cite.sohoni2019lowmemory",
+          "start_index": 311
+        },
+        {
+          "text": "2019",
+          "url": "cite.sohoni2019lowmemory",
+          "start_index": 326
+        },
+        {
+          "text": "Sukhbaatar et al .,",
+          "url": "cite.sukhbaatar2019adaptiveattn",
+          "start_index": 409
+        },
+        {
+          "text": "2019a",
+          "url": "cite.sukhbaatar2019adaptiveattn",
+          "start_index": 428
+        },
+        {
+          "text": "b",
+          "url": "cite.sukhbaatar2019persistentmemory",
+          "start_index": 434
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "1a7aebb42ca96d666d8598a25703eca7"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "861964903943d4a553ebdfa32d6a09e9",
+    "text": "In particular, leveraging sparsity in the attention layers has proved fruitful. OpenAI introduced the sparse Transformer (Child et al., 2019) which exploits a factorized sparse representation of atten- tion. Using product-key attention to increase the key space has also been used to reduce memory requirements in the feed-forward layers with no loss in performance (Lample et al., 2019).",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Child et al .,",
+          "url": "cite.child2019sparsetransformer",
+          "start_index": 122
+        },
+        {
+          "text": "2019",
+          "url": "cite.child2019sparsetransformer",
+          "start_index": 136
+        },
+        {
+          "text": "Lample et al .,",
+          "url": "cite.lample2019productkeys",
+          "start_index": 367
+        },
+        {
+          "text": "2019",
+          "url": "cite.lample2019productkeys",
+          "start_index": 382
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "1a7aebb42ca96d666d8598a25703eca7"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "726ceec719f5add4093ea45f78ca495f",
+    "text": "Locality-sensitive hashing (LSH) has, to our knowledge, not been directly applied to Transformer attention layers before. But previous work using external memory with neural networks has dealt with memories of large sizes. The original implementation of memory networks (Weston et al., 2014) and later work on scaling it (Bordes et al., 2015; Chandar et al., 2016) used memory with size in the millions. The cost of doing so is that the memory must be \ufb01xed prior to training. Moreover, since during the beginning of training the model is unlikely to query the memory correctly, strong supervision is used to encourage the model to query memory locations that are useful. These hints are either given as additional supervising information by the task or determined heuristically as in Hill et al. (2015). The requirement that the memory be \ufb01xed before has been removed in Santoro et al. (2016) at the cost of memory size and later alleviated by Rae et al. (2016). The last paper considered memory lookups with approximate nearest neighbors including both LSH and random kd-trees, but only for lookups in external memory.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Weston et al .,",
+          "url": "cite.mem_nets",
+          "start_index": 271
+        },
+        {
+          "text": "2014",
+          "url": "cite.mem_nets",
+          "start_index": 286
+        },
+        {
+          "text": "Bordes et al .,",
+          "url": "cite.large_mem_nets",
+          "start_index": 322
+        },
+        {
+          "text": "2015",
+          "url": "cite.large_mem_nets",
+          "start_index": 337
+        },
+        {
+          "text": "Chandar et al .,",
+          "url": "cite.hier_mem_nets",
+          "start_index": 343
+        },
+        {
+          "text": "2016",
+          "url": "cite.hier_mem_nets",
+          "start_index": 359
+        },
+        {
+          "text": "Hill et al .",
+          "url": "cite.goldilocks",
+          "start_index": 784
+        },
+        {
+          "text": "2015",
+          "url": "cite.goldilocks",
+          "start_index": 797
+        },
+        {
+          "text": "Santoro",
+          "url": "cite.santoro16",
+          "start_index": 871
+        },
+        {
+          "text": "et al .",
+          "url": "cite.santoro16",
+          "start_index": 879
+        },
+        {
+          "text": "2016",
+          "url": "cite.santoro16",
+          "start_index": 887
+        },
+        {
+          "text": "Rae et al .",
+          "url": "cite.jack_rae",
+          "start_index": 944
+        },
+        {
+          "text": "2016",
+          "url": "cite.jack_rae",
+          "start_index": 956
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "1a7aebb42ca96d666d8598a25703eca7"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "a4920ab7c16921d68a72ac692560381d",
+    "text": "5 EXPERIMENTS",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "34be18e293e1ae7ccc33dc4223672322"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e02a3e662c0a2f110899fca5e8a87056",
+    "text": "In this section we present experimental results demonstrating the techniques described above. We analyze the techniques one-by-one to make clear which combinations have impact on performance. We start by showing that reversible layers and shared query-key spaces do not impact performance, then proceed to analyze hashing attention and \ufb01nally the full Reformer model.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "a4920ab7c16921d68a72ac692560381d"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c994e8e0fae8319ff32991391d03ccfa",
+    "text": "We ran our experiments on the imagenet64 and enwik8-64K tasks, where the latter is a variant of enwik8 that is chunked into subsequences of 216 = 64K tokens. We use 3-layer models for our ablations so as to make it tractable to compare with the regular Transformer, which has high memory usage and performs full O(l2) attention. All experiments have dmodel = 1024, dff = 4096, nheads = 8, and a total batch size of 8 sequences. We used the Adafactor optimizer (Shazeer & Stern, 2018) for training these models. We also evaluate on the WMT 2014 English-to-German translation task, following the hyperparameters of Vaswani et al. (2017). Training for all experiments",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Shazeer",
+          "url": "cite.adafactor",
+          "start_index": 461
+        },
+        {
+          "text": "& Stern",
+          "url": "cite.adafactor",
+          "start_index": 469
+        },
+        {
+          "text": "2018",
+          "url": "cite.adafactor",
+          "start_index": 478
+        },
+        {
+          "text": "Vaswani et al .",
+          "url": "cite.transformer",
+          "start_index": 613
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 629
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf",
+      "parent_id": "a4920ab7c16921d68a72ac692560381d"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "8ef5aef04aba6ab56389fc318107838b",
+    "text": "7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "0d3e9811e53332a7aea03526d63cdda0",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "255155fcd7902d8cf0756912a58a9ad2",
+    "text": "7.2 Sharing Query-Key Space - enwik8 7.2 Reversibility - enwik8 separate q k regular 5.8 \u2014\u2014 shared q k 5.8 \u2014\u2014 reversible 4.3 4.3 29 29 1.4 14 .. 10K 20K 30K 40K 50K 60K 10K 20K 30K 40K 50K 60K Sharing Query-Key Space - imagenet64 Reversibility - imagenet64 4.3 4.3 4.2 separate q k 4.2 \u2014\u2014 reversible regular \u2014\u2014 shared g k 4.0 4.0 5 39 3.9 Q37 3.7 ~ 3.6 3.6 35 35 33 50K 100K 10 2 OO 33 50K 1 5K K steps steps",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "ab45925066eb222726d29159fbeb699d",
+    "text": "Figure 3: Effect of shared query-key space (left) and reversibility (right) on performance on enwik8 and imagenet64 training. The curves show bits per dim on held-out data.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "fe089f9ec25da9acd932c57b38ff7e87",
+    "text": "Table 4: BLEU scores on newstest2014 for WMT English-German (EnDe). We additionally report detokenized BLEU scores as computed by sacreBLEU (Post, 2018).",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Post",
+          "url": "cite.sacrebleu",
+          "start_index": 141
+        },
+        {
+          "text": "2018",
+          "url": "cite.sacrebleu",
+          "start_index": 147
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "6433507b0c3ffae4b87c478bd219302e",
+    "text": "sacreBLEU Model BLEU Uncased3 Cased4 Vaswani et al. (2017), base model 27.3 Vaswani et al. (2017), big 28.4 Ott et al. (2018), big 29.3 Reversible Transformer (base, 100K steps) 27.6 27.4 26.9 Reversible Transformer (base, 500K steps, no weight sharing) 28.0 27.9 27.4 Reversible Transformer (big, 300K steps, no weight sharing) 29.1 28.9 28.4",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Vaswani et al .",
+          "url": "cite.transformer",
+          "start_index": 6
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 22
+        },
+        {
+          "text": "Vaswani et al .",
+          "url": "cite.transformer",
+          "start_index": 40
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 56
+        },
+        {
+          "text": "Ott et al .",
+          "url": "cite.ott2018scaling",
+          "start_index": 67
+        },
+        {
+          "text": "2018",
+          "url": "cite.ott2018scaling",
+          "start_index": 79
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th rowspan=\"2\">Model</th><th colspan=\"3\">sacreBLEU</th></tr><tr><th>BLEU</th><th>Uncased\u00ae</th><th>Cased*</th></tr></thead><tbody><tr><td>Vaswani et al. (2017), base model</td><td>27.3</td><td></td><td></td></tr><tr><td>Vaswani et al. (2017), big</td><td>28.4</td><td></td><td></td></tr><tr><td>Ott et al. (2018), big</td><td>29.3</td><td></td><td></td></tr><tr><td>Reversible Transformer (base, 100K steps)</td><td>27.6</td><td>27.4</td><td>26.9</td></tr><tr><td>Reversible Transformer (base, 500K steps, no weight sharing)</td><td>28.0</td><td>27.9</td><td>27.4</td></tr><tr><td>Reversible Transformer (big, 300K steps, no weight sharing)</td><td>29.1</td><td>28.9</td><td>28.4</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "da8a3710c93d4b0b5fba9022f3d7c8b9",
+    "text": "was parallelized across 8 devices (8 GPUs or 8 TPU v3 cores). Code for training our models is made publicly available.2",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "Hfootnote.2",
+          "start_index": 118
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b94b78ae23086da3937d8107da7e9dc3",
+    "text": "Effect of sharing QK. We first consider the effect of shared-QK attention on a regular Transformer \u2014 = q. model. Shared-QK attention sets k; llgs] and prevents tokens from attending to themselves (except when no other context is available). In the left part of Figure 3, we plot perplexity curves for both regular and shared-QK attention. A shared query-key space does not perform worse than regular attention; in fact, for enwik8 it appears to train slightly faster. In other words, we are not sacrificing accuracy by switching to shared-QK attention.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "figure.3",
+          "start_index": 264
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f3310dfc951861c1452ce8133bfc59c7",
+    "text": "Effect of reversible layers. In the two plots on the right in Figure 3, we compare a regular Trans- former per Vaswani et al. (2017) with the reversible one describe in Section 3. The two models have identical parameter counts, and the learning curves likewise appear to be nearly the same. These results show that the memory savings in the reversible Transformer do not come at the expense of accuracy.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "figure.3",
+          "start_index": 69
+        },
+        {
+          "text": "Vaswani et al .",
+          "url": "cite.transformer",
+          "start_index": 111
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 127
+        },
+        {
+          "text": "3",
+          "url": "section.3",
+          "start_index": 177
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8d97c44e9724cd2d2ec1d3dbb541d5cb",
+    "text": "Reversible layers in machine translation. We also evaluate reversible layers in the context of an encoder-decoder Transformer model for machine translation from English to German. We start by making both the encoder and the decoder fully reversible in the Transformer-base architecture, and",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "e42fef25f3d94b1c2dc899a6d4edda84",
+    "text": "2https://github.com/google/trax/tree/master/trax/models/reformer",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "49ad5018cbfcf6c8dfebebf08b594050",
+    "text": "3BLEU+case.lc+lang.en-de+numrefs.1+smooth.exp+test.wmt14/full+tok.intl+version.1.4.3",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "b1f52e1fc4ca3c498c4ecfd0456f9088",
+    "text": "4BLEU+case.mixed+lang.en-de+numrefs.1+smooth.exp+test.wmt14/full+tok.intl+version.1.4.3",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "13935da798b10b045d7287e97e08748a",
+    "text": "8",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "71a2ee20c22eb4df65953667a61939c7",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "0c6e7506baa12a9a695c85953f409af7",
+    "text": "4.3 LSH Attention on Imagenet64 \u2014 full attention \\\\ 2 hashes 4. 4 hashes L\\ \u2014=- 8 hashes SN\\, \u2014\u2014 16 hashes 4. AV \"~ 3. N R N ~. 3. a3 3.6 a0k K 1 0 K 120K 140K steps",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f1ab941f0c144b9ab93b39c9a0a3d5e6",
+    "text": "Figure 4: LSH attention performance as a function of hashing rounds on imagenet64.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "ad8e7285dd56cc68f07544ae8ea8531e",
+    "text": "2.9 Performance Scaling with Layers - enwik8 10.0 Attention Speed Dependence on Sequence Length - Synthetic Data \u2014\u2014 3layers -- full attention 2.6 \u2014 6layers \u2014\u2014 12ayers \u2014\u2014 LSHa 2-hash \u2014\u2014 LSHa 1-hash 23 \u2014 16layers \u2014\u2014 LSHa 4-hash \u2014 20layers ~\u2014\u2014 LSHa 8-hash e 2.0 1.0 e 17 - 14 seconds / step - l 1.2 0.9 0.1 5K 7K 10K 12K 15K 17K 20K 22K 25K 1024/32 2048/16 4096/8 8192/4 16384/2 32768/1 steps sequence length / batch",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f67e690d37747b36e38f1372432ea263",
+    "text": "Figure 5: Left: LSH attention performance as a function of number of layers on enwik8. Right: Speed of attention evaluation as a function of input length for full- and LSH- attention.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c6f7fc67f754d6ee42b505e8701bf6ba",
+    "text": "see that the resulting model performs comparably to Vaswani et al. (2017) when trained for 100K steps. We also evaluate training for a greater number of steps and with a larger model. Reformer models are very memory-ef\ufb01cient, so for the latter two experiments we do not need to save mem- ory by sharing embedding and output projection weight matrices throughout the model. Results are shown in Table 4. We do not apply LSH attention in this setting because examples are single sentences, and sentences tend to be relatively short. Our typical LSH attention con\ufb01guration uses chunks of 128 tokens after hashing and sorting, whereas the examples in the WMT14 test set are all shorter than 128 tokens.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "Vaswani et al .",
+          "url": "cite.transformer",
+          "start_index": 52
+        },
+        {
+          "text": "2017",
+          "url": "cite.transformer",
+          "start_index": 68
+        },
+        {
+          "text": "4",
+          "url": "table.4",
+          "start_index": 400
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5d7ad1d22f73db080f1eb8bb28c20dbc",
+    "text": "LSH attention in Transformer. LSH attention is an approximation for full attention that, as evi- denced in Figure 4, becomes more accurate as the number of hashes increases. At nrounds = 8, it already almost matches full attention. The computational cost of a model grows with the number of hashes, so this hyperparameter can be adjusted depending on the available compute budget. Ad- ditionally, as in Table 2, the number of hashes can be increased at evaluation time to produce more accurate results. On the right half of Figure 5, we plot the speed of different attention types vs. the sequence length, while holding the total number of tokens \ufb01xed. We see that while regular attention becomes slower at longer sequence length, LSH attention speed remains \ufb02at.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "4",
+          "url": "figure.4",
+          "start_index": 114
+        },
+        {
+          "text": "5",
+          "url": "figure.5",
+          "start_index": 531
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9a1f07dc6237d586ec147df78039f8be",
+    "text": "Large Reformer models. To verify that the Reformer can indeed \ufb01t large models on a single core and train fast on long sequences, we train up to 20-layer big Reformers on enwik8 and imagenet64. As can be seen in Figure 5, these models \ufb01t into memory and train. We were not able to train Trans- former baselines in this case as they are too slow and memory-hungry, but we see clear improvement with the number of layers. A 12-layer model on enwik8 trained for 20K steps with a dropout rate of 0.1 achieves 1.19 bits/dim on the test set. We also trained a 12-layer Reformer model for longer with further tuning and improvements and we reached 1.05 bits/dim on the enwiki8 test set.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "5",
+          "url": "figure.5",
+          "start_index": 218
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "47bad551983d86ccbab9e114fd5040bd",
+    "text": "9",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "ffccf6121b047b59715921b59864f494",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "6224f06730b1f20e7ff71fcd1e4554e4",
+    "text": "6 CONCLUSION",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "ffccf6121b047b59715921b59864f494"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "67ed9fb7b84241a337cb2d23eec52700",
+    "text": "Reformer combines the modeling capacity of a Transformer with an architecture that can be executed ef\ufb01ciently on long sequences and with small memory use even for models with a large number of layers. We believe that this will help large, richly-parameterized Transformer models become more widespread and accessible. Also, the ability to handle long sequences opens the way for the use of the Reformer on many generative tasks. In addition to generating very long coherent text, the Reformer can bring the power of Transformer models to other domains like time-series forecasting, music, image and video generation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "6224f06730b1f20e7ff71fcd1e4554e4"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2281d30befcbb2d2e27036c4ddbd5ac6",
+    "text": "REFERENCES",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "ffccf6121b047b59715921b59864f494"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "fa37d8a29db4253ca640fa64c18e68f7",
+    "text": "Rami Al-Rfou, Dokook Choe, Noah Constant, Mandy Guo, and Llion Jones. Character-level language modeling with deeper self-attention. CoRR, abs/1808.04444, 2018. URL http: //arxiv.org/abs/1808.04444.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :",
+          "url": "http://arxiv.org/abs/1808.04444",
+          "start_index": 164
+        },
+        {
+          "text": "// arxiv . org / abs / 1808 . 04444",
+          "url": "http://arxiv.org/abs/1808.04444",
+          "start_index": 170
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d9fcd66ab7f1234c19c07590ba2fd237",
+    "text": "Alexandr Andoni, Piotr Indyk, Thijs Laarhoven, Ilya P. Razenshteyn, and Ludwig Schmidt. Practical and optimal LSH for angular distance. CoRR, abs/1509.02897, 2015. URL http://arxiv. org/abs/1509.02897.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv .",
+          "url": "http://arxiv.org/abs/1509.02897",
+          "start_index": 168
+        },
+        {
+          "text": "org / abs / 1509 . 02897",
+          "url": "http://arxiv.org/abs/1509.02897",
+          "start_index": 182
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3f705cc9e2c3043f6563d8c8c953cf79",
+    "text": "Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hinton. Layer normalization. arXiv preprint arXiv:1607.06450, 2016. URL http://arxiv.org/abs/1607.06450.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1607 . 06450",
+          "url": "http://arxiv.org/abs/1607.06450",
+          "start_index": 28
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "42b3f6681bc703209029817808888826",
+    "text": "Antoine Bordes, Nicolas Usunier, Sumit Chopra, and Jason Weston. Large-scale simple question answering with memory networks. CoRR, abs/1506.02075, 2015. URL http://arxiv.org/ abs/1506.02075.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org /",
+          "url": "http://arxiv.org/abs/1506.02075",
+          "start_index": 157
+        },
+        {
+          "text": "abs / 1506 . 02075",
+          "url": "http://arxiv.org/abs/1506.02075",
+          "start_index": 175
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "81a1a1a6f01b0bd7a4d6d0202035201c",
+    "text": "Sarath Chandar, Sungjin Ahn, Hugo Larochelle, Pascal Vincent, Gerald Tesauro, and Yoshua Ben- gio. Hierarchical memory networks. arXiv preprint arXiv:1605.07427, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7b11f36b4e14214adbd5c9bacf683e63",
+    "text": "Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever. Generating long sequences with sparse transformers. URL https://openai.com/blog/sparse-transformers, 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7cabf1b2bfd8fb1e4811c4dd1aa39456",
+    "text": "Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: pre-training of deep bidirectional transformers for language understanding. CoRR, abs/1810.04805, 2018. URL http://arxiv.org/abs/1810.04805.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1810 . 04805",
+          "url": "http://arxiv.org/abs/1810.04805",
+          "start_index": 180
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5478a99962ddcc931842809a8fb2769f",
+    "text": "Aidan N Gomez, Mengye Ren, Raquel Urtasun, and Roger B Grosse. The reversible residual net- work: Backpropagation without storing activations. In Advances in neural information processing systems, pp. 2214\u20132224, 2017.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c4e60dbbeb1ff5f3757b7d2301f7f4c3",
+    "text": "Felix Hill, Antoine Bordes, Sumit Chopra, and Jason Weston. The goldilocks principle: Reading children\u2019s books with explicit memory representations. CoRR, abs/1511.02301, 2015. URL http://arxiv.org/abs/1511.02301.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1511 . 02301",
+          "url": "http://arxiv.org/abs/1511.02301",
+          "start_index": 181
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "0c4c80675d9d69b39b046fc361658205",
+    "text": "Cheng-Zhi Anna Huang, Ashish Vaswani, Jakob Uszkoreit, Noam Shazeer, Curtis Hawthorne, An- drew M Dai, Matthew D Hoffman, and Douglas Eck. Music transformer: Generating music with long-term structure. arXiv preprint arXiv:1809.04281, 2018.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "5ab2468c7ce33ecdb8abaf634474f94a",
+    "text": "Guillaume Lample, Alexandre Sablayrolles, Marc\u2019Aurelio Ranzato, Ludovic Denoyer, and Herv\u00b4e J\u00b4egou. Large memory layers with product keys. CoRR, abs/1907.05242, 2019. URL http: //arxiv.org/abs/1907.05242.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :",
+          "url": "http://arxiv.org/abs/1907.05242",
+          "start_index": 171
+        },
+        {
+          "text": "// arxiv . org / abs / 1907 . 05242",
+          "url": "http://arxiv.org/abs/1907.05242",
+          "start_index": 177
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "6f51276f987196c0e2bfed60f69fa218",
+    "text": "Peter J. Liu, Mohammad Saleh, Etienne Pot, Ben Goodrich, Ryan Sepassi, Lukasz Kaiser, and Noam Shazeer. Generating wikipedia by summarizing long sequences. CoRR, abs/1801.10198, 2018. URL http://arxiv.org/abs/1801.10198.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1801 . 10198",
+          "url": "http://arxiv.org/abs/1801.10198",
+          "start_index": 188
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a48cbc05757813f663aa2d5159a2d2c9",
+    "text": "Myle Ott, Sergey Edunov, David Grangier, and Michael Auli. Scaling neural machine trans- lation. In Proceedings of the Third Conference on Machine Translation: Research Papers, pp. 1\u20139, Brussels, Belgium, October 2018. Association for Computational Linguistics. doi: 10.18653/v1/W18-6301. URL https://www.aclweb.org/anthology/W18-6301.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "https :// www . aclweb . org / anthology / W18 - 6301",
+          "url": "https://www.aclweb.org/anthology/W18-6301",
+          "start_index": 293
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf",
+      "parent_id": "2281d30befcbb2d2e27036c4ddbd5ac6"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "f22e228aec51aa69ea39c5b82b09ca45",
+    "text": "10",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "58b99a44b8e896c4c69fb127a3a96618",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9cd29e2b032f2c391e2ee0cd1071b50d",
+    "text": "Niki Parmar, Ashish Vaswani, Jakob Uszkoreit, Lukasz Kaiser, Noam Shazeer, and Alexander Ku. Image transformer. CoRR, abs/1802.05751, 2018. URL http://arxiv.org/abs/1802. 05751.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1802 .",
+          "url": "http://arxiv.org/abs/1802.05751",
+          "start_index": 144
+        },
+        {
+          "text": "05751",
+          "url": "http://arxiv.org/abs/1802.05751",
+          "start_index": 171
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9ad7f6b167c280790d13ebf1942722a4",
+    "text": "Matt Post. A call for clarity in reporting BLEU scores. In Proceedings of the Third Conference on Machine Translation: Research Papers, pp. 186\u2013191, Belgium, Brussels, October 2018. As- sociation for Computational Linguistics. URL https://www.aclweb.org/anthology/ W18-6319.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "https :// www . aclweb . org / anthology /",
+          "url": "https://www.aclweb.org/anthology/W18-6319",
+          "start_index": 231
+        },
+        {
+          "text": "W18 - 6319",
+          "url": "https://www.aclweb.org/anthology/W18-6319",
+          "start_index": 265
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "bca0a2029742483db82e2bb622cd44f9",
+    "text": "Alec Radford, Jeff Wu, Rewon Child, David Luan, Dario Amodei, and Ilya Sutskever. Language models are unsupervised multitask learners. 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "01044f735264f78288bea3acf05c5275",
+    "text": "Jack W Rae, Jonathan J Hunt, Tim Harley, Ivo Danihelka, Andrew Senior, Greg Wayne, Alex Graves, and Timothy P Lillicrap. Scaling memory-augmented neural networks with sparse reads and writes. In Advances in Neural Information Processing Systems, (NIPS), 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "03c11a1917a156af0217e407cabebbe5",
+    "text": "Prajit Ramachandran, Niki Parmar, Ashish Vaswani, Irwan Bello, Anselm Levskaya, and Jonathon Shlens. Stand-alone self-attention in vision models. CoRR, abs/1906.05909, 2019. URL http: //arxiv.org/abs/1906.05909.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :",
+          "url": "http://arxiv.org/abs/1906.05909",
+          "start_index": 178
+        },
+        {
+          "text": "// arxiv . org / abs / 1906 . 05909",
+          "url": "http://arxiv.org/abs/1906.05909",
+          "start_index": 184
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "345c006a6c893f806bee71a27c7eb263",
+    "text": "Adam Santoro, Sergey Bartunov, Matthew Botvinick, Daan Wierstra, and Timothy P. Lillicrap. One- shot learning with memory-augmented neural networks. CoRR, abs/1605.06065, 2016. URL http://arxiv.org/abs/1605.06065.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1605 . 06065",
+          "url": "http://arxiv.org/abs/1605.06065",
+          "start_index": 181
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "6627c5f3be67c4170ec6bf6b37640721",
+    "text": "Noam Shazeer and Mitchell Stern. Adafactor: Adaptive learning rates with sublinear memory cost. CoRR, abs/1804.04235, 2018. URL http://arxiv.org/abs/1804.04235.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1804 . 04235",
+          "url": "http://arxiv.org/abs/1804.04235",
+          "start_index": 32
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "1f88331b6a4b6cc76c96564286e3d674",
+    "text": "Noam Shazeer, Youlong Cheng, Niki Parmar, Dustin Tran, Ashish Vaswani, Penporn Koanantakool, Peter Hawkins, HyoukJoong Lee, Mingsheng Hong, Cliff Young, Ryan Sepassi, and Blake Hecht- man. Mesh-tensor\ufb02ow: Deep learning for supercomputers. CoRR, abs/1811.02084, 2018. URL http://arxiv.org/abs/1811.02084.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1811 . 02084",
+          "url": "http://arxiv.org/abs/1811.02084",
+          "start_index": 271
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3263fde87d33db6fd413d9900c7a8518",
+    "text": "Nimit Sharad Sohoni, Christopher Richard Aberger, Megan Leszczynski, Jian Zhang, and Christo- pher R\u00b4e. Low-memory neural network training: A technical report. CoRR, abs/1904.10631, 2019. URL http://arxiv.org/abs/1904.10631.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1904 . 10631",
+          "url": "http://arxiv.org/abs/1904.10631",
+          "start_index": 192
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "a1803da6074566ac69a75deb2364ff55",
+    "text": "Sainbayar Sukhbaatar, Edouard Grave, Piotr Bojanowski, and Armand Joulin. Adaptive atten- tion span in transformers. CoRR, abs/1905.07799, 2019a. URL http://arxiv.org/abs/ 1905.07799.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs /",
+          "url": "http://arxiv.org/abs/1905.07799",
+          "start_index": 150
+        },
+        {
+          "text": "1905 . 07799",
+          "url": "http://arxiv.org/abs/1905.07799",
+          "start_index": 172
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b515f176dca06614b88c04b9a39b0631",
+    "text": "Sainbayar Sukhbaatar, Edouard Grave, Guillaume Lample, Herv\u00b4e J\u00b4egou, and Armand Joulin. Aug- menting self-attention with persistent memory. CoRR, abs/1907.01470, 2019b. URL http: //arxiv.org/abs/1907.01470.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :",
+          "url": "http://arxiv.org/abs/1907.01470",
+          "start_index": 174
+        },
+        {
+          "text": "// arxiv . org / abs / 1907 . 01470",
+          "url": "http://arxiv.org/abs/1907.01470",
+          "start_index": 180
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "0308e1bb041abfffb39d664f6764b7a6",
+    "text": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention is all you need. CoRR, 2017. URL http: //arxiv.org/abs/1706.03762.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :",
+          "url": "http://arxiv.org/abs/1706.03762",
+          "start_index": 169
+        },
+        {
+          "text": "// arxiv . org / abs / 1706 . 03762",
+          "url": "http://arxiv.org/abs/1706.03762",
+          "start_index": 175
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "c7960409c82f757fc4618fc25db66d6b",
+    "text": "Jason Weston, Sumit Chopra, and Antoine Bordes. Memory networks. CoRR, abs/1410.3916, 2014. URL http://arxiv.org/abs/1410.3916.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "http :// arxiv . org / abs / 1410 . 3916",
+          "url": "http://arxiv.org/abs/1410.3916",
+          "start_index": 4
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf",
+      "parent_id": "58b99a44b8e896c4c69fb127a3a96618"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "1f174429438e3578057dac43328b99c6",
+    "text": "11",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Header",
+    "element_id": "49f8d8e81661567af455a33996c62d96",
+    "text": "Published as a conference paper at ICLR 2020",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "550e283566060f7bc49abeb8a5ba9b91",
+    "text": "A MULTI-ROUND LSH ATTENTION",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf",
+      "parent_id": "49f8d8e81661567af455a33996c62d96"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "f57abfe00fcd68e463024efd92936b02",
+    "text": "In this section we describe in more detail the multi-hash version of our LSH attention mechanism. We \ufb01rst repeat Equation (3) from the main text, which describes a general formulation of attention with sparsity:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "equation.2.3",
+          "start_index": 123
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf",
+      "parent_id": "550e283566060f7bc49abeb8a5ba9b91"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "acccf2e96a1e7d839b9fdb0c6370d321",
+    "text": "o ifj &P 3) 0; = exp (g m(j, P \u2014 2(i,P)) where m(j,P;) = 0 otherwise",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "equation.2.3",
+          "start_index": 1
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1c2ec239884e9bc51344b8e5ea8cd966",
+    "text": "In the multi-round case, a query position i can attend to key positions Pi as de\ufb01ned in (6), which we also repeat here:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "6",
+          "url": "equation.2.6",
+          "start_index": 89
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "b6314d8483a7e7f79c62fb0ad7e868f3",
+    "text": "Nrounds Q) where P\") R (g;) = h",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "6",
+          "url": "equation.2.6",
+          "start_index": 1
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3eff2f8914266bf8819bef14fef840b5",
+    "text": "For batching purposes, attention is performed on chunks of sorted queries/keys:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "3b803e76a512fb3465dda1c1503ab027",
+    "text": "(r) (r) - J m m < m an E | |",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e6c2ffbd38e7f9e63a7727cc77bd30ba",
+    "text": "Combining (3) and (6) gives:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "equation.2.3",
+          "start_index": 11
+        },
+        {
+          "text": "6",
+          "url": "equation.2.6",
+          "start_index": 19
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "1da688e355c8d5945239eb77320dcf26",
+    "text": "0 = (4, P) (i,P)) 12) exp (g jeP;",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "916c74e4065529f2911806cba5905e15",
+    "text": "Nrounds > exp (26, P) \u2014 20, 7)) j \u2014m(,P) - 20 P) vy r=1 jeP\u2122 13)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "5fd2a0081cacbfb47361ca32a59c7454",
+    "text": "Nrounds (r) exp (i, 7)) 14) r=1",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "504cc300f2df0b72ee6bce6a55a908e8",
+    "text": "(7) (r) exp (q; - kj \u2014m ] ( 15) ) v; je\u2122",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "af1c416d68ecf33c69bc77bdb85f7441",
+    "text": "1 P (r) = 10\u00b0 16) where N; ; = jE and m, 2] ifi =3 log N; otherwise",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bce42d6183136f79b32828d2f596807f",
+    "text": "Each round of LSH attention produces a vector o(r) that can be computed independently from other i rounds, except for the inclusion of a term Ni,j to avoid double-counting elements when constructing the union of P(r) i sets. In our implementation we fold the Ni,j factor into the masking term m(r) i,j .",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "887a379e2cfffbd70a8f60c1e77c54bc",
+    "text": "We also modify m(r) i,j to introduce a special case for i = j. This case is added because causal masking in a standard Transformer allows position i to attend to itself, which is not desirable in a shared-QK formulation. We set the mask to a large but \ufb01nite value to disallow attention-in-place, except in the situation where a token has no other valid attention targets. For example, the \ufb01rst token in a sequence attends only to itself, because no prior context is available.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "f653a7432f400242a6c10681ed9c898d",
+    "text": "12",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "reformer.pdf"
+    }
+  }
+]

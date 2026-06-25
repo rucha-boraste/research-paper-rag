@@ -1,0 +1,3631 @@
+[
+  {
+    "type": "Title",
+    "element_id": "39a0d8d48095f233ed7bd67110b887f8",
+    "text": "Transformer in Transformer",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "ef680047156677d624f0f06c33809156",
+    "text": "Kai Han1,2 An Xiao2 Enhua Wu1,3\u2217 Jianyuan Guo2 Chunjing Xu2 Yunhe Wang2\u2217",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "39a0d8d48095f233ed7bd67110b887f8"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "32e3fc224152f2205d248de578c7624a",
+    "text": "1State Key Lab of Computer Science, ISCAS & UCAS",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "39a0d8d48095f233ed7bd67110b887f8"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "b5c1a1ce556b1b76a4cfce62f7d5e813",
+    "text": "2Huawei Noah\u2019s Ark Lab",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "39a0d8d48095f233ed7bd67110b887f8"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "1919ab98fb7d2526b5de55db863e43a1",
+    "text": "3University of Macau",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "39a0d8d48095f233ed7bd67110b887f8"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e2de9adf14b95b629fbd3e8a18372926",
+    "text": "{hankai,weh}@ios.ac.cn, yunhe.wang@huawei.com",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "39a0d8d48095f233ed7bd67110b887f8"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "235de4dcc19cd0726fe691e2766a23a9",
+    "text": "Abstract",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1d1a64e2ea707cca6d7e46d353815789",
+    "text": "Transformer is a new kind of neural architecture which encodes the input data as powerful features via the attention mechanism. Basically, the visual transformers \ufb01rst divide the input images into several local patches and then calculate both representations and their relationship. Since natural images are of high complexity with abundant detail and color information, the granularity of the patch dividing is not \ufb01ne enough for excavating features of objects in different scales and locations. In this paper, we point out that the attention inside these local patches are also essential for building visual transformers with high performance and we explore a new architecture, namely, Transformer iN Transformer (TNT). Speci\ufb01cally, we regard the local patches (e.g., 16\u00d716) as \u201cvisual sentences\u201d and present to further divide them into smaller patches (e.g., 4\u00d74) as \u201cvisual words\u201d. The attention of each word will be calculated with other words in the given visual sentence with negligible computational costs. Features of both words and sentences will be ag- gregated to enhance the representation ability. Experiments on several benchmarks demonstrate the effectiveness of the proposed TNT architecture, e.g., we achieve an 81.5% top-1 accuracy on the ImageNet, which is about 1.7% higher than that of the state-of-the-art visual transformer with similar computational cost. The PyTorch code is available at https://github.com/huawei-noah/CV-Backbones, and the MindSpore code is available at https://gitee.com/mindspore/models/ tree/master/research/cv/TNT.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "https :// github . com / huawei - noah / CV - Backbones",
+          "url": "https://github.com/huawei-noah/CV-Backbones",
+          "start_index": 1414
+        },
+        {
+          "text": "https :// gitee . com / mindspore / models /",
+          "url": "https://gitee.com/mindspore/models/tree/master/research/cv/TNT",
+          "start_index": 1498
+        },
+        {
+          "text": "tree / master / research / cv / TNT",
+          "url": "https://gitee.com/mindspore/models/tree/master/research/cv/TNT",
+          "start_index": 1534
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "235de4dcc19cd0726fe691e2766a23a9"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "fce37b65b4778f5585ae9d72179c8933",
+    "text": "1 Introduction",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b8fdc66f3b18b6f996229ed1988d1b3f",
+    "text": "In the past decade, the mainstream deep neural architectures used in the computer vision (CV) are mainly established on convolutional neural networks (CNNs) [17, 12, 11]. Differently, transformer is a type of neural network mainly based on self-attention mechanism [35], which can provide the relationships between different features. Transformer is widely used in the \ufb01eld of natural language processing (NLP), e.g., the famous BERT [8] and GPT-3 [2] models. The power of these transformer models inspires the whole community to investigate the use of transformer for visual tasks.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "17",
+          "url": "cite.alexnet",
+          "start_index": 158
+        },
+        {
+          "text": "12",
+          "url": "cite.resnet",
+          "start_index": 162
+        },
+        {
+          "text": "11",
+          "url": "cite.ghostnet",
+          "start_index": 166
+        },
+        {
+          "text": "35",
+          "url": "cite.Att",
+          "start_index": 266
+        },
+        {
+          "text": "8",
+          "url": "cite.bert",
+          "start_index": 435
+        },
+        {
+          "text": "2",
+          "url": "cite.gpt3",
+          "start_index": 449
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "fce37b65b4778f5585ae9d72179c8933"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a288e1d7e402c69b99a39d9035b2502b",
+    "text": "To utilize the transformer architectures for conducting visual tasks, a number of researchers have explored for representing the sequence information from different data. For example, Wang et al. ex- plore self-attention mechanism in non-local networks [37] for capturing long-range dependencies in video and image recognition. Carion et al. present DETR [3], which treats object detection as a direct set prediction problem and solve it using a transformer encoder-decoder architecture. Chen et al. propose the iGPT [5], which is the pioneering work applying pure transformer model (i.e., without convolution) on image recognition by self-supervised pre-training.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "37",
+          "url": "cite.non-local",
+          "start_index": 254
+        },
+        {
+          "text": "3",
+          "url": "cite.detr",
+          "start_index": 356
+        },
+        {
+          "text": "5",
+          "url": "cite.igpt",
+          "start_index": 518
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "fce37b65b4778f5585ae9d72179c8933"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "caf57c35cf01a40fc5b12d9a7ebf2d2f",
+    "text": "\u2217Corresponding author.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "070c51490c6df31a63747606fa18b7c3",
+    "text": "35th Conference on Neural Information Processing Systems (NeurIPS 2021).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "bf862f38371036b4fbe123cac6d27473",
+    "text": "\ud835\udc3f \u00d7  Output  Outer Transformer Block  1  Sentence position   encoding  +  Inner   Transformer  Block  +  Inner   Transformer  Block  \u2026  +  Inner   Transformer  Block  Sentence   embedding  0 *  1  1  4  7  2  5  8  3  6  9  2  1  4  7  2  5  8  3  6  9  \u2026  9  1  4  7  2  5  8  3  6  9  *  Class token  Linear Projection of Visual Sentences and Words  \u2026  1  Word position   encoding  Word embedding ",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "175696777eac1b2f6890d374c1f7aad1",
+    "text": "Figure 1: Illustration of the proposed Transformer-iN-Transformer (TNT) framework. The inner transformer block is shared in the same layer. The word position encodings are shared across visual sentences.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "71d86cacdb6dcf3a4fa18deaf0c8126e",
+    "text": "Different from the data in NLP tasks, there exists a semantic gap between input images and the ground-truth labels in CV tasks. To this end, Dosovitskiy et al. develop the ViT [9], which paves the way for transferring the success of transformer based NLP models. Concretely, ViT divides the given image into several local patches as a visual sequence. Then, the attention can be naturally calculated between any two image patches for generating effective feature representations for the recognition task. Subsequently, Touvron et al. explore the data-ef\ufb01cient training and distillation to enhance the performance of ViT on the ImageNet benchmark and obtain an about 81.8% ImageNet top-1 accuracy, which is comparable to that of the state-of-the-art convolutional networks. Chen et al. further treat the image processing tasks (e.g., denosing and super-resolution) as a series of translations and develop the IPT model for handling multiple low-level computer vision problems [4]. Nowadays, transformer architectures have been used in a growing number of computer vision tasks [10] such as image recognition [6, 40, 29], object detection [46], and segmentation [43, 38].",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 177
+        },
+        {
+          "text": "4",
+          "url": "cite.ipt",
+          "start_index": 976
+        },
+        {
+          "text": "10",
+          "url": "cite.han2020survey",
+          "start_index": 1077
+        },
+        {
+          "text": "6",
+          "url": "cite.cpvt",
+          "start_index": 1108
+        },
+        {
+          "text": "40",
+          "url": "cite.yuan2021tokenstotoken",
+          "start_index": 1111
+        },
+        {
+          "text": "29",
+          "url": "cite.tang2021augmented",
+          "start_index": 1115
+        },
+        {
+          "text": "46",
+          "url": "cite.ddetr",
+          "start_index": 1138
+        },
+        {
+          "text": "43",
+          "url": "cite.setr",
+          "start_index": 1161
+        },
+        {
+          "text": "38",
+          "url": "cite.trans2seg",
+          "start_index": 1165
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ab9923444ee84c3cab5b19607cd07725",
+    "text": "Although the aforementioned visual transformers have made great efforts to boost the models\u2019 performances, most of existing works follow the conventional representation scheme used in ViT, i.e., dividing the input images into patches. Such a exquisite paradigm can effectively capture the visual sequential information and estimate the attention between different image patches. However, the diversity of natural images in modern benchmarks is very high, e.g., there are over 120 M images with 1000 different categories in the ImageNet dataset [26]. As shown in Figure 1, representing the given image into local patches can help us to \ufb01nd the relationship and similarity between them. However, there are also some sub-patches inside them with high similarity. Therefore, we are motivated to explore a more exquisite visual image dividing method for generating visual sequences and improve the performance.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "26",
+          "url": "cite.imagenet",
+          "start_index": 545
+        },
+        {
+          "text": "1",
+          "url": "figure.1",
+          "start_index": 569
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c687f51e75a0841efcf24a4f2a729ff0",
+    "text": "In this paper, we propose a novel Transformer-iN-Transformer (TNT) architecture for visual recog- nition as shown in Figure 1. To enhance the feature representation ability of visual transformers, we \ufb01rst divide the input images into several patches as \u201cvisual sentences\u201d and then further divide them into sub-patches as \u201cvisual words\u201d. Besides the conventional transformer blocks for extracting features and attentions of visual sentences, we further embed a sub-transformer into the architecture for excavating the features and details of smaller visual words. Speci\ufb01cally, features and attentions between visual words in each visual sentence are calculated independently using a shared network so that the increased amount of parameters and FLOPs (\ufb02oating-point operations) is negligible. Then, features of words will be aggregated into the corresponding visual sentence. The class token is also used for the subsequent visual recognition task via a fully-connected head. Through the proposed TNT model, we can extract visual information with \ufb01ne granularity and provide features with more details. We then conduct a series of experiments on the ImageNet benchmark and downstream tasks to demonstrate its superiority and thoroughly analyze the impact of the size for dividing visual words. The results show that our TNT can achieve better accuracy and FLOPs trade-off over the state-of-the-art transformer networks.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "figure.1",
+          "start_index": 124
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "ab0f2db1d46eb651409fab1a2d96bffa",
+    "text": "2",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "777a1650672b2b5b0080b1590ce4656e",
+    "text": "2 Approach",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c57a6659099a073b3314ebe1dc58f543",
+    "text": "In this section, we describe the proposed transformer-in-transformer architecture and analyze the computation and parameter complexity in details.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "777a1650672b2b5b0080b1590ce4656e"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "65442ee46f2a6c1bdd9f532c9a2bde4b",
+    "text": "2.1 Preliminaries",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9c15444ae7d627262069e3c35f374fbb",
+    "text": "We \ufb01rst brie\ufb02y describe the basic components in transformer [35], including MSA (Multi-head Self-Attention), MLP (Multi-Layer Perceptron) and LN (Layer Normalization).",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "35",
+          "url": "cite.Att",
+          "start_index": 61
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "65442ee46f2a6c1bdd9f532c9a2bde4b"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "693db54fb0ef5933c76bb4b6233cf2ba",
+    "text": "In the self-attention module, the inputs X \u2208 Rn\u00d7d are linearly transformed to three parts, MSA. i.e., queries Q \u2208 Rn\u00d7dk, keys K \u2208 Rn\u00d7dk and values V \u2208 Rn\u00d7dv where n is the sequence length, d, dk, dv are the dimensions of inputs, queries (keys) and values, respectively. The scaled dot-product attention is applied on Q,K,V :",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "65442ee46f2a6c1bdd9f532c9a2bde4b"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "746c543479d109b6247e89e74c4acda3",
+    "text": "Attention(Q,K,V ) = softmax( QKT \u221a dk )V. (1)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "671dbc2c62b8ea31f8e75cbc3b3bca0e",
+    "text": "Finally, a linear layer is used to produce the output. Multi-head self-attention splits the queries, keys and values to h parts and perform the attention function in parallel, and then the output values of each head are concatenated and linearly projected to form the \ufb01nal output.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b6f7fc0beb90b30f868b84a573ccce27",
+    "text": "MLP. The MLP is applied between self-attention layers for feature transformation and non-linearity:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "79b5e8729098d37d0c47c2cae6866cc1",
+    "text": "MLP(X) = FC(\u03c3(FC(X))), FC(X) = XW + b, (2)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5d03ba86ce9c0d752b67cc8a147736dc",
+    "text": "where W and b are the weight and bias term of fully-connected layer respectively, and \u03c3(\u00b7) is the activation function such as GELU [13].",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "13",
+          "url": "cite.gelu",
+          "start_index": 132
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "752373777894a02dc854a742bdd0f87c",
+    "text": "LN. Layer normalization [1] is a key part in transformer for stable training and faster convergence. LN is applied over each sample x \u2208 Rd as follows:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "cite.ba2016layer",
+          "start_index": 25
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "47dc589c233caa7f0c346b53beeb99cb",
+    "text": "LN(x) = x \u2212 \u00b5 \u03b4 \u25e6 \u03b3 + \u03b2 (3)",
+    "metadata": {
+      "is_extracted": "partial",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "52c3c5c324a9ddc709bfe7b5ec500c06",
+    "text": "where \u00b5 \u2208 R, \u03b4 \u2208 R are the mean and standard deviation of the feature respectively, \u25e6 is the element-wise dot, and \u03b3 \u2208 Rd, \u03b2 \u2208 Rd are learnable af\ufb01ne transform parameters.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "fb1077a63c3f5f42cbc13aa324c1a56a",
+    "text": "2.2 Transformer in Transformer",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fee3d60bfd8f714b52a6e0501701116e",
+    "text": "Given a 2D image, we uniformly split it into n patches X = [X1,X2,\u00b7\u00b7\u00b7 ,Xn] \u2208 Rn\u00d7p\u00d7p\u00d73, where (p,p) is the resolution of each image patch. ViT [9] just utilizes a standard transformer to process the sequence of patches which corrupts the local structure of a patch, as shown in Fig. 1(a). Instead, we propose Transformer-iN-Transformer (TNT) architecture to learn both global and local information in an image. In TNT, we view the patches as visual sentences that represent the image. Each patch is further divided into m sub-patches, i.e., a visual sentence is composed of a sequence of visual words:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 143
+        },
+        {
+          "text": "1",
+          "url": "figure.1",
+          "start_index": 282
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "fb1077a63c3f5f42cbc13aa324c1a56a"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "0cbc5bccde1fe15b4cc3b02944713aa4",
+    "text": "Xi \u2192 [xi,1,xi,2,\u00b7\u00b7\u00b7 ,xi,m], (4)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a362b58db6bdc56cb98273972e8b6ca0",
+    "text": "where xi,j \u2208 Rs\u00d7s\u00d73 is the j-th visual word of the i-th visual sentence, (s,s) is the spatial size of sub-patches, and j = 1,2,\u00b7\u00b7\u00b7 ,m. With a linear projection, we transform the visual words into a sequence of word embeddings:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "3c2ef68beac8ed7beb5dad6245d95ff2",
+    "text": "Y i = [yi,1,yi,2,\u00b7\u00b7\u00b7 ,yi,m], yi,j = FC(Vec(xi,j)), (5)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b6d747debca5876240e439c0fc0be3da",
+    "text": "where yi,j \u2208 Rc is the j-th word embedding, c is the dimension of word embedding, and Vec(\u00b7) is the vectorization operation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "7c4533743821d0fcce1f8531cc0c48e8",
+    "text": "In TNT, we have two data \ufb02ows in which one \ufb02ow operates across the visual sentences and the other processes the visual words inside each sentence. For the word embeddings, we utilize a transformer block to explore the relation between visual words:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "ca26da76e599bb49ed90eadfb2048925",
+    "text": "Y =Y + MSA(LN(Y , \u00a9)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "4f9bdd68d9bed808b0b1677cddba841b",
+    "text": "Y =Y\u2019} + MLP(LN(Y})). O]",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "b84b20c446954a006ada74a5424322f6",
+    "text": "3",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e4e52b20bf007afba3737adc1d476a10",
+    "text": "where l = 1,2,\u00b7\u00b7\u00b7 ,L is the index of the l-th block, and L is the total number of stacked blocks. The input of the \ufb01rst block Y i 0 is just Y i in Eq. 5. All word embeddings in the image after transformation l ,Y 2 are Yl = [Y 1 l ,\u00b7\u00b7\u00b7 ,Y n l ]. This can be viewed as an inner transformer block, denoted as Tin. This process builds the relationships among visual words by computing interactions between any two visual words. For example, in a patch of human face, a word corresponding to the eye is more related to other words of eyes while interacts less with forehead part.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "5",
+          "url": "equation.2.5",
+          "start_index": 123
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9f93b4daf368a825f21ffcd8685f13da",
+    "text": "For the sentence level, we create the sentence embedding memories to store the sequence of sentence- level representations: Z0 = [Zclass,Z1 0 ] \u2208 R(n+1)\u00d7d where Zclass is the class token 0,Z2 0,\u00b7\u00b7\u00b7 ,Zn similar to ViT [9], and all of them are initialized as zero. In each layer, the sequence of word embeddings are transformed into the domain of sentence embedding by linear projection and added into the sentence embedding:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 203
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "c030c3779a308b97906c44901b133b9c",
+    "text": "Zi l\u22121 = Zi l\u22121 + FC(Vec(Y i l )), (8)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "6befaaee137b8754ddda4de4b8ca03f9",
+    "text": "l\u22121 \u2208 Rd and the fully-connected layer FC makes the dimension match for addition. With the where Zi above addition operation, the representation of sentence embedding is augmented by the word-level features. We use the standard transformer block for transforming the sentence embeddings:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "57be6366532ca1343500e2344b04e4c7",
+    "text": "Z' = Z1 + MSA(LN(Z_1)), \u00ae",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "52e88fe54cb1f63117822608760589c1",
+    "text": "2, = Z' + MLP(LN(Z\"))). 10)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b65e8cb0bc8a3132dbc2ba8359c99205",
+    "text": "This outer transformer block Tout is used for modeling relationships among sentence embeddings.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5440d54b09e086b30e1b52cc497ec615",
+    "text": "In summary, the inputs and outputs of the TNT block include the visual word embeddings and sentence embeddings as shown in Fig. 1(b), so the TNT can be formulated as",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "figure.1",
+          "start_index": 128
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "393e645b4512e54ded80c62f61395c5a",
+    "text": "Yl,Zl = TNT(Yl\u22121,Zl\u22121). (11)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1009614d47c14cebbc6f025ed1e317fd",
+    "text": "In our TNT block, the inner transformer block is used to model the relationship between visual words for local feature extraction, and the outer transformer block captures the intrinsic information from the sequence of sentences. By stacking the TNT blocks for L times, we build the transformer- in-transformer network. Finally, the classi\ufb01cation token serves as the image representation and a fully-connected layer is applied for classi\ufb01cation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1fdbf9a1832d9dc111f4ba6d864690e2",
+    "text": "Position encoding. Spatial information is an important factor in image recognition. For sentence embeddings and word embeddings, we both add the corresponding position encodings to retain spatial information as shown in Fig. 1. The standard learnable 1D position encodings are utilized here. Speci\ufb01cally, each sentence is assigned with a position encodings:",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "1",
+          "url": "figure.1",
+          "start_index": 225
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "010ad75270fd44a1a4b107b99e4dc30e",
+    "text": "Z0 \u2190 Z0 + Esentence, (12)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a007030d384a1781522952443619c1ca",
+    "text": "where Esentence \u2208 R(n+1)\u00d7d are the sentence position encodings. As for the visual words in a sentence, a word position encoding is added to each word embedding:",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "912f0c9276e00605495e9d065767c871",
+    "text": "Y i 0 \u2190 Y i 0 + Eword, i = 1,2,\u00b7\u00b7\u00b7 ,n (13)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "06bdf51062156b3f908a425602a9820c",
+    "text": "where Eword \u2208 Rm\u00d7c are the word position encodings which are shared across sentences. In this way, sentence position encoding can maintain the global spatial information, while word position encoding is used for preserving the local relative position.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "e4f548971353c5fc61308a607b9338ef",
+    "text": "2.3 Complexity Analysis",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "eb2a1ad6e118b7aa4dd840a502fa82ec",
+    "text": "A standard transformer block includes two parts, i.e., the multi-head self-attention and multi-layer perceptron. The FLOPs of MSA are 2nd(dk + dv) + n2(dk + dv), and the FLOPs of MLP are 2ndvrdv where r is the dimension expansion ratio of hidden layer in MLP. Overall, the FLOPs of a standard transformer block are",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "e4f548971353c5fc61308a607b9338ef"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "c6e751f1d385085384196217b1f3e448",
+    "text": "FLOPsT = 2nd(dk + dv) + n2(dk + dv) + 2nddr. (14)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "38336fdd3d3f8fd671f7d9c93945a027",
+    "text": "Since r is usually set as 4, and the dimensions of input, key (query) and value are usually set as the same, the FLOPs calculation can be simpli\ufb01ed as",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "63f0b3c8d49ae745a961cc841bef84aa",
+    "text": "FLOPsT = 2nd(6d + n). (15)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "c6d108d56fc6fac9ba2875ec367da0e2",
+    "text": "4",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1869efa20f27d15afb9393527374628d",
+    "text": "The number of parameters can be obtained as",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "9cd641890f0ffbed9316a5952d9a93d3",
+    "text": "ParamsT = 12dd. (16)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a3067feb6a3284fdb00c54b599688d80",
+    "text": "Our TNT block consists of three parts: an inner transformer block Tin, an outer transformer block Tout and a linear layer. The computation complexity of Tin and Tout are 2nmc(6c + m) and 2nd(6d + n) respectively. The linear layer has FLOPs of nmcd. In total, the FLOPs of TNT block are",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "36467c73b80e0dd81bb47fec1cf25477",
+    "text": "FLOPsTNT = 2nmc(6c + m) + nmcd + 2nd(6d + n). (17)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "96cbdb70f3da08fbe7b5031163ea1dec",
+    "text": "Similarly, the parameter complexity of TNT block is calculated as",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "c5ccdbff88ca051b17e76774fcb136f8",
+    "text": "ParamsTNT = 12cc + mcd + 12dd. (18)",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4b6fcde09be1975646e055999f6493e6",
+    "text": "Although we add two more components in our TNT block, the increase of FLOPs is small since \u00a2 < dand O(m) ~ O(n) in practice. For example, in the DeiT-S configuration, we have d = 384 and n = 196. We set \u00a2 = 24 and m = 16 in our structure of TNT-S correspondingly. From Eq. 15 and Eq. 17, we can obtain that FLOPs = 376 M and FLOPsp = 429M . The FLOPs ratio of TNT block over standard transformer block is about 1.14x. Similarly, the parameters ratio is about 1.08x. With a small increase of computation and memory cost, our TNT block can efficiently model the local structure information and achieve a much better trade-off between accuracy and complexity as demonstrated in the experiments.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "15",
+          "url": "equation.2.15",
+          "start_index": 273
+        },
+        {
+          "text": "17",
+          "url": "equation.2.17",
+          "start_index": 284
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "3ec59607ff2ac33fa6b82905aa6acec7",
+    "text": "2.4 Network Architecture",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4206100b43f9f6e2a911cd75a05948c3",
+    "text": "We build our TNT architectures by following the basic con\ufb01guration of ViT [9] and DeiT [31]. The patch size is set as 16\u00d716. The number of sub-patches is set as m = 4 \u00b7 4 = 16 by default. Other size values are evaluated in the ablation studies. As shown in Table 1, there are three variants of TNT networks with different model sizes, namely, TNT-Ti, TNT-S and TNT-B. They consist of 6.1M, 23.8M and 65.6M parameters respectively. The corresponding FLOPs for processing a 224\u00d7224 image are 1.4B, 5.2B and 14.1B respectively.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 75
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 88
+        },
+        {
+          "text": "1",
+          "url": "table.1",
+          "start_index": 263
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "3ec59607ff2ac33fa6b82905aa6acec7"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f8f60fcd60f393dccae09290900145b5",
+    "text": "Table 1: Variants of our TNT architecture. \u2018Ti\u2019 means tiny, \u2018S\u2019 means small, and \u2018B\u2019 means base. The FLOPs are calculated for images at resolution 224\u00d7224.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "3ec59607ff2ac33fa6b82905aa6acec7"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "0bc2bfe3bc911b1b550ef0be460c4d72",
+    "text": "Model Depth Inner transformer dim c #heads MLP r Outer transformer dim d #heads MLP r Params (M) FLOPs (B) TNT-Ti 12 12 2 4 192 3 4 6.1 1.4 TNT-S 12 24 4 4 384 6 4 23.8 5.2 TNT-B 12 40 4 4 640 10 4 65.6 14.1",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th rowspan=\"2\">Model</th><th rowspan=\"2\">Depth</th><th colspan=\"3\">Inner transformer</th><th colspan=\"3\">Outer transformer</th><th rowspan=\"2\">Params M)</th><th rowspan=\"2\">FLOPs (B)</th></tr><tr><th>dim \u00a2</th><th>#heads</th><th>MLP r</th><th>dim d</th><th>#heads</th><th>MLP r</th></tr></thead><tbody><tr><td>TNT-Ti</td><td>12</td><td>12</td><td>2</td><td>4</td><td>192</td><td>3</td><td>4</td><td>6.1</td><td>1.4</td></tr><tr><td>TNT-S</td><td>12 |</td><td>24</td><td>4 |</td><td>4 |</td><td>384</td><td>6 |</td><td>4 |</td><td>23.8 |</td><td>52 |</td></tr><tr><td>TNT-B</td><td>12</td><td>40</td><td>4</td><td>4</td><td>640</td><td>10</td><td>4</td><td>65.6</td><td>14.1</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "3ec59607ff2ac33fa6b82905aa6acec7"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "2624491f236848e0023e6db4058f2854",
+    "text": "3 Experiments",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "384142e5b8a0c067c05d5a609f74d7b8",
+    "text": "In this section, we conduct extensive experiments on visual benchmarks to evaluate the effectiveness of the proposed TNT architecture.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "2624491f236848e0023e6db4058f2854"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "a23b5bd311d9457b756662279d8ce65e",
+    "text": "Table 2: Details of used visual datasets.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "2624491f236848e0023e6db4058f2854"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "9af027206ffcfde2c9d9322c48cdbf30",
+    "text": "Dataset Type Train size Val size #Classes ImageNet [26] Pretrain 1,281,167 50,000 1,000 Oxford 102 Flowers [22] 2,040 6,149 102 Oxford-IIIT Pets [23] 3,680 3,669 37 iNaturalist 2019 [34] Classi\ufb01cation 265,240 3,003 1,010 CIFAR-10 [16] 50,000 10,000 10 CIFAR-100 [16] 50,000 10,000 100 COCO2017 [19] Detection 118,287 5,000 80 ADE20K [45] Segmentation 20,210 2,000 150",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "26",
+          "url": "cite.imagenet",
+          "start_index": 10
+        },
+        {
+          "text": "22",
+          "url": "cite.flower",
+          "start_index": 20
+        },
+        {
+          "text": "23",
+          "url": "cite.pets",
+          "start_index": 42
+        },
+        {
+          "text": "34",
+          "url": "cite.van2018inaturalist",
+          "start_index": 64
+        },
+        {
+          "text": "16",
+          "url": "cite.cifar",
+          "start_index": 78
+        },
+        {
+          "text": "16",
+          "url": "cite.cifar",
+          "start_index": 93
+        },
+        {
+          "text": "19",
+          "url": "cite.coco",
+          "start_index": 10
+        },
+        {
+          "text": "45",
+          "url": "cite.ade20k",
+          "start_index": 8
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Dataset</th><th>Type</th><th>Train size</th><th>Val size</th><th>#Classes</th></tr></thead><tbody><tr><td>ImageNet [26]</td><td>Pretrain</td><td>1,281,167</td><td>50,000</td><td>1,000</td></tr><tr><td>Oxford 102 Flowers [22]</td><td></td><td>2,040</td><td>6,149</td><td>102</td></tr><tr><td>Oxford-IIIT Pets [23]</td><td></td><td>3,680</td><td>3,669</td><td>37</td></tr><tr><td>iNaturalist 2019 [34]</td><td>Classification</td><td>265,240</td><td>3,003</td><td>1,010</td></tr><tr><td>CIFAR-10 [16]</td><td></td><td>50,000</td><td>10,000</td><td>10</td></tr><tr><td>CIFAR-100 [16]</td><td></td><td>50,000</td><td>10,000</td><td>100</td></tr><tr><td>COC02017 [19]</td><td>Detection</td><td>118,287</td><td>5,000</td><td>80</td></tr><tr><td>ADE20K [45]</td><td>Segmentation</td><td>20,210</td><td>2,000</td><td>150</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "2624491f236848e0023e6db4058f2854"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "a2b6b614862bdb99c109c78ce456efd1",
+    "text": "5",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "c1ecfccf150516673f905ab9597897da",
+    "text": "3.1 Datasets and Experimental Settings",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "66abf93eca23e6d485371993fd8c0276",
+    "text": "Datasets. ImageNet ILSVRC 2012 [26] is an image classi\ufb01cation benchmark consisting of 1.2M training images belonging to 1000 classes, and 50K validation images with 50 images per class. We adopt the same data augmentation strategy as that in DeiT [31] including random crop, random clip, Rand-Augment [7], Random Erasing [44], Mixup [42] and CutMix [41]. For the license of ImageNet dataset, please refer to http://www.image-net.org/download.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "26",
+          "url": "cite.imagenet",
+          "start_index": 32
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 248
+        },
+        {
+          "text": "7",
+          "url": "cite.randaugment",
+          "start_index": 302
+        },
+        {
+          "text": "44",
+          "url": "cite.zhong2020random",
+          "start_index": 322
+        },
+        {
+          "text": "42",
+          "url": "cite.mixup",
+          "start_index": 334
+        },
+        {
+          "text": "41",
+          "url": "cite.cutmix",
+          "start_index": 350
+        },
+        {
+          "text": "http :// www . image - net . org / download",
+          "url": "http://www.image-net.org/download",
+          "start_index": 408
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "c1ecfccf150516673f905ab9597897da"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "6805af2d035abf71052953d7b2dd0622",
+    "text": "In addition to ImageNet, we also test on the downstream tasks with transfer learning to evaluate the generalization ability of TNT. The details of used visual datasets are listed in Table 2. The data augmentation strategy of image classi\ufb01cation datasets are the same as that of ImageNet. For COCO and ADE20K, the data augmentation strategy follows that in PVT [36]. For the licenses of these datasets, please refer to the original papers.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "table.2",
+          "start_index": 188
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 361
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "c1ecfccf150516673f905ab9597897da"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "cc1b5449ee06cb02ad98bce7c5a37cec",
+    "text": "Implementation Details. We utilize the training strategy provided in DeiT [31]. The main ad- vanced technologies apart from common settings [12] include AdamW [20], label smoothing [27], DropPath [18], and repeated augmentation [14]. We list the hyper-parameters in Table 3 for better understanding. All the models are implemented with PyTorch [24] and MindSpore [15] and trained on NVIDIA Tesla V100 GPUs. The potential negative societal impacts may include energy consumption and carbon dioxide emissions of GPU computation.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 75
+        },
+        {
+          "text": "12",
+          "url": "cite.resnet",
+          "start_index": 141
+        },
+        {
+          "text": "20",
+          "url": "cite.adamw",
+          "start_index": 160
+        },
+        {
+          "text": "27",
+          "url": "cite.label-smooth",
+          "start_index": 182
+        },
+        {
+          "text": "18",
+          "url": "cite.larsson2016fractalnet",
+          "start_index": 197
+        },
+        {
+          "text": "14",
+          "url": "cite.hoffer2020augment",
+          "start_index": 229
+        },
+        {
+          "text": "3",
+          "url": "table.3",
+          "start_index": 272
+        },
+        {
+          "text": "24",
+          "url": "cite.pytorch",
+          "start_index": 345
+        },
+        {
+          "text": "15",
+          "url": "cite.mindspore",
+          "start_index": 364
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "c1ecfccf150516673f905ab9597897da"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "8d4504a992e46a59fe3e59b3f1d68ccf",
+    "text": "Table 3: Default training hyper-parameters used in our method, unless stated otherwise.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "c1ecfccf150516673f905ab9597897da"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "708f2b8b09635d0eed11fa036145cf71",
+    "text": "Epochs Optimizer Batch size Learning rate LR decay Weight Warmup decay epochs Label smooth Drop Repeated path Aug 300 AdamW 1024 1e-3 cosine 0.05 5 0.1 0.1 \u221a",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>Epochs</th><th>Optimizer</th><th>Bh 1</th><th>Learning rate</th><th>LR | decay</th><th>Weight decay</th><th>\u2018Warmup epochs</th><th>Label smooth</th><th>Drop | path</th><th>Repeated | Aug</th></tr></thead><tbody><tr><td>300</td><td>| AdamW</td><td>| 1024</td><td>| le-3</td><td>| cosine</td><td>0.05</td><td>| 5</td><td>0.1</td><td>[ 01</td><td>v</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "c1ecfccf150516673f905ab9597897da"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "dce6d2178bba94d8a3710807e895fc6b",
+    "text": "3.2 TNT on ImageNet",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "dfdf90f1fbd1031bc7b83d2ab2a9c31d",
+    "text": "We train our TNT models with the same training settings as that of DeiT [31]. The recent transformer- based models like ViT [9] and DeiT [31] are compared. To have a better understanding of current progress of visual transformers, we also include the representative CNN-based models such as ResNet [12], RegNet [25] and Ef\ufb01cientNet [28]. The results are shown in Table 4. We can see that our transformer-based model, i.e., TNT outperforms all other visual transformer models. In particular, TNT-S achieves 81.5% top-1 accuracy which is 1.7% higher than the baseline model DeiT- S, indicating the bene\ufb01t of the introduced TNT framework to preserve local structure information inside the patch. Compared to CNNs, TNT can outperform the widely-used ResNet and RegNet. Note that all the transformer-based models are still inferior to Ef\ufb01cientNet which utilizes special depth-wise convolutions, so it is yet a challenge of how to beat Ef\ufb01cientNet using pure transformer.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 73
+        },
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 125
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 138
+        },
+        {
+          "text": "12",
+          "url": "cite.resnet",
+          "start_index": 299
+        },
+        {
+          "text": "25",
+          "url": "cite.regnet",
+          "start_index": 312
+        },
+        {
+          "text": "28",
+          "url": "cite.efficientnet",
+          "start_index": 333
+        },
+        {
+          "text": "4",
+          "url": "table.4",
+          "start_index": 369
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "dce6d2178bba94d8a3710807e895fc6b"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "50d53578e8ebc39c20f9d5aff411706d",
+    "text": "Table 4: Results of TNT and other networks on ImageNet.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "dce6d2178bba94d8a3710807e895fc6b"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "2544ebb1fe9a1bb221b3a6fde4727485",
+    "text": "Model Resolution Params (M) FLOPs (B) Top-1 Top-5 CNN-based ResNet-50 [12] 224\u00d7224 25.6 4.1 76.2 92.9 ResNet-152 [12] 224\u00d7224 60.2 11.5 78.3 94.1 RegNetY-8GF [25] 224\u00d7224 39.2 8.0 79.9 - RegNetY-16GF [25] 224\u00d7224 83.6 15.9 80.4 - Ef\ufb01cientNet-B3 [28] 300\u00d7300 12.0 1.8 81.6 94.9 Ef\ufb01cientNet-B4 [28] 380\u00d7380 19.0 4.2 82.9 96.4 Transformer-based DeiT-Ti [31] 224\u00d7224 5.7 1.3 72.2 - TNT-Ti 224\u00d7224 6.1 1.4 73.9 91.9 DeiT-S [31] 224\u00d7224 22.1 4.6 79.8 - PVT-Small [36] 224\u00d7224 24.5 3.8 79.8 - T2T-ViT_t-14 [40] 224\u00d7224 21.5 5.2 80.7 - TNT-S 224\u00d7224 23.8 5.2 81.5 95.7 ViT-B/16 [9] 384\u00d7384 86.4 55.5 77.9 - DeiT-B [31] 224\u00d7224 86.4 17.6 81.8 - T2T-ViT_t-24 [40] 224\u00d7224 63.9 13.2 82.2 - TNT-B 224\u00d7224 65.6 14.1 82.9 96.3",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "12",
+          "url": "cite.resnet",
+          "start_index": 21
+        },
+        {
+          "text": "12",
+          "url": "cite.resnet",
+          "start_index": 37
+        },
+        {
+          "text": "25",
+          "url": "cite.regnet",
+          "start_index": 54
+        },
+        {
+          "text": "25",
+          "url": "cite.regnet",
+          "start_index": 72
+        },
+        {
+          "text": "28",
+          "url": "cite.efficientnet",
+          "start_index": 92
+        },
+        {
+          "text": "28",
+          "url": "cite.efficientnet",
+          "start_index": 112
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 27
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 8
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 23
+        },
+        {
+          "text": "40",
+          "url": "cite.yuan2021tokenstotoken",
+          "start_index": 41
+        },
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 10
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 21
+        },
+        {
+          "text": "40",
+          "url": "cite.yuan2021tokenstotoken",
+          "start_index": 39
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Model</th><th>Resolution</th><th>Params (M)</th><th>FLOPs (B)</th><th>Top-1</th><th>Top-5</th></tr></thead><tbody><tr><td colspan=\"6\">CNN-based</td></tr><tr><td>ResNet-50 [12]</td><td>224x224</td><td>25.6</td><td>4.1</td><td>76.2</td><td>92.9</td></tr><tr><td>ResNet-152 [12]</td><td>224x224</td><td>60.2</td><td>11.5</td><td>78.3</td><td>94.1</td></tr><tr><td>RegNetY-8GF [25]</td><td>224x224</td><td>39.2</td><td>8.0</td><td>79.9</td><td></td></tr><tr><td>RegNetY-16GF [25]</td><td>224x224</td><td>83.6</td><td>15.9</td><td>80.4</td><td></td></tr><tr><td>EfficientNet-B3 [28]</td><td>300x300</td><td>12.0</td><td>1.8</td><td>81.6</td><td>.</td></tr><tr><td>EfficientNet-B4 [28]</td><td>380x380</td><td>19.0</td><td>42</td><td>82.9</td><td>96.4</td></tr><tr><td colspan=\"6\">Transformer-based</td></tr><tr><td>DeiT-Ti [31]</td><td>224x224</td><td>57</td><td>1.3</td><td>72.2</td><td>1.</td></tr><tr><td>DeiT-S [31] PVT-Small [36] T2T-ViT_t-14 [40]</td><td>224x224 224x224 224x224</td><td>22.1 245 215</td><td>4.6 38 52</td><td>79.8 79.8 80.7</td><td></td></tr><tr><td>TNT-S</td><td>224x224</td><td>23.8</td><td>52</td><td>81.5</td><td>95.7</td></tr><tr><td>ViT-B/16 [9]</td><td>384x384</td><td>86.4</td><td>55.5</td><td>77.9</td><td></td></tr><tr><td>DeiT-B [31]</td><td>224x224</td><td>86.4</td><td>17.6</td><td>81.8</td><td></td></tr><tr><td>T2T-ViT_t-24 [40]</td><td>224x224</td><td>63.9</td><td>13</td><td>822</td><td></td></tr><tr><td>TNT-B</td><td>224x224</td><td>65.6</td><td>14.1</td><td>82.9</td><td>9.3</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "dce6d2178bba94d8a3710807e895fc6b"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "bc9c64e5e2ed4f34a01f10543d9bea7e",
+    "text": "6",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "288c90b822b60fc7d61073b05c1b06f4",
+    "text": "83 82 81 ) % ( 80 y c a r 79 u c c A 78 77 TNT ResNet 76 ViT ResNeXt DeiT RegNet 75 20 30 40 50 60 70 80 90 Params (M)",
+    "metadata": {
+      "text_as_html": "<table><tbody><tr><td>83</td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"5\">82</td></tr><tr><td colspan=\"5\">81 -</td></tr><tr><td colspan=\"5\">o - _____\u2014\u2014 \u2014\u2014 o Accuracy (%)</td></tr><tr><td>3</td><td>o</td><td></td><td></td><td></td></tr><tr><td>&gt;</td><td>ca</td><td>=~ + VT</td><td>TNT -3 ] DeiT =&amp;</td><td></td></tr><tr><td>&amp; 20</td><td>30</td><td>60 Params (M)</td><td>T 70</td><td>90</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "6e995db355b0e7709e22539894a0f1f6",
+    "text": "83 82 81 ) % ( 80 y c a r 79 u c c A 78 77 TNT ResNet 76 ViT ResNeXt DeiT RegNet 75 4 6 8 10 12 14 16 18 20 FLOPs (B)",
+    "metadata": {
+      "text_as_html": "<table><tbody><tr><td colspan=\"4\">83</td></tr><tr><td colspan=\"4\">82 4</td></tr><tr><td colspan=\"4\">- 81 =X</td></tr><tr><td colspan=\"4\">e \u2014\u2014 (%)</td></tr><tr><td colspan=\"4\">] Accuracy oa</td></tr><tr><td>77 1</td><td>=~ TNT</td><td>ResNet</td><td></td></tr><tr><td>764</td><td>V DeiT</td><td>ResNeXt RegNet</td><td></td></tr><tr><td>75</td><td>12 14 FLOPs (B)</td><td>18</td><td>20</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "716c6c72be2136574197d4c194939bfb",
+    "text": "(a) Acc v.s. Params",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "7a4d67e07c277dc5d45baf7560f29aa5",
+    "text": "(b) Acc v.s. FLOPs",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "60a39eee46fec83fcd2b1292aa8fef1b",
+    "text": "Figure 2: Performance comparison of the representative visual backbone networks on ImageNet.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e0d6dc19c11878e8d7dd835001d4d47b",
+    "text": "We also plot the accuracy-parameters and accuracy-FLOPs line charts in Fig. 2 to have an intuitive comparison of these models. Our TNT models consistently outperform other transformer-based models by a signi\ufb01cant margin.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "2",
+          "url": "figure.2",
+          "start_index": 76
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "cecec1a3ef0b632cb1b445fc3e6cbc39",
+    "text": "Inference speed. Deployment of transformer models on devices is important for practical applica- tions, so we test the inference speed of our TNT model. Following [31], the throughput is measured on an NVIDIA V100 GPU and PyTorch, with 224\u00d7224 input size. Since the resolution and content inside the patch is smaller than that of the whole image, we may need fewer blocks to learn its representation. Thus, we can reduce the used TNT blocks and replace some with vanilla transformer blocks. From the results in Table 5, we can see that our TNT is more ef\ufb01cient than DeiT and PVT by achieving higher accuracy with similar inference speed.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 164
+        },
+        {
+          "text": "5",
+          "url": "table.5",
+          "start_index": 517
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f2bdfeac1a7b9d80ee87268630f2442e",
+    "text": "Table 5: GPU throughput comparison of vision transformer models.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "64b0e3822207d1127685e0e9a1158b29",
+    "text": "Model Indices of TNT blocks FLOPs (B) Throughput (images/s) Top-1 DeiT-S [31] - 4.6 907 79.8 DeiT-B [31] - 17.6 292 81.8 PVT-Small [36] - 3.8 820 79.8 PVT-Medium [36] - 6.7 526 81.2 TNT-S [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] 5.2 428 81.5 TNT-S-1 [1, 4, 8, 12] 4.8 668 81.4 TNT-S-2 [1, 6, 12] 4.7 704 81.3 TNT-S-3 [1, 6] 4.7 757 81.1 TNT-S-4 [1] 4.6 822 80.8",
+    "metadata": {
+      "is_extracted": "partial",
+      "links": [
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 8
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 20
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 35
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 51
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Model</th><th>Indices of TNT blocks</th><th>FLOPs (B)</th><th>Throughput (images/s)</th><th>Top-1</th></tr></thead><tbody><tr><td>DeiTS [31]</td><td>=</td><td>4.6</td><td>907</td><td>79.8</td></tr><tr><td>DeiT-B [31]</td><td>-</td><td>17.6</td><td>292</td><td>81.8</td></tr><tr><td>PVT-Small [36]</td><td>-</td><td>3.8</td><td>820</td><td>79.8</td></tr><tr><td>PVT-Medium [36]</td><td>=</td><td>6.7</td><td>526</td><td>81.2</td></tr><tr><td>TNT-S</td><td>[1,2,3,4,5,6,7,8,9,10, 11, 12]</td><td>52</td><td>428</td><td>81.5</td></tr><tr><td>TNT-S-1</td><td>[1,4,8,12]</td><td>4.8</td><td>668</td><td>81.4</td></tr><tr><td>TNT-S-2</td><td>[1,6, 12]</td><td>4.7</td><td>704</td><td>81.3</td></tr><tr><td>TNT-S-3</td><td>[1, 6]</td><td>4.7</td><td>757</td><td>81.1</td></tr><tr><td>TNT-S-4</td><td>(1]</td><td>4.6</td><td>822</td><td>80.8</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "4f93aff775167a27a9b98578d5121eee",
+    "text": "3.3 Ablation Studies",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9b3047e45a84aba738a290e0edf2ef8b",
+    "text": "Effect of position encodings. Position infor- mation is important for image recognition. In TNT structure, sentence position encoding is for maintaining global spatial information, and word position encoding is used to preserve lo- cally relative position. We verify their effect by removing them separately. As shown in Table 6, we can see that TNT-S with both patch position encoding and word position encoding performs",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "6",
+          "url": "table.6",
+          "start_index": 327
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "4f93aff775167a27a9b98578d5121eee"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "4c9fc15aa4f74a204c06f8c2e8d6c557",
+    "text": "Table 6: Effect of position encoding.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "4f93aff775167a27a9b98578d5121eee"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "5fafbb8618f803e36ad272187caad14f",
+    "text": "Position encoding Model Sentence-level Word-level Top-1 X X 80.5 TNT-S v X 80.8 X v 80.7 v v 81.5",
+    "metadata": {
+      "is_extracted": "partial",
+      "text_as_html": "<table><thead><tr><th>Model</th><th>Position Sentence-level</th><th>encoding Word-level</th><th>Top-1</th></tr></thead><tbody><tr><td rowspan=\"4\">TNT-S</td><td>X</td><td>X</td><td>80.5</td></tr><tr><td>N</td><td></td><td>80.8</td></tr><tr><td>AR</td><td>AR</td><td>80.7</td></tr><tr><td></td><td></td><td>81.5</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "4f93aff775167a27a9b98578d5121eee"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d17d5f1e2daa6652ead6de785e40d15c",
+    "text": "the best by achieving 81.5% top-1 accuracy. Removing sentence/word position encoding results in a 0.8%/0.7% accuracy drop respectively, and removing all position encodings heavily decrease the accuracy by 1.0%.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "4f93aff775167a27a9b98578d5121eee"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5af85016cd6badf66a117b0cd23f86aa",
+    "text": "Number of heads. The effect of #heads in standard transformer has been investigated in multiple works [21, 35] and a head width of 64 is recommended for visual tasks [9, 31]. We adopt the head width of 64 in outer transformer block in our model. The number of heads in inner transformer block",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "21",
+          "url": "cite.sixteen-head",
+          "start_index": 103
+        },
+        {
+          "text": "35",
+          "url": "cite.Att",
+          "start_index": 107
+        },
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 167
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 170
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "4f93aff775167a27a9b98578d5121eee"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "4a623e816b4dacd7fafa9841d7f7e98b",
+    "text": "7",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bfe59e800106039dd2424c5c711bafe6",
+    "text": "is another hyper-parameter for investigation. We evaluate the effect of #heads in inner transformer block (Table 7). We can see that a proper number of heads (e.g., 2 or 4) achieve the best performance.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "7",
+          "url": "table.7",
+          "start_index": 113
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "11a312522ca4cdefbcc7d811884adadf",
+    "text": "Table 7: Effect of #heads in inner transformer block in TNT-S.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "f87685adcfd6aed7b0ed9cb3305de57a",
+    "text": "#heads 1 2 4 6 8 Top-1 81.0 81.4 81.5 81.3 81.1",
+    "metadata": {
+      "is_extracted": "partial",
+      "text_as_html": "<table><thead><tr><th>#heads</th><th>1 |</th><th>2 |</th><th>4</th><th>6</th><th>8</th></tr></thead><tbody><tr><td>Top-1</td><td>| 810</td><td>| 814</td><td>| 81</td><td>| 813</td><td>| 8LI</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "749587d7be842f896e80c7e29c846b87",
+    "text": "Number of visual words. In TNT, the input image is split into a number of 16\u00d716 patches and each patch is further split into m sub-patches (visual words) of size (s,s) for computational ef\ufb01ciency. Here we test the ef- fect of hyper-parameter m on TNT-S architecture. When we change m, the embedding dimension c also changes",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "40b869e8a153404c118dd8dfd240ba57",
+    "text": "Table 8: Effect of #words m.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "ea1d3b251461c8a0f001acbfabeb46d7",
+    "text": "m c Params FLOPs Top-1 64 16 4 6 24 96 23.8M 23.8M 25.1M 5.1B 5.2B 6.0B 81.0 81.5 81.1",
+    "metadata": {
+      "is_extracted": "true",
+      "text_as_html": "<table><thead><tr><th>m</th><th>\u00a2 c</th><th>| Params</th><th>| FLOPs |</th><th>Top-1</th></tr></thead><tbody><tr><td>64</td><td>6</td><td>23.8M</td><td>5.1B</td><td>81.0</td></tr><tr><td>16</td><td>24</td><td>23.8M</td><td>5.2B</td><td>81.5</td></tr><tr><td>4</td><td>96</td><td>25.1M</td><td>6.0B |</td><td>81.1</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "846d83fae70eda8c5977ace714337453",
+    "text": "correspondingly to control the FLOPs. As shown in Table 8, we can see that the value of m has slight in\ufb02uence on the performance, and we use m = 16 by default for its ef\ufb01ciency, unless stated otherwise.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "8",
+          "url": "table.8",
+          "start_index": 380
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "fdad7fda9981992ef1efb246e4bbbab2",
+    "text": "TNT  DeiT ",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "b6c446ea9330eebf4359de94022e6505",
+    "text": "(a) Feature maps in Block-1/6/12.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0ba4b355f2a14775f5228483d13318dc",
+    "text": "(b) T-SNE of Block-12.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "a67890564bbc8c4e7f0e9f747d01dc45",
+    "text": "Figure 3: Visualization of the features of DeiT-S and TNT-S.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "06b9bdc24330a0f0aa06b50d10591421",
+    "text": "3.4 Visualization",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a4e0b6afd2022a547b58204a54e98350",
+    "text": "Visualization of Feature Maps. We visualize the learned features of DeiT and TNT to further understand the effect of the proposed method. For better visualization, the input image is resized to 1024\u00d71024. The feature maps are formed by reshaping the patch embeddings according to their spatial positions. The feature maps in the 1-st, 6-th and 12-th blocks are shown in Fig. 3(a) where 12 feature maps are randomly sampled for these blocks each. In TNT, the local information are better preserved compared to DeiT. We also visualize all the 384 feature maps in the 12-th block using t-SNE [33] (Fig. 3(b)). We can see that the features of TNT are more diverse and contain richer information than those of DeiT. These bene\ufb01ts owe to the introduction of inner transformer block for modeling local features.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "figure.3",
+          "start_index": 375
+        },
+        {
+          "text": "33",
+          "url": "cite.tsne",
+          "start_index": 590
+        },
+        {
+          "text": "3",
+          "url": "figure.3",
+          "start_index": 600
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "06b9bdc24330a0f0aa06b50d10591421"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b39fd433a460859d18b96bcd6f526e29",
+    "text": "In addition to the patch-level features, we also visualize the pixel-level embeddings of TNT in Fig. 4. For each patch, we reshape the word embeddings according to their spatial positions to form the feature maps and then average these feature maps by the channel dimension. The averaged feature maps corresponding to the 14\u00d714 patches are shown in Fig. 4. We can see that the local information is well preserved in the shallow layers, and the representations become more abstract gradually as the network goes deeper.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "4",
+          "url": "figure.4",
+          "start_index": 101
+        },
+        {
+          "text": "4",
+          "url": "figure.4",
+          "start_index": 354
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "06b9bdc24330a0f0aa06b50d10591421"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "c6a31efc9fa118e9a8a37f2691d985f8",
+    "text": "Visualization of Attention Maps. There are two self-attention layers in our TNT block, i.e., an inner self-attention and an outer self-attention for modeling relationship among visual words and sentences respectively. We show the attention maps of different queries in the inner transformer in Figure 5. For a given query visual word, the attention values of visual words with similar appearance are higher, indicating their features will be interacted more relevantly with the query. These interactions are missed in ViT and DeiT, etc. The attention maps in the outer transformer can be found in the supplemental material.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "5",
+          "url": "figure.5",
+          "start_index": 301
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "06b9bdc24330a0f0aa06b50d10591421"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "8cafd82b8f32cbafc94ca09fbad0bc2a",
+    "text": "8",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 8,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "e65b0135632d28b5ad5daf934cfa99d5",
+    "text": "",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "ed6720894681a29fb6933e6d1f4a5b98",
+    "text": "2 0 D ol = g BERIFT N L W s | l L B el 5 FFTTETE S W Block-1",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "ee83b39dad52d8a305b535b7920be37d",
+    "text": "i | dda T [E M A HE R L @i T E [ 4 e L - L N | [ l [ R R R L [ L T il 58 R ] RR Block-6",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "b6da04e709877b9d0b1c7fa97d47aafc",
+    "text": "1 PR T A B0 WL RN R e T R Y 0 R R O = 5 P O o % -12",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "f216d7571b28d4b7a063c0c435ce1d67",
+    "text": "Figure 4: Visualization of the averaged word embeddings of TNT-S.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "b8640b81f039a44555c85afe01214791",
+    "text": "- I [ |",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "c6c9f087502733cf4487ad63d89e09f2",
+    "text": "y",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "df3d09d344ab8ff5df432822acd8c21c",
+    "text": "",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "beb69ab1e542dc3f6054f3d8e299b5f6",
+    "text": "",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "21872f1fc958a449bbd26aab5e1c5533",
+    "text": "",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "0de0b81f816ec3ac838ecee4cff92b45",
+    "text": "",
+    "metadata": {
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "0296299ec25016ef3228af852e775ff9",
+    "text": "Figure 5: Attention maps of different queries in the inner transformer. Red cross symbol denotes the query location.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "342144ee8f6235f9acce59cac2cd1768",
+    "text": "3.5 Transfer Learning",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "32f6d66b2ac9a290ed2042d41977645f",
+    "text": "To demonstrate the strong generalization ability of TNT, we transfer TNT-S, TNT-B models trained on ImageNet to the downstream tasks.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "342144ee8f6235f9acce59cac2cd1768"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "732abe95cc9be615f95ee6d5f9c8bafe",
+    "text": "Pure Transformer Image Classi\ufb01cation. Following DeiT [31], we evaluate our models on 4 image classi\ufb01cation datasets with training set size ranging from 2,040 to 50,000 images. These datasets include superordinate-level object classi\ufb01cation (CIFAR-10 [16], CIFAR-100 [16]) and \ufb01ne-grained object classi\ufb01cation (Oxford-IIIT Pets [23], Oxford 102 Flowers [22] and iNaturalist 2019 [34]), shown in Table 2. All models are \ufb01ne-tuned with an image resolution of 384\u00d7384. We adopt the same training settings as those at the pre-training stage by preserving all data augmentation strategies. In order to \ufb01ne-tune in a different resolution, we also interpolate the position embeddings of new patches. For CIFAR-10 and CIFAR-100, we \ufb01ne-tune the models for 64 epochs, and for \ufb01ne-grained datasets, we \ufb01ne-tune the models for 300 epochs. Table 9 compares the transfer learning results of TNT to those of ViT, DeiT and other convolutional networks. We \ufb01nd that TNT outperforms DeiT in most datasets with less parameters, which shows the superiority of modeling pixel-level relations to get better feature representation.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 54
+        },
+        {
+          "text": "16",
+          "url": "cite.cifar",
+          "start_index": 251
+        },
+        {
+          "text": "16",
+          "url": "cite.cifar",
+          "start_index": 267
+        },
+        {
+          "text": "23",
+          "url": "cite.pets",
+          "start_index": 328
+        },
+        {
+          "text": "22",
+          "url": "cite.flower",
+          "start_index": 353
+        },
+        {
+          "text": "34",
+          "url": "cite.van2018inaturalist",
+          "start_index": 379
+        },
+        {
+          "text": "2",
+          "url": "table.2",
+          "start_index": 400
+        },
+        {
+          "text": "9",
+          "url": "table.9",
+          "start_index": 833
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "342144ee8f6235f9acce59cac2cd1768"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "9aa5f64730c92e6c14a29c9cce2b3161",
+    "text": "Table 9: Results on downstream image classi\ufb01cation tasks with ImageNet pre-training. \u2191 384 denotes \ufb01ne-tuning with 384\u00d7384 resolution.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "342144ee8f6235f9acce59cac2cd1768"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "91421340ac22b839965b28a6b600d4b2",
+    "text": "Model Params (M) ImageNet CIFAR10 CIFAR100 Flowers Pets CNN-based Gra\ufb01t ResNet-50 [32] 25.6 79.6 - - 98.2 - Gra\ufb01t RegNetY-8GF [32] 39.2 - - - 99.1 - Ef\ufb01cientNet-B5 [28] 30 83.6 98.7 91.1 98.5 - Transformer-based ViT-B/16\u2191384 [9] 86.4 77.9 98.1 87.1 89.5 93.8 DeiT-B\u2191384 [31] 86.4 83.1 99.1 90.8 98.4 - TNT-S\u2191384 23.8 83.1 98.7 90.1 98.8 94.7 TNT-B\u2191384 65.6 83.9 99.1 91.1 99.0 95.0 iNat-19 75.9 80.0 - - - 81.4 83.2",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "32",
+          "url": "cite.touvron2020grafit",
+          "start_index": 27
+        },
+        {
+          "text": "32",
+          "url": "cite.touvron2020grafit",
+          "start_index": 50
+        },
+        {
+          "text": "28",
+          "url": "cite.efficientnet",
+          "start_index": 70
+        },
+        {
+          "text": "9",
+          "url": "cite.vit",
+          "start_index": 32
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 47
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Model</th><th>Params (M)</th><th>ImageNet</th><th>CIFARI10</th><th>| CIFAR100 |</th><th>Flowers</th><th>Pets</th><th>iNat-19</th></tr></thead><tbody><tr><td colspan=\"8\">CNN-based</td></tr><tr><td>Grafit ResNet-50 [32]</td><td>25.6</td><td>79.6</td><td>-</td><td>-</td><td>98.2</td><td></td><td>75.9</td></tr><tr><td>Grafit RegNetY-8GF [32]</td><td>39.2</td><td>-</td><td></td><td></td><td>99.1</td><td></td><td>80.0</td></tr><tr><td>EfficientNet-B5 [28]</td><td>30</td><td>8.6</td><td>9.7</td><td>911</td><td>98.5</td><td></td><td></td></tr><tr><td colspan=\"8\">Transformer-based</td></tr><tr><td>ViT-B/161354 [9]</td><td>86.4</td><td>719</td><td>98.1</td><td>87.1</td><td>89.5</td><td>93.8</td><td></td></tr><tr><td>DeiT-Bsss [31]</td><td>86.4</td><td>83.1</td><td>99.1</td><td>90.8</td><td>98.4</td><td></td><td></td></tr><tr><td>TNT-St384</td><td>23.8</td><td>83.1</td><td>98.7</td><td>90.1</td><td>98.8</td><td>7</td><td>8 1</td></tr><tr><td>TNT-B3s4</td><td>65.6</td><td>83.9</td><td>99.1</td><td>91.1</td><td>99.0</td><td>95.0</td><td>83.2</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "342144ee8f6235f9acce59cac2cd1768"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fe74c62dcfd5dd716b86bcc1ae0d72a4",
+    "text": "Pure Transformer Object Detection. We construct a pure transformer object detection pipeline by combining our TNT and DETR [3]. For fair comparison, we adopt the training and testing settings in PVT [36] and add a 2\u00d72 average pooling to make the output size of TNT backbone the same as that of PVT and ResNet. All the compared models are trained using AdamW [20] with batch size of 16 for 50 epochs. The training images are randomly resized to have a shorter side in the range of [640,800] and a longer side within 1333 pixels. For testing, the shorter side is set as 800 pixels. The results on COCO val2017 are shown in Table 10. Under the same setting, DETR with TNT-S backbone outperforms the representative pure transformer detector DETR+PVT-Small by 3.5 AP with similar parameters.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "3",
+          "url": "cite.detr",
+          "start_index": 124
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 200
+        },
+        {
+          "text": "20",
+          "url": "cite.adamw",
+          "start_index": 359
+        },
+        {
+          "text": "10",
+          "url": "table.10",
+          "start_index": 627
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "342144ee8f6235f9acce59cac2cd1768"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "ceb6f17f98b3ff4478056273265ba269",
+    "text": "9",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 9,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "69eb4b64fbe680daa30c308763090608",
+    "text": "Table 10: Results of object detection on COCO2017 val set with ImageNet pre-training. \u2020Results from our implementation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "722567bc409218e3658ccd889cd75b02",
+    "text": "Backbone Params Epochs AP AP50 AP75 APS APM APL ResNet-50 [36] 41M 50 32.3 53.9 32.3 10.7 33.8 53.0 DeiT-S\u2020 [31] 38M 50 33.9 54.7 34.3 11.0 35.4 56.6 PVT-Small [36] 40M 50 34.7 55.7 35.4 12.0 36.4 56.7 PVT-Medium [36] 57M 50 36.4 57.9 37.2 13.0 38.7 59.1 TNT-S 39M 50 38.2 58.9 39.4 15.5 41.1 58.8",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 11
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 24
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 39
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 55
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Backbone</th><th>| Params</th><th>| Epochs</th><th>| AP</th><th>| APso</th><th>| AP7</th><th>| APs</th><th>| APy</th><th>| A</th></tr></thead><tbody><tr><td>ResNet-50 [36]</td><td>41IM</td><td>50</td><td>323</td><td>539</td><td>323</td><td>10.7</td><td>338</td><td>53.0</td></tr><tr><td>DeiT-S [31]</td><td>38M</td><td>50</td><td>339</td><td>54.7</td><td>343</td><td>11.0</td><td>354</td><td>56.6</td></tr><tr><td>PVT-Small [36]</td><td>40M</td><td>50</td><td>34.7</td><td>55.7</td><td>354</td><td>12.0</td><td>36.4</td><td>56.7</td></tr><tr><td>PVT-Medium [36]</td><td>5M</td><td>50</td><td>36.4</td><td>57.9</td><td>37.2</td><td>13.0</td><td>38.7</td><td>59.1</td></tr><tr><td>TNT-S</td><td>39M</td><td>50</td><td>38.2</td><td>58.9</td><td>39</td><td>15.5</td><td>41.1</td><td>58.8</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4e29e84b9f1ba30ad8d05b4f3b1441ec",
+    "text": "Pure Transformer Semantic Segmentation. We adopt the segmentation framework of Trans2Seg [38] to build the pure transformer semantic segmentation based on TNT backbone. We follow the training and testing con\ufb01guration in PVT [36] for fair comparison. All the com- pared models are trained by AdamW optimizer with initial learning rate of 1e-4 and polynomial decay schedule. We apply random resize and crop of 512\u00d7512 during training. The ADE20K",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "38",
+          "url": "cite.trans2seg",
+          "start_index": 90
+        },
+        {
+          "text": "36",
+          "url": "cite.pvt",
+          "start_index": 225
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "86edbfb4c48a5b0507d1c4df17c228f4",
+    "text": "Table 11: Results of semantic segmentation on ADE20K val set with ImageNet pre-training. \u2020Results from our implementation.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "4228f806a4c2acf32e210d7f8b044036",
+    "text": "Backbone Params FLOPs Steps mIoU ResNet-50 [38] 56.1M 79.3G 40k 39.7 DeiT-S\u2020 [31] 30.3M 27.2G 40k 40.5 PVT-Small [43] TNT-S 32.1M 31.6G 32.1M 30.4G 40k 40k 42.6 43.6",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "38",
+          "url": "cite.trans2seg",
+          "start_index": 11
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 24
+        },
+        {
+          "text": "43",
+          "url": "cite.setr",
+          "start_index": 39
+        },
+        {
+          "text": "38",
+          "url": "cite.trans2seg",
+          "start_index": 11
+        },
+        {
+          "text": "31",
+          "url": "cite.deit",
+          "start_index": 24
+        },
+        {
+          "text": "43",
+          "url": "cite.setr",
+          "start_index": 39
+        }
+      ],
+      "text_as_html": "<table><thead><tr><th>Backbone</th><th>| Params</th><th>| FLOPs |</th><th>Steps</th><th>| mloU</th></tr></thead><tbody><tr><td>ResNet-50 [38]</td><td>56.IM</td><td>79.3G</td><td>40k</td><td>39.7</td></tr><tr><td>DeiT-S [31]</td><td>30.3M</td><td>27.2G</td><td>40k</td><td>40.5</td></tr><tr><td>PVT-Small [43]</td><td>32.1M</td><td>31.6G</td><td>40k</td><td>42.6</td></tr><tr><td>TNT-S</td><td>32.1IM</td><td>30.4G</td><td>40k</td><td>43.6</td></tr></tbody></table>",
+      "table_extraction_method": "tatr",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d942c47a29eae43b6cbc898129dc9b04",
+    "text": "results with single scale testing are shown in Table 11. With similar parameters, Trans2Seg with TNT-S backbone achieves 43.6% mIoU, which is 1.0% higher than that of PVT-small backbone and 2.8% higher than that of DeiT-S backbone.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "11",
+          "url": "table.11",
+          "start_index": 497
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "f6f9d26136479baae4c3631ee01b832a",
+    "text": "4 Conclusion",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bc22a8f7bee14dbbc3c38e2bf56c3863",
+    "text": "In this paper, we propose a novel Transformer-iN-Transformer (TNT) network architecture for visual recognition. In particular, we uniformly split the image into a sequence of patches (visual sentences) and view each patch as a sequence of sub-patches (visual words). We introduce a TNT block in which an outer transformer block is utilized for processing the sentence embeddings and an inner transformer block is used to model the relation among word embeddings. The information of visual word embeddings is added to the visual sentence embedding after the projection of a linear layer. We build our TNT architecture by stacking the TNT blocks. Compared to the conventional vision transformers (ViT) which corrupts the local structure of the patch, our TNT can better preserve and model the local information for visual recognition. Extensive experiments on ImageNet and downstream tasks have demonstrate the effectiveness of the proposed TNT architecture.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "f6f9d26136479baae4c3631ee01b832a"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "352c38ec4f2ab006704533ad521ab044",
+    "text": "Acknowledgement",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "fedc0de2f22c12cfb9c10397b85d5cb0",
+    "text": "This work was supported by NSFC (62072449, 61632003), Guangdong-Hongkong-Macao Joint Research Grant (2020B1515130004) and Macao FDCT (0018/2019/AKP, 0015/2019/AKP).",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "352c38ec4f2ab006704533ad521ab044"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "bc92a16a81f99d8356991f760b70d184",
+    "text": "References",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "90d4be7372b3ef8fa9b708791e4ee3b8",
+    "text": "[1] Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hinton. Layer normalization. arXiv preprint arXiv:1607.06450, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "bc92a16a81f99d8356991f760b70d184"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "39f416ee8bf3c220a9df6c5486acd4c6",
+    "text": "[2] Tom B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. In NeurIPS, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "bc92a16a81f99d8356991f760b70d184"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "dc8508e1db287e2a22c98304c0ab4110",
+    "text": "[3] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey Zagoruyko. End-to-end object detection with transformers. In ECCV, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "bc92a16a81f99d8356991f760b70d184"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "569a630a5aaede6fb10bf5ff68117c21",
+    "text": "[4] Hanting Chen, Yunhe Wang, Tianyu Guo, Chang Xu, Yiping Deng, Zhenhua Liu, Siwei Ma, Chunjing Xu, Chao Xu, and Wen Gao. Pre-trained image processing transformer. In CVPR, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "bc92a16a81f99d8356991f760b70d184"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "0ca67ab5c873051c12af2ce75db804bb",
+    "text": "[5] Mark Chen, Alec Radford, Rewon Child, Jeffrey Wu, Heewoo Jun, David Luan, and Ilya Sutskever. Generative pretraining from pixels. In ICML, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "bc92a16a81f99d8356991f760b70d184"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "45ab75c404d314b42c504c9fe236a638",
+    "text": "[6] Xiangxiang Chu, Bo Zhang, Zhi Tian, Xiaolin Wei, and Huaxia Xia. Do we really need explicit position encodings for vision transformers? arXiv preprint arXiv:2102.10882, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf",
+      "parent_id": "bc92a16a81f99d8356991f760b70d184"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "cc41dc41c400e4c3e5b654fc3f05c836",
+    "text": "10",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 10,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "d0fa89ce9016b52d99bb80ee6f053aaf",
+    "text": "[7] Ekin D Cubuk, Barret Zoph, Jonathon Shlens, and Quoc V Le. Randaugment: Practical automated data augmentation with a reduced search space. In CVPR Workshops, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b7f3e31cb8be5c42be6dd3bb8442e5b5",
+    "text": "[8] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: Pre-training of deep bidirec- tional transformers for language understanding. In NAACL-HLT (1), 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7c491abb7cf773b416a133cdd073d900",
+    "text": "[9] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al. An image is worth 16x16 words: Transformers for image recognition at scale. In ICLR, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f69560d9b19c9b4ff5eabe7ec1c599cf",
+    "text": "[10] Kai Han, Yunhe Wang, Hanting Chen, Xinghao Chen, Jianyuan Guo, Zhenhua Liu, Yehui Tang, An Xiao, Chunjing Xu, Yixing Xu, et al. A survey on vision transformer. arXiv preprint arXiv:2012.12556, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "af98d708ebd6ca153d874e82ed8c7b11",
+    "text": "[11] Kai Han, Yunhe Wang, Qi Tian, Jianyuan Guo, Chunjing Xu, and Chang Xu. Ghostnet: More features from cheap operations. In CVPR, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "40cbaf1a5a2d1be04e32e4613d730e23",
+    "text": "[12] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In CVPR, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "07e2ee18c427352b8a3b7c996638384d",
+    "text": "[13] Dan Hendrycks and Kevin Gimpel. Gaussian error linear units (gelus). arXiv preprint arXiv:1606.08415, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "39a739b07101f8e85a233f7e17477e9c",
+    "text": "[14] Elad Hoffer, Tal Ben-Nun, Itay Hubara, Niv Giladi, Torsten Hoe\ufb02er, and Daniel Soudry. Augment your batch: Improving generalization through instance repetition. In CVPR, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ff7bbe4a1543ac24bf51bc27a2f0c26f",
+    "text": "[15] Huawei. Mindspore. https://www.mindspore.cn/, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "links": [
+        {
+          "text": "https :// www . mindspore . cn /,",
+          "url": "https://www.mindspore.cn/",
+          "start_index": 24
+        }
+      ],
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "8e723a25699a7a4c134d066fe053388e",
+    "text": "[16] Alex Krizhevsky, Geoffrey Hinton, et al. Learning multiple layers of features from tiny images. 2009.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "810e5f6519065e381daddda3c84c56dd",
+    "text": "[17] Alex Krizhevsky, Ilya Sutskever, and Geoffrey E Hinton. Imagenet classi\ufb01cation with deep convolutional neural networks. In NeurIPS, pages 1097\u20131105, 2012.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "3e7a9b944360625c171da561622982cd",
+    "text": "[18] Gustav Larsson, Michael Maire, and Gregory Shakhnarovich. Fractalnet: Ultra-deep neural networks without residuals. arXiv preprint arXiv:1605.07648, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "fa41fdc9fafe809e573d86dfcf4316bc",
+    "text": "[19] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll\u00e1r, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In ECCV, pages 740\u2013755, 2014.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "dc9adb181228cfc4a5e8bcb2124b10ac",
+    "text": "[20] Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. arXiv preprint arXiv:1711.05101, 2017.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7efbb3432490bc2a62f66efaba15067b",
+    "text": "[21] Paul Michel, Omer Levy, and Graham Neubig. Are sixteen heads really better than one? In NeurIPS, 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "eba0346f766d36cd0b1b6eafa1351825",
+    "text": "[22] Maria-Elena Nilsback and Andrew Zisserman. Automated \ufb02ower classi\ufb01cation over a large number of classes. In 2008 Sixth Indian Conference on Computer Vision, Graphics & Image Processing, pages 722\u2013729. IEEE, 2008.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "da0d56f377c57c5555f62edbdad9fa9c",
+    "text": "[23] Omkar M Parkhi, Andrea Vedaldi, Andrew Zisserman, and CV Jawahar. Cats and dogs. In CVPR, pages 3498\u20133505. IEEE, 2012.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "dccbddb6bdd8b6c16e16b84b7f110174",
+    "text": "[24] Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al. Pytorch: An imperative style, high-performance deep learning library. NeurIPS, 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "0132466cd297b52b424577ad3c4eb65b",
+    "text": "[25] Ilija Radosavovic, Raj Prateek Kosaraju, Ross Girshick, Kaiming He, and Piotr Doll\u00e1r. Designing network design spaces. In CVPR, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f2479f2c8dd212f3ec65a38759784a25",
+    "text": "[26] Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, et al. Imagenet large scale visual recognition challenge. International Journal of Computer Vision, 115(3):211\u2013252, 2015.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "1b8ca522a4bbbf8ac5935305b46132e7",
+    "text": "[27] Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jon Shlens, and Zbigniew Wojna. Rethinking the inception architecture for computer vision. In CVPR, 2016.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "289bcae66757d8e6d8f8787686148fb0",
+    "text": "[28] Mingxing Tan and Quoc Le. Ef\ufb01cientnet: Rethinking model scaling for convolutional neural networks. In ICML, 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "674cfbda4d36a3a066b562e17b6e31da",
+    "text": "[29] Yehui Tang, Kai Han, Chang Xu, An Xiao, Yiping Deng, Chao Xu, and Yunhe Wang. Augmented shortcuts for vision transformers. arXiv preprint arXiv:2106.15941, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ce4d45fdbc1f4a1da395a94f16a80fe1",
+    "text": "[30] Yehui Tang, Yunhe Wang, Yixing Xu, Yiping Deng, Chao Xu, Dacheng Tao, and Chang Xu. Manifold regularized dynamic network pruning. In CVPR, pages 5018\u20135028, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "49f2b3bd402985dcd1602108a654e3b1",
+    "text": "[31] Hugo Touvron, Matthieu Cord, Matthijs Douze, Francisco Massa, Alexandre Sablayrolles, and Herv\u00e9 J\u00e9gou. Training data-ef\ufb01cient image transformers & distillation through attention. In ICML, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "1763bf95ce041adc34b0d697e4f90af5",
+    "text": "[32] Hugo Touvron, Alexandre Sablayrolles, Matthijs Douze, Matthieu Cord, and Herv\u00e9 J\u00e9gou. Gra\ufb01t: Learning \ufb01ne-grained image representations with coarse labels. arXiv preprint arXiv:2011.12982, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "807ade4011a69c1f39fd0fa1dbd31156",
+    "text": "[33] Laurens Van der Maaten and Geoffrey Hinton. Visualizing data using t-sne. Journal of machine learning research, 9(11), 2008.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "57c66d65e78d7dfc22a02c3398fddfc9",
+    "text": "11",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 11,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9185868d6baad3d2ec48c9f6e7517e95",
+    "text": "[34] Grant Van Horn, Oisin Mac Aodha, Yang Song, Yin Cui, Chen Sun, Alex Shepard, Hartwig Adam, Pietro Perona, and Serge Belongie. The inaturalist species classi\ufb01cation and detection dataset. In CVPR, pages 8769\u20138778, 2018.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "e2f9f6c0140b0eeca23429be69dc7c98",
+    "text": "[35] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, \u0141ukasz Kaiser, and Illia Polosukhin. Attention is all you need. NeurIPS, 2017.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "19820200ac46e63df06e5437e208a1bc",
+    "text": "[36] Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang, Tong Lu, Ping Luo, and Ling Shao. Pyramid vision transformer: A versatile backbone for dense prediction without convolutions. In ICCV, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "13d83b72ae07258bdf6ed589e2f6d1a7",
+    "text": "[37] Xiaolong Wang, Ross Girshick, Abhinav Gupta, and Kaiming He. Non-local neural networks. In CVPR, pages 7794\u20137803, 2018.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "02cce02a622313ca2b9926d676154d10",
+    "text": "[38] Enze Xie, Wenjia Wang, Wenhai Wang, Peize Sun, Hang Xu, Ding Liang, and Ping Luo. Segmenting transparent object in the wild with transformer. In IJCAI, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "ea07ec029aa269a5f5c2345f24d4c4bc",
+    "text": "[39] Yixing Xu, Yunhe Wang, Kai Han, Yehui Tang, Shangling Jui, Chunjing Xu, and Chang Xu. Renas: Relativistic evaluation of neural architecture search. In CVPR, pages 4411\u20134420, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "37ebe076bbbdf731bbf9e33bd2235ed5",
+    "text": "[40] Li Yuan, Yunpeng Chen, Tao Wang, Weihao Yu, Yujun Shi, Zihang Jiang, Francis EH Tay, Jiashi Feng, and Shuicheng Yan. Tokens-to-token vit: Training vision transformers from scratch on imagenet. arXiv preprint arXiv:2101.11986, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b0f4bc08797e8e2e80f2b354c220dcff",
+    "text": "[41] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo. Cutmix: Regularization strategy to train strong classi\ufb01ers with localizable features. In ICCV, 2019.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "8f3305bc5ee509520b69c80cbb0c4af1",
+    "text": "[42] Hongyi Zhang, Moustapha Cisse, Yann N Dauphin, and David Lopez-Paz. mixup: Beyond empirical risk minimization. arXiv preprint arXiv:1710.09412, 2017.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "98231c218fc196e44434e03054d9c38c",
+    "text": "[43] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al. Rethinking semantic segmentation from a sequence-to-sequence perspective with transformers. In CVPR, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "6b337b4940f7e4333acb5e1689ce3a3f",
+    "text": "[44] Zhun Zhong, Liang Zheng, Guoliang Kang, Shaozi Li, and Yi Yang. Random erasing data augmentation. In AAAI, volume 34, pages 13001\u201313008, 2020.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "e18738f0411544bfb56e94f9a3842a23",
+    "text": "[45] Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Barriuso, and Antonio Torralba. Scene parsing through ade20k dataset. In CVPR, 2017.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "9cd88a42e74cb258418a058245c2fefa",
+    "text": "[46] Xizhou Zhu, Weijie Su, Lewei Lu, Bin Li, Xiaogang Wang, and Jifeng Dai. Deformable detr: Deformable transformers for end-to-end object detection. In ICLR, 2021.",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  },
+  {
+    "type": "Footer",
+    "element_id": "efec0a70e5da0a9e42484c7e2aca2d57",
+    "text": "12",
+    "metadata": {
+      "is_extracted": "true",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 12,
+      "filename": "transformer_in_transformer.pdf"
+    }
+  }
+]
