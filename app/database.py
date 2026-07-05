@@ -1,0 +1,19 @@
+from sqlmodel import SQLModel
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
+from app.config import Config
+from app.rag.models import Document
+
+engine = create_async_engine(
+    Config.DATABASE_URL,
+    echo=True
+)
+
+async_session_local = async_sessionmaker(
+    engine,
+    expire_on_commit=False
+)
+
+async def initdb():
+    async with engine.begin() as conn:
+        await conn.run_sync(SQLModel.metadata.create_all)
+        print("Tables Created if they did not exist")
