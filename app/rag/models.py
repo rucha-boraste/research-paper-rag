@@ -5,6 +5,8 @@ import uuid
 from datetime import datetime
 from typing import Any, Optional
 
+from pgvector.sqlalchemy import Vector
+
 class Document(SQLModel, table=True):
     __tablename__ = "documents"
 
@@ -71,4 +73,4 @@ class Chunk(SQLModel, table=True):
 
     def __repr__(self) -> str:
         return f"<Chunk document_id={self.document_id} chunk_index={self.chunk_index}>" 
-
+    

@@ -2,13 +2,18 @@ from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
 from tempfile import NamedTemporaryFile
 from uuid import uuid4
+import asyncio
 
 import re
 from langchain_unstructured import UnstructuredLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
+from langchain_core.documents import Document as LCDocument #just an alias name to avoid nameclash with Document class
+from langchain_postgres import PGVector
 
 from app.rag.models import Document, Chunk
 from app.rag.storage import supabase
+from app.config import Config
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -57,6 +62,20 @@ def is_low_signal(chunk_text: str) -> bool:
         return True
     return False
 
+embeddings_model = HuggingFaceEndpointEmbeddings(
+    model="sentence-transformers/all-MiniLM-L6-v2",
+    huggingfacehub_api_token=Config.HUGGINGFACEHUB_API_TOKEN
+)
+
+def get_vector_store() -> PGVector:
+    return PGVector(
+        embeddings=embeddings_model,
+        collection_name="embeddings",
+        connection=Config.PGVECTOR_CONNECTION,
+        create_extension=False,
+        engine_args={"connect_args": {"prepare_threshold": 0}}
+    )
+
 
 async def upload_document(file: UploadFile, session: AsyncSession):
 
@@ -84,6 +103,7 @@ async def upload_document(file: UploadFile, session: AsyncSession):
     )
 
     return document
+
 
 async def process_document(document: Document, session: AsyncSession):
 
@@ -157,10 +177,58 @@ async def process_document(document: Document, session: AsyncSession):
         filtered_chunks.append(chunk_record)
 
     if filtered_chunks:
-            session.add_all(filtered_chunks)
-            await session.commit()
-            for chunk in filtered_chunks:
-                await session.refresh(chunk)
+        session.add_all(filtered_chunks)
+        await session.commit()
+        for chunk in filtered_chunks:
+            await session.refresh(chunk)
+            
+        vector_store = get_vector_store()
+        vector_documents = [
+            LCDocument(
+                page_content=chunk.content,
+                metadata={
+                    "chunk_id": str(chunk.id),
+                    "document_id": str(chunk.document_id),
+                    "chunk_index": chunk.chunk_index,
+                    "filename": document.filename,
+                    "start_index": chunk.start_index,
+                    "page_number": chunk.page_number,
+                    "section_title": chunk.section_title,
+                },
+            )
+            for chunk in filtered_chunks
+        ]
+        vector_ids = [chunk.id for chunk in filtered_chunks]
+
+        await asyncio.to_thread(
+            vector_store.add_documents,
+            documents=vector_documents,
+            ids=vector_ids,
+        )
 
     return filtered_chunks
 
+
+async def query_documents(query: str, k: int = 5):
+    print("Inside service")
+    vector_store = get_vector_store()
+    print("Got vector store")
+    results = await asyncio.to_thread(
+        vector_store.similarity_search_with_score,
+        query,
+        k,
+    )
+    print("Got results")
+
+    return [
+        {
+            "chunk_id": doc.metadata.get("chunk_id"),
+            "content": doc.page_content,
+            "document_id": doc.metadata.get("document_id"),
+            "chunk_index": doc.metadata.get("chunk_index"),
+            "page_number": doc.metadata.get("page_number"),
+            "section_title": doc.metadata.get("section_title"),
+            "score": float(score) if score is not None else None,
+        }
+        for doc, score in results
+    ]

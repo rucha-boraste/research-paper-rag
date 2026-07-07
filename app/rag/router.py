@@ -1,8 +1,8 @@
 from fastapi import APIRouter, UploadFile, File
 
 from app.database import async_session_local
-from app.rag.service import upload_document, process_document
-from app.rag.schemas import DocumentResponse, DocumentChunksResponse, ChunkResponse
+from app.rag.service import upload_document, process_document, query_documents
+from app.rag.schemas import DocumentChunksResponse, QueryRequest, QueryResponse
 
 rag_router = APIRouter(
     prefix="/rag",
@@ -27,4 +27,13 @@ async def upload_pdf(file: UploadFile = File(...),):
         "filename": document.filename,
         "uploaded_at": document.uploaded_at,
         "chunks": chunks,
+    }
+
+@rag_router.post("/query", response_model=QueryResponse)
+async def query_pdf(query: QueryRequest):
+    print("Received query:", query.query)
+    results = await query_documents(query.query)
+    return{
+        "query": query.query,
+        "results": results,
     }

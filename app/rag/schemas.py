@@ -23,3 +23,19 @@ class DocumentChunksResponse(SQLModel):
     filename: str
     uploaded_at: datetime
     chunks: list[ChunkResponse]
+
+class QueryRequest(SQLModel):
+    query: str
+
+class RetrievedChunkedResponse(SQLModel):
+    chunk_id: str
+    content: str
+    document_id: UUID
+    chunk_index:int
+    page_number: int | None = None
+    section_title: str | None = None
+    score: float | None = None
+
+class QueryResponse(SQLModel):
+    query: str
+    results: list[RetrievedChunkedResponse]

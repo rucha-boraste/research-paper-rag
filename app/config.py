@@ -4,6 +4,9 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     SUPABASE_URL: str
     SUPABASE_KEY: str
+    UNSTRUCTURED_API_KEY: str
+    HUGGINGFACEHUB_API_TOKEN: str
+    PGVECTOR_CONNECTION: str
 
     model_config = SettingsConfigDict(
         env_file = ".env",
