@@ -10,6 +10,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_core.documents import Document as LCDocument #just an alias name to avoid nameclash with Document class
 from langchain_postgres import PGVector
+from langchain_groq import ChatGroq
+from langchain_core.prompts import ChatPromptTemplate
 
 from app.rag.models import Document, Chunk
 from app.rag.storage import supabase
@@ -232,3 +234,53 @@ async def query_documents(query: str, k: int = 5):
         }
         for doc, score in results
     ]
+
+PROMPT = ChatPromptTemplate.from_template("""
+You are an expert assistant answering questions about NLP research papers.
+
+Use ONLY the context below.
+
+If the answer cannot be found in the context, reply:
+
+"I don't know."
+
+Context:
+{context}
+
+Question:
+{input}
+""")
+
+def format_retrieved_chunks(chunks: list[dict]) -> str:
+    return "\n\n".join(
+        (
+            f"Chunk {i + 1}"
+            f"\nDocument ID: {chunk['document_id']}"
+            f"\nChunk ID: {chunk['chunk_id']}"
+            f"\nScore: {chunk.get('score')}"
+            f"\nContent:\n{chunk['content']}"
+        )
+        for i, chunk in enumerate(chunks)
+    )
+
+async def answer_query(query: str, k: int = 5):
+    retrieved_chunks = await query_documents(query, k=k)
+    context = format_retrieved_chunks(retrieved_chunks)
+
+    llm = ChatGroq(
+        model="llama-3.1-8b-instant",
+        temperature=0,
+    )
+
+    chain = PROMPT | llm
+    response = await asyncio.to_thread(
+        chain.invoke,
+        {"context": context, "input": query},
+    )
+
+    answer = response.content if hasattr(response, "content") else str(response)
+
+    return {
+        "query": query,
+        "answer": answer,
+    }

@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     UNSTRUCTURED_API_KEY: str
     HUGGINGFACEHUB_API_TOKEN: str
     PGVECTOR_CONNECTION: str
+    GROQ_API_KEY: str
 
     model_config = SettingsConfigDict(
         env_file = ".env",

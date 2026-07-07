@@ -39,3 +39,7 @@ class RetrievedChunkedResponse(SQLModel):
 class QueryResponse(SQLModel):
     query: str
     results: list[RetrievedChunkedResponse]
+
+class AnswerResponse(SQLModel):
+    query: str
+    answer: str
