@@ -7,15 +7,13 @@ import asyncio
 import re
 from langchain_unstructured import UnstructuredLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_core.documents import Document as LCDocument #just an alias name to avoid nameclash with Document class
-from langchain_postgres import PGVector
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 
 from app.rag.models import Document, Chunk
 from app.rag.storage import supabase
-from app.config import Config
+from app.rag.vectorstore import get_vector_store
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -63,21 +61,6 @@ def is_low_signal(chunk_text: str) -> bool:
     if sum(1 for pattern in CITATION_PATTERNS if re.search(pattern, lower)) >= 2:
         return True
     return False
-
-embeddings_model = HuggingFaceEndpointEmbeddings(
-    model="sentence-transformers/all-MiniLM-L6-v2",
-    huggingfacehub_api_token=Config.HUGGINGFACEHUB_API_TOKEN
-)
-
-def get_vector_store() -> PGVector:
-    return PGVector(
-        embeddings=embeddings_model,
-        collection_name="embeddings",
-        connection=Config.PGVECTOR_CONNECTION,
-        create_extension=False,
-        engine_args={"connect_args": {"prepare_threshold": 0}}
-    )
-
 
 async def upload_document(file: UploadFile, session: AsyncSession):
 
