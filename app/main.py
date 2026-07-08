@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 from app.database import initdb
 from app.rag.router import rag_router
 from app.rag.vectorstore import init_vector_store
+from app.auth.router import auth_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -17,6 +18,7 @@ app = FastAPI(
 )
 
 app.include_router(rag_router)
+app.include_router(auth_router)
 # @app.get("/")
 # async def root():
 #     return {
