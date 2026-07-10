@@ -1,8 +1,12 @@
-from fastapi import APIRouter, UploadFile, File
+from fastapi import APIRouter, UploadFile, File, Depends
 
 from app.database import async_session_local
-from app.rag.service import upload_document, process_document, query_documents, answer_query
-from app.rag.schemas import DocumentChunksResponse, QueryRequest, QueryResponse, AnswerResponse
+from app.rag.service import upload_document, process_document, query_documents, answer_query, get_user_chat
+from app.rag.schemas import DocumentChunksResponse, QueryRequest, QueryResponse, AnswerResponse, ChatHistoryResponse
+
+from app.auth.dependency import AccessTokenBearer
+
+access_token_bearer = AccessTokenBearer()
 
 rag_router = APIRouter(
     prefix="/rag",
@@ -41,3 +45,13 @@ async def query_pdf(query: QueryRequest):
 @rag_router.post("/answer", response_model=AnswerResponse)
 async def answer_pdf(query: QueryRequest):
     return await answer_query(query.query)
+
+@rag_router.get("/get_history", response_model=ChatHistoryResponse)
+async def get_chats(user=Depends(access_token_bearer)):
+    async with async_session_local() as session:
+        chats = await get_user_chat(
+            user_id=user["user_uid"],
+            session=session,
+        )
+
+        return ChatHistoryResponse(chats=chats)

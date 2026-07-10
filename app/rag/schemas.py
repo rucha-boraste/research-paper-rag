@@ -43,3 +43,14 @@ class QueryResponse(SQLModel):
 class AnswerResponse(SQLModel):
     query: str
     answer: str
+
+
+class ChatResponse(SQLModel):
+    id: UUID
+    question: str
+    answer: str
+    document_id: UUID
+    created_at: datetime
+
+class ChatHistoryResponse(SQLModel):
+    chats: list[ChatResponse]

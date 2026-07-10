@@ -5,7 +5,6 @@ import uuid
 from datetime import datetime
 from typing import Any, Optional
 
-from pgvector.sqlalchemy import Vector
 
 class Document(SQLModel, table=True):
     __tablename__ = "documents"
@@ -18,7 +17,18 @@ class Document(SQLModel, table=True):
             nullable=False,
         )
     )
+
+    user_id: uuid.UUID = Field(
+        sa_column=Column(
+            pg.UUID(as_uuid=True),
+            ForeignKey("users.id", ondelete="CASCADE"),
+            nullable=False,
+            index=True,
+        )
+    )
+
     filename: str
+
     uploaded_at: datetime = Field(
         sa_column=Column(
             pg.TIMESTAMP,
@@ -26,7 +36,7 @@ class Document(SQLModel, table=True):
         )
     )
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f"<Document {self.filename}>"
     
 
@@ -74,3 +84,48 @@ class Chunk(SQLModel, table=True):
     def __repr__(self) -> str:
         return f"<Chunk document_id={self.document_id} chunk_index={self.chunk_index}>" 
     
+
+class ChatHistory(SQLModel, table=True):
+
+    __tablename__ = "chat_history"
+
+    id: uuid.UUID = Field(
+        default_factory=uuid.uuid4,
+        sa_column=Column(
+            pg.UUID(as_uuid=True),
+            primary_key=True,
+            nullable=False,
+        )
+    )
+
+    user_id: uuid.UUID = Field(
+        sa_column=Column(
+            pg.UUID(as_uuid=True),
+            ForeignKey("users.id", ondelete="CASCADE"),
+            nullable=False,
+            index=True,
+        )
+    )
+
+    document_id: uuid.UUID = Field(
+        sa_column=Column(
+            pg.UUID(as_uuid=True),
+            ForeignKey("documents.id", ondelete="CASCADE"),
+            nullable=False,
+            index=True,
+        )
+    )
+
+    question: str = Field(nullable=False)
+
+    answer: str = Field(nullable=False)
+
+    created_at: datetime = Field(
+        sa_column=Column(
+            pg.TIMESTAMP,
+            default=datetime.now,
+        )
+    )
+
+    def __repr__(self):
+        return f"<ChatHistory {self.id}>"

@@ -1,5 +1,6 @@
 from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlmodel import select
 from tempfile import NamedTemporaryFile
 from uuid import uuid4
 import asyncio
@@ -11,9 +12,10 @@ from langchain_core.documents import Document as LCDocument #just an alias name 
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 
-from app.rag.models import Document, Chunk
+from app.rag.models import Document, Chunk, ChatHistory
 from app.rag.storage import supabase
 from app.rag.vectorstore import get_vector_store
+from app.rag.schemas import ChatResponse
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -246,7 +248,7 @@ def format_retrieved_chunks(chunks: list[dict]) -> str:
         for i, chunk in enumerate(chunks)
     )
 
-async def answer_query(query: str, k: int = 5):
+async def answer_query(query: str,user_id: uuid4, document_id: uuid4, session: AsyncSession, k: int = 5):
     retrieved_chunks = await query_documents(query, k=k)
     context = format_retrieved_chunks(retrieved_chunks)
 
@@ -263,7 +265,44 @@ async def answer_query(query: str, k: int = 5):
 
     answer = response.content if hasattr(response, "content") else str(response)
 
+    chat = ChatHistory(
+        user_id=user_id,
+        document_id=document_id,
+        question=query,
+        answer=answer,
+    )
+
+    session.add(chat)
+    await session.commit()
+    await session.refresh(chat)
+
     return {
         "query": query,
         "answer": answer,
     }
+
+
+async def get_user_chat(user_id: uuid4,session: AsyncSession):
+    statement = (
+        select(ChatHistory)
+        .where(ChatHistory.user_id == user_id)
+        .order_by(ChatHistory.created_at.desc())
+    )
+
+    result = await session.execute(statement)
+
+    chats = result.scalar_one_or_none()
+
+    if chats:
+        return [
+            ChatResponse(
+                id=chat.id,
+                question=chat.question,
+                answer=chat.answer,
+                document_id=chat.document_id,
+                created_at=chat.created_at,
+            )
+            for chat in chats
+        ]
+    else:
+        return []

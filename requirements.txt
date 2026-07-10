@@ -2,6 +2,7 @@ aiofiles==25.1.0
 aiohappyeyeballs==2.7.1
 aiohttp==3.14.1
 aiosignal==1.4.0
+altair==6.2.2
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.14.1
@@ -9,6 +10,8 @@ appdirs==1.4.4
 asttokens==3.0.1
 asyncpg==0.31.0
 attrs==26.1.0
+blinker==1.9.0
+cachetools==7.1.4
 certifi==2026.6.17
 cffi==2.0.0
 charset-normalizer==3.4.7
@@ -31,6 +34,8 @@ fastapi==0.139.0
 filelock==3.29.4
 frozenlist==1.8.0
 fsspec==2026.4.0
+gitdb==4.0.12
+GitPython==3.1.50
 google-api-core==2.31.0
 google-auth==2.55.1
 google-cloud-bigquery==3.42.1
@@ -61,12 +66,15 @@ instructor==1.15.4
 ipykernel==7.3.0
 ipython==9.15.0
 ipython_pygments_lexers==1.1.1
+itsdangerous==2.2.0
 jedi==0.20.0
 Jinja2==3.1.6
 jiter==0.14.0
 joblib==1.5.3
 jsonpatch==1.33
 jsonpointer==3.1.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
 jupyter_client==8.9.1
 jupyter_core==5.9.1
 langchain==1.3.11
@@ -143,6 +151,7 @@ pycparser==3.0
 pydantic==2.13.4
 pydantic-settings==2.14.2
 pydantic_core==2.46.4
+pydeck==0.9.3
 Pygments==2.20.0
 PyJWT==2.13.0
 pyOpenSSL==26.3.0
@@ -155,10 +164,12 @@ PyYAML==6.0.3
 pyzmq==27.1.0
 ragas==0.4.3
 realtime==2.31.0
+referencing==0.37.0
 regex==2026.6.28
 requests==2.34.2
 requests-toolbelt==1.0.0
 rich==14.3.4
+rpds-py==2026.6.3
 safetensors==0.8.0
 scikit-learn==1.9.0
 scikit-network==0.33.5
@@ -167,12 +178,14 @@ sentence-transformers==5.6.0
 setuptools==81.0.0
 shellingham==1.5.4
 six==1.17.0
+smmap==5.0.3
 sniffio==1.3.1
 SQLAlchemy==2.0.51
 sqlmodel==0.0.39
 stack-data==0.6.3
 starlette==1.3.1
 storage3==2.31.0
+streamlit==1.59.1
 StrEnum==0.4.15
 supabase==2.31.0
 supabase-auth==2.31.0
@@ -182,6 +195,7 @@ tenacity==9.1.4
 threadpoolctl==3.6.0
 tiktoken==0.13.0
 tokenizers==0.22.2
+toml==0.10.2
 torch==2.12.1
 tornado==6.5.7
 tqdm==4.68.3
@@ -196,6 +210,7 @@ urllib3==2.7.0
 uuid_utils==0.16.2
 uvicorn==0.50.0
 uvloop==0.22.1
+watchdog==6.0.0
 watchfiles==1.2.0
 wcwidth==0.8.2
 websockets==15.0.1
