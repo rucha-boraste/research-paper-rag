@@ -11,7 +11,10 @@ from fastapi.exceptions import HTTPException
 from app.auth.utils import verify_password, create_access_token
 from app.database import async_session_local
 
-auth_router = APIRouter()
+auth_router = APIRouter(
+    prefix="/auth",
+    tags=["AUTH"],
+)
 
 REFRESH_TOKEN_EXPIRY = 7
 
@@ -45,24 +48,24 @@ async def login_users(data: UserLoginModel):
             valid = verify_password(password, user.password_hash)
 
             if valid:
-                 access_token = create_access_token(
-                user_data={"email": user.email, "user_uid": str(user.id)}
-            )
+                access_token = create_access_token(
+                    user_data={"email": user.email, "user_uid": str(user.id)}
+                )
 
-            refresh_token = create_access_token(
-                user_data={"email": user.email, "user_uid": str(user.id)},
-                refresh=True,
-                expiry=timedelta(days=REFRESH_TOKEN_EXPIRY),
-            )
+                refresh_token = create_access_token(
+                    user_data={"email": user.email, "user_uid": str(user.id)},
+                    refresh=True,
+                    expiry=timedelta(days=REFRESH_TOKEN_EXPIRY),
+                )
 
-            return JSONResponse(
-                content={
-                    "message": "Login successful",
-                    "access_token": access_token,
-                    "refresh_token": refresh_token,
-                    "user": {"email": user.email, "uid": str(user.id)},
-                }
-            )
+                return JSONResponse(
+                    content={
+                        "message": "Login successful",
+                        "access_token": access_token,
+                        "refresh_token": refresh_token,
+                        "user": {"email": user.email, "uid": str(user.id)},
+                    }
+                )
 
     raise HTTPException(
         status_code=status.HTTP_403_FORBIDDEN, detail="Invalid Email Or Password"

@@ -3,6 +3,11 @@ from uuid import UUID
 from sqlmodel import SQLModel
 from typing import Any
 
+class UploadDocumentResponse(SQLModel):
+    message: str
+    document_id: UUID
+    filename: str
+
 class DocumentResponse(SQLModel):
     id: UUID
     filename: str

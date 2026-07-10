@@ -64,13 +64,14 @@ def is_low_signal(chunk_text: str) -> bool:
         return True
     return False
 
-async def upload_document(file: UploadFile, session: AsyncSession):
+async def upload_document(file: UploadFile, session: AsyncSession, user_id: uuid4):
 
     '''
     Store document metadata in 'documents' table and document in storage
     '''
 
     document = Document(
+        user_id=user_id,
         filename=file.filename,
     )
 
@@ -306,3 +307,9 @@ async def get_user_chat(user_id: uuid4,session: AsyncSession):
         ]
     else:
         return []
+
+
+async def get_user_documents(user_id: uuid4, session: AsyncSession):
+    statement = select(Document).where(Document.user_id == user_id).order_by(Document.uploaded_at.desc())
+    result = await session.execute(statement)
+    return result.scalars().all()
