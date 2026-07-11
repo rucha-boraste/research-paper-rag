@@ -49,7 +49,10 @@ class AnswerResponse(SQLModel):
     query: str
     answer: str
 
-
+class AnswerRequest(SQLModel):
+    query: str
+    document_id: UUID
+    
 class ChatResponse(SQLModel):
     id: UUID
     question: str

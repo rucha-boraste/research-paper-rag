@@ -1,8 +1,10 @@
 from fastapi import APIRouter, UploadFile, File, Depends, status
 
+from uuid import UUID
+
 from app.database import async_session_local
 from app.rag.service import upload_document, process_document, query_documents, answer_query, get_user_chat, get_user_documents
-from app.rag.schemas import DocumentResponse, QueryRequest, QueryResponse, AnswerResponse, ChatHistoryResponse, UploadDocumentResponse
+from app.rag.schemas import DocumentResponse, QueryRequest, QueryResponse, AnswerResponse, ChatHistoryResponse, UploadDocumentResponse, AnswerRequest
 
 from app.auth.dependency import AccessTokenBearer
 
@@ -43,14 +45,21 @@ async def query_pdf(query: QueryRequest):
     }
 
 @rag_router.post("/answer", response_model=AnswerResponse)
-async def answer_pdf(query: QueryRequest):
-    return await answer_query(query.query)
+async def answer_pdf(payload: AnswerRequest, user=Depends(access_token_bearer)):
+    async with async_session_local() as session:
+        return await answer_query(
+            query=payload.query,
+            user_id=user["user_uid"],
+            document_id=payload.document_id,
+            session=session,
+        )
 
 @rag_router.get("/get_history", response_model=ChatHistoryResponse)
-async def get_chats(user=Depends(access_token_bearer)):
+async def get_chats(document_id: UUID, user=Depends(access_token_bearer)):
     async with async_session_local() as session:
         chats = await get_user_chat(
             user_id=user["user_uid"],
+            document_id=document_id,
             session=session,
         )
 

@@ -1,5 +1,5 @@
 import streamlit as st
-from api import signup, login, upload_pdf, get_documents
+from api import signup, login, upload_pdf, get_documents, answer_query, get_chat_history
 
 # --- 1. Session State Initialization ---
 # Keeps track of variables across page reruns
@@ -19,6 +19,27 @@ if "active_doc" not in st.session_state:
     st.session_state.active_doc = None
 if "username" not in st.session_state:
     st.session_state.username = None
+
+def load_active_document_history():
+    st.session_state.messages = []
+    if not st.session_state.active_doc:
+        return
+
+    # st.write(st.session_state.active_doc)
+    # st.write(type(st.session_state.active_doc["id"]))
+    response = get_chat_history(
+        st.session_state.active_doc["id"],
+        st.session_state.access_token,
+    )
+
+    # print(response.text)
+
+    if response.ok:
+        for chat in response.json()["chats"]:
+            st.session_state.messages.extend([
+                {"role": "user", "content": chat["question"]},
+                {"role": "assistant", "content": chat["answer"]},
+            ])
 
 
 def logout():
@@ -71,7 +92,7 @@ if not st.session_state.logged_in:
 
                         if st.session_state.documents:
                             st.session_state.active_doc = st.session_state.documents[0]
-
+                            load_active_document_history()
                     st.rerun()
                 else:
                     st.error(response.json().get("detail", "Login failed"))
@@ -179,7 +200,7 @@ else:
         # If the user switches documents, update state and clear chat history
         if selected_doc != st.session_state.active_doc:
             st.session_state.active_doc = selected_doc
-            st.session_state.messages = [] 
+            load_active_document_history()
             st.rerun()
 
     # --- Main Panel ---
@@ -197,15 +218,20 @@ else:
             
     # 2. Chat Input
     if prompt := st.chat_input("Ask a question about this document..."):
-        
-        # Display user prompt
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
-            
-        # Display assistant response (Replace with your LLM/LangChain call)
-        mock_response = f"Based on the context in `{st.session_state.active_doc}`, here is the answer to: '{prompt}'"
-        
-        st.session_state.messages.append({"role": "assistant", "content": mock_response})
-        with st.chat_message("assistant"):
-            st.markdown(mock_response)
+
+        response = answer_query(
+            prompt,
+            st.session_state.active_doc["id"],
+            st.session_state.access_token,
+        )
+
+        if response.ok:
+            answer = response.json()["answer"]
+            st.session_state.messages.append({"role": "assistant", "content": answer})
+            with st.chat_message("assistant"):
+                st.markdown(answer)
+        else:
+            st.error(response.text)

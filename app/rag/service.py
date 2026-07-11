@@ -3,6 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
 from tempfile import NamedTemporaryFile
 from uuid import uuid4
+from uuid import UUID
 import asyncio
 
 import re
@@ -197,14 +198,15 @@ async def process_document(document: Document, session: AsyncSession):
     return filtered_chunks
 
 
-async def query_documents(query: str, k: int = 5):
+async def query_documents(query: str, document_id: uuid4, k: int = 5):
     print("Inside service")
     vector_store = get_vector_store()
     print("Got vector store")
     results = await asyncio.to_thread(
         vector_store.similarity_search_with_score,
-        query,
-        k,
+        query=query,
+        k=k,
+        filter={"document_id": str(document_id)},
     )
     print("Got results")
 
@@ -250,7 +252,7 @@ def format_retrieved_chunks(chunks: list[dict]) -> str:
     )
 
 async def answer_query(query: str,user_id: uuid4, document_id: uuid4, session: AsyncSession, k: int = 5):
-    retrieved_chunks = await query_documents(query, k=k)
+    retrieved_chunks = await query_documents(query, document_id=document_id, k=k)
     context = format_retrieved_chunks(retrieved_chunks)
 
     llm = ChatGroq(
@@ -283,16 +285,19 @@ async def answer_query(query: str,user_id: uuid4, document_id: uuid4, session: A
     }
 
 
-async def get_user_chat(user_id: uuid4,session: AsyncSession):
+async def get_user_chat(user_id: UUID, document_id: UUID, session: AsyncSession):
     statement = (
         select(ChatHistory)
-        .where(ChatHistory.user_id == user_id)
+        .where(
+            ChatHistory.user_id == user_id,
+            ChatHistory.document_id == document_id,
+        )
         .order_by(ChatHistory.created_at.desc())
     )
 
     result = await session.execute(statement)
 
-    chats = result.scalar_one_or_none()
+    chats = result.scalars().all()
 
     if chats:
         return [
