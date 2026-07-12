@@ -135,55 +135,58 @@ else:
         st.header("📄 Document Management")
         
         # Upload PDF
-        uploaded_file = st.file_uploader(
-            "Upload a new PDF",
-            type=["pdf"]
+        uploaded_files = st.file_uploader(
+            "Upload PDF(s)",
+            type=["pdf"],
+            accept_multiple_files=True,
         )
 
-        if uploaded_file is not None:
+        if uploaded_files:
 
-            if st.button("Upload Document"):
+            if st.button("Upload Document(s)"):
 
-                with st.spinner("Uploading and processing document..."):
+                progress = st.progress(0)
 
-                    response = upload_pdf(
-                        uploaded_file,
-                        st.session_state.access_token,
-                    )
+                successful = 0
 
-                if response.ok:
+                for index, uploaded_file in enumerate(uploaded_files):
 
-                    st.success(response.json()["message"])
+                    with st.spinner(f"Uploading {uploaded_file.name}..."):
 
-                    docs_response = get_documents(
-                        st.session_state.access_token
-                    )
+                        response = upload_pdf(
+                            uploaded_file,
+                            st.session_state.access_token,
+                        )
 
-                    if docs_response.ok:
-                        st.session_state.documents = docs_response.json()
+                    if response.ok:
 
-                        # Optional: automatically select the newly uploaded document
-                        if st.session_state.documents:
-                            st.session_state.active_doc = st.session_state.documents[0]
+                        successful += 1
 
-                        st.rerun()
+                        # Refresh documents after every successful upload
+                        docs_response = get_documents(
+                            st.session_state.access_token
+                        )
+
+                        if docs_response.ok:
+                            st.session_state.documents = docs_response.json()
+
+                            # Select the newest uploaded document
+                            if st.session_state.documents:
+                                st.session_state.active_doc = st.session_state.documents[0]
 
                     else:
+
                         st.error(
-                            docs_response.json().get(
-                                "detail",
-                                "Failed to refresh documents."
-                            )
+                            f"Failed to upload {uploaded_file.name}"
                         )
 
-                else:
+                    progress.progress((index + 1) / len(uploaded_files))
 
-                    st.error(
-                        response.json().get(
-                            "detail",
-                            "Upload failed."
-                        )
-                    )
+                st.success(
+                    f"{successful}/{len(uploaded_files)} document(s) uploaded successfully."
+                )
+
+                st.rerun()
         
         # Document Selector
         selected_doc = st.selectbox(

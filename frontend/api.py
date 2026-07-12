@@ -30,6 +30,8 @@ def login(email, password):
 
 
 def upload_pdf(file, access_token):
+    # print(type(file))
+    # print(repr(file)[:100])
     headers = {
         "Authorization": f"Bearer {access_token}"
     }
@@ -37,10 +39,10 @@ def upload_pdf(file, access_token):
     files = {
         "file": (
             file.name,
-            file,
+            file.getvalue(),
             "application/pdf",
         )
-    }
+}
 
     response = requests.post(
         f"{API_URL}/rag/upload",

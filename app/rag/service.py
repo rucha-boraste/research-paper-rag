@@ -15,12 +15,14 @@ from langchain_core.prompts import ChatPromptTemplate
 
 from app.rag.models import Document, Chunk, ChatHistory
 from app.rag.storage import supabase
-from app.rag.vectorstore import get_vector_store
+from app.rag.vectorstore import get_vector_store, embeddings_model
 from app.rag.schemas import ChatResponse
 
 from dotenv import load_dotenv
 load_dotenv()
 
+from sqlalchemy import text
+    
 LOW_SIGNAL_PATTERNS = [
     r"^references?$",
     r"^bibliography$",
@@ -45,7 +47,7 @@ def clean_chunk_text(text: str) -> str:
         return ""
     text = re.sub(r"\s+", " ", text).strip()
     text = re.sub(
-        r"(?i)\b(author|authors|references|bibliography|acknowledg(e|ements?))\b.*",
+        r"(?im)^(references|bibliography|acknowledgements?)\s*$",
         "",
         text,
     )
@@ -57,7 +59,7 @@ def is_low_signal(chunk_text: str) -> bool:
     if not chunk_text:
         return True
     lower = chunk_text.lower()
-    if len(chunk_text.split()) < 25:
+    if len(chunk_text.split()) < 8:
         return True
     if any(re.search(pattern, lower) for pattern in LOW_SIGNAL_PATTERNS):
         return True
@@ -111,22 +113,26 @@ async def process_document(document: Document, session: AsyncSession):
         loader = UnstructuredLoader(
             file_path=tmp.name,
             partition_via_api=True,
-            strategy="fast",
+            strategy="hi_res",
             chunking_strategy="by_title",
-            max_characters=800,
-            new_after_n_chars=600,
-            overlap=50,
+            max_characters=900,
+            new_after_n_chars=700,
+            overlap=120,
         )
 
         docs = loader.load()
     
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=600,
-        chunk_overlap=80,
-        add_start_index=True,
+        chunk_size=700,
+        chunk_overlap=120,
     )
 
-    chunks = text_splitter.split_documents(docs)
+    chunks = []
+    for doc in docs:
+        if len(doc.page_content) > 1200:
+            chunks.extend(text_splitter.split_documents([doc]))
+        else:
+            chunks.append(doc)
 
     filtered_chunks = []
     seen = set()
@@ -137,8 +143,7 @@ async def process_document(document: Document, session: AsyncSession):
             continue
 
         key = cleaned.lower()
-        if len(key) < 80:
-            continue
+        
         if key in seen:
             continue
 
@@ -154,14 +159,33 @@ async def process_document(document: Document, session: AsyncSession):
             content=cleaned,
             meta_data={
                 **metadata,
+
                 "document_id": str(document.id),
+                "document_name": document.filename,
+
                 "chunk_id": chunk_id,
                 "chunk_index": len(filtered_chunks),
-                "filename": document.filename,
+
+                "page_number": metadata.get("page_number"),
+                "start_index": metadata.get("start_index"),
+
+                "section_title": (
+                    metadata.get("section_title")
+                    or metadata.get("parent_title")
+                    or metadata.get("title")
+                    or "Unknown"
+                ),
+
+                "element_type": metadata.get("category"),
             },
             start_index=metadata.get("start_index"),
             page_number=metadata.get("page_number"),
-            section_title=metadata.get("section_title") or metadata.get("category"),
+            section_title=(
+                metadata.get("section_title")
+                or metadata.get("parent_title")
+                or metadata.get("title")
+                or "Unknown"
+            ),
         )
         filtered_chunks.append(chunk_record)
 
@@ -172,21 +196,36 @@ async def process_document(document: Document, session: AsyncSession):
             await session.refresh(chunk)
             
         vector_store = get_vector_store()
-        vector_documents = [
-            LCDocument(
-                page_content=chunk.content,
-                metadata={
-                    "chunk_id": str(chunk.id),
-                    "document_id": str(chunk.document_id),
-                    "chunk_index": chunk.chunk_index,
-                    "filename": document.filename,
-                    "start_index": chunk.start_index,
-                    "page_number": chunk.page_number,
-                    "section_title": chunk.section_title,
-                },
+        vector_documents = []
+
+        for chunk in filtered_chunks:
+            enriched_content = f"""
+        Document: {document.filename}
+
+        Section: {chunk.section_title or "Unknown"}
+
+        Page: {chunk.page_number or "Unknown"}
+
+        {chunk.content}
+        """.strip()
+
+            vector_documents.append(
+                LCDocument(
+                    page_content=enriched_content,
+                    metadata={
+                        "document_id": str(chunk.document_id),
+                        "document_name": document.filename,
+
+                        "chunk_id": str(chunk.id),
+                        "chunk_index": chunk.chunk_index,
+
+                        "page_number": chunk.page_number,
+                        "start_index": chunk.start_index,
+
+                        "section_title": chunk.section_title,
+                    },
+                )
             )
-            for chunk in filtered_chunks
-        ]
         vector_ids = [chunk.id for chunk in filtered_chunks]
 
         await asyncio.to_thread(
@@ -198,61 +237,111 @@ async def process_document(document: Document, session: AsyncSession):
     return filtered_chunks
 
 
-async def query_documents(query: str, document_id: uuid4, k: int = 5):
+async def query_documents(query: str, document_id: uuid4, k: int = 8):
     print("Inside service")
     vector_store = get_vector_store()
     print("Got vector store")
-    results = await asyncio.to_thread(
-        vector_store.similarity_search_with_score,
-        query=query,
-        k=k,
-        filter={"document_id": str(document_id)},
-    )
-    print("Got results")
+    
+    print("Embedding user query")
 
-    return [
-        {
-            "chunk_id": doc.metadata.get("chunk_id"),
-            "content": doc.page_content,
-            "document_id": doc.metadata.get("document_id"),
-            "chunk_index": doc.metadata.get("chunk_index"),
-            "page_number": doc.metadata.get("page_number"),
-            "section_title": doc.metadata.get("section_title"),
-            "score": float(score) if score is not None else None,
-        }
-        for doc, score in results
-    ]
+    embedding = embeddings_model.embed_query(query)
+    embedding_str = "[" + ",".join(map(str, embedding)) + "]"
+
+    stmt = text(
+        """
+        SELECT
+        document,
+        cmetadata,
+        embedding <=> CAST(:embedding AS vector) AS distance
+        FROM langchain_pg_embedding
+        WHERE cmetadata->>'document_id' = :document_id
+        ORDER BY embedding <=> CAST(:embedding AS vector)
+        LIMIT :k;
+        """
+    )
+
+    with vector_store._engine.connect() as conn:
+        rows = conn.execute(
+            stmt,
+            {
+                "embedding": embedding_str,
+                "document_id": str(document_id),
+                "k": k,
+            },
+        ).fetchall()
+
+    results = []
+
+    for row in rows:
+        results.append(
+            {
+                "chunk_id": row.cmetadata.get("chunk_id"),
+                "content": row.document,
+                "document_id": row.cmetadata.get("document_id"),
+                "chunk_index": row.cmetadata.get("chunk_index"),
+                "page_number": row.cmetadata.get("page_number"),
+                "section_title": row.cmetadata.get("section_title"),
+                "score": float(row.distance),
+            }
+        )
+
+    print(f"Retrieved {len(results)} chunks")
+
+    return results
 
 PROMPT = ChatPromptTemplate.from_template("""
-You are an expert assistant answering questions about NLP research papers.
+You are an expert assistant answering questions about ONE research paper.
 
-Use ONLY the context below.
+Use ONLY the retrieved context.
 
-If the answer cannot be found in the context, reply:
+Instructions:
 
-"I don't know."
+- Combine information across multiple retrieved chunks whenever necessary.
+- Prefer evidence from the Abstract, Introduction, Contributions and Conclusion sections.
+- If multiple chunks contain overlapping information, synthesize them into one coherent answer.
+- Do NOT invent information.
+- If the retrieved context is insufficient, reply exactly:
 
-Context:
+"The retrieved context does not contain enough information to answer this question."
+
+Retrieved Context:
 {context}
 
 Question:
 {input}
+
+Provide a concise but complete answer.
 """)
 
 def format_retrieved_chunks(chunks: list[dict]) -> str:
-    return "\n\n".join(
-        (
-            f"Chunk {i + 1}"
-            f"\nDocument ID: {chunk['document_id']}"
-            f"\nChunk ID: {chunk['chunk_id']}"
-            f"\nScore: {chunk.get('score')}"
-            f"\nContent:\n{chunk['content']}"
-        )
-        for i, chunk in enumerate(chunks)
-    )
+    formatted = []
 
-async def answer_query(query: str,user_id: uuid4, document_id: uuid4, session: AsyncSession, k: int = 5):
+    for i, chunk in enumerate(chunks, start=1):
+        formatted.append(
+                f"""
+    ========== Chunk {i} ==========
+
+    Document: {chunk.get("document_id")}
+    Section: {chunk.get("section_title")}
+    Page: {chunk.get("page_number")}
+    Similarity Score: {chunk.get("score")}
+
+    Content:
+    {chunk.get("content")}
+    """
+            )
+
+    return "\n\n".join(formatted)
+
+async def answer_query(query: str,user_id: uuid4, document_id: uuid4, session: AsyncSession, k: int = 8):
     retrieved_chunks = await query_documents(query, document_id=document_id, k=k)
+    # print("=" * 80)
+    # for i, chunk in enumerate(retrieved_chunks):
+    #     print(f"\nChunk {i}")
+    #     print("Section:", chunk.get("section_title"))
+    #     print("Page:", chunk.get("page_number"))
+    #     print(chunk["content"][:500])
+    # print("=" * 80)
     context = format_retrieved_chunks(retrieved_chunks)
 
     llm = ChatGroq(
