@@ -47,6 +47,8 @@ The project also evaluates multiple retrieval configurations using **Ragas** to 
 
 # Architecture
 
+![Architecture Image](architecture.png)
+
 ---
 
 # Tech Stack
