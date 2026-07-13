@@ -108,7 +108,7 @@ evaluation/
 ## Clone the repository
 
 ```bash
-git clone git@github.com:rucha-boraste/reaearch-paper-rag.git
+git clone git@github.com:rucha-boraste/research-paper-rag.git
 
 cd research-paper-rag
 ```
