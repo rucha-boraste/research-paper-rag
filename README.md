@@ -9,7 +9,7 @@ The Project focuses on evaluating different retrieval pipelines through multiple
 ## Demo
 
 <p align="center">
-  <img src="docs/demo.gif" alt="Research Paper RAG Demo" width="900"/>
+  <img src="nlp_rag.gif" alt="Research Paper RAG Demo" width="900"/>
 </p>
 
 ---
