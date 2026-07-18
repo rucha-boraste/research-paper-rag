@@ -17,7 +17,6 @@ class Document(SQLModel, table=True):
             nullable=False,
         )
     )
-
     user_id: uuid.UUID = Field(
         sa_column=Column(
             pg.UUID(as_uuid=True),
@@ -26,15 +25,24 @@ class Document(SQLModel, table=True):
             index=True,
         )
     )
-
     filename: str
-
     uploaded_at: datetime = Field(
         sa_column=Column(
             pg.TIMESTAMP,
             default=datetime.now
         )
     )
+    status: str = Field(
+        default="UPLOADED",
+        nullable=False,
+    )
+    processed_at: datetime = Field(
+        sa_column=Column(
+            pg.TIMESTAMP,
+            default=datetime.now
+        )
+    )
+    error_message: str | None
 
     def __repr__(self):
         return f"<Document {self.filename}>"

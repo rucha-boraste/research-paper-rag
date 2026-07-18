@@ -30,7 +30,11 @@ def init_vector_store():
 
 
 def get_vector_store() -> PGVector:
+
+    global vector_store
+    
     if vector_store is None:
+        init_vector_store()
         raise RuntimeError("Vector store has not been initialized.")
 
     return vector_store
