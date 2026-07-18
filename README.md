@@ -4,15 +4,11 @@ A Retrieval-Augmented Generation (RAG) system that enables users to upload resea
 
 The Project focuses on evaluating different retrieval pipelines through multiple experiments involving chunking strategies, embedding models, retrieval algorithms, and prompt engineering.
 
----
-
 ## Demo
 
 <p align="center">
   <img src="nlp_rag.gif" alt="Research Paper RAG Demo" width="900"/>
 </p>
-
----
 
 ## Table of Contents
 
@@ -28,46 +24,59 @@ The Project focuses on evaluating different retrieval pipelines through multiple
 - [Evaluation Results](#evaluation-results)
 - [License](#license)
 
----
-
 # Overview
 
 This project implements a Retrieval-Augmented Generation (RAG) system capable of:
 
-- Uploading research papers
+- User authentication with JWT access and refresh tokens
+- Uploading research papers to Supabase Storage
+- Asynchronous document ingestion using Celery workers
 - Parsing and chunking documents using Unstructured
 - Generating semantic embeddings
-- Storing embeddings inside PostgreSQL using pgvector
+- Storing embeddings in PostgreSQL using pgvector
 - Retrieving relevant chunks
 - Generating grounded answers using Llama 3.1
- 
-The project also evaluates multiple retrieval configurations using **Ragas** to  identify the most effective RAG pipeline.
 
----
+The project also evaluates multiple retrieval configurations using **Ragas** to identify the most effective RAG pipeline.
 
 # Architecture
 
 ![Architecture Image](architecture.png)
 
----
+# Asynchronous Document Processing
+
+Document ingestion is handled asynchronously using Celery.
+
+Uploading a PDF immediately returns control to the user while a background worker:
+
+- Downloads the document
+- Parses the PDF
+- Chunks text
+- Generates embeddings
+- Stores vectors in pgvector
+- Updates document status
+
+The frontend polls the processing status and automatically updates once ingestion is complete.
+
+This allows multiple documents to be processed concurrently without blocking the API.
 
 # Tech Stack
 
 | Component | Technology |
 |------------|------------|
 | Backend | FastAPI |
+| Background Jobs | Celery |
+| Message Broker | Redis |
 | Frontend | Streamlit |
 | Database | PostgreSQL |
 | Vector Database | pgvector |
-| Authentication | JWT |
+| Authentication | JWT + Refresh Tokens|
 | Storage | Supabase |
 | Embedding Model | sentence-transformers/all-MiniLM-L6-v2 |
 | LLM | Llama 3.1 (Groq) |
 | PDF Parsing | Unstructured |
 | Evaluation | Ragas |
 | Framework | LangChain |
-
----
 
 # Project Structure
 
@@ -81,27 +90,30 @@ app
 │   ├── schemas.py
 │   ├── service.py
 │   └── utils.py
+├── celery
+│   ├── __init__.py
+│   ├── celery_app.py
+│   └── tasks.py
 ├── config.py
 ├── database.py
+├── database_sync.py
 ├── main.py
 └── rag
     ├── models.py
+    ├── processor.py
     ├── router.py
     ├── schemas.py
     ├── service.py
     ├── storage.py
-    ├── tasks.py
     └── vectorstore.py
-
+data/
 frontend/
 │
 ├── app.py
 └── api.py
-
-evaluation/
+notebooks/
+results/
 ```
-
----
 
 # Installation
 
@@ -123,27 +135,17 @@ python -m venv venv
 
 Activate it
 
-### Linux / macOS
+### Ubuntu
 
 ```bash
 source venv/bin/activate
 ```
-
-### Windows
-
-```bash
-venv\Scripts\activate
-```
-
----
 
 ## Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-
----
 
 # Database Setup
 
@@ -161,8 +163,6 @@ Project Settings → Database
 
 Copy the PostgreSQL connection string from the **Session Pooler** section.
 
----
-
 ## 2. Configure the Database Connection
 
 The application requires two PostgreSQL connection strings.
@@ -179,8 +179,6 @@ postgresql+asyncpg://postgres.<PROJECT_REF>:YOUR_PASSWORD@aws-0-<REGION>.pooler.
 
 This connection is used by SQLAlchemy for all database operations.
 
----
-
 ### PGVECTOR_CONNECTION
 
 Create another connection string using the **psycopg** driver.
@@ -193,8 +191,6 @@ postgresql+psycopg://postgres.<PROJECT_REF>:YOUR_PASSWORD@aws-0-<REGION>.pooler.
 
 This connection is used by LangChain's PGVector integration for vector similarity search.
 
----
-
 ## 3. Enable pgvector
 
 Open the **SQL Editor** in your Supabase project and execute:
@@ -204,8 +200,6 @@ CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
 This enables vector storage and similarity search inside PostgreSQL.
-
----
 
 ## 4. Obtain Remaining Credentials
 
@@ -221,8 +215,6 @@ Copy:
 - Service Role Key → `SUPABASE_KEY`
 
 These values will be used later in the `.env` file.
-
----
 
 # Environment Variables
 
@@ -250,8 +242,15 @@ JWT_ALGORITHM=HS256
 
 Replace each value with your own credentials before running the application.
 
----
 # Running the Application
+
+## Redis
+
+Start Redis
+
+```bash
+redis-server
+```
 
 ## Backend
 
@@ -265,7 +264,13 @@ Backend runs on
 http://localhost:8000
 ```
 
----
+## Celery Worker
+
+Start a Celery worker
+
+```bash
+celery -A app.celery.celery_app.celery_app worker --loglevel=info --concurrency=[Number of workers]
+```
 
 ## Frontend
 
@@ -279,8 +284,6 @@ Frontend runs on
 http://localhost:8501
 ```
 
----
-
 # Experiments
 
 Four retrieval strategies were evaluated.
@@ -291,8 +294,6 @@ Four retrieval strategies were evaluated.
 | E2 | Unstructured By-Title + Cleaning + Filtering + MiniLM + Similarity | 0.8482 | 0.7523 | 0.4515 |
 | E3 | BGE Embeddings + MMR Retrieval | 0.8187 | 0.6699 | 0.4654 |
 | E4 | Hi-Res Parsing + Recursive Chunking + Relaxed Filtering + Prompt Refinement + k=8 Retrieval | **0.9000** | **0.7825** | **0.4794** |
-
----
 
 # Evaluation Results
 
@@ -306,16 +307,7 @@ Evaluation Metrics:
 
 Experiment 4 achieved the best overall performance by improving chunk quality, retrieval depth, and prompt design.
 
----
-
-# License
-
-This project is licensed under the MIT License.
-
----
-
 # Author
 
 **Rucha Boraste**
-
 B.Tech — Computer Engineering
