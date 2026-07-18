@@ -106,3 +106,14 @@ def get_document_status(document_id, access_token):
     )
 
     return response
+
+def refresh_access_token(refresh_token):
+    response = requests.post(
+        f"{API_URL}/auth/refresh",
+        json={
+            "refresh_token": refresh_token,
+        },
+        timeout=30,
+    )
+
+    return response

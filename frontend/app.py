@@ -1,6 +1,17 @@
 import streamlit as st
 import time
-from api import signup, login, upload_pdf, get_documents, answer_query, get_chat_history, get_document_status
+from api import signup, login, upload_pdf, get_documents, answer_query, get_chat_history, get_document_status, refresh_access_token
+from streamlit_cookies_manager import EncryptedCookieManager
+
+COOKIE_PASSWORD = "A9vK7mQ2xLp8RzN4fH1cUw6YjE3sTb5GqX0nMdW9PkVr2"
+
+cookies = EncryptedCookieManager(
+    prefix="rag",
+    password=COOKIE_PASSWORD,
+)
+
+if not cookies.ready():
+    st.stop()
 
 # --- 1. Session State Initialization ---
 # Keeps track of variables across page reruns
@@ -20,6 +31,7 @@ if "active_doc" not in st.session_state:
     st.session_state.active_doc = None
 if "username" not in st.session_state:
     st.session_state.username = None
+
 
 def load_active_document_history():
     st.session_state.messages = []
@@ -43,13 +55,60 @@ def load_active_document_history():
             ])
 
 
+if (
+    not st.session_state.logged_in
+    and "refresh_token" in cookies
+):
+
+    response = refresh_access_token(
+        cookies["refresh_token"]
+    )
+
+    if response.ok:
+
+        data = response.json()
+
+        st.session_state.logged_in = True
+        st.session_state.access_token = data["access_token"]
+        st.session_state.user = data["user"]
+        st.session_state.username = data["user"]["email"]
+
+        docs = get_documents(
+            st.session_state.access_token
+        )
+
+        if docs.ok:
+            st.session_state.documents = docs.json()
+
+            if st.session_state.documents:
+                st.session_state.active_doc = (
+                    st.session_state.documents[0]
+                )
+
+                load_active_document_history()
+
+        st.rerun()
+
+    else:
+
+        del cookies["refresh_token"]
+        cookies.save()
+
 def logout():
+
     st.session_state.logged_in = False
     st.session_state.access_token = None
     st.session_state.refresh_token = None
     st.session_state.user = None
     st.session_state.username = ""
     st.session_state.messages = []
+    st.session_state.documents = []
+    st.session_state.active_doc = None
+
+    if "refresh_token" in cookies:
+        del cookies["refresh_token"]
+
+    cookies.save()
 
     st.rerun()
 
@@ -81,6 +140,8 @@ if not st.session_state.logged_in:
                     st.session_state.logged_in = True
                     st.session_state.access_token = data["access_token"]
                     st.session_state.refresh_token = data["refresh_token"]
+                    cookies["refresh_token"] = data["refresh_token"]
+                    cookies.save()
                     st.session_state.user = data["user"]
                     st.session_state.username = data["user"]["email"]
 
@@ -233,22 +294,49 @@ else:
                 st.rerun()
         
         # Document Selector
-        selected_doc = st.selectbox(
-            "Select active document for chat",
-            options=st.session_state.documents,
-            format_func=lambda doc: doc["filename"],
-            index=(
-                st.session_state.documents.index(st.session_state.active_doc)
-                if st.session_state.active_doc in st.session_state.documents
-                else 0
-            ),
+        # Search Documents
+        search_query = st.text_input(
+            "🔍 Search documents",
+            placeholder="Type a filename...",
         )
-        
-        # If the user switches documents, update state and clear chat history
-        if selected_doc != st.session_state.active_doc:
-            st.session_state.active_doc = selected_doc
-            load_active_document_history()
-            st.rerun()
+
+        # Filter documents
+        filtered_documents = sorted(
+            [
+                doc
+                for doc in st.session_state.documents
+                if search_query.lower() in doc["filename"].lower()
+            ],
+            key=lambda doc: doc["filename"].lower(),
+        )
+
+        if filtered_documents:
+
+            # Keep the current document selected if it's in the filtered list
+            default_index = 0
+
+            if (
+                st.session_state.active_doc
+                and st.session_state.active_doc in filtered_documents
+            ):
+                default_index = filtered_documents.index(
+                    st.session_state.active_doc
+                )
+
+            selected_doc = st.selectbox(
+                "Select active document for chat",
+                options=filtered_documents,
+                format_func=lambda doc: doc["filename"],
+                index=default_index,
+            )
+
+            if selected_doc != st.session_state.active_doc:
+                st.session_state.active_doc = selected_doc
+                load_active_document_history()
+                st.rerun()
+
+        else:
+            st.info("No matching documents found.")
 
     # --- Main Panel ---
     if st.session_state.active_doc:

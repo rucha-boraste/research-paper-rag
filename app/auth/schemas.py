@@ -17,3 +17,6 @@ class UserResponseModel(SQLModel):
 class UserLoginModel(SQLModel):
     email: str
     password: str
+
+class RefreshTokenRequest(SQLModel):
+    refresh_token: str
