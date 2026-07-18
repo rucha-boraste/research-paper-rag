@@ -93,3 +93,16 @@ def get_chat_history(document_id, access_token):
         timeout=30,
     )
     return response
+
+def get_document_status(document_id, access_token):
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+
+    response = requests.get(
+        f"{API_URL}/rag/documents/{document_id}/status",
+        headers=headers,
+        timeout=30,
+    )
+
+    return response

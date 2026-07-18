@@ -7,6 +7,7 @@ class UploadDocumentResponse(SQLModel):
     message: str
     document_id: UUID
     filename: str
+    status: str
 
 class DocumentResponse(SQLModel):
     id: UUID
@@ -62,3 +63,10 @@ class ChatResponse(SQLModel):
 
 class ChatHistoryResponse(SQLModel):
     chats: list[ChatResponse]
+
+class DocumentStatusResponse(SQLModel):
+    document_id: UUID
+    filename: str
+    status: str
+    processed_at: datetime | None = None
+    error_message: str | None = None    

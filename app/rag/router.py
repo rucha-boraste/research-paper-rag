@@ -1,10 +1,12 @@
-from fastapi import APIRouter, UploadFile, File, Depends, status
+from fastapi import APIRouter, UploadFile, File, Depends, status, HTTPException
 
 from uuid import UUID
 
 from app.database import async_session_local
-from app.rag.service import upload_document, process_document, query_documents, answer_query, get_user_chat, get_user_documents
-from app.rag.schemas import DocumentResponse, QueryRequest, QueryResponse, AnswerResponse, ChatHistoryResponse, UploadDocumentResponse, AnswerRequest
+from app.rag.service import upload_document, query_documents, answer_query, get_user_chat, get_user_documents, get_document_status
+from app.rag.schemas import DocumentResponse, QueryRequest, QueryResponse, AnswerResponse, ChatHistoryResponse, UploadDocumentResponse, AnswerRequest, DocumentStatusResponse
+
+from app.celery.tasks import process_document_task
 
 from app.auth.dependency import AccessTokenBearer
 
@@ -23,16 +25,25 @@ async def upload_pdf(file: UploadFile = File(...),user=Depends(access_token_bear
             session,
             user_id=user["user_uid"],
         )
-    
-        await process_document(
-            document,
-            session
-        )
+
+        try:
+            process_document_task.delay(str(document.id))
+
+            document.status = "QUEUED"
+            await session.commit()
+            await session.refresh(document)
+
+        except Exception:
+            document.status = "FAILED"
+            document.error_message = "Failed to queue processing task."
+            await session.commit()
+            raise
     
     return {
         "message": "Document uploaded successfully.",
         "document_id": document.id,
         "filename": document.filename,
+        "status": document.status,
     }
 
 @rag_router.post("/query", response_model=QueryResponse)
@@ -74,3 +85,29 @@ async def get_docs(user=Depends(access_token_bearer)):
         )
 
         return documents
+    
+@rag_router.get(
+    "/documents/{document_id}/status",
+    response_model=DocumentStatusResponse,
+)
+async def get_status(document_id: UUID):
+    async with async_session_local() as session:
+
+        document = await get_document_status(
+            document_id=document_id,
+            session=session,
+        )
+
+        if document is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Document not found.",
+            )
+
+        return DocumentStatusResponse(
+            document_id=document.id,
+            filename=document.filename,
+            status=document.status,
+            processed_at=document.processed_at,
+            error_message=document.error_message,
+        )

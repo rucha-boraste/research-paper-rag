@@ -1,5 +1,6 @@
 import streamlit as st
-from api import signup, login, upload_pdf, get_documents, answer_query, get_chat_history
+import time
+from api import signup, login, upload_pdf, get_documents, answer_query, get_chat_history, get_document_status
 
 # --- 1. Session State Initialization ---
 # Keeps track of variables across page reruns
@@ -162,17 +163,60 @@ else:
 
                         successful += 1
 
-                        # Refresh documents after every successful upload
-                        docs_response = get_documents(
-                            st.session_state.access_token
-                        )
+                        data = response.json()
 
-                        if docs_response.ok:
-                            st.session_state.documents = docs_response.json()
+                        document_id = data["document_id"]
 
-                            # Select the newest uploaded document
-                            if st.session_state.documents:
-                                st.session_state.active_doc = st.session_state.documents[0]
+                        status = data["status"]
+
+                        status_placeholder = st.empty()
+
+                        while status in ["QUEUED", "PROCESSING"]:
+
+                            status_placeholder.info(
+                                f"{uploaded_file.name}: {status}"
+                            )
+
+                            time.sleep(2)
+
+                            status_response = get_document_status(
+                                document_id,
+                                st.session_state.access_token,
+                            )
+
+                            if not status_response.ok:
+                                break
+
+                            status_data = status_response.json()
+
+                            status = status_data["status"]
+
+                        if status == "COMPLETED":
+
+                            status_placeholder.success(
+                                f"{uploaded_file.name}: Processing completed."
+                            )
+
+                            docs_response = get_documents(
+                                st.session_state.access_token
+                            )
+
+                            if docs_response.ok:
+                                st.session_state.documents = docs_response.json()
+
+                                if st.session_state.documents:
+                                    st.session_state.active_doc = (
+                                        st.session_state.documents[0]
+                                    )
+
+                        elif status == "FAILED":
+
+                            status_placeholder.error(
+                                status_data.get(
+                                    "error_message",
+                                    "Document processing failed.",
+                                )
+                            )
 
                     else:
 

@@ -407,3 +407,12 @@ async def get_user_documents(user_id: uuid4, session: AsyncSession):
     statement = select(Document).where(Document.user_id == user_id).order_by(Document.uploaded_at.desc())
     result = await session.execute(statement)
     return result.scalars().all()
+
+
+async def get_document_status(document_id: UUID,session: AsyncSession,) -> Document | None:
+
+    result = await session.execute(
+        select(Document).where(Document.id == document_id)
+    )
+
+    return result.scalar_one_or_none()
