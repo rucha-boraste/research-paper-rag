@@ -259,7 +259,7 @@ JWT_ALGORITHM=HS256
 
 Replace each value with your own credentials before running the application.
 
-# Running the Application (Without docker)
+# Running the Application (With docker)
 
 ## Build the containers
 
