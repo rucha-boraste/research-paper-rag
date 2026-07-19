@@ -14,6 +14,7 @@ The Project focuses on evaluating different retrieval pipelines through multiple
 
 - [Overview](#overview)
 - [Architecture](#architecture)
+- [Asynchronous Document Processing](#asynchronus-document-processing)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
