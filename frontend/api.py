@@ -1,6 +1,6 @@
 import requests
 
-API_URL = "http://localhost:8000/api/v1"
+API_URL = "http://backend:8000/api/v1"
 
 def signup(email, username, password):
     response = requests.post(
