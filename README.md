@@ -14,7 +14,8 @@ The Project focuses on evaluating different retrieval pipelines through multiple
 
 - [Overview](#overview)
 - [Architecture](#architecture)
-- [Asynchronous Document Processing](#asynchronus-document-processing)
+- [Docker Architecture](#docker-architecture)
+- [Asynchronous Document Processing](#asynchronous-document-processing)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
@@ -37,12 +38,26 @@ This project implements a Retrieval-Augmented Generation (RAG) system capable of
 - Storing embeddings in PostgreSQL using pgvector
 - Retrieving relevant chunks
 - Generating grounded answers using Llama 3.1
+- Containerized deployment using Docker and Docker Compose
 
 The project also evaluates multiple retrieval configurations using **Ragas** to identify the most effective RAG pipeline.
 
 # Architecture
 
 ![Architecture Image](architecture.png)
+
+# Docker Architecture
+
+The application is containerized using Docker Compose.
+
+Services:
+
+- FastAPI backend
+- Streamlit frontend
+- Celery worker
+- Redis message broker
+
+The backend and frontend communicate over Docker's internal network while Celery processes document ingestion asynchronously.
 
 # Asynchronous Document Processing
 
@@ -70,6 +85,7 @@ This allows multiple documents to be processed concurrently without blocking the
 | Message Broker | Redis |
 | Frontend | Streamlit |
 | Database | PostgreSQL |
+| Containerization | Docker, Docker Compose |
 | Vector Database | pgvector |
 | Authentication | JWT + Refresh Tokens|
 | Storage | Supabase |
@@ -243,7 +259,40 @@ JWT_ALGORITHM=HS256
 
 Replace each value with your own credentials before running the application.
 
-# Running the Application
+# Running the Application (Without docker)
+
+## Build the containers
+
+```bash
+docker compose build
+```
+
+## Start all services
+
+```bash
+docker compose up
+```
+
+This starts:
+
+- FastAPI API
+- Streamlit frontend
+- Celery worker
+- Redis
+
+Frontend:
+
+```
+http://localhost:8501
+```
+
+Backend API:
+
+```
+http://localhost:8000
+```
+
+# Running the Application (Without docker)
 
 ## Redis
 
