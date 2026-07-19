@@ -21,7 +21,7 @@ def init_vector_store():
             connection=Config.PGVECTOR_CONNECTION,
             create_extension=False,
             engine_args={
-                "echo": True,
+                "echo": False,
                 "connect_args": {
                     "prepare_threshold": 0,
                 }

@@ -30,8 +30,6 @@ def login(email, password):
 
 
 def upload_pdf(file, access_token):
-    # print(type(file))
-    # print(repr(file)[:100])
     headers = {
         "Authorization": f"Bearer {access_token}"
     }
@@ -48,7 +46,7 @@ def upload_pdf(file, access_token):
         f"{API_URL}/rag/upload",
         headers=headers,
         files=files,
-        timeout=300,      # Large PDFs may take a while
+        timeout=300,      
     )
 
     return response

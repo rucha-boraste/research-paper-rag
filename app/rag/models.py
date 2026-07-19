@@ -71,7 +71,6 @@ class Chunk(SQLModel, table=True):
     chunk_index: int = Field(nullable=False, index=True)
     chunk_id: str = Field(nullable=False, unique=True, index=True)
     content: str = Field(nullable=False)
-
     meta_data: dict[str, Any] =Field(
         default_factory=dict,
         sa_column=Column(
@@ -105,7 +104,6 @@ class ChatHistory(SQLModel, table=True):
             nullable=False,
         )
     )
-
     user_id: uuid.UUID = Field(
         sa_column=Column(
             pg.UUID(as_uuid=True),
@@ -114,7 +112,6 @@ class ChatHistory(SQLModel, table=True):
             index=True,
         )
     )
-
     document_id: uuid.UUID = Field(
         sa_column=Column(
             pg.UUID(as_uuid=True),
@@ -123,11 +120,8 @@ class ChatHistory(SQLModel, table=True):
             index=True,
         )
     )
-
     question: str = Field(nullable=False)
-
     answer: str = Field(nullable=False)
-
     created_at: datetime = Field(
         sa_column=Column(
             pg.TIMESTAMP,

@@ -10,7 +10,7 @@ SYNC_DATABASE_URL = Config.DATABASE_URL.replace(
 
 engine = create_engine(
     SYNC_DATABASE_URL,
-    echo=True,
+    echo=False,
     pool_pre_ping=True,
 )
 

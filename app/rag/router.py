@@ -86,10 +86,7 @@ async def get_docs(user=Depends(access_token_bearer)):
 
         return documents
     
-@rag_router.get(
-    "/documents/{document_id}/status",
-    response_model=DocumentStatusResponse,
-)
+@rag_router.get( "/documents/{document_id}/status", response_model=DocumentStatusResponse,)
 async def get_status(document_id: UUID):
     async with async_session_local() as session:
 

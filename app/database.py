@@ -6,7 +6,7 @@ from app.auth.models import User
 
 engine = create_async_engine(
     Config.DATABASE_URL,
-    echo=True
+    echo=False
 )
 
 async_session_local = async_sessionmaker(

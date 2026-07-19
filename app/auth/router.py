@@ -71,6 +71,7 @@ async def login_users(data: UserLoginModel):
         status_code=status.HTTP_403_FORBIDDEN, detail="Invalid Email Or Password"
     )
 
+
 @auth_router.post("/refresh")
 async def refresh_access_token(data: RefreshTokenRequest):
 

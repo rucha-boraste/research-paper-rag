@@ -13,8 +13,7 @@ cookies = EncryptedCookieManager(
 if not cookies.ready():
     st.stop()
 
-# --- 1. Session State Initialization ---
-# Keeps track of variables across page reruns
+
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 if "access_token" not in st.session_state:
@@ -37,15 +36,12 @@ def load_active_document_history():
     st.session_state.messages = []
     if not st.session_state.active_doc:
         return
-
-    # st.write(st.session_state.active_doc)
-    # st.write(type(st.session_state.active_doc["id"]))
+    
     response = get_chat_history(
         st.session_state.active_doc["id"],
         st.session_state.access_token,
     )
 
-    # print(response.text)
 
     if response.ok:
         for chat in response.json()["chats"]:
@@ -55,14 +51,14 @@ def load_active_document_history():
             ])
 
 
+refresh_token = cookies.get("refresh_token")
+
 if (
     not st.session_state.logged_in
-    and "refresh_token" in cookies
+    and refresh_token
+    and refresh_token.strip() != ""
 ):
-
-    response = refresh_access_token(
-        cookies["refresh_token"]
-    )
+    response = refresh_access_token(refresh_token)
 
     if response.ok:
 
@@ -95,29 +91,22 @@ if (
         cookies.save()
 
 def logout():
-
     st.session_state.logged_in = False
     st.session_state.access_token = None
     st.session_state.refresh_token = None
     st.session_state.user = None
-    st.session_state.username = ""
+    st.session_state.username = None
     st.session_state.messages = []
     st.session_state.documents = []
     st.session_state.active_doc = None
 
-    if "refresh_token" in cookies:
-        del cookies["refresh_token"]
-
+    cookies["refresh_token"] = ""
     cookies.save()
 
     st.rerun()
 
-# --- 3. Page Configuration ---
 st.set_page_config(page_title="RAG PDF Chat", layout="wide")
 
-# ==========================================
-# ROUTE A: LOGIN & SIGNUP PAGE
-# ==========================================
 if not st.session_state.logged_in:
     st.title("Welcome to the AI Document Assistant")
     st.write("Please log in or create an account to continue.")
@@ -181,11 +170,7 @@ if not st.session_state.logged_in:
                     print(response.text)
                     st.error(response.json()["detail"])
 
-# ==========================================
-# ROUTE B: MAIN DASHBOARD
-# ==========================================
 else:
-    # --- Sidebar Controls ---
     with st.sidebar:
         st.header("👤 User Info")
         st.write(f"**Logged in as:** {st.session_state.username}")
@@ -208,93 +193,81 @@ else:
             if st.button("Upload Document(s)"):
 
                 progress = st.progress(0)
-
                 successful = 0
+                documents = []
 
+            # Upload all PDFs first
                 for index, uploaded_file in enumerate(uploaded_files):
 
                     with st.spinner(f"Uploading {uploaded_file.name}..."):
-
                         response = upload_pdf(
                             uploaded_file,
                             st.session_state.access_token,
                         )
 
                     if response.ok:
-
                         successful += 1
 
                         data = response.json()
 
-                        document_id = data["document_id"]
-
-                        status = data["status"]
-
-                        status_placeholder = st.empty()
-
-                        while status in ["QUEUED", "PROCESSING"]:
-
-                            status_placeholder.info(
-                                f"{uploaded_file.name}: {status}"
-                            )
-
-                            time.sleep(2)
-
-                            status_response = get_document_status(
-                                document_id,
-                                st.session_state.access_token,
-                            )
-
-                            if not status_response.ok:
-                                break
-
-                            status_data = status_response.json()
-
-                            status = status_data["status"]
-
-                        if status == "COMPLETED":
-
-                            status_placeholder.success(
-                                f"{uploaded_file.name}: Processing completed."
-                            )
-
-                            docs_response = get_documents(
-                                st.session_state.access_token
-                            )
-
-                            if docs_response.ok:
-                                st.session_state.documents = docs_response.json()
-
-                                if st.session_state.documents:
-                                    st.session_state.active_doc = (
-                                        st.session_state.documents[0]
-                                    )
-
-                        elif status == "FAILED":
-
-                            status_placeholder.error(
-                                status_data.get(
-                                    "error_message",
-                                    "Document processing failed.",
-                                )
-                            )
+                        documents.append({
+                            "id": data["document_id"],
+                            "filename": uploaded_file.name,
+                        })
 
                     else:
-
-                        st.error(
-                            f"Failed to upload {uploaded_file.name}"
-                        )
+                        st.error(f"Failed to upload {uploaded_file.name}")
 
                     progress.progress((index + 1) / len(uploaded_files))
 
-                st.success(
-                    f"{successful}/{len(uploaded_files)} document(s) uploaded successfully."
-                )
+
+                # Now wait for all PDFs simultaneously
+                remaining = documents.copy()
+
+                while remaining:
+
+                    time.sleep(2)
+
+                    finished = []
+
+                    for doc in remaining:
+
+                        status_response = get_document_status(
+                            doc["id"],
+                            st.session_state.access_token,
+                        )
+
+                        if not status_response.ok:
+                            continue
+
+                        status = status_response.json()["status"]
+
+                        if status == "COMPLETED":
+                            st.success(f"{doc['filename']} completed.")
+                            finished.append(doc)
+
+                        elif status == "FAILED":
+                            st.error(f"{doc['filename']} failed.")
+                            finished.append(doc)
+
+                    for doc in finished:
+                        remaining.remove(doc)
+
+
+                docs_response = get_documents(st.session_state.access_token)
+
+                if docs_response.ok:
+                    st.session_state.documents = docs_response.json()
+
+                    if st.session_state.documents:
+                        st.session_state.active_doc = st.session_state.documents[0]
+                        load_active_document_history()
+
+                st.success(f"{successful}/{len(uploaded_files)} document(s) uploaded successfully.")
 
                 st.rerun()
         
         # Document Selector
-        # Search Documents
         search_query = st.text_input(
             "🔍 Search documents",
             placeholder="Type a filename...",
@@ -311,8 +284,6 @@ else:
         )
 
         if filtered_documents:
-
-            # Keep the current document selected if it's in the filtered list
             default_index = 0
 
             if (
@@ -338,7 +309,6 @@ else:
         else:
             st.info("No matching documents found.")
 
-    # --- Main Panel ---
     if st.session_state.active_doc:
         st.title(
             f"Chatting with: `{st.session_state.active_doc['filename']}`"
